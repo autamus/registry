@@ -1,0 +1,98 @@
+name: "Build Containers on Update"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      
+jobs:
+  build-config:
+    runs-on: ubuntu-latest
+    outputs:
+      package: ${{ steps.save-output.outputs.package }}
+      version: ${{ steps.save-output.outputs.version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+        
+      - name: Run Build Config
+        uses: autamus/buildconfig@v0.0.1
+        with:
+          parsers_loaded: spack
+          packages_path: spack/
+      
+      - name: Save Package Output
+        id: save-output
+        run: |
+          echo "::set-output name=package::$(cat package)"
+          echo "::set-output name=version::$(cat version)"
+
+
+  spack-containerize:
+    runs-on: ubuntu-latest
+    needs: build-config
+    container:
+      image: spack/ubuntu-bionic
+      options: --entrypoint /bin/bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Import Registry to Spack
+        run: |
+          for file in spack/*/*; do
+            if [ -d "$file" ]; then
+                cp -r "$file/" "/opt/spack/var/spack/repos/builtin/packages/"
+            fi
+          done
+
+      - name: Generate Spack Environment Dockerfile
+        run: |
+          export PATH=/opt/spack/bin:$PATH
+          package=${{needs.build-config.outputs.package}}
+          echo "spack:" > spack.yaml
+          echo "  specs: [\"$package\"]" >> spack.yaml
+          echo "  view: true" >> spack.yaml
+
+          cat spack.yaml
+          spack containerize > Dockerfile
+
+      - name: Upload Dockerfile
+        uses: actions/upload-artifact@v2
+        with:
+          name: Dockerfile
+          path: Dockerfile
+           
+  build-container:
+    needs:
+      - spack-containerize
+      - build-config
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Dockerfile
+        uses: actions/download-artifact@v2
+        with:
+          name: Dockerfile
+      - name: Build Dockerfile for package
+        run: |
+          package=${{needs.build-config.outputs.package}}
+          version=${{needs.build-config.outputs.version}}
+          docker build -t ghcr.io/autamus/$package:latest \
+                       -t ghcr.io/autamus/$package:$version .
+
+      - name: 
+        uses: docker/login-action@v1 
+        with:
+          registry: ghcr.io
+          username: ${{ secrets.GHCR_USERNAME }}
+          password: ${{ secrets.GHCR_TOKEN }}
+
+      - name: Push to GitHub Packages
+        # Don't push build on pull request
+        if: github.ref == 'refs/heads/main'
+        run: docker push ghcr.io/autamus/${{needs.build-config.outputs.package}}:latest
