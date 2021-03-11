@@ -78,6 +78,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: Dockerfile
+          
       - name: Build Dockerfile for package
         run: |
           package=${{needs.build-config.outputs.package}}
@@ -85,7 +86,8 @@ jobs:
           docker build -t ghcr.io/autamus/$package:latest \
                        -t ghcr.io/autamus/$package:$version .
 
-      - name: 
+      - name: Docker Login
+        if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v1 
         with:
           registry: ghcr.io
@@ -95,4 +97,4 @@ jobs:
       - name: Push to GitHub Packages
         # Don't push build on pull request
         if: github.ref == 'refs/heads/main'
-        run: docker push ghcr.io/autamus/${{needs.build-config.outputs.package}}:latest
+        run: docker push --all-tags ghcr.io/autamus/${{needs.build-config.outputs.package}}:latest
