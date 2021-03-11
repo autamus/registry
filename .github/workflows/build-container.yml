@@ -78,6 +78,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: Dockerfile
+          
       - name: Build Dockerfile for package
         run: |
           package=${{needs.build-config.outputs.package}}
@@ -85,7 +86,7 @@ jobs:
           docker build -t ghcr.io/autamus/$package:latest \
                        -t ghcr.io/autamus/$package:$version .
 
-      - name: 
+      - name: Docker Login
         uses: docker/login-action@v1 
         with:
           registry: ghcr.io
