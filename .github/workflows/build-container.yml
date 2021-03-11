@@ -97,4 +97,4 @@ jobs:
       - name: Push to GitHub Packages
         # Don't push build on pull request
         if: github.ref == 'refs/heads/main'
-        run: docker push --all-tags ghcr.io/autamus/${{needs.build-config.outputs.package}}:latest
+        run: docker push --all-tags ghcr.io/autamus/${{needs.build-config.outputs.package}}
