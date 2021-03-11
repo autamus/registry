@@ -58,8 +58,8 @@ jobs:
           echo "spack:" > spack.yaml
           echo "  specs: [\"$package\"]" >> spack.yaml
           echo "  view: true" >> spack.yaml
-          echo "  config:" >> spack.yml
-          echo "    concretizer: clingo" >> spack.yml
+          echo "  config:" >> spack.yaml
+          echo "    concretizer: clingo" >> spack.yaml
 
           cat spack.yaml
           spack containerize > Dockerfile
