@@ -13,12 +13,13 @@ class Wget(AutotoolsPackage, GNUMirrorPackage):
     cron jobs, terminals without X-Windows support, etc."""
 
     homepage = "http://www.gnu.org/software/wget/"
-    url = "https://ftp.gnu.org/gnu/wget/wget-1.20.3.tar.gz"
+    url      = "https://mirrors.rit.edu/gnu/wget/wget-1.21.1.tar.gz"
 
+    version('1.21.1', sha256='59ba0bdade9ad135eda581ae4e59a7a9f25e3a4bde6a5419632b31906120e26e', url='https://mirrors.rit.edu/gnu/wget/wget-1.21.1.tar.gz')
     version('1.20.3', sha256='31cccfc6630528db1c8e3a06f6decf2a370060b982841cfab2b8677400a5092e')
     version('1.19.1', sha256='9e4f12da38cc6167d0752d934abe27c7b1599a9af294e73829be7ac7b5b4da40')
-    version('1.17',   sha256='3e04ad027c5b6ebd67c616eec13e66fbedb3d4d8cbe19cc29dadde44b92bda55')
-    version('1.16',   sha256='b977fc10ac7a72d987d48136251aeb332f2dced1aabd50d6d56bdf72e2b79101')
+    version('1.17', sha256='3e04ad027c5b6ebd67c616eec13e66fbedb3d4d8cbe19cc29dadde44b92bda55')
+    version('1.16', sha256='b977fc10ac7a72d987d48136251aeb332f2dced1aabd50d6d56bdf72e2b79101')
 
     variant('ssl', default='openssl', values=('gnutls', 'openssl'),
             description='Specify SSL backend')
