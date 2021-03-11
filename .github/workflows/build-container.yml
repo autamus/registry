@@ -50,11 +50,6 @@ jobs:
                 cp -r "$file/" "/opt/spack/var/spack/repos/builtin/packages/"
             fi
           done
-      
-      - name: Set Spack Config
-        run: | 
-          echo "config:" > .spack/config.yml
-          echo "  concretizer: clingo" >> .spack/config.yml
 
       - name: Generate Spack Environment Dockerfile
         run: |
@@ -63,6 +58,8 @@ jobs:
           echo "spack:" > spack.yaml
           echo "  specs: [\"$package\"]" >> spack.yaml
           echo "  view: true" >> spack.yaml
+          echo "config:" >> spack.yml
+          echo "  concretizer: clingo" >> spack.yml
 
           cat spack.yaml
           spack containerize > Dockerfile
