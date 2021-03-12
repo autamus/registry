@@ -53,7 +53,7 @@ jobs:
           echo "  container:" >> spack.yaml
           echo "    os_packages:" >> spack.yaml
           echo "      build:" >> spack.yaml
-          echo "        - python-dev" >> spack.yaml
+          echo "        - python3-dev" >> spack.yaml
           cat spack.yaml
           spack containerize > Dockerfile
       - name: Upload Dockerfile
