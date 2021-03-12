@@ -26,6 +26,6 @@ Right now all of our packages are hosted on the GitHub Container Registry.
 
 1) Fork this repository (button at the top right of this page!)
 2) Check out the [Spack Repository](https://spack.readthedocs.io/en/latest/package_list.html) to see if they have the package build instructions you are looking for. Or checkout the [Spack Docs](https://spack.readthedocs.io/en/latest/packaging_guide.html) to learn how to build your very of instruction file (called a Speck).
-3) Add that package.py file (and any other nessiary files like patches) to a directory in your fork of this repository under `FIRST-LETTER-OF-APPLICATION/NAME-OF-APPLICATION/package.py`.
+3) Add that package.py file (and any other nessiary files like patches) to a directory in your fork of this repository under `spack/FIRST-LETTER-OF-APPLICATION/NAME-OF-APPLICATION/package.py`.
 4) Commit that new directory to your fork and open a pull request on this repository from your fork.
 
