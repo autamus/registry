@@ -31,8 +31,6 @@ jobs:
         run: |
           echo "::set-output name=package::$(cat package)"
           echo "::set-output name=version::$(cat version)"
-
-
   spack-containerize:
     runs-on: ubuntu-latest
     needs: build-config
@@ -43,14 +41,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Import Registry to Spack
-        run: |
-          for file in spack/*/*; do
-            if [ -d "$file" ]; then
-                cp -r "$file/" "/opt/spack/var/spack/repos/builtin/packages/"
-            fi
-          done
-
       - name: Generate Spack Environment Dockerfile
         run: |
           export PATH=/opt/spack/bin:$PATH
@@ -60,10 +50,12 @@ jobs:
           echo "  view: true" >> spack.yaml
           echo "  config:" >> spack.yaml
           echo "    concretizer: clingo" >> spack.yaml
-
+          echo "  container:" >> spack.yaml
+          echo "    os_packages:" >> spack.yaml
+          echo "      build:" >> spack.yaml
+          echo "        - python-dev" >> spack.yaml
           cat spack.yaml
           spack containerize > Dockerfile
-
       - name: Upload Dockerfile
         uses: actions/upload-artifact@v2
         with:
@@ -76,18 +68,30 @@ jobs:
       - build-config
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
       - name: Download Dockerfile
         uses: actions/download-artifact@v2
         with:
           name: Dockerfile
+
+      - name: Import Registry to Repo
+        run: |
+          mkdir repo
+          for file in spack/*/*; do
+            if [ -d "$file" ]; then
+                cp -r "$file/" "repo/"
+            fi
+          done
+          sed -i '/^.*as builder.*/a \\nADD repo /opt/spack/var/spack/repos/builtin/packages/' Dockerfile
           
-      - name: Build Dockerfile for package
+      - name: Build Container for Package
         run: |
           package=${{needs.build-config.outputs.package}}
           version=${{needs.build-config.outputs.version}}
           docker build -t ghcr.io/autamus/$package:latest \
                        -t ghcr.io/autamus/$package:$version .
-
       - name: Docker Login
         if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v1 
@@ -99,4 +103,4 @@ jobs:
       - name: Push to GitHub Packages
         # Don't push build on pull request
         if: github.ref == 'refs/heads/main'
-        run: docker push --all-tags ghcr.io/autamus/${{needs.build-config.outputs.package}}:latest
+        run: docker push --all-tags ghcr.io/autamus/${{needs.build-config.outputs.package}}
