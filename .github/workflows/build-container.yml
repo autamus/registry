@@ -57,6 +57,11 @@ jobs:
           echo "    strip: false" >> spack.yaml
           cat spack.yaml
           spack containerize > Dockerfile
+          
+      - name: Change Entrypoint of Containers
+        run : |
+          sed -i 's/\"-l\"/\"-l\", \"-c\"/g' Dockerfile
+          
       - name: Upload Dockerfile
         uses: actions/upload-artifact@v2
         with:
