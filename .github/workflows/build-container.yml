@@ -86,7 +86,11 @@ jobs:
             fi
           done
           sed -i '/^.*as builder.*/a \\nADD repo /opt/spack/var/spack/repos/builtin/packages/' Dockerfile
-          
+
+      - name: Change Entrypoint of Containers
+        run : |
+          sed -i 's/\"-l\"/\"-l\", \"-c\"/g' Dockerfile    
+                
       - name: Build Container for Package
         run: |
           package=${{needs.build-config.outputs.package}}
