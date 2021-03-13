@@ -54,7 +54,6 @@ jobs:
           echo "    os_packages:" >> spack.yaml
           echo "      build:" >> spack.yaml
           echo "        - python3-dev" >> spack.yaml
-          echo "    strip: false" >> spack.yaml
           cat spack.yaml
           spack containerize > Dockerfile
           

@@ -11,7 +11,7 @@ class Diamond(CMakePackage):
     designed for high performance analysis of big sequence data."""
 
     homepage = "https://ab.inf.uni-tuebingen.de/software/diamond"
-    url      = "https://github.com/bbuchfink/diamond/archive/v0.9.14.tar.gz"
+    url      = "https://github.com/bbuchfink/diamond/archive/v0.9.14.tar.gz" 
 
     version('2.0.4', sha256='94e8fe72bdc28b83fd0f2d90c439b58b63b38263aa1a3905582ef68f614ae95d')
     version('0.9.25', sha256='65298f60cf9421dcc7669ce61642611cd9eeffc32f66fd39ebfa25dd64416808')
