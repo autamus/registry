@@ -15,7 +15,7 @@ class Exonerate(AutotoolsPackage):
     version('2.4.0', sha256='f849261dc7c97ef1f15f222e955b0d3daf994ec13c9db7766f1ac7e77baa4042')
 
     depends_on('pkgconfig', type="build")
-    depends_on('glib')
+    depends_on('glib^2.58.3')
 
     parallel = False
 
