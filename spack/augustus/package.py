@@ -62,7 +62,7 @@ class Augustus(MakefilePackage):
                             'bamtools'].prefix)
             makefile.filter('INCLUDES = *',
                             'INCLUDES = -I$(BAMTOOLS)/include/bamtools ')
-            if 'bamtools@2.5.1' in spec:
+            if 'bamtools@2.5:' in spec:
                 makefile.filter('LIBS = -lbamtools -lz',
                                 'LIBS = $(BAMTOOLS)/lib'
                                 '/libbamtools.a -lz')
@@ -80,11 +80,11 @@ class Augustus(MakefilePackage):
                             'BAMTOOLS = %s' % self.spec['bamtools'].prefix)
             makefile.filter('INCLUDES = /usr/include/bamtools',
                             'INCLUDES = $(BAMTOOLS)/include/bamtools')
-            if 'bamtools@2.5.1' in spec:
+            if 'bamtools@2.5:' in spec:
                 makefile.filter('LIBS = -lbamtools -lz',
                                 'LIBS = $(BAMTOOLS)/lib'
                                 '/libbamtools.a -lz')
-            if 'bamtools@2.5:' in spec:
+            if 'bamtools@2.5.0' in spec:
                 makefile.filter('LIBS = -lbamtools -lz',
                                 'LIBS = $(BAMTOOLS)/lib64'
                                 '/libbamtools.a -lz')
