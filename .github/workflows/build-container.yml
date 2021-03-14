@@ -21,7 +21,7 @@ jobs:
           fetch-depth: '0'
         
       - name: Run Build Config
-        uses: autamus/buildconfig@v0.0.3
+        uses: autamus/buildconfig@v0.0.2
         with:
           parsers_loaded: spack
           packages_path: spack/
@@ -48,8 +48,6 @@ jobs:
           echo "spack:" > spack.yaml
           echo "  specs: [\"$package\"]" >> spack.yaml
           echo "  view: true" >> spack.yaml
-          echo "  config:" >> spack.yaml
-          echo "    concretizer: clingo" >> spack.yaml
           echo "  container:" >> spack.yaml
           echo "    os_packages:" >> spack.yaml
           echo "      build:" >> spack.yaml
@@ -57,6 +55,11 @@ jobs:
           echo "    strip: false" >> spack.yaml
           cat spack.yaml
           spack containerize > Dockerfile
+          
+      - name: Change Entrypoint of Containers
+        run : |
+          sed -i 's/\"-l\"/\"-l\", \"-c\"/g' Dockerfile
+          
       - name: Upload Dockerfile
         uses: actions/upload-artifact@v2
         with:
