@@ -24,7 +24,7 @@ class Singularity(MakefilePackage):
     '''
 
     homepage = "https://www.sylabs.io/singularity/"
-    url      = "https://github.com/sylabs/singularity/releases/download/v3.7.2/singularity-3.7.2.tar.gz"
+    url      = "https://github.com/hpcng/singularity/releases/download/v3.7.2/singularity-3.7.2.tar.gz"
 
     version('3.7.2', sha256='36916222e26fb934404f0766e0ff368edac36d7fc31ca571f5f609466609066b', url='https://github.com/sylabs/singularity/releases/download/v3.7.2/singularity-3.7.2.tar.gz')
     version('3.7.0', sha256='fb96aaf5f462a56a4a5bd2951287bcbbefe8cf543e228e4e955428f386a8d478')
