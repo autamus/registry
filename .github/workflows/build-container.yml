@@ -21,7 +21,7 @@ jobs:
           fetch-depth: '0'
         
       - name: Run Build Config
-        uses: autamus/buildconfig@v0.0.2
+        uses: autamus/buildconfig@v0.0.4
         with:
           parsers_loaded: spack
           packages_path: spack/
