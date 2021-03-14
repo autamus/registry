@@ -52,13 +52,15 @@ jobs:
           echo "    os_packages:" >> spack.yaml
           echo "      build:" >> spack.yaml
           echo "        - python3-dev" >> spack.yaml
+          echo "      final:" >> spack.yaml
+          echo "        - ca-certificates" >> spack.yaml
           echo "    strip: false" >> spack.yaml
           cat spack.yaml
           spack containerize > Dockerfile
           
       - name: Change Entrypoint of Containers
         run : |
-          sed -i 's/\"-l\"/\"-l\", \"-c\"/g' Dockerfile
+          sed -i 's/\"-l\".*]/\"-l\", \"-c\"]/g' Dockerfile
           
       - name: Upload Dockerfile
         uses: actions/upload-artifact@v2
@@ -89,6 +91,7 @@ jobs:
             fi
           done
           sed -i '/^.*as builder.*/a \\nADD repo /opt/spack/var/spack/repos/builtin/packages/' Dockerfile
+          sed -i '/^.*packages.*/a \\ENV PATH=/opt/view/bin:/opt/spack/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin' Dockerfile
           
       - name: Build Container for Package
         run: |
