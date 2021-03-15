@@ -22,6 +22,7 @@ class Mrbayes(AutotoolsPackage):
     variant('beagle', default=True, description='Enable BEAGLE library for speed benefits')
     variant('readline', default=False, description='Enable readline library, not recommended with MPI')
 
+    depends_on('libuuid')
     depends_on('libbeagle', when='+beagle')
     depends_on('mpi', when='+mpi')
     depends_on('readline', when='+readline')
