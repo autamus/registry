@@ -12,12 +12,13 @@ class Julia(Package):
     """The Julia Language: A fresh approach to technical computing"""
 
     homepage = "http://julialang.org"
-    url      = "https://github.com/JuliaLang/julia/releases/download/v0.4.3/julia-0.4.3-full.tar.gz"
+    url      = "https://github.com/JuliaLang/julia/releases/download/v1.5.4/julia-1.5.4-full.tar.gz"
     git      = "https://github.com/JuliaLang/julia.git"
 
     maintainers = ['glennpj']
 
-    version('master', branch='master')
+    version('N/A', branch='master')
+    version('1.5.4', sha256='dbfb8cd544b223eff70f538da7bb9d5b6f76fd0b00dd2385e6254e74ad4e892f', url='https://github.com/JuliaLang/julia/releases/download/v1.5.4/julia-1.5.4-full.tar.gz')
     version('1.5.3', sha256='fb69337ca037576758547c7eed9ae8f153a9c052318327b6b7f1917408c14d91')
     version('1.5.2', sha256='850aed3fe39057488ec633f29af705f5ada87e3058fd65e48ad26f91b713a19a')
     version('1.5.1', sha256='1d0debfccfc7cd07047aa862dd2b1a96f7438932da1f5feff6c1033a63f9b1d4')
