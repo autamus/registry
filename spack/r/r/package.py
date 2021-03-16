@@ -10,7 +10,7 @@ from spack import *
 
 
 class R(AutotoolsPackage):
-    """R is 'GNU S', a freely available language and environment for
+    """R is GNU S, a freely available language and environment for
     statistical computing and graphics which provides a wide variety of
     statistical and graphical techniques: linear and nonlinear modelling,
     statistical tests, time series analysis, classification, clustering, etc.
