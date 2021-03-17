@@ -83,3 +83,4 @@ class Salmon(CMakePackage):
         ]
 
         return args
+
