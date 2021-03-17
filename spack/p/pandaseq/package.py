@@ -28,3 +28,4 @@ class Pandaseq(AutotoolsPackage):
     def autoreconf(self, spec, prefix):
         bash = which('bash')
         bash('./autogen.sh')
+
