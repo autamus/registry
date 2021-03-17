@@ -31,3 +31,4 @@ class Apex(CMakePackage):
             '-DUSE_OMPT=TRUE',
             '-DOMPT_ROOT=%s' % spec['ompt-openmp'].prefix,
         ]
+
