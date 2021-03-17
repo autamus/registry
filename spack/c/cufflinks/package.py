@@ -25,3 +25,4 @@ class Cufflinks(Package):
         install('cuffquant', prefix.bin)
         install('gffread', prefix.bin)
         install('gtf_to_sam', prefix.bin)
+
