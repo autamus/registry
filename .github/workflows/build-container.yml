@@ -61,6 +61,7 @@ jobs:
       - name: Change Entrypoint of Containers
         run : |
           sed -i 's/\"-l\".*]/\"-l\", \"-c\"]/g' Dockerfile
+          sed -i '/^.*ubuntu:18.04.*/a \\ \nENV PATH=/opt/view/bin:/opt/spack/bin:$PATH' Dockerfile
           
       - name: Upload Dockerfile
         uses: actions/upload-artifact@v2
@@ -91,7 +92,6 @@ jobs:
             fi
           done
           sed -i '/^.*as builder.*/a \\nADD repo /opt/spack/var/spack/repos/builtin/packages/' Dockerfile
-          sed -i '/^.*packages.*/a \\ENV PATH=/opt/view/bin:/opt/spack/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin' Dockerfile
           
       - name: Build Container for Package
         run: |
