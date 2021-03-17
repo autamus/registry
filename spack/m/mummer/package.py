@@ -54,3 +54,4 @@ class Mummer(Package):
             install(f, join_path(abd, f[8:]))
         for f in scripts:
             install(f, join_path(sd, f[8:]))
+
