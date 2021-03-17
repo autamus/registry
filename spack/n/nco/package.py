@@ -58,3 +58,4 @@ class Nco(AutotoolsPackage):
         env.set('NETCDF_LIB', spec['netcdf-c'].prefix.lib)
         env.set('ANTLR_ROOT', spec['antlr'].prefix)
         env.set('UDUNITS2_PATH', spec['udunits'].prefix)
+
