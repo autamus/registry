@@ -27,3 +27,4 @@ class Mafft(Package):
         with working_dir('extensions'):
             make('PREFIX=%s' % prefix)
             make('PREFIX=%s' % prefix, 'install')
+
