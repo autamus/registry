@@ -49,3 +49,4 @@ class ClingoBootstrap(Clingo):
 
         env.set('CXXFLAGS', opts)
         env.set('LDFLAGS', opts)
+
