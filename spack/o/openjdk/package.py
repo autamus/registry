@@ -153,3 +153,4 @@ class Openjdk(Package):
         """Allows spec['java'].home to work."""
 
         self.spec.home = self.home
+
