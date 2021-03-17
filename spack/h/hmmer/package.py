@@ -49,3 +49,4 @@ class Hmmer(Package):
             make('check')
 
         make('install')
+
