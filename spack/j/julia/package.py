@@ -198,3 +198,4 @@ class Julia(Package):
             curl('--create-dirs',
                  '--output', cacert_file,
                  'https://curl.haxx.se/ca/cacert.pem')
+
