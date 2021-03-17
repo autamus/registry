@@ -194,3 +194,4 @@ class Go(Package):
         # Allow packages to find this when using module files
         env.prepend_path('GOPATH', self.generate_path_components(
             dependent_spec))
+
