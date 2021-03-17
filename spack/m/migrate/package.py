@@ -74,3 +74,4 @@ class Migrate(AutotoolsPackage):
         mkdirp(prefix.man)
         with working_dir('src'):
             make('install')
+
