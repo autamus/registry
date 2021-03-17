@@ -236,3 +236,4 @@ class Hypre(Package, CudaPackage):
         libs = find_libraries('libHYPRE', root=self.prefix, shared=is_shared,
                               recursive=True)
         return libs or None
+
