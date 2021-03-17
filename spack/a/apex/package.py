@@ -10,9 +10,10 @@ class Apex(CMakePackage):
     """Autonomic Performance Environment for eXascale (APEX)."""
 
     homepage = "http://github.com/khuck/xpress-apex"
-    url      = "http://github.com/khuck/xpress-apex/archive/v0.1.tar.gz"
+    url      = "https://github.com/khuck/xpress-apex/archive/v2.3.1.tar.gz"
 
-    version('0.1',   sha256='efd10f38a61ebdb9f8adee9dc84acaee22d065b2e6eea1888872a7bfca0f4495')
+    version('2.3.1', sha256='86bf6933f2c53531fcb24cda9fc7dc9919909bed54740d1e0bc3e7ce6ed78091', url='https://github.com/khuck/xpress-apex/archive/v2.3.1.tar.gz')
+    version('0.1', sha256='efd10f38a61ebdb9f8adee9dc84acaee22d065b2e6eea1888872a7bfca0f4495')
 
     depends_on("binutils+libiberty@:2.33.1")
     depends_on("boost@1.54:")
