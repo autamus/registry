@@ -430,3 +430,4 @@ HDF5 version {version} {version}
 
         # Run existing install check
         self._check_install()
+
