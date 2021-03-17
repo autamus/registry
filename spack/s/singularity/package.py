@@ -174,3 +174,4 @@ class Singularity(MakefilePackage):
 
             {0}
             """.format(self.perm_script_path()))
+
