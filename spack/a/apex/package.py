@@ -20,6 +20,7 @@ class Apex(CMakePackage):
     depends_on('cmake@2.8.12:', type='build')
     depends_on("activeharmony@4.5:")
     depends_on("ompt-openmp")
+    depends_on("openmpi")
 
     def cmake_args(self):
         spec = self.spec
