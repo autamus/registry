@@ -319,3 +319,4 @@ class Gromacs(CMakePackage):
                                format(self.spec['amdfftw'].libs.joined(';')))
 
         return options
+
