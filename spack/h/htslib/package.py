@@ -55,3 +55,4 @@ class Htslib(AutotoolsPackage):
             args.extend(self.enable_or_disable('libcurl'))
 
         return args
+
