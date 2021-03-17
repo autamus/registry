@@ -78,3 +78,4 @@ class Clingo(CMakePackage):
             args += self.cmake_python_hints
 
         return args
+
