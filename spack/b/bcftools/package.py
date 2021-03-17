@@ -103,3 +103,4 @@ class Bcftools(AutotoolsPackage):
     @when('@1.2')
     def setup_run_environment(self, env):
         env.set('BCFTOOLS_PLUGINS', self.prefix.libexec.bcftools)
+
