@@ -85,3 +85,4 @@ class Alps(CMakePackage):
                           ['--Tmin', '10'])
         self._single_test('ed-01-sparsediag', 'sparsediag', 'parm1a')
         self._single_test('dmrg-01-dmrg', 'dmrg', 'spin_one_half')
+
