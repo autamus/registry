@@ -53,3 +53,4 @@ class Gsl(AutotoolsPackage, GNUMirrorPackage):
                                   % self.spec['blas'].libs.ld_flags)
 
         return configure_args
+
