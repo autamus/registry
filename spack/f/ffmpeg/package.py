@@ -188,3 +188,4 @@ class Ffmpeg(AutotoolsPackage):
             config_args += self.enable_or_disable(variant_opt)
 
         return config_args
+
