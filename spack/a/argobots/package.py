@@ -45,3 +45,4 @@ class Argobots(AutotoolsPackage):
             args.append('--disable-debug')
 
         return args
+
