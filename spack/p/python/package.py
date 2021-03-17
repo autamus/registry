@@ -1115,3 +1115,4 @@ class Python(AutotoolsPackage):
         options = ['-c', 'import sys; {0}'.format(print_str)]
         self.run_test(exe, options=options, expected=[self.spec.prefix],
                       installed=True, purpose=reason)
+
