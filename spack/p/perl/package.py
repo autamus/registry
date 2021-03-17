@@ -387,3 +387,4 @@ class Perl(Package):  # Perl doesn't use Autotools, it should subclass Package
         msg = 'Hello, World!'
         options = ['-e', 'use warnings; use strict;\nprint("%s\n");' % msg]
         self.run_test(exe, options, msg, installed=True, purpose=reason)
+
