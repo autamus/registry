@@ -19,9 +19,8 @@ class Argobots(AutotoolsPackage):
     url      = "https://github.com/pmodels/argobots/releases/download/v1.0b1/argobots-1.0b1.tar.gz"
     git      = "https://github.com/pmodels/argobots.git"
     maintainers = ['shintaro-iwasaki']
-
-    version("main", branch="main")
-    version("1.0", sha256="36a0815f7bf99900a9c9c1eef61ef9b3b76aa2cfc4594a304f6c8c3296da8def")
+    version('N/A', branch='main')
+    version('1.0', sha256="36a0815f7bf99900a9c9c1eef61ef9b3b76aa2cfc4594a304f6c8c3296da8def")
 
     variant("valgrind", default=False, description="Enable Valgrind")
     variant("debug", default=False, description="Compiled with debugging symbols")
