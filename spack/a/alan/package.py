@@ -17,3 +17,4 @@ class Alan(Package):
     def install(self, spec, prefix):
         mkdirp(prefix.bin)
         install('alan', prefix.bin)
+
