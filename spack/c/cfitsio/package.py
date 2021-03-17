@@ -51,3 +51,4 @@ class Cfitsio(AutotoolsPackage):
             targets += ['shared']
 
         return targets
+
