@@ -44,3 +44,4 @@ class Meme(AutotoolsPackage):
         if '~mpi' in spec:
             args += ['--enable-serial']
         return args
+
