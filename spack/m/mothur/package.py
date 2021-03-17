@@ -42,3 +42,4 @@ class Mothur(MakefilePackage):
         install('mothur', prefix.bin)
         install('uchime', prefix.bin)
         install_tree('source', prefix.include)
+
