@@ -23,3 +23,4 @@ class Fraggenescan(MakefilePackage):
 
     def install(self, spec, prefix):
         install_tree('.', prefix.bin)
+
