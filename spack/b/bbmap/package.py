@@ -23,3 +23,4 @@ class Bbmap(Package, SourceforgePackage):
     def setup_run_environment(self, env):
         env.set('BBMAP_CONFIG', self.prefix.bin.config)
         env.set('BBMAP_RESOURCES', self.prefix.bin.resources)
+
