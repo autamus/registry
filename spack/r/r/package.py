@@ -246,3 +246,4 @@ class R(AutotoolsPackage):
         # already.
         if dependent_spec.package.is_extension:
             mkdirp(module.r_lib_dir)
+
