@@ -38,3 +38,4 @@ class Plink(Package):
                 install('plink', prefix.bin)
         if spec.version == Version('1.9-beta6.10'):
             install('plink', prefix.bin)
+
