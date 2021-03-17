@@ -16,8 +16,9 @@ class Ants(CMakePackage):
     """
 
     homepage = "http://stnava.github.io/ANTs/"
-    url      = "https://github.com/ANTsX/ANTs/archive/v2.3.4.tar.gz"
+    url      = "https://github.com/ANTsX/ANTs/archive/v2.3.5.tar.gz"
 
+    version('2.3.5', sha256='2fddfd5f274a47f1c383e734a7e763b627c4a8383d2d3b9971561f335016bb0a', url='https://github.com/ANTsX/ANTs/archive/v2.3.4.tar.gz')
     version('2.3.4', sha256='590b678f6fcbfa2f7bca4ae6059f49d5cf64ad07b2ed5088fb9226cb0f28ffec')
     version('2.2.0', sha256='62f8f9ae141cb45025f4bb59277c053acf658d4a3ba868c9e0f609af72e66b4a')
 
