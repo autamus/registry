@@ -8,6 +8,7 @@ The Core Registry of Container Blueprints for the Autamus Build System
 - [Usage](#usage)
   - [Downloading A Container](#downloading-a-container)
   - [Submitting A Package](#submitting-a-package)
+- [Container Size Comparison](#container-size-comparison)
 
 ## Backstory
 At the end of my undergraduate freshman year, as my internship with the University's Research & HPC Computing group was finishing up, a friend (@bjoyce3) and I (@alecbcs) were talking about the software installed on our University's local HPC. In particular, how the age of many of the analysis packages (and their depedencies) were keeping us from updating the operating systems of the clusters. During that conversation, we started dreaming about "an autonoumous build system" for scientific containers. One that would update containers as new versions of their source code became available, rebuild containers as a package's depedencies received updates, and thoroughly test the containers before publishing them. During that following summer, I was hired on by the HPC Team and this idea became a multi-year project. Although we've still got a ways to go handling depdencies and testing contaiers we're ready to begin building analysis packages for researchers. If this interests you as a researcher, research software engineer, or system admin check below to see how you can submit packages and pull the built containers.
@@ -29,3 +30,13 @@ Right now all of our packages are hosted on the GitHub Container Registry.
 3) Add that package.py file (and any other nessiary files like patches) to a directory in your fork of this repository under `spack/FIRST-LETTER-OF-APPLICATION/NAME-OF-APPLICATION/package.py`.
 4) Commit that new directory to your fork and open a pull request on this repository from your fork.
 
+## Container Size Comparison
+| **Package/Container Name** | **Autamus Container Size** | **Official Dockerhub Container Size** |
+|----------------------------|----------------------------|---------------------------------------|
+| Python                     | 417MB                      | 885MB                                 |
+| R                          | 517.9MB                    | 761.2MB                               |
+| GCC                        | 1.731GB                    | 1.186GB                               |
+| Go                         | 751.2MB                    | 861.9MB                               |
+
+### How are Autamus Containers Smaller?
+Autamus uses Spack to build all packages from source before deleting no longer needed build dependencies. As a result Autamus containers only contain a minimal Linux environment and the software of the container.
