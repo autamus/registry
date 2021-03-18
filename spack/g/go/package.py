@@ -33,8 +33,8 @@ from spack import *
 class Go(Package):
     """The golang compiler and build environment"""
     homepage = "https://golang.org"
-    url = 'https://dl.google.com/go/go1.12.6.src.tar.gz'
-    git = 'https://go.googlesource.com/go.git'
+    url      = "https://dl.google.com/go/go1.16.2.src.tar.gz"
+    git      = "https://go.googlesource.com/go.git"
 
     extendable = True
     executables = ['^go$']
