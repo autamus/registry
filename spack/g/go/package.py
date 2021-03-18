@@ -27,7 +27,7 @@ from spack import *
 # - When building on a *large* machine (144 cores, 1.5TB RAM) I need
 #   to run `ulimit -u 8192` to bump up the max number of user processes.
 #   Failure to do so results in an explosion in one of the tests and an
-#   epic stack trace....
+#   epic stack trace.... 
 
 
 class Go(Package):
