@@ -69,7 +69,7 @@ class Rust(Package):
     depends_on('libgit2')
 
     # Pre-release Versions
-    version('N/A', branch='master', submodules=True)
+    version('master', branch='master', submodules=True)
     version('1.50.0', sha256='95978f8d02bb6175ae3238930baf03563c240aedf9a70bebdc3eaa2a8c3c5a5e', url='https://static.rust-lang.org/dist/rustc-1.50.0-src.tar.gz')
     version('1.48.0', sha256='0e763e6db47d5d6f91583284d2f989eacc49b84794d1443355b85c58d67ae43b')
     version('1.47.0', sha256='3185df064c4747f2c8b9bb8c4468edd58ff4ad6d07880c879ac1b173b768d81d')
@@ -118,6 +118,12 @@ class Rust(Package):
     # This dictionary contains a version: hash dictionary for each supported
     # Rust target.
     rust_releases = {
+        '1.50.0': {
+            'x86_64-unknown-linux-gnu':      'fa889b53918980aea2dea42bfae4e858dcb2104c6fdca6e4fe359f3a49767701',
+            'powerpc64le-unknown-linux-gnu': 'e0472589d3f9ba7ebf27f033af320e0d5cfb70222955bd8ed73ce2c9a70ae535',
+            'aarch64-unknown-linux-gnu':     '1db7a4fbddc68cd29eb9bca9fa7d0d2d9e3d59ede7ddaad66222fb4336a6bacf',
+            'x86_64-apple-darwin':           '1bf5a7ecf6468ce1bf9fe49c8083b3f648b40c16fbfb7539d106fe28eb0e792e'
+        },
         '1.48.0': {
             'x86_64-unknown-linux-gnu':      '950420a35b2dd9091f1b93a9ccd5abc026ca7112e667f246b1deb79204e2038b',
             'powerpc64le-unknown-linux-gnu': 'e6457a0214f3b1b04bd5b2618bba7e3826e254216420dede2971b571a1c13bb1',
