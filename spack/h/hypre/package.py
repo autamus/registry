@@ -20,12 +20,29 @@ class Hypre(Package, CudaPackage):
     maintainers = ['ulrikeyang', 'osborn9', 'balay']
 
     test_requires_compiler = True
-    version('2.20.0', sha256='5be77b28ddf945c92cde4b52a272d16fb5e9a7dc05e714fc5765948cba802c01', url='https://github.com/hypre-space/hypre/archive/v2.20.0.tar.gz')
-
     # Versions 2.13.0 and later can be patched to build shared
     # libraries on Darwin; the patch for this capability does not
     # apply to version 2.12.1 and earlier due to changes in the build system
     # between versions 2.12.1 and 2.13.0.
+    version('develop', branch='master')
+    version('2.20.0', sha256='5be77b28ddf945c92cde4b52a272d16fb5e9a7dc05e714fc5765948cba802c01', url='https://github.com/hypre-space/hypre/archive/v2.20.0.tar.gz')
+    version('2.19.0', sha256='466b19d8a86c69989a237f6f03f20d35c0c63a818776d2cd071b0a084cffeba5')
+    version('2.18.2', sha256='28007b5b584eaf9397f933032d8367788707a2d356d78e47b99e551ab10cc76a')
+    version('2.18.1', sha256='220f9c4ad024e815add8dad8950eaa2d8f4f231104788cf2a3c5d9da8f94ba6e')
+    version('2.18.0', sha256='62591ac69f9cc9728bd6d952b65bcadd2dfe52b521081612609804a413f49b07')
+    version('2.17.0', sha256='4674f938743aa29eb4d775211b13b089b9de84bfe5e9ea00c7d8782ed84a46d7')
+    version('2.16.0', sha256='33f8a27041e697343b820d0426e74694670f955e21bbf3fcb07ee95b22c59e90')
+    version('2.15.1', sha256='50d0c0c86b4baad227aa9bdfda4297acafc64c3c7256c27351f8bae1ae6f2402')
+    version('2.15.0', sha256='2d597472b473964210ca9368b2cb027510fff4fa2193a8c04445e2ed4ff63045')
+    version('2.14.0', sha256='705a0c67c68936bb011c50e7aa8d7d8b9693665a9709b584275ec3782e03ee8c')
+    version('2.13.0', sha256='3979602689c3b6e491c7cf4b219cfe96df5a6cd69a5302ccaa8a95ab19064bad')
+    version('2.12.1', sha256='824841a60b14167a0051b68fdb4e362e0207282348128c9d0ca0fd2c9848785c')
+    version('2.11.2', sha256='25b6c1226411593f71bb5cf3891431afaa8c3fd487bdfe4faeeb55c6fdfb269e')
+    version('2.11.1', sha256='6bb2ff565ff694596d0e94d0a75f0c3a2cd6715b8b7652bc71feb8698554db93')
+    version('2.10.1', sha256='a4a9df645ebdc11e86221b794b276d1e17974887ead161d5050aaf0b43bb183a')
+    version('2.10.0b', sha256='b55dbdc692afe5a00490d1ea1c38dd908dae244f7bdd7faaf711680059824c11')
+    version('xsdk-0.2.0', tag='xsdk-0.2.0', git='https://github.com/LLNL/hypre.git')
+    
     variant('shared', default=(sys.platform != 'darwin'),
             description="Build shared library (disables static library)")
     # Use internal SuperLU routines for FEI - version 2.12.1 and below
