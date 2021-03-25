@@ -15,7 +15,7 @@ class Rust(Package):
     """
 
     homepage = "https://www.rust-lang.org"
-    url      = "https://static.rust-lang.org/dist/rustc-1.50.0-src.tar.gz"
+    url      = "https://static.rust-lang.org/dist/rustc-1.51.0-src.tar.gz"
     git = "https://github.com/rust-lang/rust.git"
 
     maintainers = ["AndrewGaspar"]
@@ -69,7 +69,8 @@ class Rust(Package):
     depends_on('libgit2')
 
     # Pre-release Versions
-    version('master', branch='master', submodules=True)
+    version('N/A', branch='master', submodules=True)
+    version('1.51.0', sha256='7a6b9bafc8b3d81bbc566e7c0d1f17c9f499fd22b95142f7ea3a8e4d1f9eb847', url='https://static.rust-lang.org/dist/rustc-1.51.0-src.tar.gz')
     version('1.50.0', sha256='95978f8d02bb6175ae3238930baf03563c240aedf9a70bebdc3eaa2a8c3c5a5e', url='https://static.rust-lang.org/dist/rustc-1.50.0-src.tar.gz')
     version('1.48.0', sha256='0e763e6db47d5d6f91583284d2f989eacc49b84794d1443355b85c58d67ae43b')
     version('1.47.0', sha256='3185df064c4747f2c8b9bb8c4468edd58ff4ad6d07880c879ac1b173b768d81d')
