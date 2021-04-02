@@ -33,11 +33,12 @@ from spack import *
 class Go(Package):
     """The golang compiler and build environment"""
     homepage = "https://golang.org"
-    url      = "https://dl.google.com/go/go1.16.2.src.tar.gz"
+    url      = "https://dl.google.com/go/go1.16.3.src.tar.gz"
     git      = "https://go.googlesource.com/go.git"
 
     extendable = True
     executables = ['^go$']
+    version('1.16.3', sha256='b298d29de9236ca47a023e382313bcc2d2eed31dfa706b60a04103ce83a71a25', url='https://dl.google.com/go/go1.16.3.src.tar.gz')
     version('1.16.2', sha256='7688063d55656105898f323d90a79a39c378d86fe89ae192eb3b7fc46347c95a')
     version('1.16.0', sha256='7688063d55656105898f323d90a79a39c378d86fe89ae192eb3b7fc46347c95a')
     version('1.15.8', sha256='540c0ab7781084d124991321ed1458e479982de94454a98afab6acadf38497c2')
