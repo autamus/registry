@@ -69,7 +69,7 @@ class Rust(Package):
     depends_on('libgit2')
 
     # Pre-release Versions
-    version('N/A', branch='master', submodules=True)
+    version('master', branch='master', submodules=True)
     version('1.51.0', sha256='7a6b9bafc8b3d81bbc566e7c0d1f17c9f499fd22b95142f7ea3a8e4d1f9eb847', url='https://static.rust-lang.org/dist/rustc-1.51.0-src.tar.gz')
     version('1.50.0', sha256='95978f8d02bb6175ae3238930baf03563c240aedf9a70bebdc3eaa2a8c3c5a5e', url='https://static.rust-lang.org/dist/rustc-1.50.0-src.tar.gz')
     version('1.48.0', sha256='0e763e6db47d5d6f91583284d2f989eacc49b84794d1443355b85c58d67ae43b')
