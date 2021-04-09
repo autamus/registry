@@ -11,8 +11,9 @@ class Ffmpeg(AutotoolsPackage):
     convert and stream audio and video."""
 
     homepage = "https://ffmpeg.org"
-    url      = "https://github.com/FFmpeg/FFmpeg/archive/n4.3.2.tar.gz"
+    url      = "https://github.com/FFmpeg/FFmpeg/archive/n4.5-dev.tar.gz"
 
+    version('4.5', sha256='31a3aae03382068addd8a699c56dfccd2aea00d420bb2af812a9578a761a4ba3', url='https://github.com/FFmpeg/FFmpeg/archive/n4.5-dev.tar.gz')
     version('4.3.2', sha256='d9b650a5aaaa6e2907a5578135b715ca532896fe9a6dc7a823c25f89790ff1ed', url='https://github.com/FFmpeg/FFmpeg/archive/n4.3.2.tar.gz')
     version('4.2.2', sha256='b620d187c26f76ca19e74210a0336c3b8380b97730df5cdf45f3e69e89000e5c')
     version('4.1.1', sha256='0cb40e3b8acaccd0ecb38aa863f66f0c6e02406246556c2992f67bf650fab058')
