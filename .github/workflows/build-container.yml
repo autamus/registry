@@ -21,7 +21,7 @@ jobs:
           fetch-depth: '0'
         
       - name: Run Build Config
-        uses: autamus/buildconfig@v0.0.2
+        uses: autamus/buildconfig@v0.0.5
         with:
           parsers_loaded: spack
           packages_path: spack/
@@ -52,13 +52,16 @@ jobs:
           echo "    os_packages:" >> spack.yaml
           echo "      build:" >> spack.yaml
           echo "        - python3-dev" >> spack.yaml
+          echo "      final:" >> spack.yaml
+          echo "        - ca-certificates" >> spack.yaml
           echo "    strip: false" >> spack.yaml
           cat spack.yaml
           spack containerize > Dockerfile
           
       - name: Change Entrypoint of Containers
         run : |
-          sed -i 's/\"-l\"/\"-l\", \"-c\"/g' Dockerfile
+          sed -i 's/\"-l\".*]/\"-l\", \"-c\"]/g' Dockerfile
+          sed -i '/^.*ubuntu:18.04.*/a \\ \nENV PATH=/opt/view/bin:/opt/spack/bin:$PATH' Dockerfile
           
       - name: Upload Dockerfile
         uses: actions/upload-artifact@v2
