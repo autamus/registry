@@ -28,7 +28,7 @@ class Augustus(MakefilePackage):
     depends_on('python', when='@3.3.1:', type=('build', 'run'))
     depends_on('bamtools')
     depends_on('gsl')
-    depends_on('boost@1.70.0')
+    depends_on('boost@1.70.0+cxxstd=14')
     depends_on('zlib')
     depends_on('htslib')
     depends_on('bcftools')
