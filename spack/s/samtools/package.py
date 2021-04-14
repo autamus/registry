@@ -14,6 +14,7 @@ class Samtools(Package):
     homepage = "http://www.htslib.org"
     url      = "https://github.com/samtools/samtools/releases/download/1.11/samtools-1.11.tar.bz2"
 
+    version('1.12', sha256='6da3770563b1c545ca8bdf78cf535e6d1753d6383983c7929245d5dba2902dcb', url='https://github.com/samtools/samtools/releases/download/1.12/samtools-1.12.tar.bz2')
     version('1.11', sha256='e283cebd6c1c49f0cf8a3ca4fa56e1d651496b4d2e42f80ab75991a9ece4e5b6', url='https://github.com/samtools/samtools/releases/download/1.11/samtools-1.11.tar.bz2')
     version('1.10', sha256='7b9ec5f05d61ec17bd9a82927e45d8ef37f813f79eb03fe06c88377f1bd03585')
     version('1.9', sha256='083f688d7070082411c72c27372104ed472ed7a620591d06f928e653ebc23482')
@@ -33,6 +34,10 @@ class Samtools(Package):
     depends_on('python', type='run')
 
     # htslib became standalone @1.3.1, must use corresponding version
+<<<<<<< HEAD
+=======
+    depends_on('htslib@1.12', when='@1.12')
+>>>>>>> main
     depends_on('htslib@1.11', when='@1.11')
     depends_on('htslib@1.10.2', when='@1.10')
     depends_on('htslib@1.9', when='@1.9')
