@@ -13,13 +13,13 @@ class Grass(AutotoolsPackage):
        graphics and maps production, spatial modeling, and visualization."""
 
     homepage = "https://grass.osgeo.org"
-    url      = "https://grass.osgeo.org/grass78/source/grass-7.8.2.tar.gz"
+    url      = "https://grass.osgeo.org/grass78/source/grass-7.8.5.tar.gz"
     list_url = "https://grass.osgeo.org/download/software/sources/"
     git      = "https://github.com/OSGeo/grass.git"
 
     maintainers = ['adamjstewart']
-
-    version('master', branch='master')
+    version('N/A', branch='master')
+    version('7.8.5', sha256='a359bb665524ecccb643335d70f5436b1c84ffb6a0e428b78dffebacd983ff37', url='https://grass.osgeo.org/grass78/source/grass-7.8.5.tar.gz')
     version('7.8.2', sha256='33576f7078f805b39ca20c2fa416ac79c64260c0581072a6dc7d813f53aa9abb')
     version('7.8.1', sha256='6ae578fd67afcce7abec4ba4505dcc55b3d2dfe0ca46b99d966cb148c654abb3')
     version('7.8.0', sha256='4b1192294e959ffd962282344e4ff325c4472f73abe605e246a1da3beda7ccfa')
