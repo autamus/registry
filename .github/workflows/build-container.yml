@@ -74,6 +74,7 @@ jobs:
       - spack-containerize
       - build-config
     runs-on: self-hosted
+    timeout-minutes: 720
     steps:
       - name: Checkout
         uses: actions/checkout@v2
