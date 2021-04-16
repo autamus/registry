@@ -10,8 +10,9 @@ class Bart(MakefilePackage, CudaPackage):
     """BART: Toolbox for Computational Magnetic Resonance Imaging"""
 
     homepage = "https://mrirecon.github.io/bart/"
-    url      = "https://github.com/mrirecon/bart/archive/v0.5.00.tar.gz"
+    url      = "https://github.com/mrirecon/bart/archive/v0.7.00.tar.gz"
 
+    version('0.7.00', sha256='a16afc4b632c703d95b5c34e47acd82fafc19f51f9aff442373eecfef08bfc41', url='https://github.com/mrirecon/bart/archive/v0.7.00.tar.gz')
     version('0.6.00', sha256='dbbd33d1e3ed3324fe21f90a3b62cb51765fe369f21df100b46a32004928f18d')
     version('0.5.00', sha256='30eedcda0f0ef3808157542e0d67df5be49ee41e4f41487af5c850632788f643')
 
