@@ -66,6 +66,7 @@ class Paraview(CMakePackage, CudaPackage):
     conflicts('~opengl2', when='@5.5:')
 
     depends_on('cmake@3.3:', type='build')
+    depends_on('gcc+binutils', type='build')
 
     # Workaround for
     # adding the following to your packages.yaml
