@@ -10,9 +10,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
 
       - name: Run Binoc Scan
-        uses: autamus/binoc@v1.0.0
+        uses: autamus/binoc@v0.2.0
         with:
           git_token: ${{ secrets.BINOC_GIT_TOKEN }}
           git_username: ${{ secrets.BINOC_GIT_USERNAME }}
