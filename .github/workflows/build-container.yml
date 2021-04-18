@@ -73,8 +73,7 @@ jobs:
     needs:
       - spack-containerize
       - build-config
-    runs-on: self-hosted
-    timeout-minutes: 720
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
