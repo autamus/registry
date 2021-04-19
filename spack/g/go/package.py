@@ -33,7 +33,7 @@ from spack import *
 class Go(Package):
     """The golang compiler and build environment"""
     homepage = "https://golang.org"
-    url      = "https://dl.google.com/go/go1.16.3.src.tar.gz"
+    url      = "https://dl.google.com/go/go1.14.15.src.tar.gz"
     git      = "https://go.googlesource.com/go.git"
 
     extendable = True
@@ -48,6 +48,7 @@ class Go(Package):
     version('1.15.2', sha256='28bf9d0bcde251011caae230a4a05d917b172ea203f2a62f2c2f9533589d4b4d')
     version('1.15.1', sha256='d3743752a421881b5cc007c76b4b68becc3ad053e61275567edab1c99e154d30')
     version('1.15.0', sha256='69438f7ed4f532154ffaf878f3dfd83747e7a00b70b3556eddabf7aaee28ac3a')
+    version('1.14.15', sha256='7ed13b2209e54a451835997f78035530b331c5b6943cdcd68a3d815fdc009149', url='https://dl.google.com/go/go1.14.15.src.tar.gz')
     version('1.14.14', sha256='6204bf32f58fae0853f47f1bd0c51d9e0ac11f1ffb406bed07a0a8b016c8a76f')
     version('1.14.13', sha256='ba1d244c6b5c0ed04aa0d7856d06aceb89ed31b895de6ff783efb1cc8ab6b177')
     version('1.14.12', sha256='b34f4b7ad799eab4c1a52bdef253602ce957125a512f5a1b28dce43c6841b971')
