@@ -26,7 +26,7 @@ class Perl(Package):  # Perl doesn't use Autotools, it should subclass Package
 
     homepage = "http://www.perl.org"
     # .URL must remain http:// so Spack can bootstrap curl
-    url = "http://www.cpan.org/src/5.0/perl-5.24.1.tar.gz"
+    url      = "http://search.cpan.org/CPAN/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7044.tar.gz"
 
     executables = [r'^perl(-?\d+.*)?$']
 
@@ -35,18 +35,14 @@ class Perl(Package):  # Perl doesn't use Autotools, it should subclass Package
 
     # Development releases (odd numbers)
     version('5.33.3', sha256='4f4ba0aceb932e6cf7c05674d05e51ef759d1c97f0685dee65a8f3d190f737cd')
+    version('5.32.1', sha256='03b693901cd8ae807231b1787798cf1f2e0b8a56218d07b7da44f784a7caeb2c')
+    version('5.32.0', sha256='efeb1ce1f10824190ad1cadbcccf6fdb8a5d37007d0100d2d9ae5f2b5900c0b4')
     version('5.31.7', sha256='d05c4e72128f95ef6ffad42728ecbbd0d9437290bf0f88268b51af011f26b57d')
     version('5.31.4', sha256='418a7e6fe6485cc713a86d1227ef112f0bb3f80322e3b715ffe42851d97804a5')
-
-    # Maintenance releases (even numbers, recommended)
-    version('5.32.1', sha256='03b693901cd8ae807231b1787798cf1f2e0b8a56218d07b7da44f784a7caeb2c', preferred=True)
-    version('5.32.0', sha256='efeb1ce1f10824190ad1cadbcccf6fdb8a5d37007d0100d2d9ae5f2b5900c0b4')
     version('5.30.3', sha256='32e04c8bb7b1aecb2742a7f7ac0eabac100f38247352a73ad7fa104e39e7406f')
     version('5.30.2', sha256='66db7df8a91979eb576fac91743644da878244cf8ee152f02cd6f5cd7a731689')
     version('5.30.1', sha256='bf3d25571ff1ee94186177c2cdef87867fd6a14aa5a84f0b1fb7bf798f42f964')
     version('5.30.0', sha256='851213c754d98ccff042caa40ba7a796b2cee88c5325f121be5cbb61bbf975f2')
-
-    # End of life releases
     version('5.28.0', sha256='7e929f64d4cb0e9d1159d4a59fc89394e27fa1f7004d0836ca0d514685406ea8')
     version('5.26.2', sha256='572f9cea625d6062f8a63b5cee9d3ee840800a001d2bb201a41b9a177ab7f70d')
     version('5.24.1', sha256='e6c185c9b09bdb3f1b13f678999050c639859a7ef39c8cad418448075f5918af')
@@ -58,6 +54,7 @@ class Perl(Package):  # Perl doesn't use Autotools, it should subclass Package
     version('5.20.3', sha256='3524e3a76b71650ab2f794fd68e45c366ec375786d2ad2dca767da424bbb9b4a')
     version('5.18.4', sha256='01a4e11a9a34616396c4a77b3cef51f76a297e1a2c2c490ae6138bf0351eb29f')
     version('5.16.3', sha256='69cf08dca0565cec2c5c6c2f24b87f986220462556376275e5431cc2204dedb6')
+    version('1.7044', sha256='9b60767fe40752ef7a9d3f13f19060a63389a5c23acc3e9827e19b75500f81f3', url='http://search.cpan.org/CPAN/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7044.tar.gz')
 
     extendable = True
 
