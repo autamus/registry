@@ -20,16 +20,16 @@ class Gnuplot(AutotoolsPackage):
 
     """
     homepage = "http://www.gnuplot.info"
-    url      = "http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.0.6/gnuplot-5.0.6.tar.gz"
+    url      = "http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.2.1/gnuplot-5.2.1.tar.gz"
 
     # There is a conflict in term.h between gnuplot and ncurses, which is a
     # dependency of readline. Fix it with a small patch
     patch('term_include.patch')
-
     version('5.2.8', sha256='60a6764ccf404a1668c140f11cc1f699290ab70daa1151bb58fed6139a28ac37')
     version('5.2.7', sha256='97fe503ff3b2e356fe2ae32203fc7fd2cf9cef1f46b60fe46dc501a228b9f4ed')
     version('5.2.5', sha256='039db2cce62ddcfd31a6696fe576f4224b3bc3f919e66191dfe2cdb058475caa')
     version('5.2.2', sha256='a416d22f02bdf3873ef82c5eb7f8e94146795811ef808e12b035ada88ef7b1a1')
+    version('5.2.1', sha256='7dc6b0fb6b321691e89e344387310a8e6614f0c4e5eb15a90dc742a53d807e88', url='http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.2.1/gnuplot-5.2.1.tar.gz')
     version('5.2.0', sha256='7dfe6425a1a6b9349b1fb42dae46b2e52833b13e807a78a613024d6a99541e43')
     version('5.0.7', sha256='0ad760ff013b4a9cf29853fa9b50c50030a33cd8fb86220a23abb466655136fc')
     version('5.0.6', sha256='5bbe4713e555c2e103b7d4ffd45fca69551fff09cf5c3f9cb17428aaacc9b460')
