@@ -10,9 +10,10 @@ class LpSolve(Package):
     """lp_solve is a Mixed Integer Linear Programming (MILP) solver."""
 
     homepage = "https://sourceforge.net/projects/lpsolve/"
-    url      = "https://sourceforge.net/projects/lpsolve/files/lpsolve/5.5.2.11/lp_solve_5.5.2.11_source.tar.gz"
+    url      = "https://sourceforge.net/projects/lpsolve/files/lpsolve/5.5.2.9/lp_solve_5.5.2.9_source.tar.gz"
 
     version('5.5.2.11', sha256='6d4abff5cc6aaa933ae8e6c17a226df0fc0b671c438f69715d41d09fe81f902f')
+    version('5.5.2.9', sha256='67cd78b6dc78d63b43dd4bcc1214b829af03f7f7c11265795b516f8b4807686a', url='https://sourceforge.net/projects/lpsolve/files/lpsolve/5.5.2.9/lp_solve_5.5.2.9_source.tar.gz')
 
     def install(self, spec, prefix):
         with working_dir('lpsolve55'):
