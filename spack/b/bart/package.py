@@ -22,7 +22,7 @@ class Bart(MakefilePackage, CudaPackage):
           when='@0.5.00')
 
     # patch to fix Makefile for openblas and cuda
-    patch('Makefile.patch')
+    patch('Makefile.patch', when='@0.5.00-0.6.00')
 
     # patch to set path to bart
     patch('bart_path-0.5.00.patch', when='@0.5.00')
