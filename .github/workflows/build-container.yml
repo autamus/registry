@@ -50,10 +50,10 @@ jobs:
           echo "  view: true" >> spack.yaml
           echo "  packages:" >> spack.yaml
           echo "    all:" >> spack.yaml
-          echo "      target: x86_64" >> spack.yaml
+          echo "      target: [x86_64]" >> spack.yaml
           echo "  config:" >> spack.yaml
           echo "    compiler:" >> spack.yaml
-          echo "      target: [x86_64]" >> spack.yaml
+          echo "      target: x86_64" >> spack.yaml
           echo "    install_missing_compilers: true >> spack.yaml"
           echo "  container:" >> spack.yaml
           echo "    os_packages:" >> spack.yaml
