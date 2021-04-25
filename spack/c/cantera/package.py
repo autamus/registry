@@ -34,6 +34,7 @@ class Cantera(SConsPackage):
     depends_on('sundials@:3.1.2+lapack', when='+sundials')  # must be compiled with -fPIC
     depends_on('blas')
     depends_on('lapack')
+    depends_on('yaml-cpp')
 
     # Python module dependencies
     extends('python', when='+python')
