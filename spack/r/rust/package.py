@@ -64,6 +64,7 @@ class Rust(Package):
     depends_on('cmake@3.4.3:', type='build')
     depends_on('ninja', when='@1.48.0:', type='build')
     depends_on('pkgconfig', type='build')
+    depends_on('gcc')
     depends_on('openssl')
     depends_on('libssh2')
     depends_on('libgit2')
