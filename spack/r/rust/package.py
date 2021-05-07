@@ -119,6 +119,13 @@ class Rust(Package):
     # This dictionary contains a version: hash dictionary for each supported
     # Rust target.
     rust_releases = {
+        '1.52.0': {
+            'x86_64-unknown-linux-gnu':      'c082b5eea81206ff207407b41a10348282362dd972e93c86b054952b66ca0e2b',
+            'powerpc64le-unknown-linux-gnu': '5145c4592a6fbc74f3a8c74cfed961d0ea2028740c841a6f2e9f4e0b5cd96858',
+            'aarch64-unknown-linux-gnu':     'd37152f9da1074cfa84407ff183ce0dfb298f2e474d5b0ae3a3065d44c442770',
+            'x86_64-apple-darwin':           '18906ea9ef6d7afc493f0c4403ece9fb466b0971db8d37d837864676ef9b077b',
+            'aarch64-apple-darwin':          '3aa15896dd85d1746a23af1b9764b55edb3659823ec20f306a5f30271c6bac5d'
+        },
         '1.50.0': {
             'x86_64-unknown-linux-gnu':      'fa889b53918980aea2dea42bfae4e858dcb2104c6fdca6e4fe359f3a49767701',
             'powerpc64le-unknown-linux-gnu': 'e0472589d3f9ba7ebf27f033af320e0d5cfb70222955bd8ed73ce2c9a70ae535',
@@ -378,6 +385,9 @@ class Rust(Package):
         ],
         'x86_64-apple-darwin': [
             {'platform': 'darwin', 'target': 'x86_64:'}
+        ],
+        'aarch64-apple-darwin': [
+            {'platform': 'darwin', 'target': 'aarch64:'}
         ]
     }
 
@@ -451,8 +461,11 @@ class Rust(Package):
                 return 'powerpc64le-unknown-linux-gnu'
             elif 'target=aarch64:' in self.spec:
                 return 'aarch64-unknown-linux-gnu'
-        elif 'platform=darwin target=x86_64:' in self.spec:
-            return 'x86_64-apple-darwin'
+        elif 'platform=darwin' in self.spec:
+            if 'target=x86_64:' in self.spec:
+                return 'x86_64-apple-darwin'
+            elif 'target=aarch64:' in self.spec:
+                return 'aarch64-apple-darwin'
 
         raise InstallError(
             "rust is not supported for '{0}'".format(
