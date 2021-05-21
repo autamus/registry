@@ -33,6 +33,7 @@ jobs:
       - build-config
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         container: ${{ fromJson(needs.build-config.outputs.containers) }}
     name: Build ${{ matrix.container }}
