@@ -22,7 +22,7 @@ jobs:
         
       - name: Run Build Config
         id: config
-        uses: autamus/buildconfig@master
+        uses: autamus/buildconfig@main
         with:
           parsers_loaded: spack
           packages_path: spack/
@@ -42,7 +42,7 @@ jobs:
       
       - name: Builder
         id: builder
-        uses: autamus/builder@master
+        uses: autamus/builder@main
         with:
           containers_current: ${{ matrix.container }}
           parsers_loaded: spack
