@@ -12,8 +12,10 @@ class Mothur(MakefilePackage):
        community."""
 
     homepage = "https://github.com/mothur/mothur"
-    url      = "https://github.com/mothur/mothur/archive/v.1.45.0.tar.gz"
+    url      = "https://github.com/mothur/mothur/archive/v1.45.3.tar.gz"
 
+    version('1.45.3', sha256='865317569260ab7fa8fde2cbe00bcc05e6402dcd97267615d863ede145f381e8', url='https://github.com/mothur/mothur/archive/v1.45.3.tar.gz')
+    version('1.45.1', sha256='5e568f03cabb35adc53b053ee62ef8c4b3198b33bf6933144b9568aba38af6ff', url='https://github.com/mothur/mothur/archive/v1.45.1.tar.gz')
     version('1.45.0', sha256='b22e1b4ba8686f4e77e6a55a30a1a1cb6490b651398b0756d84f80314f55aa70', url='https://github.com/mothur/mothur/archive/v.1.45.0.tar.gz')
     version('1.44.3', sha256='a9825ccbb7f60b527f63c16e07f9dd45373bdc8ee65c8f2f0b45f8b2113b2e6f', url='https://github.com/mothur/mothur/archive/v1.44.3.tar.gz')
     version('1.43.0', sha256='12ccd95a85bec3bb1564b8feabd244ea85413973740754803d01fc71ecb0a2c1')

@@ -10,10 +10,10 @@ on:
       
 jobs:
   build-config:
+    name: Build Config
     runs-on: ubuntu-latest
     outputs:
-      package: ${{ steps.save-output.outputs.package }}
-      version: ${{ steps.save-output.outputs.version }}
+      containers: ${{ steps.config.outputs.matrix }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,69 +21,37 @@ jobs:
           fetch-depth: '0'
         
       - name: Run Build Config
-        uses: autamus/buildconfig@v0.0.5
+        id: config
+        uses: autamus/buildconfig@main
         with:
           parsers_loaded: spack
           packages_path: spack/
-      
-      - name: Save Package Output
-        id: save-output
-        run: |
-          echo "::set-output name=package::$(cat package)"
-          echo "::set-output name=version::$(cat version)"
-  spack-containerize:
-    runs-on: ubuntu-latest
-    needs: build-config
-    container:
-      image: spack/ubuntu-bionic
-      options: --entrypoint /bin/bash
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Generate Spack Environment Dockerfile
-        run: |
-          export PATH=/opt/spack/bin:$PATH
-          package=${{needs.build-config.outputs.package}}
-          echo "spack:" > spack.yaml
-          echo "  specs: [\"$package\"]" >> spack.yaml
-          echo "  view: true" >> spack.yaml
-          echo "  container:" >> spack.yaml
-          echo "    os_packages:" >> spack.yaml
-          echo "      build:" >> spack.yaml
-          echo "        - python3-dev" >> spack.yaml
-          echo "      final:" >> spack.yaml
-          echo "        - ca-certificates" >> spack.yaml
-          echo "    strip: false" >> spack.yaml
-          cat spack.yaml
-          spack containerize > Dockerfile
-          
-      - name: Change Entrypoint of Containers
-        run : |
-          sed -i 's/\"-l\".*]/\"-l\", \"-c\"]/g' Dockerfile
-          sed -i '/^.*ubuntu:18.04.*/a \\ \nENV PATH=/opt/view/bin:/opt/spack/bin:$PATH' Dockerfile
-          
-      - name: Upload Dockerfile
-        uses: actions/upload-artifact@v2
-        with:
-          name: Dockerfile
-          path: Dockerfile
+          containers_path: containers/
            
   build-container:
     needs:
-      - spack-containerize
       - build-config
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        container: ${{ fromJson(needs.build-config.outputs.containers) }}
+    name: Build ${{ matrix.container }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-      - name: Download Dockerfile
-        uses: actions/download-artifact@v2
+      
+      - name: Builder
+        id: builder
+        uses: autamus/builder@main
         with:
-          name: Dockerfile
+          containers_current: ${{ matrix.container }}
+          parsers_loaded: spack
+          packages_path: spack/
+          containers_path: containers/
 
       - name: Import Registry to Repo
+        if: ${{ steps.builder.outputs.type }} == 'Spack'
         run: |
           mkdir repo
           for file in spack/*/*; do
@@ -95,11 +63,13 @@ jobs:
           
       - name: Build Container for Package
         run: |
-          package=${{needs.build-config.outputs.package}}
-          version=${{needs.build-config.outputs.version}}
+          package=${{ steps.builder.outputs.container }}
+          version=${{ steps.builder.outputs.version }}
           docker build -t ghcr.io/autamus/$package:latest \
                        -t ghcr.io/autamus/$package:$version .
+
       - name: Docker Login
+        # Don't log into registry on pull request
         if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v1 
         with:

@@ -35,17 +35,13 @@ class Ascent(Package, CudaPackage):
 
     homepage = "https://github.com/Alpine-DAV/ascent"
     git      = "https://github.com/Alpine-DAV/ascent.git"
-    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.5.1/ascent-v0.5.1-src-with-blt.tar.gz"
+    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz"
 
     maintainers = ['cyrush']
-
-    version('develop',
-            branch='develop',
-            submodules=True)
-    version('0.6.0',
-            tag='v0.6.0',
-            submodules=True,
-            preferred=True)
+    version('develop', branch='develop', submodules=True)
+    version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
+    version('0.7.0', submodules=True)
+    version('0.6.0', submodules=True)
 
     ###########################################################################
     # package variants
@@ -82,9 +78,8 @@ class Ascent(Package, CudaPackage):
     # package dependencies
     ###########################################################################
 
-    # use cmake 3.14, newest that provides proper cuda support
-    # and we have seen errors with cuda in 3.15
-    depends_on("cmake@3.14.1:3.14.99", type='build')
+    # Certain CMake versions have been found to break for our use cases
+    depends_on("cmake@3.14.1:3.14.99,3.18.2:", type='build')
     depends_on("conduit~python", when="~python")
     depends_on("conduit+python", when="+python+shared")
     depends_on("conduit~shared~python", when="~shared")
@@ -111,8 +106,8 @@ class Ascent(Package, CudaPackage):
     #######################
     # BabelFlow
     #######################
-    depends_on('babelflow@develop', when='+babelflow+mpi')
-    depends_on('parallelmergetree@develop', when='+babelflow+mpi')
+    depends_on('babelflow', when='+babelflow+mpi')
+    depends_on('parallelmergetree', when='+babelflow+mpi')
 
     #############################
     # TPLs for Runtime Features
@@ -139,28 +134,34 @@ class Ascent(Package, CudaPackage):
 
     # devil ray variants with mpi
     # we have to specify both because mfem makes us
-    depends_on("dray@develop+mpi~test~utils+shared+cuda",        when="+dray+mpi+cuda+shared")
-    depends_on("dray@develop+mpi~test~utils+shared+openmp",      when="+dray+mpi+openmp+shared")
-    depends_on("dray@develop+mpi~test~utils+shared~openmp~cuda", when="+dray+mpi~openmp~cuda+shared")
+    depends_on("dray+mpi~test~utils+shared+cuda",        when="+dray+mpi+cuda+shared")
+    depends_on("dray+mpi~test~utils+shared+openmp",      when="+dray+mpi+openmp+shared")
+    depends_on("dray+mpi~test~utils+shared~openmp~cuda", when="+dray+mpi~openmp~cuda+shared")
 
-    depends_on("dray@develop+mpi~test~utils~shared+cuda",        when="+dray+mpi+cuda~shared")
-    depends_on("dray@develop+mpi~test~utils~shared+openmp",      when="+dray+mpi+openmp~shared")
-    depends_on("dray@develop+mpi~test~utils~shared~openmp~cuda", when="+dray+mpi~openmp~cuda~shared")
+    depends_on("dray+mpi~test~utils~shared+cuda",        when="+dray+mpi+cuda~shared")
+    depends_on("dray+mpi~test~utils~shared+openmp",      when="+dray+mpi+openmp~shared")
+    depends_on("dray+mpi~test~utils~shared~openmp~cuda", when="+dray+mpi~openmp~cuda~shared")
 
     # devil ray variants without mpi
-    depends_on("dray@develop~mpi~test~utils+shared+cuda",        when="+dray~mpi+cuda+shared")
-    depends_on("dray@develop~mpi~test~utils+shared+openmp",      when="+dray~mpi+openmp+shared")
-    depends_on("dray@develop~mpi~test~utils+shared~openmp~cuda", when="+dray~mpi~openmp~cuda+shared")
+    depends_on("dray~mpi~test~utils+shared+cuda",        when="+dray~mpi+cuda+shared")
+    depends_on("dray~mpi~test~utils+shared+openmp",      when="+dray~mpi+openmp+shared")
+    depends_on("dray~mpi~test~utils+shared~openmp~cuda", when="+dray~mpi~openmp~cuda+shared")
 
-    depends_on("dray@develop~mpi~test~utils~shared+cuda",        when="+dray~mpi+cuda~shared")
-    depends_on("dray@develop~mpi~test~utils~shared+openmp",      when="+dray~mpi+openmp~shared")
-    depends_on("dray@develop~mpi~test~utils~shared~openmp~cuda", when="+dray~mpi~openmp~cuda~shared")
+    depends_on("dray~mpi~test~utils~shared+cuda",        when="+dray~mpi+cuda~shared")
+    depends_on("dray~mpi~test~utils~shared+openmp",      when="+dray~mpi+openmp~shared")
+    depends_on("dray~mpi~test~utils~shared~openmp~cuda", when="+dray~mpi~openmp~cuda~shared")
 
     #######################
     # Documentation related
     #######################
     depends_on("py-sphinx", when="+python+doc", type='build')
     depends_on("py-sphinx-rtd-theme", when="+python+doc", type='build')
+
+    ###########
+    # Conflicts
+    ###########
+    conflicts("+shared", when="+cuda",
+              msg="Ascent needs to be built with ~shared for CUDA builds.")
 
     def setup_build_environment(self, env):
         env.set('CTEST_OUTPUT_ON_FAILURE', '1')
@@ -518,4 +519,4 @@ class Ascent(Package, CudaPackage):
         host_cfg_fname = os.path.abspath(host_cfg_fname)
         tty.info("spack generated conduit host-config file: " + host_cfg_fname)
         return host_cfg_fname
-
+    
