@@ -1,3 +1,9 @@
 spack:
   specs: 
     - rust
+  container:
+    strip: false
+    os_packages:
+      final:
+        - ca-certificates
+        - gcc
