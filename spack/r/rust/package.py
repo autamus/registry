@@ -385,6 +385,9 @@ class Rust(Package):
         ],
         'x86_64-apple-darwin': [
             {'platform': 'darwin', 'target': 'x86_64:'}
+        ],
+        'aarch64-apple-darwin': [
+            {'platform': 'darwin', 'target': 'aarch64:'}
         ]
     }
 
@@ -458,8 +461,11 @@ class Rust(Package):
                 return 'powerpc64le-unknown-linux-gnu'
             elif 'target=aarch64:' in self.spec:
                 return 'aarch64-unknown-linux-gnu'
-        elif 'platform=darwin target=x86_64:' in self.spec:
-            return 'x86_64-apple-darwin'
+        elif 'platform=darwin' in self.spec:
+            if 'target=x86_64:' in self.spec:
+                return 'x86_64-apple-darwin'
+            elif 'target=aarch64:' in self.spec:
+                return 'aarch64-apple-darwin'
 
         raise InstallError(
             "rust is not supported for '{0}'".format(
