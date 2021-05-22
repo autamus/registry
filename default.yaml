@@ -7,3 +7,5 @@ spack:
     compiler:
       target: x86_64
     install_missing_compilers: true
+  container:
+    strip: true
