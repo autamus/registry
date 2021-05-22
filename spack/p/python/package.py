@@ -17,7 +17,7 @@ from spack import *
 
 
 class Python(AutotoolsPackage):
-    """The Python programming language.""" 
+    """The Python programming language."""
 
     homepage = "https://www.python.org/"
     url      = "https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz"
