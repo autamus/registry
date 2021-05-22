@@ -1,3 +1,5 @@
 spack:
   specs: 
     - singularity
+  container:
+    strip: false
