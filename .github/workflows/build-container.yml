@@ -59,7 +59,6 @@ jobs:
                 cp -r "$file/" "repo/"
             fi
           done
-          sed -i '/^.*as builder.*/a \\nADD repo /opt/spack/var/spack/repos/builtin/packages/' Dockerfile
           
       - name: Build Container for Package
         run: |
