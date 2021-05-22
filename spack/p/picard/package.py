@@ -21,7 +21,7 @@ class Picard(Package):
 
     # They started distributing a single jar file at v2.6.0, prior to
     # that it was a .zip file with multiple .jar and .so files
-    version('2.25.5', sha256='f7fa9784b84d384abfcbd77076f5ceab7b2797dc863ac35fd41470daa3efe3a5', url='https://github.com/broadinstitute/picard/releases/download/2.25.5/picard.jar')
+    version('2.25.5', sha256='f7fa9784b84d384abfcbd77076f5ceab7b2797dc863ac35fd41470daa3efe3a5', expand=False, url='https://github.com/broadinstitute/picard/releases/download/2.25.5/picard.jar')
     version('2.25.4', sha256='c3ac14471e48e28e24201ae5515f828ffa45db7ac3e37173251a672845b4a9b3', expand=False, url='https://github.com/broadinstitute/picard/releases/download/2.25.4/picard.jar')
     version('2.25.3', sha256='1d4dbfcb36d23fde11f173ab0de8a99835e04161efb04f246bbcbfc0bee3b493', expand=False, url='https://github.com/broadinstitute/picard/releases/download/2.25.3/picard.jar')
     version('2.25.2', sha256='aead4baf12028a5d2b9ef70e00c93e4bba8f6bece0b9a7104b89b842a8e0326f', expand=False, url='https://github.com/broadinstitute/picard/releases/download/2.25.2/picard.jar')
