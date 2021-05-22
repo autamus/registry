@@ -9,7 +9,7 @@ import os.path
 import re
 
 
-class Picard(Package):
+class Picard(Package): 
     """Picard is a set of command line tools for manipulating high-throughput
        sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.
     """
