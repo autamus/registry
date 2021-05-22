@@ -2,6 +2,7 @@ spack:
   specs: 
     - go
   container:
+    strip: false
     os_packages:
       final:
         - ca-certificates
