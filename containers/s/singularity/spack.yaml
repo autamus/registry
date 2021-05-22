@@ -3,3 +3,6 @@ spack:
     - singularity
   container:
     strip: false
+    os_packages:
+      final:
+        - ca-certificates
