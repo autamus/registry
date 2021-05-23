@@ -1,7 +1,7 @@
 ### GENERAL SETTINGS ###
 
 # Site settings
-title: Singularity HPC Library
+title: Autamus Docker Library
 description: "Library of Singularity containers for HPC"
 baseurl: "/registry" #important: start with /
 url: ""
