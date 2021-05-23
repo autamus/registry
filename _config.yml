@@ -1,9 +1,9 @@
 ### GENERAL SETTINGS ###
 
 # Site settings
-title: Singularity HPC Library
-description: "Library of Singularity containers for HPC"
-baseurl: "/singularity-hpc" #important: start with /
+title: Autamus Registry
+description: "Library of Docker containers"
+baseurl: "/registry" #important: start with /
 url: ""
 
 # Build settings
@@ -35,9 +35,9 @@ defaults:
       layout: "page"
 
 # Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
-github: https://github.com/singularityhub
-repo: https://github.com/singularityhub/singularity-hpc
-docs: https://singularity-hpc.readthedocs.io/
+github: https://github.com/autamus
+repo: https://github.com/autamus/registry
+docs: https://autamus.io/
 maintainer: "@vsoch"
 maintainer_url: https://github.com/vsoch
 social:
