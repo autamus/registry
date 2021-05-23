@@ -988,8 +988,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border: 1px solid #E3E3E3;
 }
 .has-error .form-control:focus + .input-group-addon {
-  border-color: #31363C;
-  color: #31363C;
+  border-color: #FF3B30;
+  color: #FF3B30;
 }
 .has-success .form-control:focus + .input-group-addon {
   border-color: #05AE0E;
@@ -1141,7 +1141,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border-radius: 30px !important;
 }
 .fresh-table a {
-  color: #709EE4;
+  color: #E53129;
   font-weight: bold;
 }
 .fresh-table a:hover, .fresh-table a:focus {
@@ -1250,17 +1250,17 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .fresh-table.toolbar-color-red .fixed-table-toolbar {
   background: #ED362C;
-  background: -moz-radial-gradient(center, ellipse cover,  #31363C 0%, #ED362C 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #C51E1B 0%, #ED362C 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,  #31363C), color-stop(100%, #ED362C));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #C51E1B), color-stop(100%, #ED362C));
   /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  #31363C 0%, #ED362C 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #C51E1B 0%, #ED362C 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  #31363C 0%, #ED362C 100%);
+  background: -o-radial-gradient(center, ellipse cover, #C51E1B 0%, #ED362C 100%);
   /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  #31363C 0%, #ED362C 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #C51E1B 0%, #ED362C 100%);
   /* IE10+ */
-  background: radial-gradient(ellipse at center,  #31363C 0%, #ED362C 100%);
+  background: radial-gradient(ellipse at center, #C51E1B 0%, #ED362C 100%);
   /* W3C */
   background-size: 250% 250%;
 }
@@ -1569,17 +1569,17 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .fresh-table.full-color-red {
   background: #ED362C;
-  background: -moz-radial-gradient(center, ellipse cover,  #31363C 0%, #ED362C 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #C51E1B 0%, #ED362C 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,  #31363C), color-stop(100%, #ED362C));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #C51E1B), color-stop(100%, #ED362C));
   /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  #31363C 0%, #ED362C 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #C51E1B 0%, #ED362C 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  #31363C 0%, #ED362C 100%);
+  background: -o-radial-gradient(center, ellipse cover, #C51E1B 0%, #ED362C 100%);
   /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  #31363C 0%, #ED362C 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #C51E1B 0%, #ED362C 100%);
   /* IE10+ */
-  background: radial-gradient(ellipse at center,  #31363C 0%, #ED362C 100%);
+  background: radial-gradient(ellipse at center, #C51E1B 0%, #ED362C 100%);
   /* W3C */
   background-size: 250% 250%;
 }
