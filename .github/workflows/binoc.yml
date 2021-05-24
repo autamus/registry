@@ -3,8 +3,6 @@ name: "Automatic Binoc Scan"
 on:
   schedule:
     - cron: '0 14 * * *'
-  push:
-    branches: main
     
 jobs:
   auto-scan:
