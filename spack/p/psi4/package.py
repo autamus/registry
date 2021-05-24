@@ -27,7 +27,7 @@ class Psi4(CMakePackage):
     depends_on('boost+chrono+filesystem+python+regex+serialization+system+timer+thread')
     depends_on('python@3.6.0:3.6.13')
     depends_on('cmake@3.3:', type='build')
-    depends_on('py-numpy', type=('build', 'run'))
+    depends_on('py-numpy@1.19', type=('build', 'run'))
 
     # Optional dependencies
     # TODO: add packages for these
