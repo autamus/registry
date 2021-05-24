@@ -10,7 +10,7 @@ import os
 class Psi4(CMakePackage):
     """Psi4 is an open-source suite of ab initio quantum chemistry
     programs designed for efficient, high-accuracy simulations of
-    a variety of molecular properties."""
+    a variety of molecular properties.""" 
 
     homepage = "http://www.psicode.org/"
     url = "https://github.com/psi4/psi4/archive/v1.3.2.tar.gz"
