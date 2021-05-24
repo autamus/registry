@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '0 14 * * *'
   push:
-    branches: update/Binoc
+    branches: main
     
 jobs:
   auto-scan:
