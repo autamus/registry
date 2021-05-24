@@ -81,3 +81,13 @@ jobs:
         # Don't push build on pull request
         if: github.ref == 'refs/heads/main'
         run: docker push --all-tags ghcr.io/autamus/${{steps.builder.outputs.container}}
+      
+      - name: Build Summary
+        run: |
+          container=${{steps.builder.outputs.container}}
+          raw=$(docker system df -v | grep "ghcr.io/autamus/$container")
+          raw_data=($raw)
+          echo "[[ Build Summary: $container ]]"
+          echo "URL:      ${raw_data[0]}"
+          echo "Version:  ${raw_data[1]}"
+          echo "Size:     ${raw_data[6]}"
