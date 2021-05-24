@@ -1,6 +1,6 @@
 # Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
-#
+# 
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 from six import iteritems
 
@@ -15,7 +15,7 @@ class Rust(Package):
     """
 
     homepage = "https://www.rust-lang.org"
-    url      = "https://static.rust-lang.org/dist/rustc-1.50.0-src.tar.gz"
+    url      = "https://static.rust-lang.org/dist/rustc-1.52.1-src.tar.gz"
     git = "https://github.com/rust-lang/rust.git"
 
     maintainers = ["AndrewGaspar"]
@@ -70,6 +70,7 @@ class Rust(Package):
 
     # Pre-release Versions
     version('master', branch='master', submodules=True)
+    version('1.52.1', sha256='3a6f23a26d0e8f87abbfbf32c5cd7daa0c0b71d0986abefc56b9a5fbfbd0bf98', url='https://static.rust-lang.org/dist/rustc-1.52.1-src.tar.gz')
     version('1.50.0', sha256='95978f8d02bb6175ae3238930baf03563c240aedf9a70bebdc3eaa2a8c3c5a5e', url='https://static.rust-lang.org/dist/rustc-1.50.0-src.tar.gz')
     version('1.48.0', sha256='0e763e6db47d5d6f91583284d2f989eacc49b84794d1443355b85c58d67ae43b')
     version('1.47.0', sha256='3185df064c4747f2c8b9bb8c4468edd58ff4ad6d07880c879ac1b173b768d81d')
@@ -118,6 +119,13 @@ class Rust(Package):
     # This dictionary contains a version: hash dictionary for each supported
     # Rust target.
     rust_releases = {
+        '1.52.1': {
+            'x86_64-unknown-linux-gnu':      '617ae06e212cb65bc4abbf52b158b0328b9f1a6c2f822c27c95b274d6fbc0627',
+            'powerpc64le-unknown-linux-gnu': 'f258c5d7d6d9022108672b7383412d930a5f59d7644d148e413c3ab0ae45604f',
+            'aarch64-unknown-linux-gnu':     '17d9aa7bb73b819ef70d81013498727b7218533ee6cf3bd802c4eac29137fbcb',
+            'x86_64-apple-darwin':           'cfa73228ea54e2c94f75d1b142ea41444c463f4ee8562a3eca1b11b2fe8af95a',
+            'aarch64-apple-darwin':          '217e9723f828c5359467d69b363a342d702bdcbbcc4107be907e6bc4531f4912'
+        },
         '1.50.0': {
             'x86_64-unknown-linux-gnu':      'fa889b53918980aea2dea42bfae4e858dcb2104c6fdca6e4fe359f3a49767701',
             'powerpc64le-unknown-linux-gnu': 'e0472589d3f9ba7ebf27f033af320e0d5cfb70222955bd8ed73ce2c9a70ae535',
@@ -377,6 +385,9 @@ class Rust(Package):
         ],
         'x86_64-apple-darwin': [
             {'platform': 'darwin', 'target': 'x86_64:'}
+        ],
+        'aarch64-apple-darwin': [
+            {'platform': 'darwin', 'target': 'aarch64:'}
         ]
     }
 
@@ -450,8 +461,11 @@ class Rust(Package):
                 return 'powerpc64le-unknown-linux-gnu'
             elif 'target=aarch64:' in self.spec:
                 return 'aarch64-unknown-linux-gnu'
-        elif 'platform=darwin target=x86_64:' in self.spec:
-            return 'x86_64-apple-darwin'
+        elif 'platform=darwin' in self.spec:
+            if 'target=x86_64:' in self.spec:
+                return 'x86_64-apple-darwin'
+            elif 'target=aarch64:' in self.spec:
+                return 'aarch64-apple-darwin'
 
         raise InstallError(
             "rust is not supported for '{0}'".format(
