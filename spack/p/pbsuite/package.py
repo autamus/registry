@@ -18,7 +18,7 @@ class Pbsuite(Package, SourceforgePackage):
 
     depends_on('blasr@1.3.1:', type='run')
     depends_on('python@2.7:', type='run')
-    depends_on('py-networkx@1.1:', type='run')
+    depends_on('py-networkx@1.1:2.2', type='run')
 
     def install(self, spec, prefix):
         install_tree('pbsuite', prefix.pbsuite)
