@@ -11,7 +11,7 @@ class Sqlite(AutotoolsPackage):
        link the SQLite3 library can have SQL database access without
        running a separate RDBMS process.
     """
-    homepage = "https://www.sqlite.org"    url      = "https://sqlite.org/contrib/download/extension-functions.c/download/extension-functions.c?get=25"
+    homepage = "https://www.sqlite.org"
 
     version('3.35.5', sha256='f52b72a5c319c3e516ed7a92e123139a6e87af08a2dc43d7757724f6132e6db0')
     version('3.35.4', sha256='7771525dff0185bfe9638ccce23faa0e1451757ddbda5a6c853bb80b923a512d')
