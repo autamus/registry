@@ -38,7 +38,7 @@ defaults:
 github: https://github.com/autamus
 repo: https://github.com/autamus/registry
 docs: https://autamus.io/docs/
-maintainer: "@vsoch"
+maintainer: "@autamus"
 maintainer_url: https://github.com/autamus
 
 about: "Autamus is a Semi-Autonomous Build System for Scientific Containers."

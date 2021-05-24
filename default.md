@@ -1,33 +1,28 @@
 ---
 layout: container
-name:  "ghcr.io/autamus/ffmpeg"
-maintainer: "@vsoch"
-github: "https://github.com/singularityhub/singularity-hpc/blob/main/registry/ghcr.io/autamus/ffmpeg/container.yaml"
-updated_at: "2021-05-23 12:56:58.780736"
-container_url: "https://github.com/orgs/autamus/packages/container/package/ffmpeg"
-aliases:
- - "ffmpeg"
-
- - "ffprobe"
+name:  "{{.Name}}"
+github: "https://github.com/autamus/registry/blob/main/containers/{{.First}}/{{.LCName}}/spack.yaml"
+updated_at: "{{.Time}}"
+container_url: "ghcr.io/autamus/{{.LCName}}"
 
 versions:
- - "4.5"
+ - "4.8.0-fastcgi"
  - "latest"
-description: "FFmpeg is a free and open-source software project consisting of a large suite of libraries and programs for handling video, audio, and other multimedia files and streams."
+description: "Database management in a single PHP file."
 ---
 
-This module is a singularity container wrapper for ghcr.io/autamus/ffmpeg.
-FFmpeg is a free and open-source software project consisting of a large suite of libraries and programs for handling video, audio, and other multimedia files and streams.
+This module is a singularity container wrapper for adminer.
+Database management in a single PHP file.
 After [installing shpc](#install) you will want to install this container module:
 
 ```bash
-$ shpc install ghcr.io/autamus/ffmpeg
+$ shpc install adminer
 ```
 
 Or a specific version:
 
 ```bash
-$ shpc install ghcr.io/autamus/ffmpeg:4.5
+$ shpc install adminer:4.8.0-fastcgi
 ```
 
 And then you can tell lmod about your modules folder:
@@ -39,8 +34,8 @@ $ module use ./modules
 And load the module, and ask for help, or similar.
 
 ```bash
-$ module load ghcr.io/autamus/ffmpeg/4.5
-$ module help ghcr.io/autamus/ffmpeg/4.5
+$ module load adminer/4.8.0-fastcgi
+$ module help adminer/4.8.0-fastcgi
 ```
 
 You can use tab for auto-completion of module names or commands that are provided.
@@ -51,50 +46,43 @@ You can use tab for auto-completion of module names or commands that are provide
 
 When you install this module, you'll be able to load it to make the following commands accessible:
 
-#### ghcr.io-autamus-ffmpeg-run:
+#### adminer-run:
 
 ```bash
 $ singularity run <container>
 ```
 
-#### ghcr.io-autamus-ffmpeg-shell:
+#### adminer-shell:
 
 ```bash
 $ singularity shell -s /bin/bash <container>
 ```
 
-#### ghcr.io-autamus-ffmpeg-exec:
+#### adminer-exec:
 
 ```bash
 $ singularity exec -s /bin/bash <container> "$@"
 ```
 
-#### ghcr.io-autamus-ffmpeg-inspect-runscript:
+#### adminer-inspect-runscript:
 
 ```bash
 $ singularity inspect -r <container>
 ```
 
-#### ghcr.io-autamus-ffmpeg-inspect-deffile:
+#### adminer-inspect-deffile:
 
 ```bash
 $ singularity inspect -d <container>
 ```
 
 
-#### ffmpeg
-       
+
+#### adminer
+
 ```bash
-$ singularity exec <container> /opt/view/bin/ffmpeg
+$ singularity run <container>
 ```
-
-
-#### ffprobe
-       
-```bash
-$ singularity exec <container> /opt/view/bin/ffprobe
-```
-
 
 
 In the above, the `<container>` directive will reference an actual container provided
