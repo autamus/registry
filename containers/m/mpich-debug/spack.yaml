@@ -1,0 +1,5 @@
+spack:
+  specs: 
+    - mpich
+  container:
+    strip: false

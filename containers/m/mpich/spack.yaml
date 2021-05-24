@@ -1,5 +1,3 @@
 spack:
   specs: 
-    - mpich+debug
-  container:
-    strip: false
+    - mpich
