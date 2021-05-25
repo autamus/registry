@@ -18,7 +18,7 @@ docker pull ghcr.io/autamus/{{toHypen .Name}}:latest
 or to download a specific version of {{.Name}} run,
 
 ```bash
-docker pull ghcr.io/autamus/{{toHypen .Name}}:{{.Versions[0]}}
+docker pull ghcr.io/autamus/{{toHypen .Name}}:{{index .Versions 0}}
 ```
 ### Run
 To run the container as an application run,
