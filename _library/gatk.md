@@ -4,7 +4,7 @@ name: gatk
 github: https://github.com/autamus/registry/blob/main/containers/g/gatk/spack.yaml
 versions:
 - 4.2.0.0
-updated_at: 2021-05-25T17:09:23.305836858Z
+updated_at: 2021-05-25T19:44:18.346491343Z
 size: 681MB
 description: ' Genome Analysis Toolkit Variant Discovery in High-Throughput Sequencing
   Data '

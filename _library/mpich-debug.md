@@ -4,7 +4,7 @@ name: mpich-debug
 github: https://github.com/autamus/registry/blob/main/containers/m/mpich-debug/spack.yaml
 versions:
 - 3.4.1
-updated_at: 2021-05-25T18:09:38.20855594Z
+updated_at: 2021-05-25T20:19:49.60341442Z
 size: 44MB
 description: MPICH is a high performance and widely portable implementation of the
   Message Passing Interface (MPI) standard.

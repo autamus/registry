@@ -4,7 +4,7 @@ name: dyninst
 github: https://github.com/autamus/registry/blob/main/containers/d/dyninst/spack.yaml
 versions:
 - 11.0.0
-updated_at: 2021-05-25T17:52:09.691103305Z
+updated_at: 2021-05-25T20:20:14.141693287Z
 size: 70MB
 description: API for dynamic binary instrumentation. Modify programs while they are
   executing without recompiling, re-linking, or re-executing.

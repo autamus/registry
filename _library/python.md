@@ -3,8 +3,8 @@ layout: container
 name: python
 github: https://github.com/autamus/registry/blob/main/containers/p/python/spack.yaml
 versions:
-- 3.9.2
-updated_at: 2021-05-25T18:22:33.021760844Z
+- 3.9.5
+updated_at: 2021-05-25T20:41:58.959364408Z
 size: 83MB
 description: The Python programming language.
 container_url: https://github.com/orgs/autamus/packages/container/package/python
@@ -30,7 +30,7 @@ docker pull ghcr.io/autamus/python:latest
 or to download a specific version of python run,
 
 ```bash
-docker pull ghcr.io/autamus/python:3.9.2
+docker pull ghcr.io/autamus/python:3.9.5
 ```
 ### Run
 To run the container as an application run,

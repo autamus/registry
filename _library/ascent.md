@@ -4,7 +4,7 @@ name: ascent
 github: https://github.com/autamus/registry/blob/main/containers/a/ascent/spack.yaml
 versions:
 - 0.7.1
-updated_at: 2021-05-25T17:56:03.413779023Z
+updated_at: 2021-05-25T20:09:24.32810213Z
 size: 97MB
 description: Ascent is an open source many-core capable lightweight in situ visualization
   and analysis infrastructure for multi-physics HPC simulations.
