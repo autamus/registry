@@ -6,6 +6,3 @@ permalink: /
 ---
 
 {% include table.html %}
-
-<div>
-</div><br>
