@@ -1,5 +1,5 @@
 ---
-title: Singularity HPC Registry
+title: Autamus Container Library
 layout: none
 ---
 
@@ -8,6 +8,7 @@ layout: none
         "name": "{{ entry.name }}",
         "github": "{{ entry.github }}",
         "size": "{{entry.size}}",
+        "updated_at": "{{entry.updated_at}}",
         "versions": [{% for version in entry.versions %}"{{ version }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]
   }{% if forloop.last %}{% else %},{% endif %}
 {% endfor %}]
