@@ -7,12 +7,12 @@ RUN mkdir /opt/spack-environment \
 &&   echo "  - mpich@3.4" \
 &&   echo "  - mpich@3.3.2" \
 &&   echo "  - mpich@3.3.1" \
-&&   echo "  - mpich@3.2" \
-&&   echo "  - mpich@3.1.4" \
-&&   echo "  - mpich@3.1.3" \
-&&   echo "  - mpich@3.1.1" \
-&&   echo "  - mpich@3.1" \
-&&   echo "  - mpich@3.0.4" \
+&&   echo "  - mpich@3.2 device=ch3" \
+&&   echo "  - mpich@3.1.4 device=ch3" \
+&&   echo "  - mpich@3.1.3 device=ch3" \
+&&   echo "  - mpich@3.1.1 device=ch3" \
+&&   echo "  - mpich@3.1 device=ch3" \
+&&   echo "  - mpich@3.0.4 device=ch3" \
 &&   echo "  config:" \
 &&   echo "    install_tree: /opt/software" \
 &&   echo "  view: /opt/view") > /opt/spack-environment/spack.yaml
