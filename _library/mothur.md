@@ -4,7 +4,7 @@ name: mothur
 github: https://github.com/autamus/registry/blob/main/containers/m/mothur/spack.yaml
 versions:
 - 1.45.3
-updated_at: 2021-05-25T17:46:36.383649433Z
+updated_at: 2021-05-25T19:52:04.768036094Z
 size: 74MB
 description: This project seeks to develop a single piece of open-source, expandable
   software to fill the bioinformatics needs of the microbial ecology community.
