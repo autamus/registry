@@ -13,7 +13,6 @@ RUN mkdir /opt/spack-environment \
 &&   echo "  - mpich+debug@3.1.1" \
 &&   echo "  - mpich+debug@3.1" \
 &&   echo "  - mpich+debug@3.0.4" \
-&&   echo "  concretization: together" \
 &&   echo "  config:" \
 &&   echo "    install_tree: /opt/software" \
 &&   echo "  view: /opt/view") > /opt/spack-environment/spack.yaml
