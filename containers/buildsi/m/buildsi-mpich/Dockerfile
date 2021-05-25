@@ -1,6 +1,6 @@
 FROM spack/ubuntu-bionic:latest
 
-RUN spack install mpich@3.4.1
+RUN spack install mpich@3.4.1 \
 &&  spack install mpich@3.3.2 \
 &&  spack install mpich@3.1.4 device=ch3 netmod=tcp \
 &&  spack install mpich@3.0.4 device=ch3 netmod=tcp
