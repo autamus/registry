@@ -85,9 +85,14 @@ jobs:
       - name: Build Summary
         run: |
           container=${{steps.builder.outputs.container}}
-          raw=$(docker system df -v | grep "ghcr.io/autamus/$container")
+          docker image save "ghcr.io/autamus/$container" > container
+          tar -czvf container.tar.gz container > /dev/null
+          docker=$(docker system df -v | grep "ghcr.io/autamus/$container")
+          docker_data=($docker)
+          raw=$(ls -lh --block-size=MB | grep "container.tar.gz")
           raw_data=($raw)
           echo "[[ Build Summary: $container ]]"
-          echo "URL:      ${raw_data[0]}"
-          echo "Version:  ${raw_data[1]}"
-          echo "Size:     ${raw_data[6]}"
+          echo "URL              :  ${docker_data[0]}"
+          echo "Version          :  ${docker_data[1]}"
+          echo "Raw Size         :  ${docker_data[6]}"
+          echo "Compressed Size  :  ${raw_data[4]}"
