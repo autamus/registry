@@ -17,6 +17,7 @@
              <th data-field="container" data-sortable="true">container</th>
              <th data-field="description" data-sortable="true">description</th>
              <th data-field="size" data-sortable="false">size</th>
+             <th data-field="published date" data-sortable="false">size</th>
           </thead>
               <tbody>
                 {% for entry in site.library %}
@@ -28,6 +29,7 @@
                     <td><a href="{{ site.baseurl }}/r/{{ entry.name | replace: '/', '-'}}/">{{ entry.name }}</a></td>
                     <td>{% if entry.description %}{{ entry.description }}{% endif %}</td>
                     <td>{% if entry.size %}{{ entry.size }}{% endif %}</td>
+                    <td>{% if entry.date %}{{ entry.date }}{% endif %}</td>
                 </tr>
                 {% endfor %}
               </tbody>
