@@ -1,108 +1,44 @@
----
-layout: container
-name:  "{{.Name}}"
-github: "https://github.com/autamus/registry/blob/main/containers/{{.First}}/{{.LCName}}/spack.yaml"
-updated_at: "{{.Time}}"
-container_url: "ghcr.io/autamus/{{.LCName}}"
-
-versions:
- - "4.8.0-fastcgi"
- - "latest"
-description: "Database management in a single PHP file."
----
-
-This module is a singularity container wrapper for adminer.
-Database management in a single PHP file.
-After [installing shpc](#install) you will want to install this container module:
-
-```bash
-$ shpc install adminer
+# {{.Name}}
+```bash 
+Download        : docker pull ghcr.io/autamus/{{toHypen .Name}}
+Compressed Size : {{.Size}}
 ```
 
-Or a specific version:
+## Description
+{{.Description}}
+
+## Usage
+### Pull (Download)
+To download the latest version of {{.Name}} run,
 
 ```bash
-$ shpc install adminer:4.8.0-fastcgi
+docker pull ghcr.io/autamus/{{toHypen .Name}}:latest
 ```
 
-And then you can tell lmod about your modules folder:
+or to download a specific version of {{.Name}} run,
 
 ```bash
-$ module use ./modules
+docker pull ghcr.io/autamus/{{toHypen .Name}}:{{.Versions[0]}}
 ```
-
-And load the module, and ask for help, or similar.
-
+### Run
+To run the container as an application run,
 ```bash
-$ module load adminer/4.8.0-fastcgi
-$ module help adminer/4.8.0-fastcgi
+docker run --rm ghcr.io/autamus/{{toHypen .Name}} {{toHypen .Name}} --version
 ```
 
-You can use tab for auto-completion of module names or commands that are provided.
-
-<br>
-
-### Commands
-
-When you install this module, you'll be able to load it to make the following commands accessible:
-
-#### adminer-run:
-
+or to run the container in an interactive session run,
 ```bash
-$ singularity run <container>
+docker run -it --rm ghcr.io/autamus/{{toHypen .Name}} bash
 ```
 
-#### adminer-shell:
+### Mounting volumes between the container and your machine
+To access files from your machine within the {{.Name}} container you'll have to mount them using the `-v external/path:internal/path` option.
 
+For example,
 ```bash
-$ singularity shell -s /bin/bash <container>
+docker run -v ~/Documents/Data:/Data ghcr.io/autamus/{{toHypen .Name}} {{toHypen .Name}} /Data/myData.csv
 ```
+which will mount the `~/Documents/Data` directory on your computer to the `/Data` directory within the container.
 
-#### adminer-exec:
-
-```bash
-$ singularity exec -s /bin/bash <container> "$@"
-```
-
-#### adminer-inspect-runscript:
-
-```bash
-$ singularity inspect -r <container>
-```
-
-#### adminer-inspect-deffile:
-
-```bash
-$ singularity inspect -d <container>
-```
-
-
-
-#### adminer
-
-```bash
-$ singularity run <container>
-```
-
-
-In the above, the `<container>` directive will reference an actual container provided
-by the module, for the version you have chosen to load. Note that although a container
-might provide custom commands, every container exposes unique exec, shell, run, and
-inspect aliases. For each of the above, you can export:
-
- - SINGULARITY_OPTS: to define custom options for singularity (e.g., --debug)
- - SINGULARITY_COMMAND_OPTS: to define custom options for the command (e.g., -b)
-
-<br>
-  
-### Install
-
-You can install shpc locally (for yourself or your user base) as follows:
-
-```bash
-$ git clone https://github.com/singularityhub/singularity-hpc
-$ cd singularity-hpc
-$ pip install -e .
-```
-
-Have any questions, or want to request a new module or version? [ask for help!](https://github.com/singularityhub/singularity-hpc/issues)
+## HPC
+If you're looking to use this container in an HPC environment we recommend using [Singularity-HPC](https://singularity-hpc.readthedocs.io) to use the container just as any other module on the cluser. Check out the SHPC {{.Name}} container [here](https://singularityhub.github.io/singularity-hpc/r/ghcr.io-autamus-{{toHypen .Name}}/).
