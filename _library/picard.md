@@ -54,4 +54,4 @@ docker run -v ~/Documents/Data:/Data ghcr.io/autamus/picard picard /Data/myData.
 which will mount the `~/Documents/Data` directory on your computer to the `/Data` directory within the container.
 
 ## HPC
-If you're looking to use this container in an HPC environment we recommend using [Singularity-HPC](https://singularity-hpc.readthedocs.io) to use the container just as any other module on the cluser. Check out the SHPC picard container [here](https://singularityhub.github.io/singularity-hpc/r/ghcr.io-autamus-picard/).
+If you're looking to use this container in an HPC environment we recommend using [Singularity-HPC](https://singularity-hpc.readthedocs.io) to use the container just as any other module on the cluster. Check out the SHPC picard container [here](https://singularityhub.github.io/singularity-hpc/r/ghcr.io-autamus-picard/).
