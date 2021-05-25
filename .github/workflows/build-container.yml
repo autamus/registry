@@ -81,8 +81,9 @@ jobs:
         # Don't push build on pull request
         if: github.ref == 'refs/heads/main'
         run: docker push --all-tags ghcr.io/autamus/${{steps.builder.outputs.container}}
-      
+
       - name: Build Summary
+        id: summary
         run: |
           container=${{steps.builder.outputs.container}}
           docker image save "ghcr.io/autamus/$container" > container
@@ -97,3 +98,17 @@ jobs:
           echo "Raw Size         :  ${docker_data[6]}"
           echo "Compressed Size  :  ${raw_data[4]}"
           echo "::set-output name=size::${raw_data[4]}"
+
+      - name: Librarian Run
+        # if: github.ref == 'refs/heads/main'
+        uses: autamus/librarian@main
+        with:
+          git_token: ${{ secrets.BINOC_GIT_TOKEN }}
+          git_username: ${{ secrets.BINOC_GIT_USERNAME }}
+          git_email: ${{ secrets.BINOC_GIT_EMAIL }}
+          git_name: ${{ secrets.BINOC_GIT_NAME }}
+          containers_current: ${{ steps.builder.outputs.container }}
+          containers_version: ${{ steps.builder.outputs.version }}
+          containers_size: ${{ steps.summary.outputs.size }}
+          template_path: default.md
+
