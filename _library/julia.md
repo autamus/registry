@@ -4,7 +4,7 @@ name: julia
 github: https://github.com/autamus/registry/blob/main/containers/j/julia/spack.yaml
 versions:
 - 1.6.1
-updated_at: 2021-05-25T17:54:58.690374179Z
+updated_at: 2021-05-25T20:10:33.180845842Z
 size: 103MB
 description: 'The Julia Language: A fresh approach to technical computing'
 container_url: https://github.com/orgs/autamus/packages/container/package/julia
