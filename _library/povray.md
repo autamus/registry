@@ -4,7 +4,7 @@ name: povray
 github: https://github.com/autamus/registry/blob/main/containers/p/povray/spack.yaml
 versions:
 - 3.7.0.8
-updated_at: 2021-05-25T19:00:15.551496268Z
+updated_at: 2021-05-25T21:12:15.454116462Z
 size: 1145MB
 description: 'The Persistence of Vision Raytracer creates three-dimensional, photo-realistic
   images using a rendering technique called ray-tracing. It reads in a text file containing
