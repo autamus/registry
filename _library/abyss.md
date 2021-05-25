@@ -3,9 +3,9 @@ layout: container
 name: abyss
 github: https://github.com/autamus/registry/blob/main/containers/a/abyss/spack.yaml
 versions:
-- latest
-updated_at: 2021-05-24T22:47:55.38862-07:00
-size: 500MB
+- 2.3.1
+updated_at: 2021-05-25T10:40:11.634194967Z
+size: 79MB
 description: ABySS is a de novo, parallel, paired-end sequence assembler that is designed
   for short reads. The single-processor version is useful for assembling genomes up
   to 100 Mbases in size.
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/abyss
 # abyss
 ```bash 
 Download        : docker pull ghcr.io/autamus/abyss
-Compressed Size : 500MB
+Compressed Size : 79MB
 ```
 
 ## Description
@@ -32,7 +32,7 @@ docker pull ghcr.io/autamus/abyss:latest
 or to download a specific version of abyss run,
 
 ```bash
-docker pull ghcr.io/autamus/abyss:latest
+docker pull ghcr.io/autamus/abyss:2.3.1
 ```
 ### Run
 To run the container as an application run,
