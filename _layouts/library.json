@@ -7,7 +7,7 @@ layout: none
     {
         "name": "{{ entry.name }}",
         "github": "{{ entry.github }}",
-        "size": "{{entry.size}}"
+        "size": "{{entry.size}}",
         "versions": [{% for version in entry.versions %}"{{ version }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]
   }{% if forloop.last %}{% else %},{% endif %}
 {% endfor %}]
