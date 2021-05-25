@@ -62,6 +62,12 @@ jobs:
                 cp -r "$file/" "repo/"
             fi
           done
+      
+      - name: Upload Dockerfile
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{steps.builder.outputs.container}}.Dockerfile
+          path: Dockerfile
           
       - name: Build Container for Package
         run: |
@@ -102,7 +108,7 @@ jobs:
           echo "::set-output name=size::${raw_data[4]}"
 
       - name: Librarian Run
-        # if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: autamus/librarian@main
         with:
           git_token: ${{ secrets.BINOC_GIT_TOKEN }}
