@@ -4,7 +4,7 @@ name: addrwatch
 github: https://github.com/autamus/registry/blob/main/containers/a/addrwatch/spack.yaml
 versions:
 - 1.0.2
-updated_at: 2021-05-26T01:44:00.186634337Z
+updated_at: 2021-05-26T02:58:32.123571425Z
 size: 31MB
 description: A tool similar to arpwatch for IPv4/IPv6 and ethernet address pairing
   monitoring.
