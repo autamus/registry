@@ -4,7 +4,7 @@ name: proj
 github: https://github.com/autamus/registry/blob/main/containers/p/proj/spack.yaml
 versions:
 - 7.2.1
-updated_at: 2021-05-25T18:38:03.662857376Z
+updated_at: 2021-05-26T07:44:29.75717521Z
 size: 47MB
 description: PROJ is a generic coordinate transformation software, that transforms
   geospatial coordinates from one coordinate reference system (CRS) to another. This
