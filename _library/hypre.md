@@ -3,8 +3,8 @@ layout: container
 name: hypre
 github: https://github.com/autamus/registry/blob/main/containers/h/hypre/spack.yaml
 versions:
-- 2.20.0
-updated_at: 2021-05-26T07:07:14.579134432Z
+- 2.21.0
+updated_at: 2021-05-26T19:44:49.925599187Z
 size: 75MB
 description: Hypre is a library of high performance preconditioners that features
   parallel multigrid methods for both structured and unstructured grid problems.
@@ -31,7 +31,7 @@ docker pull ghcr.io/autamus/hypre:latest
 or to download a specific version of hypre run,
 
 ```bash
-docker pull ghcr.io/autamus/hypre:2.20.0
+docker pull ghcr.io/autamus/hypre:2.21.0
 ```
 ### Run
 To run the container as an application run,
