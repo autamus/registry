@@ -1,3 +1,8 @@
 spack:
   specs: 
     - gcc
+    - binutils
+  container:
+    os_packages:
+      final:
+        - libc
