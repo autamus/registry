@@ -4,9 +4,13 @@ name: r
 github: https://github.com/autamus/registry/blob/main/containers/r/r/spack.yaml
 versions:
 - 4.0.4
-updated_at: 2021-05-26T16:02:09.250061192Z
+updated_at: 2021-05-26T17:11:20.09883308Z
 size: 273MB
-description: .format( cargo=join_path(boot_bin, 'cargo
+description: 'R is GNU S, a freely available language and environment for statistical
+  computing and graphics which provides a wide variety of statistical and graphical
+  techniques: linear and nonlinear modelling, statistical tests, time series analysis,
+  classification, clustering, etc. Please consult the R project homepage for further
+  information.'
 container_url: https://github.com/orgs/autamus/packages/container/package/r
 
 ---
@@ -17,7 +21,7 @@ Compressed Size : 273MB
 ```
 
 ## Description
-.format( cargo=join_path(boot_bin, 'cargo
+R is GNU S, a freely available language and environment for statistical computing and graphics which provides a wide variety of statistical and graphical techniques: linear and nonlinear modelling, statistical tests, time series analysis, classification, clustering, etc. Please consult the R project homepage for further information.
 
 ## Usage
 ### Pull (Download)
