@@ -4,7 +4,7 @@ name: sundials
 github: https://github.com/autamus/registry/blob/main/containers/s/sundials/spack.yaml
 versions:
 - 5.7.0
-updated_at: 2021-05-26T08:22:55.219656057Z
+updated_at: 2021-05-26T19:37:43.560667877Z
 size: 76MB
 description: SUNDIALS (SUite of Nonlinear and DIfferential/ALgebraic equation Solvers
 container_url: https://github.com/orgs/autamus/packages/container/package/sundials
