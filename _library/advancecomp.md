@@ -4,7 +4,7 @@ name: advancecomp
 github: https://github.com/autamus/registry/blob/main/containers/a/advancecomp/spack.yaml
 versions:
 - "2.1"
-updated_at: 2021-05-26T01:35:38.112105169Z
+updated_at: 2021-05-26T02:51:10.615926712Z
 size: 27MB
 description: AdvanceCOMP contains recompression utilities for your .zip archives,
   .png images, .mng video clips and .gz files.
