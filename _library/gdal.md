@@ -3,8 +3,8 @@ layout: container
 name: gdal
 github: https://github.com/autamus/registry/blob/main/containers/g/gdal/spack.yaml
 versions:
-- 3.2.1
-updated_at: 2021-05-25T20:32:45.67295768Z
+- 3.3.0
+updated_at: 2021-05-26T20:16:58.552011094Z
 size: 58MB
 description: 'GDAL (Geospatial Data Abstraction Library) is a translator library for
   raster and vector geospatial data formats that is released under an X/MIT style
@@ -35,7 +35,7 @@ docker pull ghcr.io/autamus/gdal:latest
 or to download a specific version of gdal run,
 
 ```bash
-docker pull ghcr.io/autamus/gdal:3.2.1
+docker pull ghcr.io/autamus/gdal:3.3.0
 ```
 ### Run
 To run the container as an application run,
