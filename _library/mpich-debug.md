@@ -3,22 +3,21 @@ layout: container
 name: mpich-debug
 github: https://github.com/autamus/registry/blob/main/containers/m/mpich-debug/spack.yaml
 versions:
-- 3.4.1
-updated_at: 2021-05-25T20:19:49.60341442Z
-size: 44MB
-description: MPICH is a high performance and widely portable implementation of the
-  Message Passing Interface (MPI) standard.
+- latest
+updated_at: 2021-05-26T00:02:27.911307403Z
+size: 594MB
+description: ""
 container_url: https://github.com/orgs/autamus/packages/container/package/mpich-debug
 
 ---
 # mpich-debug
 ```bash 
 Download        : docker pull ghcr.io/autamus/mpich-debug
-Compressed Size : 44MB
+Compressed Size : 594MB
 ```
 
 ## Description
-MPICH is a high performance and widely portable implementation of the Message Passing Interface (MPI) standard.
+
 
 ## Usage
 ### Pull (Download)
@@ -31,7 +30,7 @@ docker pull ghcr.io/autamus/mpich-debug:latest
 or to download a specific version of mpich-debug run,
 
 ```bash
-docker pull ghcr.io/autamus/mpich-debug:3.4.1
+docker pull ghcr.io/autamus/mpich-debug:latest
 ```
 ### Run
 To run the container as an application run,
