@@ -5,4 +5,4 @@ spack:
   container:
     os_packages:
       final:
-        - libc
+        - libc-dev
