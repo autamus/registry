@@ -4,7 +4,7 @@ name: argobots
 github: https://github.com/autamus/registry/blob/main/containers/a/argobots/spack.yaml
 versions:
 - "1.1"
-updated_at: 2021-05-26T01:27:13.903763695Z
+updated_at: 2021-05-26T02:39:57.319756022Z
 size: 27MB
 description: 'Argobots, which was developed as a part of the Argo project, is a lightweight
   runtime system that supports integrated computation and data movement with massive
