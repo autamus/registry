@@ -3,8 +3,8 @@ layout: container
 name: singularity
 github: https://github.com/autamus/registry/blob/main/containers/s/singularity/spack.yaml
 versions:
-- 3.7.3
-updated_at: 2021-05-26T08:22:11.436997264Z
+- 3.7.4
+updated_at: 2021-05-27T17:29:39.191273394Z
 size: 343MB
 description: ""
 container_url: https://github.com/orgs/autamus/packages/container/package/singularity
@@ -30,7 +30,7 @@ docker pull ghcr.io/autamus/singularity:latest
 or to download a specific version of singularity run,
 
 ```bash
-docker pull ghcr.io/autamus/singularity:3.7.3
+docker pull ghcr.io/autamus/singularity:3.7.4
 ```
 ### Run
 To run the container as an application run,
