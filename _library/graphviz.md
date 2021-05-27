@@ -3,8 +3,8 @@ layout: container
 name: graphviz
 github: https://github.com/autamus/registry/blob/main/containers/g/graphviz/spack.yaml
 versions:
-- 2.47.1
-updated_at: 2021-05-26T06:31:16.81763047Z
+- 2.47.2
+updated_at: 2021-05-27T16:38:58.637085935Z
 size: 31MB
 description: Graph Visualization Software
 container_url: https://github.com/orgs/autamus/packages/container/package/graphviz
@@ -30,7 +30,7 @@ docker pull ghcr.io/autamus/graphviz:latest
 or to download a specific version of graphviz run,
 
 ```bash
-docker pull ghcr.io/autamus/graphviz:2.47.1
+docker pull ghcr.io/autamus/graphviz:2.47.2
 ```
 ### Run
 To run the container as an application run,
