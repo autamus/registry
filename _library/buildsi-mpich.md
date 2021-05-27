@@ -4,8 +4,8 @@ name: buildsi-mpich
 github: https://github.com/autamus/registry/blob/main/containers/b/buildsi-mpich/spack.yaml
 versions:
 - latest
-updated_at: 2021-05-26T01:09:44.818508061Z
-size: 434MB
+updated_at: 2021-05-27T20:49:43.817809707Z
+size: 607MB
 description: ""
 container_url: https://github.com/orgs/autamus/packages/container/package/buildsi-mpich
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/builds
 # buildsi-mpich
 ```bash 
 Download        : docker pull ghcr.io/autamus/buildsi-mpich
-Compressed Size : 434MB
+Compressed Size : 607MB
 ```
 
 ## Description
