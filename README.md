@@ -36,7 +36,7 @@ Right now all of our packages are hosted on the GitHub Container Registry.
 | Python                     | 417MB                      | 885MB                                 |
 | R                          | 517.9MB                    | 761.2MB                               |
 | Go                         | 751.2MB                    | 861.9MB                               |
-| Rust                       | 754MB                      | 1.235GB                               |
+| Rust                       | 754MB                      | 1.23GB                                |
 
 ### How are Autamus Containers Smaller?
 Autamus uses Spack to build all packages from source before deleting no longer needed build dependencies. As a result Autamus containers only contain a minimal Linux environment and the software of the container.
