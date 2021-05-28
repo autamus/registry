@@ -79,7 +79,6 @@ jobs:
           echo "${{secrets.SIGN_KEY}}" > sign_key
           DOCKER_BUILDKIT=1 docker build \
           --secret id=aws_id,env=access_id \
-          --secret id=package,env=package \
           --secret id=aws_secret,env=access_secret \
           --secret id=sign_key,src=./sign_key --progress=plain \
           -t ghcr.io/autamus/$package:latest -t ghcr.io/autamus/$package:$version .
