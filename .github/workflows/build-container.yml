@@ -73,7 +73,7 @@ jobs:
         run: |
           package=${{ steps.builder.outputs.container }}
           version=${{ steps.builder.outputs.version }}
-          echo ${{secrets.SIGN_KEY}} > sign_key
+          echo "${{secrets.SIGN_KEY}}" > sign_key
           DOCKER_BUILDKIT=1 docker build \
           --secret id=aws_id,env=${{secrets.AWS_ACCESS_KEY_ID}} \
           --secret id=aws_secret,env=${{secrets.AWS_SECRET_ACCESS_KEY}} \
