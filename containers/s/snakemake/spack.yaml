@@ -1,0 +1,4 @@
+spack:
+  specs: 
+    - snakemake
+    - anaconda3
