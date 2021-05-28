@@ -1,4 +1,5 @@
 spack:
+  concretization: together
   specs: 
     - snakemake
     - miniconda3
