@@ -1,4 +1,4 @@
 spack:
   specs: 
     - snakemake
-    - anaconda3
+    - miniconda3
