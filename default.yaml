@@ -9,3 +9,5 @@ spack:
     install_missing_compilers: true
   container:
     strip: true
+  mirrors:
+    autamus: s3://autamus-cache
