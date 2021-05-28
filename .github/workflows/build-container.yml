@@ -70,14 +70,16 @@ jobs:
           path: Dockerfile
           
       - name: Build Container for Package
+        env:
+          package: ${{ steps.builder.outputs.container }}
+          version: ${{ steps.builder.outputs.version }}
+          access_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          access_secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          package=${{ steps.builder.outputs.container }}
-          version=${{ steps.builder.outputs.version }}
-          access_id=${{ secrets.AWS_ACCESS_KEY_ID }}
-          access_secret=${{ secrets.AWS_SECRET_ACCESS_KEY }}
           echo "${{secrets.SIGN_KEY}}" > sign_key
           DOCKER_BUILDKIT=1 docker build \
           --secret id=aws_id,env=access_id \
+          --secret id=package,env=package \
           --secret id=aws_secret,env=access_secret \
           --secret id=sign_key,src=./sign_key --progress=plain \
           -t ghcr.io/autamus/$package:latest -t ghcr.io/autamus/$package:$version .
