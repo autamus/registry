@@ -1,0 +1,5 @@
+spack:
+  specs: 
+    - fraggenescan
+  container:
+    strip: false
