@@ -4,8 +4,8 @@ name: viennarna
 github: https://github.com/autamus/registry/blob/main/containers/v/viennarna/spack.yaml
 versions:
 - 2.4.3
-updated_at: 2021-05-26T08:08:03.83223529Z
-size: 126MB
+updated_at: 2021-05-29T01:43:19.926584355Z
+size: 127MB
 description: 'The ViennaRNA Package consists of a C code library and several stand-alone
   programs for the prediction and comparison of RNA secondary structures. '
 container_url: https://github.com/orgs/autamus/packages/container/package/viennarna
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/vienna
 # viennarna
 ```bash 
 Download        : docker pull ghcr.io/autamus/viennarna
-Compressed Size : 126MB
+Compressed Size : 127MB
 ```
 
 ## Description
