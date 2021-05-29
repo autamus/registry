@@ -106,7 +106,7 @@ class Python(AutotoolsPackage):
     )
 
     # --enable-shared is known to cause problems for some users on macOS
-    # This is a problem for Python 2.7 only, not Python3
+    # This is a problem for Python 2.7 only, not Python 3
     # See http://bugs.python.org/issue29846
     variant('shared', default=True,
             description='Enable shared libraries')
