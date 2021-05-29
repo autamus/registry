@@ -4,8 +4,8 @@ name: rust
 github: https://github.com/autamus/registry/blob/main/containers/r/rust/spack.yaml
 versions:
 - 1.52.1
-updated_at: 2021-05-26T00:33:17.425467029Z
-size: 224MB
+updated_at: 2021-05-29T05:39:58.658871769Z
+size: 225MB
 description: .format( cargo=join_path(boot_bin, 'cargo
 container_url: https://github.com/orgs/autamus/packages/container/package/rust
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/rust
 # rust
 ```bash 
 Download        : docker pull ghcr.io/autamus/rust
-Compressed Size : 224MB
+Compressed Size : 225MB
 ```
 
 ## Description
