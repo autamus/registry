@@ -4,8 +4,8 @@ name: wget
 github: https://github.com/autamus/registry/blob/main/containers/w/wget/spack.yaml
 versions:
 - 1.21.1
-updated_at: 2021-05-25T20:54:27.7351042Z
-size: 32MB
+updated_at: 2021-05-29T00:05:59.55855859Z
+size: 33MB
 description: GNU Wget is a free software package for retrieving files using HTTP,
   HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive
   commandline tool, so it may easily be called from scripts, cron jobs, terminals
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/wget
 # wget
 ```bash 
 Download        : docker pull ghcr.io/autamus/wget
-Compressed Size : 32MB
+Compressed Size : 33MB
 ```
 
 ## Description
