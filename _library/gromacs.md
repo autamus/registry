@@ -4,8 +4,8 @@ name: gromacs
 github: https://github.com/autamus/registry/blob/main/containers/g/gromacs/spack.yaml
 versions:
 - "2021.1"
-updated_at: 2021-05-28T22:35:47.007115952Z
-size: 59MB
+updated_at: 2021-05-29T01:43:14.754698882Z
+size: 60MB
 description: 'GROMACS (GROningen MAchine for Chemical Simulations) is a molecular
   dynamics package primarily designed for simulations of proteins, lipids and nucleic
   acids. It was originally developed in the Biophysical Chemistry department of University
@@ -20,7 +20,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/gromac
 # gromacs
 ```bash 
 Download        : docker pull ghcr.io/autamus/gromacs
-Compressed Size : 59MB
+Compressed Size : 60MB
 ```
 
 ## Description
