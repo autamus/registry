@@ -4,7 +4,7 @@ name: clingo
 github: https://github.com/autamus/registry/blob/main/containers/c/clingo/spack.yaml
 versions:
 - 5.5.0
-updated_at: 2021-05-25T19:42:47.461365226Z
+updated_at: 2021-05-29T01:08:44.812032974Z
 size: 86MB
 description: 'Clingo: A grounder and solver for logic programs Clingo is part of the
   Potassco project for Answer Set Programming (ASP). ASP offers a simple and powerful
