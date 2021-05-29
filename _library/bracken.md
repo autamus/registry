@@ -4,7 +4,7 @@ name: bracken
 github: https://github.com/autamus/registry/blob/main/containers/b/bracken/spack.yaml
 versions:
 - 1.0.0
-updated_at: 2021-05-25T19:06:45.636729236Z
+updated_at: 2021-05-29T00:51:18.490378102Z
 size: 101MB
 description: Bracken (Bayesian Reestimation of Abundance with KrakEN) is a highly
   accurate statistical method that computes the abundance of species in DNA sequences
