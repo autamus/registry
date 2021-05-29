@@ -4,8 +4,8 @@ name: bedtools2
 github: https://github.com/autamus/registry/blob/main/containers/b/bedtools2/spack.yaml
 versions:
 - 2.30.0
-updated_at: 2021-05-25T19:11:13.820788358Z
-size: 28MB
+updated_at: 2021-05-29T00:47:05.194598308Z
+size: 29MB
 description: 'Collectively, the bedtools utilities are a swiss-army knife of tools
   for a wide-range of genomics analysis tasks. The most widely-used tools enable genome
   arithmetic: that is, set theory on the genome.'
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/bedtoo
 # bedtools2
 ```bash 
 Download        : docker pull ghcr.io/autamus/bedtools2
-Compressed Size : 28MB
+Compressed Size : 29MB
 ```
 
 ## Description
