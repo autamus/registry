@@ -4,8 +4,8 @@ name: iq-tree
 github: https://github.com/autamus/registry/blob/main/containers/i/iq-tree/spack.yaml
 versions:
 - 2.0.6
-updated_at: 2021-05-25T17:50:30.781366931Z
-size: 53MB
+updated_at: 2021-05-29T01:07:22.048833293Z
+size: 54MB
 description: IQ-TREE Efficient software for phylogenomic inference
 container_url: https://github.com/orgs/autamus/packages/container/package/iq-tree
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/iq-tre
 # iq-tree
 ```bash 
 Download        : docker pull ghcr.io/autamus/iq-tree
-Compressed Size : 53MB
+Compressed Size : 54MB
 ```
 
 ## Description
