@@ -9,3 +9,8 @@ spack:
     install_missing_compilers: true
   container:
     strip: true
+    os_packages:
+      build:
+        - python3-boto3
+  mirrors:
+    autamus: s3://autamus-cache

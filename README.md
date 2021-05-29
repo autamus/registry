@@ -30,13 +30,13 @@ Right now all of our packages are hosted on the GitHub Container Registry.
 3) Add that package.py file (and any other nessiary files like patches) to a directory in your fork of this repository under `spack/FIRST-LETTER-OF-APPLICATION/NAME-OF-APPLICATION/package.py`.
 4) Commit that new directory to your fork and open a pull request on this repository from your fork.
 
-## Container Size Comparison
+#### Raw Container Size Comparisons
 | **Package/Container Name** | **Autamus Container Size** | **Official Dockerhub Container Size** |
 |----------------------------|----------------------------|---------------------------------------|
 | Python                     | 417MB                      | 885MB                                 |
 | R                          | 517.9MB                    | 761.2MB                               |
-| GCC                        | 1.731GB                    | 1.186GB                               |
 | Go                         | 751.2MB                    | 861.9MB                               |
+| Rust                       | 754MB                      | 1.23GB                                |
 
 ### How are Autamus Containers Smaller?
 Autamus uses Spack to build all packages from source before deleting no longer needed build dependencies. As a result Autamus containers only contain a minimal Linux environment and the software of the container.
