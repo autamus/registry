@@ -4,8 +4,8 @@ name: geant4
 github: https://github.com/autamus/registry/blob/main/containers/g/geant4/spack.yaml
 versions:
 - 10.7.1
-updated_at: 2021-05-25T21:18:44.738646674Z
-size: 1139MB
+updated_at: 2021-05-29T02:46:19.979997734Z
+size: 1140MB
 description: Geant4 is a toolkit for the simulation of the passage of particles through
   matter. Its areas of application include high energy, nuclear and accelerator physics,
   as well as studies in medical and space science.
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/geant4
 # geant4
 ```bash 
 Download        : docker pull ghcr.io/autamus/geant4
-Compressed Size : 1139MB
+Compressed Size : 1140MB
 ```
 
 ## Description
