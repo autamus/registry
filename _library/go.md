@@ -4,8 +4,8 @@ name: go
 github: https://github.com/autamus/registry/blob/main/containers/g/go/spack.yaml
 versions:
 - 1.16.4
-updated_at: 2021-05-26T06:54:01.393728274Z
-size: 244MB
+updated_at: 2021-06-01T18:18:53.326539926Z
+size: 245MB
 description: The golang compiler and build environment
 container_url: https://github.com/orgs/autamus/packages/container/package/go
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/go
 # go
 ```bash 
 Download        : docker pull ghcr.io/autamus/go
-Compressed Size : 244MB
+Compressed Size : 245MB
 ```
 
 ## Description
