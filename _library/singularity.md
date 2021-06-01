@@ -4,8 +4,8 @@ name: singularity
 github: https://github.com/autamus/registry/blob/main/containers/s/singularity/spack.yaml
 versions:
 - 3.7.4
-updated_at: 2021-05-27T17:29:39.191273394Z
-size: 343MB
+updated_at: 2021-06-01T18:41:41.264560371Z
+size: 344MB
 description: ""
 container_url: https://github.com/orgs/autamus/packages/container/package/singularity
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/singul
 # singularity
 ```bash 
 Download        : docker pull ghcr.io/autamus/singularity
-Compressed Size : 343MB
+Compressed Size : 344MB
 ```
 
 ## Description
