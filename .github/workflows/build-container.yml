@@ -51,7 +51,7 @@ jobs:
           containers_current: ${{ matrix.container }}
           parsers_loaded: spack
           packages_path: spack/
-          packages_pubkeyurl: 'http://s3.amazonaws.com/autamus-cache/build_cache/_pgp/FFEB24B0A9D81F6D5597F9900B59588C86C41BE7.pub'
+          packages_publickeyurl: 'http://s3.amazonaws.com/autamus-cache/build_cache/_pgp/FFEB24B0A9D81F6D5597F9900B59588C86C41BE7.pub'
           containers_path: containers/
 
       - name: Import Registry to Repo
