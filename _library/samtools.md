@@ -4,7 +4,7 @@ name: samtools
 github: https://github.com/autamus/registry/blob/main/containers/s/samtools/spack.yaml
 versions:
 - "1.12"
-updated_at: 2021-05-29T01:28:13.195503257Z
+updated_at: 2021-06-01T18:10:21.349346247Z
 size: 107MB
 description: SAM Tools provide various utilities for manipulating alignments in the
   SAM format, including sorting, merging, indexing and generating alignments in a
