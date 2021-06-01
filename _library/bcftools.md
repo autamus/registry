@@ -4,8 +4,8 @@ name: bcftools
 github: https://github.com/autamus/registry/blob/main/containers/b/bcftools/spack.yaml
 versions:
 - "1.12"
-updated_at: 2021-05-26T04:12:25.698684629Z
-size: 154MB
+updated_at: 2021-06-01T18:29:23.071917699Z
+size: 155MB
 description: BCFtools is a set of utilities that manipulate variant calls in the Variant
   Call Format (VCF) and its binary counterpart BCF. All commands work transparently
   with both VCFs and BCFs, both uncompressed and BGZF-compressed.
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/bcftoo
 # bcftools
 ```bash 
 Download        : docker pull ghcr.io/autamus/bcftools
-Compressed Size : 154MB
+Compressed Size : 155MB
 ```
 
 ## Description
