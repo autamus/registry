@@ -3,8 +3,8 @@ layout: container
 name: cctools
 github: https://github.com/autamus/registry/blob/main/containers/c/cctools/spack.yaml
 versions:
-- 7.2.4
-updated_at: 2021-05-29T00:51:53.904516185Z
+- 7.2.10
+updated_at: 2021-06-01T15:07:43.638615167Z
 size: 112MB
 description: 'The Cooperative Computing Tools (cctools) enable large scale distributed
   computations to harness hundreds to thousands of machines from clusters, clouds,
@@ -32,7 +32,7 @@ docker pull ghcr.io/autamus/cctools:latest
 or to download a specific version of cctools run,
 
 ```bash
-docker pull ghcr.io/autamus/cctools:7.2.4
+docker pull ghcr.io/autamus/cctools:7.2.10
 ```
 ### Run
 To run the container as an application run,
