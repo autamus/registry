@@ -4,7 +4,7 @@ name: rclone
 github: https://github.com/autamus/registry/blob/main/containers/r/rclone/spack.yaml
 versions:
 - 1.55.1
-updated_at: 2021-05-26T07:41:19.993121545Z
+updated_at: 2021-06-01T18:13:45.81960466Z
 size: 44MB
 description: Rclone is a command line program to sync files and directories to and
   from various cloud storage providers
