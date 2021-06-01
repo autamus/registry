@@ -4,8 +4,8 @@ name: cloc
 github: https://github.com/autamus/registry/blob/main/containers/c/cloc/spack.yaml
 versions:
 - "1.90"
-updated_at: 2021-05-26T04:40:32.623309695Z
-size: 47MB
+updated_at: 2021-06-01T18:05:11.230421531Z
+size: 48MB
 description: Count, or compute differences of, physical lines of source code in the
   given files (may be archives such as compressed tarballs or zip files) and/or recursively
   below the given directories.
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/cloc
 # cloc
 ```bash 
 Download        : docker pull ghcr.io/autamus/cloc
-Compressed Size : 47MB
+Compressed Size : 48MB
 ```
 
 ## Description
