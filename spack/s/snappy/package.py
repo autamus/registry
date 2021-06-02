@@ -10,7 +10,7 @@ class Snappy(CMakePackage):
     """A fast compressor/decompressor: https://code.google.com/p/snappy"""
 
     homepage = "https://github.com/google/snappy"
-    url      = "https://github.com/google/snappy/archive/1.1.9.tar.gz"
+    url      = "https://github.com/google/snappy/archive/1.1.8.tar.gz"
 
     version('1.1.9', sha256='75c1fbb3d618dd3a0483bff0e26d0a92b495bbe5059c8b4f1c962b478b6e06e7', url='https://github.com/google/snappy/archive/1.1.9.tar.gz')
     version('1.1.8', sha256='16b677f07832a612b0836178db7f374e414f94657c138e6993cbfc5dcc58651f')
@@ -24,18 +24,11 @@ class Snappy(CMakePackage):
     patch('link_gtest.patch')
 
     def cmake_args(self):
-        spec = self.spec
-
-        args = [
-            '-DCMAKE_INSTALL_LIBDIR:PATH={0}'.format(
-                self.prefix.lib),
-            '-DBUILD_SHARED_LIBS:BOOL={0}'.format(
-                'ON' if '+shared' in spec else 'OFF'),
-            '-DSNAPPY_BUILD_TESTS:BOOL={0}'.format(
-                'ON' if self.run_tests else 'OFF')
+        return [
+            self.define('CMAKE_INSTALL_LIBDIR', self.prefix.lib),
+            self.define_from_variant('BUILD_SHARED_LIBS', 'shared'),
+            self.define('SNAPPY_BUILD_TESTS', self.run_tests),
         ]
-
-        return args
 
     def flag_handler(self, name, flags):
         flags = list(flags)
