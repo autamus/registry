@@ -101,6 +101,7 @@ jobs:
       - name: Build Summary
         id: summary
         run: |
+          docker system prune -f
           container=${{steps.builder.outputs.container}}
           docker image save "ghcr.io/autamus/$container" > container
           tar -czvf container.tar.gz container > /dev/null
