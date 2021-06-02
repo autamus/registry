@@ -10,10 +10,10 @@ on:
       
 jobs:
   build-config:
+    name: Build Config
     runs-on: ubuntu-latest
     outputs:
-      package: ${{ steps.save-output.outputs.package }}
-      version: ${{ steps.save-output.outputs.version }}
+      containers: ${{ steps.config.outputs.matrix }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,76 +21,41 @@ jobs:
           fetch-depth: '0'
         
       - name: Run Build Config
-        uses: autamus/buildconfig@v0.0.5
+        id: config
+        uses: autamus/buildconfig@main
         with:
           parsers_loaded: spack
           packages_path: spack/
-      
-      - name: Save Package Output
-        id: save-output
-        run: |
-          echo "::set-output name=package::$(cat package)"
-          echo "::set-output name=version::$(cat version)"
-  spack-containerize:
-    runs-on: ubuntu-latest
-    needs: build-config
-    container:
-      image: spack/ubuntu-bionic
-      options: --entrypoint /bin/bash
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Generate Spack Environment Dockerfile
-        run: |
-          export PATH=/opt/spack/bin:$PATH
-          package=${{needs.build-config.outputs.package}}
-          echo "spack:" > spack.yaml
-          echo "  specs: [\"$package\"]" >> spack.yaml
-          echo "  view: true" >> spack.yaml
-          echo "  packages:" >> spack.yaml
-          echo "    all:" >> spack.yaml
-          echo "      target: [x86_64]" >> spack.yaml
-          echo "  config:" >> spack.yaml
-          echo "    compiler:" >> spack.yaml
-          echo "      target: x86_64" >> spack.yaml
-          echo "    install_missing_compilers: true >> spack.yaml"
-          echo "  container:" >> spack.yaml
-          echo "    os_packages:" >> spack.yaml
-          echo "      build:" >> spack.yaml
-          echo "        - python3-dev" >> spack.yaml
-          echo "      final:" >> spack.yaml
-          echo "        - ca-certificates" >> spack.yaml
-          echo "    strip: false" >> spack.yaml
-          cat spack.yaml
-          spack containerize > Dockerfile
-          
-      - name: Change Entrypoint of Containers
-        run : |
-          sed -i 's/\"-l\".*]/\"-l\", \"-c\"]/g' Dockerfile
-          sed -i '/^.*ubuntu:18.04.*/a \\ \nENV PATH=/opt/view/bin:/opt/spack/bin:$PATH' Dockerfile
-          
-      - name: Upload Dockerfile
-        uses: actions/upload-artifact@v2
-        with:
-          name: Dockerfile
-          path: Dockerfile
+          containers_path: containers/
+          git_token: '${{ secrets.GITHUB_TOKEN }}'
            
   build-container:
     needs:
-      - spack-containerize
       - build-config
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        container: ${{ fromJson(needs.build-config.outputs.containers) }}
+    name: Build ${{ matrix.container }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-      - name: Download Dockerfile
-        uses: actions/download-artifact@v2
         with:
-          name: Dockerfile
+          fetch-depth: '0'
+      
+      - name: Builder
+        id: builder
+        uses: autamus/builder@main
+        with:
+          containers_current: ${{ matrix.container }}
+          parsers_loaded: spack
+          packages_path: spack/
+          packages_publickeyurl: 'http://s3.amazonaws.com/autamus-cache/build_cache/_pgp/FFEB24B0A9D81F6D5597F9900B59588C86C41BE7.pub'
+          containers_path: containers/
 
       - name: Import Registry to Repo
+        if: ${{ steps.builder.outputs.type }} == 'Spack'
         run: |
           mkdir repo
           for file in spack/*/*; do
@@ -98,15 +63,29 @@ jobs:
                 cp -r "$file/" "repo/"
             fi
           done
-          sed -i '/^.*as builder.*/a \\nADD repo /opt/spack/var/spack/repos/builtin/packages/' Dockerfile
+      
+      - name: Upload Dockerfile
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{steps.builder.outputs.container}}.Dockerfile
+          path: Dockerfile
           
       - name: Build Container for Package
+        env:
+          package: ${{ steps.builder.outputs.container }}
+          version: ${{ steps.builder.outputs.version }}
+          access_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          access_secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          package=${{needs.build-config.outputs.package}}
-          version=${{needs.build-config.outputs.version}}
-          docker build -t ghcr.io/autamus/$package:latest \
-                       -t ghcr.io/autamus/$package:$version .
+          echo "${{secrets.SIGN_KEY}}" > sign_key
+          DOCKER_BUILDKIT=1 docker build \
+          --secret id=aws_id,env=access_id \
+          --secret id=aws_secret,env=access_secret \
+          --secret id=sign_key,src=./sign_key --progress=plain \
+          -t ghcr.io/autamus/$package:latest -t ghcr.io/autamus/$package:$version .
+
       - name: Docker Login
+        # Don't log into registry on pull request
         if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v1 
         with:
@@ -117,4 +96,35 @@ jobs:
       - name: Push to GitHub Packages
         # Don't push build on pull request
         if: github.ref == 'refs/heads/main'
-        run: docker push --all-tags ghcr.io/autamus/${{needs.build-config.outputs.package}}
+        run: docker push --all-tags ghcr.io/autamus/${{steps.builder.outputs.container}}
+
+      - name: Build Summary
+        id: summary
+        run: |
+          container=${{steps.builder.outputs.container}}
+          docker image save "ghcr.io/autamus/$container" > container
+          tar -czvf container.tar.gz container > /dev/null
+          docker=$(docker system df -v | grep "ghcr.io/autamus/$container")
+          docker_data=($docker)
+          raw=$(ls -lh --block-size=MB | grep "container.tar.gz")
+          raw_data=($raw)
+          echo "[[ Build Summary: $container ]]"
+          echo "URL              :  ${docker_data[0]}"
+          echo "Version          :  ${docker_data[1]}"
+          echo "Raw Size         :  ${docker_data[6]}"
+          echo "Compressed Size  :  ${raw_data[4]}"
+          echo "::set-output name=size::${raw_data[4]}"
+
+      - name: Librarian Run
+        if: github.ref == 'refs/heads/main'
+        uses: autamus/librarian@main
+        with:
+          git_token: ${{ secrets.BINOC_GIT_TOKEN }}
+          git_username: ${{ secrets.BINOC_GIT_USERNAME }}
+          git_email: ${{ secrets.BINOC_GIT_EMAIL }}
+          git_name: ${{ secrets.BINOC_GIT_NAME }}
+          containers_current: ${{ steps.builder.outputs.container }}
+          containers_version: ${{ steps.builder.outputs.version }}
+          containers_size: ${{ steps.summary.outputs.size }}
+          template_path: default.md
+
