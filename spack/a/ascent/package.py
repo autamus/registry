@@ -1,6 +1,6 @@
 # Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
-#
+# 
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 from spack import *
@@ -35,22 +35,13 @@ class Ascent(Package, CudaPackage):
 
     homepage = "https://github.com/Alpine-DAV/ascent"
     git      = "https://github.com/Alpine-DAV/ascent.git"
-    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.5.1/ascent-v0.5.1-src-with-blt.tar.gz"
+    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz"
 
     maintainers = ['cyrush']
-
-    version('develop',
-            branch='develop',
-            submodules=True)
-
-    version('0.7.0',
-            tag='v0.7.0',
-            submodules=True,
-            preferred=True)
-
-    version('0.6.0',
-            tag='v0.6.0',
-            submodules=True)
+    version('develop', branch='develop', submodules=True)
+    version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
+    version('0.7.0', submodules=True)
+    version('0.6.0', submodules=True)
 
     ###########################################################################
     # package variants

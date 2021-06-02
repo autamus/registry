@@ -1,0 +1,8 @@
+spack:
+  specs: 
+    - gromacs+mpi
+    - mpich
+  container:
+    os_packages:
+      final:
+        - libgomp1
