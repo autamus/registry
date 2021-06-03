@@ -22,11 +22,11 @@ class Povray(AutotoolsPackage):
 
     # Add a proper url for your package's homepage here.
     homepage = "http://povray.org/download/"
-    url = "https://github.com/POV-Ray/povray/archive/v3.7.0.8.tar.gz"
+    url      = "https://github.com/POV-Ray/povray/archive/v3.7.0.9.tar.gz"
     git = "https://github.com/POV-Ray/povray.git"
 
     # maintainers = ['payerle' ]
-
+    version('3.7.0.9', sha256='c273f75864ac98f86b442f58597d842aa8b76e788ea5e9133724296d93fb3e6b', url='https://github.com/POV-Ray/povray/archive/v3.7.0.9.tar.gz')
     version('3.7.0.8', sha256='53d11ebd2972fc452af168a00eb83aefb61387662c10784e81b63e44aa575de4')
 
     variant('boost', default=True, description='Build with boost support')
