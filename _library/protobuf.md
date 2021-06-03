@@ -3,9 +3,9 @@ layout: container
 name: protobuf
 github: https://github.com/autamus/registry/blob/main/containers/p/protobuf/spack.yaml
 versions:
-- 3.17.1
-updated_at: 2021-05-26T07:27:55.101500609Z
-size: 29MB
+- 3.17.2
+updated_at: 2021-06-03T16:25:04.432004044Z
+size: 30MB
 description: Google's data interchange format.
 container_url: https://github.com/orgs/autamus/packages/container/package/protobuf
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/protob
 # protobuf
 ```bash 
 Download        : docker pull ghcr.io/autamus/protobuf
-Compressed Size : 29MB
+Compressed Size : 30MB
 ```
 
 ## Description
@@ -30,7 +30,7 @@ docker pull ghcr.io/autamus/protobuf:latest
 or to download a specific version of protobuf run,
 
 ```bash
-docker pull ghcr.io/autamus/protobuf:3.17.1
+docker pull ghcr.io/autamus/protobuf:3.17.2
 ```
 ### Run
 To run the container as an application run,
