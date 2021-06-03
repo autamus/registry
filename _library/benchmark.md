@@ -3,8 +3,8 @@ layout: container
 name: benchmark
 github: https://github.com/autamus/registry/blob/main/containers/b/benchmark/spack.yaml
 versions:
-- 1.5.0
-updated_at: 2021-06-02T18:31:14.41098306Z
+- 1.5.4
+updated_at: 2021-06-03T16:21:01.789742019Z
 size: 27MB
 description: A microbenchmark support library
 container_url: https://github.com/orgs/autamus/packages/container/package/benchmark
@@ -30,7 +30,7 @@ docker pull ghcr.io/autamus/benchmark:latest
 or to download a specific version of benchmark run,
 
 ```bash
-docker pull ghcr.io/autamus/benchmark:1.5.0
+docker pull ghcr.io/autamus/benchmark:1.5.4
 ```
 ### Run
 To run the container as an application run,
