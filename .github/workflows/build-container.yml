@@ -51,6 +51,7 @@ jobs:
           containers_current: ${{ matrix.container }}
           parsers_loaded: spack
           packages_path: spack/
+          packages_publickeyurl: 'http://s3.amazonaws.com/autamus-cache/build_cache/_pgp/FFEB24B0A9D81F6D5597F9900B59588C86C41BE7.pub'
           containers_path: containers/
 
       - name: Import Registry to Repo
@@ -68,6 +69,11 @@ jobs:
         with:
           name: ${{steps.builder.outputs.container}}.Dockerfile
           path: Dockerfile
+
+      - name: Make Space For Build
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
           
       - name: Build Container for Package
         env:
@@ -100,6 +106,7 @@ jobs:
       - name: Build Summary
         id: summary
         run: |
+          docker system prune -f
           container=${{steps.builder.outputs.container}}
           docker image save "ghcr.io/autamus/$container" > container
           tar -czvf container.tar.gz container > /dev/null
