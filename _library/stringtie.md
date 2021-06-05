@@ -3,8 +3,8 @@ layout: container
 name: stringtie
 github: https://github.com/autamus/registry/blob/main/containers/s/stringtie/spack.yaml
 versions:
-- 2.1.5
-updated_at: 2021-05-25T20:59:15.441228097Z
+- 2.1.6
+updated_at: 2021-06-05T17:52:12.223764785Z
 size: 107MB
 description: StringTie is a fast and highly efficient assembler of RNA-Seq alignments
   into potential transcripts.
@@ -31,7 +31,7 @@ docker pull ghcr.io/autamus/stringtie:latest
 or to download a specific version of stringtie run,
 
 ```bash
-docker pull ghcr.io/autamus/stringtie:2.1.5
+docker pull ghcr.io/autamus/stringtie:2.1.6
 ```
 ### Run
 To run the container as an application run,
