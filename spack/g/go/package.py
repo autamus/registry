@@ -1,6 +1,6 @@
 # Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
-# 
+#
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 import os
@@ -27,28 +27,31 @@ from spack import *
 # - When building on a *large* machine (144 cores, 1.5TB RAM) I need
 #   to run `ulimit -u 8192` to bump up the max number of user processes.
 #   Failure to do so results in an explosion in one of the tests and an
-#   epic stack trace.... 
+#   epic stack trace....
 
 
 class Go(Package):
     """The golang compiler and build environment"""
     homepage = "https://golang.org"
-    url      = "https://dl.google.com/go/go1.16.4.src.tar.gz"
-    git      = "https://go.googlesource.com/go.git"
+    url      = "https://dl.google.com/go/go1.12.6.src.tar.gz"
 
     extendable = True
     executables = ['^go$']
-    version('1.16.4', sha256='ae4f6b6e2a1677d31817984655a762074b5356da50fb58722b99104870d43503', url='https://dl.google.com/go/go1.16.4.src.tar.gz')
-    version('1.16.3', sha256='b298d29de9236ca47a023e382313bcc2d2eed31dfa706b60a04103ce83a71a25', url='https://dl.google.com/go/go1.16.3.src.tar.gz')
-    version('1.16.2', sha256='7688063d55656105898f323d90a79a39c378d86fe89ae192eb3b7fc46347c95a')
-    version('1.16.0', sha256='7688063d55656105898f323d90a79a39c378d86fe89ae192eb3b7fc46347c95a')
+    version('1.16.5', sha256='7bfa7e5908c7cc9e75da5ddf3066d7cbcf3fd9fa51945851325eebc17f50ba80')
+    version('1.16.4', sha256='ae4f6b6e2a1677d31817984655a762074b5356da50fb58722b99104870d43503')
+    version('1.16.3', sha256='b298d29de9236ca47a023e382313bcc2d2eed31dfa706b60a04103ce83a71a25')
+    version('1.16.2', sha256='37ca14287a23cb8ba2ac3f5c3dd8adbc1f7a54b9701a57824bf19a0b271f83ea')
+    version('1.16', sha256='7688063d55656105898f323d90a79a39c378d86fe89ae192eb3b7fc46347c95a')
+    version('1.15.13', sha256='99069e7223479cce4553f84f874b9345f6f4045f27cf5089489b546da619a244')
+    version('1.15.12', sha256='1c6911937df4a277fa74e7b7efc3d08594498c4c4adc0b6c4ae3566137528091')
+    version('1.15.11', sha256='f25b2441d4c76cf63cde94d59bab237cc33e8a2a139040d904c8630f46d061e5')
     version('1.15.8', sha256='540c0ab7781084d124991321ed1458e479982de94454a98afab6acadf38497c2')
     version('1.15.7', sha256='8631b3aafd8ecb9244ec2ffb8a2a8b4983cf4ad15572b9801f7c5b167c1a2abc')
     version('1.15.6', sha256='890bba73c5e2b19ffb1180e385ea225059eb008eb91b694875dd86ea48675817')
     version('1.15.5', sha256='c1076b90cf94b73ebed62a81d802cd84d43d02dea8c07abdc922c57a071c84f1')
     version('1.15.2', sha256='28bf9d0bcde251011caae230a4a05d917b172ea203f2a62f2c2f9533589d4b4d')
     version('1.15.1', sha256='d3743752a421881b5cc007c76b4b68becc3ad053e61275567edab1c99e154d30')
-    version('1.15.0', sha256='69438f7ed4f532154ffaf878f3dfd83747e7a00b70b3556eddabf7aaee28ac3a')
+    version('1.15', sha256='69438f7ed4f532154ffaf878f3dfd83747e7a00b70b3556eddabf7aaee28ac3a')
     version('1.14.14', sha256='6204bf32f58fae0853f47f1bd0c51d9e0ac11f1ffb406bed07a0a8b016c8a76f')
     version('1.14.13', sha256='ba1d244c6b5c0ed04aa0d7856d06aceb89ed31b895de6ff783efb1cc8ab6b177')
     version('1.14.12', sha256='b34f4b7ad799eab4c1a52bdef253602ce957125a512f5a1b28dce43c6841b971')
@@ -60,7 +63,7 @@ class Go(Package):
     version('1.14.3', sha256='93023778d4d1797b7bc6a53e86c3a9b150c923953225f8a48a2d5fabc971af56')
     version('1.14.2', sha256='98de84e69726a66da7b4e58eac41b99cbe274d7e8906eeb8a5b7eb0aadee7f7c')
     version('1.14.1', sha256='2ad2572115b0d1b4cb4c138e6b3a31cee6294cb48af75ee86bec3dca04507676')
-    version('1.14.0', sha256='6d643e46ad565058c7a39dac01144172ef9bd476521f42148be59249e4b74389')
+    version('1.14', sha256='6d643e46ad565058c7a39dac01144172ef9bd476521f42148be59249e4b74389')
     version('1.13.14', sha256='197333e97290e9ea8796f738d61019dcba1c377c2f3961fd6a114918ecc7ab06')
     version('1.13.13', sha256='ab7e44461e734ce1fd5f4f82c74c6d236e947194d868514d48a2b1ea73d25137')
     version('1.13.12', sha256='17ba2c4de4d78793a21cc659d9907f4356cd9c8de8b7d0899cdedcef712eba34')
@@ -75,7 +78,7 @@ class Go(Package):
     version('1.13.3', sha256='4f7123044375d5c404280737fbd2d0b17064b66182a65919ffe20ffe8620e3df')
     version('1.13.2', sha256='1ea68e01472e4276526902b8817abd65cf84ed921977266f0c11968d5e915f44')
     version('1.13.1', sha256='81f154e69544b9fa92b1475ff5f11e64270260d46e7e36c34aafc8bc96209358')
-    version('1.13.0', sha256='3fc0b8b6101d42efd7da1da3029c0a13f22079c0c37ef9730209d8ec665bf122')
+    version('1.13', sha256='3fc0b8b6101d42efd7da1da3029c0a13f22079c0c37ef9730209d8ec665bf122')
     version('1.12.17', sha256='de878218c43aa3c3bad54c1c52d95e3b0e5d336e1285c647383e775541a28b25')
     version('1.12.15', sha256='8aba74417e527524ad5724e6e6c21016795d1017692db76d1b0851c6bdec84c3')
     version('1.12.14', sha256='39dbf05f7e2ffcb19b08f07d53dcc96feadeb1987fef9e279e7ff0c598213064')
@@ -94,7 +97,7 @@ class Go(Package):
     version('1.11.4', sha256='4cfd42720a6b1e79a8024895fa6607b69972e8e32446df76d6ce79801bbadb15')
     version('1.11.2', sha256='042fba357210816160341f1002440550e952eb12678f7c9e7e9d389437942550')
     version('1.11.1', sha256='558f8c169ae215e25b81421596e8de7572bd3ba824b79add22fba6e284db1117')
-    version('1.11.0', sha256='afc1e12f5fe49a471e3aae7d906c73e9d5b1fdd36d52d72652dde8f6250152fb')
+    version('1.11', sha256='afc1e12f5fe49a471e3aae7d906c73e9d5b1fdd36d52d72652dde8f6250152fb')
     version('1.10.3', sha256='567b1cc66c9704d1c019c50bef946272e911ec6baf244310f87f4e678be155f2')
     version('1.10.2', sha256='6264609c6b9cd8ed8e02ca84605d727ce1898d74efa79841660b2e3e985a98bd')
     version('1.10.1', sha256='589449ff6c3ccbff1d391d4e7ab5bb5d5643a5a41a04c99315e55c16bbf73ddc')
@@ -197,4 +200,3 @@ class Go(Package):
         # Allow packages to find this when using module files
         env.prepend_path('GOPATH', self.generate_path_components(
             dependent_spec))
-
