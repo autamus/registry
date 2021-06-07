@@ -3,8 +3,8 @@ layout: container
 name: go
 github: https://github.com/autamus/registry/blob/main/containers/g/go/spack.yaml
 versions:
-- 1.16.4
-updated_at: 2021-06-01T18:18:53.326539926Z
+- 1.16.5
+updated_at: 2021-06-07T17:19:36.170302736Z
 size: 245MB
 description: The golang compiler and build environment
 container_url: https://github.com/orgs/autamus/packages/container/package/go
@@ -30,7 +30,7 @@ docker pull ghcr.io/autamus/go:latest
 or to download a specific version of go run,
 
 ```bash
-docker pull ghcr.io/autamus/go:1.16.4
+docker pull ghcr.io/autamus/go:1.16.5
 ```
 ### Run
 To run the container as an application run,
