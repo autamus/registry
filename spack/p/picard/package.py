@@ -15,12 +15,13 @@ class Picard(Package):
     """
 
     homepage = "http://broadinstitute.github.io/picard/"
-    url      = "https://github.com/broadinstitute/picard/releases/download/2.25.5/picard.jar"
+    url      = "https://github.com/broadinstitute/picard/archive/2.25.6.tar.gz"
     _urlfmt  = "https://github.com/broadinstitute/picard/releases/download/{0}/picard.jar"
     _oldurlfmt = 'https://github.com/broadinstitute/picard/releases/download/{0}/picard-tools-{0}.zip'
 
     # They started distributing a single jar file at v2.6.0, prior to
     # that it was a .zip file with multiple .jar and .so files
+    version('2.25.6', sha256='dc29a7d8b29cc487ce94bcddd6e177b381b2854cf8282a19e3b2d9a0d3e785c8', url='https://github.com/broadinstitute/picard/archive/2.25.6.tar.gz')
     version('2.25.5', sha256='f7fa9784b84d384abfcbd77076f5ceab7b2797dc863ac35fd41470daa3efe3a5', expand=False, url='https://github.com/broadinstitute/picard/releases/download/2.25.5/picard.jar')
     version('2.25.4', sha256='c3ac14471e48e28e24201ae5515f828ffa45db7ac3e37173251a672845b4a9b3', expand=False, url='https://github.com/broadinstitute/picard/releases/download/2.25.4/picard.jar')
     version('2.25.3', sha256='1d4dbfcb36d23fde11f173ab0de8a99835e04161efb04f246bbcbfc0bee3b493', expand=False, url='https://github.com/broadinstitute/picard/releases/download/2.25.3/picard.jar')
@@ -43,7 +44,7 @@ class Picard(Package):
     version('2.9.0', sha256='9a57f6bd9086ea0f5f1a6d9d819459854cb883bb8093795c916538ed9dd5de64', expand=False)
     version('2.8.3', sha256='97a4b6c8927c8cb5f3450630c9b39bf210ced8c271f198119118ce1c24b8b0f6', expand=False)
     version('2.6.0', sha256='671d9e86e6bf0c28ee007aea55d07e2456ae3a57016491b50aab0fd2fd0e493b', expand=False)
-    version('1.140', sha256='0d27287217413db6b846284c617d502eaa578662dcb054a7017083eab9c54438')
+    version('1.140', sha256='0d27287217413db6b846284c617d502eaa578662dcb054a7017083eab9c54438', expand=False)
 
     depends_on('java@8:', type='run')
 
