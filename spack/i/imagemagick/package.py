@@ -29,6 +29,7 @@ class Imagemagick(AutotoolsPackage):
     depends_on('ghostscript')
     depends_on('ghostscript-fonts')
     depends_on('libsm')
+    depends_on('perl-xml-libxml')
 
     def configure_args(self):
         spec = self.spec
