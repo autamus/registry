@@ -27,7 +27,7 @@ jobs:
           parsers_loaded: spack
           packages_path: spack/
           containers_path: containers/
-          git_token: '${{ secrets.GITHUB_TOKEN }}'
+          git_token: ${{ secrets.BINOC_GIT_TOKEN }}
            
   build-container:
     needs:
