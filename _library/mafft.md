@@ -3,9 +3,9 @@ layout: container
 name: mafft
 github: https://github.com/autamus/registry/blob/main/containers/m/mafft/spack.yaml
 versions:
-- "7.475"
-updated_at: 2021-05-26T06:32:52.797978408Z
-size: 33MB
+- "7.481"
+updated_at: 2021-06-14T16:00:38.403584811Z
+size: 34MB
 description: MAFFT is a multiple sequence alignment program for unix-like operating
   systems. It offers a range of multiple alignment methods, L-INS-i (accurate; for
   alignment of <~200 sequences), FFT-NS-2 (fast; for alignment of <~30,000 sequences),
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/mafft
 # mafft
 ```bash 
 Download        : docker pull ghcr.io/autamus/mafft
-Compressed Size : 33MB
+Compressed Size : 34MB
 ```
 
 ## Description
@@ -33,7 +33,7 @@ docker pull ghcr.io/autamus/mafft:latest
 or to download a specific version of mafft run,
 
 ```bash
-docker pull ghcr.io/autamus/mafft:7.475
+docker pull ghcr.io/autamus/mafft:7.481
 ```
 ### Run
 To run the container as an application run,
