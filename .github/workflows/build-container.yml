@@ -147,7 +147,7 @@ jobs:
 
   upload-logs:
     name: Upload Logs
-    # if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs:
       - build-container
@@ -166,8 +166,6 @@ jobs:
         with:
           git_token: ${{ secrets.BINOC_GIT_TOKEN }}
           input_commits: ${{ steps.merge-commits.outputs.commits }}
-          # For Docker Container Actions Your Repository is Mounted at '/github/workspace'
-          # So here we'll save our output to the 'artifacts' directory.
           output_path: '/github/workspace/artifacts'
       
       - name: Setup Spack
