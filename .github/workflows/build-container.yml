@@ -188,6 +188,6 @@ jobs:
               dir="monitor"/$(dirname "$(dirname "${file}")")-output/
               mkdir -p $dir
               tar -xzvf $file -C $dir/
-              spack/bin/spack monitor upload $dir
+              spack/bin/spack monitor --monitor-host https://monitor.spack.io upload $dir
             fi
           done
