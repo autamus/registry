@@ -188,6 +188,6 @@ jobs:
               dir="monitor"/$(dirname "$(dirname "${file}")")-output/
               mkdir -p $dir
               tar -xzvf $file -C $dir/
-              spack/bin/spack monitor upload --monitor-tags autamus $dir
+              spack/bin/spack monitor upload $dir
             fi
           done
