@@ -4,7 +4,7 @@ name: picard
 github: https://github.com/autamus/registry/blob/main/containers/p/picard/spack.yaml
 versions:
 - 2.25.5
-updated_at: 2021-05-28T23:10:55.055669651Z
+updated_at: 2021-06-16T23:07:26.993660991Z
 size: 235MB
 description: 'Picard is a set of command line tools for manipulating high-throughput
   sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF. '
