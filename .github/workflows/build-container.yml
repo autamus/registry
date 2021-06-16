@@ -191,3 +191,4 @@ jobs:
               spack/bin/spack monitor --monitor-keep-going --monitor-host https://monitor.spack.io upload $dir
             fi
           done
+          exit 0
