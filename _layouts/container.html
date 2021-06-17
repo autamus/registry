@@ -13,7 +13,7 @@ layout: default
             <div class="spacing"></div>
             <h4>{{ page.name }}</h4>
             <div style="padding-bottom:20px" class="hline"></div>
-            <p><b>Versions: </b>{% for version in page.versions %}{{ version }}{% if forloop.last %}{% else %},{% endif %}{% endfor %}</p>
+            <p><b>Versions: [</b>{% for version in page.versions %}{{ version }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}]</p>
             <p style="padding-top:15px"><a href="{{ page.github }}" target="_blank">
                            <button class="btn btn-sm btn-primary">GITHUB</button></a>
             <a href="{{ page.container_url }}" target="_blank"><button class="btn btn-sm btn-primary">CONTAINER</button></a>            
