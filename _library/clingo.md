@@ -4,6 +4,9 @@ name: clingo
 github: https://github.com/autamus/registry/blob/main/containers/c/clingo/spack.yaml
 versions:
 - 5.5.0
+- 5.4.1
+- 5.4.0
+
 updated_at: 2021-05-29T01:08:44.812032974Z
 size: 86MB
 description: 'Clingo: A grounder and solver for logic programs Clingo is part of the

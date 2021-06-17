@@ -4,6 +4,8 @@ name: diamond
 github: https://github.com/autamus/registry/blob/main/containers/d/diamond/spack.yaml
 versions:
 - 2.0.9
+- 2.0.8
+- 2.0.4
 updated_at: 2021-05-26T06:49:03.882687348Z
 size: 28MB
 description: DIAMOND is a sequence aligner for protein and translated DNA searches,

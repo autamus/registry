@@ -4,6 +4,7 @@ name: cantera
 github: https://github.com/autamus/registry/blob/main/containers/c/cantera/spack.yaml
 versions:
 - 2.5.1
+- 2.4.0
 updated_at: 2021-06-02T18:36:07.192071522Z
 size: 125MB
 description: Cantera is a suite of object-oriented software tools for problems involving

@@ -4,6 +4,9 @@ name: mothur
 github: https://github.com/autamus/registry/blob/main/containers/m/mothur/spack.yaml
 versions:
 - 1.45.3
+- 1.45.1
+- 1.44.3
+- 1.43.0
 updated_at: 2021-05-29T01:13:16.640433208Z
 size: 74MB
 description: This project seeks to develop a single piece of open-source, expandable

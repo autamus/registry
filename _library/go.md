@@ -4,6 +4,10 @@ name: go
 github: https://github.com/autamus/registry/blob/main/containers/g/go/spack.yaml
 versions:
 - 1.16.5
+- 1.16.4
+- 1.16.3
+- 1.16.2
+- 1.16.0
 updated_at: 2021-06-07T17:19:36.170302736Z
 size: 245MB
 description: The golang compiler and build environment

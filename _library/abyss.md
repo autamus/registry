@@ -4,6 +4,9 @@ name: abyss
 github: https://github.com/autamus/registry/blob/main/containers/a/abyss/spack.yaml
 versions:
 - 2.3.1
+- 2.3.0
+- 2.2.5
+
 updated_at: 2021-05-29T01:23:06.119212467Z
 size: 80MB
 description: ABySS is a de novo, parallel, paired-end sequence assembler that is designed

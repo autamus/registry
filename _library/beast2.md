@@ -4,6 +4,7 @@ name: beast2
 github: https://github.com/autamus/registry/blob/main/containers/b/beast2/spack.yaml
 versions:
 - 2.6.4
+- 2.6.3
 updated_at: 2021-05-26T02:44:03.468410464Z
 size: 226MB
 description: BEAST is a cross-platform program for Bayesian inference using MCMC of

@@ -4,6 +4,7 @@ name: bedops
 github: https://github.com/autamus/registry/blob/main/containers/b/bedops/spack.yaml
 versions:
 - 2.4.39
+- 2.4.35
 updated_at: 2021-05-26T02:46:57.32960518Z
 size: 30MB
 description: BEDOPS is an open-source command-line toolkit that performs highly efficient

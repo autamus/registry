@@ -4,6 +4,12 @@ name: picard
 github: https://github.com/autamus/registry/blob/main/containers/p/picard/spack.yaml
 versions:
 - 2.25.5
+- 2.25.4
+- 2.25.3
+- 2.25.2
+- 2.25.1
+- 2.25.0
+- 2.24.0
 updated_at: 2021-06-16T23:07:26.993660991Z
 size: 235MB
 description: 'Picard is a set of command line tools for manipulating high-throughput

@@ -4,6 +4,7 @@ name: angsd
 github: https://github.com/autamus/registry/blob/main/containers/a/angsd/spack.yaml
 versions:
 - "0.935"
+- "0.933"
 updated_at: 2021-05-26T02:57:08.947496532Z
 size: 44MB
 description: Angsd is a program for analysing NGS data. The software can handle a

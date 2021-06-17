@@ -4,6 +4,7 @@ name: bcftools
 github: https://github.com/autamus/registry/blob/main/containers/b/bcftools/spack.yaml
 versions:
 - "1.12"
+- "1.11"
 updated_at: 2021-06-01T18:29:23.071917699Z
 size: 155MB
 description: BCFtools is a set of utilities that manipulate variant calls in the Variant

@@ -4,6 +4,7 @@ name: abi-dumper
 github: https://github.com/autamus/registry/blob/main/containers/a/abi-dumper/spack.yaml
 versions:
 - "1.2"
+- "1.1"
 updated_at: 2021-06-01T18:15:28.210811307Z
 size: 76MB
 description: ABI Dumper is a tool to dump ABI of an ELF object containing DWARF debug

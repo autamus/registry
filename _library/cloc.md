@@ -4,6 +4,8 @@ name: cloc
 github: https://github.com/autamus/registry/blob/main/containers/c/cloc/spack.yaml
 versions:
 - "1.90"
+- "1.88"
+- "1.84"
 updated_at: 2021-06-01T18:05:11.230421531Z
 size: 48MB
 description: Count, or compute differences of, physical lines of source code in the

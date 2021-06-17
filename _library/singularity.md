@@ -4,6 +4,10 @@ name: singularity
 github: https://github.com/autamus/registry/blob/main/containers/s/singularity/spack.yaml
 versions:
 - 3.8.0
+- 3.7.4
+- 3.7.3
+- 3.7.2
+- 3.7.0
 updated_at: 2021-06-17T02:04:39.751610456Z
 size: 345MB
 description: ""

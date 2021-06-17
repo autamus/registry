@@ -4,6 +4,8 @@ name: accumulo
 github: https://github.com/autamus/registry/blob/main/containers/a/accumulo/spack.yaml
 versions:
 - 2.0.1
+- 2.0.0
+
 updated_at: 2021-05-26T02:44:38.743202187Z
 size: 273MB
 description: Apache Accumulo is a sorted, distributed key/value store that provides

@@ -4,6 +4,8 @@ name: gcc
 github: https://github.com/autamus/registry/blob/main/containers/g/gcc/spack.yaml
 versions:
 - 11.1.0
+- 10.3.0
+- 10.2.0
 updated_at: 2021-05-26T20:09:41.435524984Z
 size: 140MB
 description: The GNU Compiler Collection includes front ends for C, C++, Objective-C,

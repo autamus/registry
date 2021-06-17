@@ -4,6 +4,7 @@ name: corset
 github: https://github.com/autamus/registry/blob/main/containers/c/corset/spack.yaml
 versions:
 - "1.09"
+- "1.06"
 updated_at: 2021-05-26T04:30:21.039771608Z
 size: 27MB
 description: Corset is a command-line software program to go from a de novo transcriptome

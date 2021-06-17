@@ -4,6 +4,8 @@ name: ascent
 github: https://github.com/autamus/registry/blob/main/containers/a/ascent/spack.yaml
 versions:
 - 0.7.1
+- 0.7.0
+- 0.6.0
 updated_at: 2021-05-29T01:40:56.816222846Z
 size: 97MB
 description: Ascent is an open source many-core capable lightweight in situ visualization

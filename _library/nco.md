@@ -4,6 +4,9 @@ name: nco
 github: https://github.com/autamus/registry/blob/main/containers/n/nco/spack.yaml
 versions:
 - 4.9.9
+- 4.9.8
+- 4.9.7
+- 4.9.3
 updated_at: 2021-05-26T07:45:01.864072929Z
 size: 62MB
 description: The NCO toolkit manipulates and analyzes data stored in netCDF-accessible
