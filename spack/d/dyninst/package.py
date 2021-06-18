@@ -15,17 +15,18 @@ class Dyninst(CMakePackage):
     git      = "https://github.com/dyninst/dyninst.git"
     maintainers = ['hainest']
 
-    version('master', branch='master')
-    version('11.0.0', tag='v11.0.0')
-    version('10.2.1', tag='v10.2.1')
-    version('10.2.0', tag='v10.2.0')
-    version('10.1.0', tag='v10.1.0')
-    version('10.0.0', tag='v10.0.0')
-    version('9.3.2', tag='v9.3.2')
-    version('9.3.0', tag='v9.3.0')
-    version('9.2.0', tag='v9.2.0')
-    version('9.1.0', tag='v9.1.0')
-    version('8.2.1', tag='v8.2.1')
+    version('master', branch='master', expand=False)
+    version('11.0.1', expand=False)
+    version('11.0.0', expand=False)
+    version('10.2.1', expand=False)
+    version('10.2.0', expand=False)
+    version('10.1.0', expand=False)
+    version('10.0.0', expand=False)
+    version('9.3.2', expand=False)
+    version('9.3.0', expand=False)
+    version('9.2.0', expand=False)
+    version('9.1.0', expand=False)
+    version('8.2.1', expand=False)
 
     variant('openmp', default=True,
             description='Enable OpenMP support for ParseAPI '
