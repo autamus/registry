@@ -4,8 +4,9 @@ name: graphviz
 github: https://github.com/autamus/registry/blob/main/containers/g/graphviz/spack.yaml
 versions:
 - 2.47.2
-updated_at: 2021-05-27T16:38:58.637085935Z
-size: 31MB
+- 2.47.3
+updated_at: 2021-06-20T22:40:23.016542239Z
+size: 32MB
 description: Graph Visualization Software
 container_url: https://github.com/orgs/autamus/packages/container/package/graphviz
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/graphv
 # graphviz
 ```bash 
 Download        : docker pull ghcr.io/autamus/graphviz
-Compressed Size : 31MB
+Compressed Size : 32MB
 ```
 
 ## Description
