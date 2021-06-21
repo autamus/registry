@@ -44,6 +44,7 @@ class Stat(AutotoolsPackage):
 
     depends_on('autoconf', type='build')
     depends_on('automake', type='build')
+    depends_on('binutils', type='build')
     depends_on('libtool', type='build')
     depends_on('dyninst', when='~dysect')
     depends_on('dyninst@:9.99', when='@:4.0.1')
