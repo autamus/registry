@@ -4,7 +4,8 @@ name: lmod
 github: https://github.com/autamus/registry/blob/main/containers/l/lmod/spack.yaml
 versions:
 - "8.3"
-updated_at: 2021-05-26T07:02:51.547114549Z
+- 8.5.6
+updated_at: 2021-06-22T14:51:19.677286584Z
 size: 45MB
 description: ' homepage = ''https://www.tacc.utexas.edu/research-development/tacc-projects/lmod'
 container_url: https://github.com/orgs/autamus/packages/container/package/lmod
