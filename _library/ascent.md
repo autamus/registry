@@ -6,8 +6,8 @@ versions:
 - 0.7.1
 - 0.7.0
 - 0.6.0
-updated_at: 2021-06-22T00:04:59.74082394Z
-size: 98MB
+updated_at: 2021-06-22T00:50:27.742073046Z
+size: 97MB
 description: Ascent is an open source many-core capable lightweight in situ visualization
   and analysis infrastructure for multi-physics HPC simulations.
 container_url: https://github.com/orgs/autamus/packages/container/package/ascent
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/ascent
 # ascent
 ```bash 
 Download        : docker pull ghcr.io/autamus/ascent
-Compressed Size : 98MB
+Compressed Size : 97MB
 ```
 
 ## Description
