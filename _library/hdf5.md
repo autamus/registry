@@ -4,8 +4,8 @@ name: hdf5
 github: https://github.com/autamus/registry/blob/main/containers/h/hdf5/spack.yaml
 versions:
 - 1.12.0
-updated_at: 2021-05-26T07:02:49.048186084Z
-size: 54MB
+updated_at: 2021-06-23T20:05:38.772247336Z
+size: 55MB
 description: .format(version=str(spec.version.up_to(3))) with open("check.c", 'w
 container_url: https://github.com/orgs/autamus/packages/container/package/hdf5
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/hdf5
 # hdf5
 ```bash 
 Download        : docker pull ghcr.io/autamus/hdf5
-Compressed Size : 54MB
+Compressed Size : 55MB
 ```
 
 ## Description
