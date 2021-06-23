@@ -4,7 +4,7 @@ name: veloc
 github: https://github.com/autamus/registry/blob/main/containers/v/veloc/spack.yaml
 versions:
 - "1.4"
-updated_at: 2021-06-23T19:15:56.723546757Z
+updated_at: 2021-06-23T19:57:55.411288946Z
 size: 74MB
 description: Very-Low Overhead Checkpointing System. VELOC is a multi-level checkpoint-restart
   runtime for HPC supercomputing infrastructures
