@@ -4,8 +4,8 @@ name: mpc
 github: https://github.com/autamus/registry/blob/main/containers/m/mpc/spack.yaml
 versions:
 - 1.1.0
-updated_at: 2021-05-26T06:49:43.936080258Z
-size: 30MB
+updated_at: 2021-06-23T20:11:05.344522748Z
+size: 31MB
 description: Gnu Mpc is a C library for the arithmetic of complex numbers with arbitrarily
   high precision and correct rounding of the result.
 container_url: https://github.com/orgs/autamus/packages/container/package/mpc
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/mpc
 # mpc
 ```bash 
 Download        : docker pull ghcr.io/autamus/mpc
-Compressed Size : 30MB
+Compressed Size : 31MB
 ```
 
 ## Description
