@@ -4,7 +4,7 @@ name: metall
 github: https://github.com/autamus/registry/blob/main/containers/m/metall/spack.yaml
 versions:
 - "0.13"
-updated_at: 2021-06-23T18:57:18.816961302Z
+updated_at: 2021-06-23T19:37:14.820333818Z
 size: 49MB
 description: A Persistent Memory Allocator For Data-Centric Analytics
 container_url: https://github.com/orgs/autamus/packages/container/package/metall
