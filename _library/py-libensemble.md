@@ -4,7 +4,7 @@ name: py-libensemble
 github: https://github.com/autamus/registry/blob/main/containers/p/py-libensemble/spack.yaml
 versions:
 - 0.7.2
-updated_at: 2021-06-23T20:15:05.338898577Z
+updated_at: 2021-06-23T20:26:53.850526523Z
 size: 116MB
 description: Library for managing ensemble-like collections of computations.
 container_url: https://github.com/orgs/autamus/packages/container/package/py-libensemble
