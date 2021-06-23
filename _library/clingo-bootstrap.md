@@ -4,8 +4,8 @@ name: clingo-bootstrap
 github: https://github.com/autamus/registry/blob/main/containers/c/clingo-bootstrap/spack.yaml
 versions:
 - latest
-updated_at: 2021-06-23T17:39:57.464892664Z
-size: 89MB
+updated_at: 2021-06-23T19:23:46.033198339Z
+size: 88MB
 description: Clingo with some options used for bootstrapping
 container_url: https://github.com/orgs/autamus/packages/container/package/clingo-bootstrap
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/clingo
 # clingo-bootstrap
 ```bash 
 Download        : docker pull ghcr.io/autamus/clingo-bootstrap
-Compressed Size : 89MB
+Compressed Size : 88MB
 ```
 
 ## Description
