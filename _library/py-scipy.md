@@ -4,7 +4,7 @@ name: py-scipy
 github: https://github.com/autamus/registry/blob/main/containers/p/py-scipy/spack.yaml
 versions:
 - 1.6.3
-updated_at: 2021-06-02T18:56:07.087982041Z
+updated_at: 2021-06-23T18:41:44.170196367Z
 size: 137MB
 description: SciPy (pronounced "Sigh
 container_url: https://github.com/orgs/autamus/packages/container/package/py-scipy
