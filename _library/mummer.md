@@ -4,7 +4,7 @@ name: mummer
 github: https://github.com/autamus/registry/blob/main/containers/m/mummer/spack.yaml
 versions:
 - "3.23"
-updated_at: 2021-06-23T19:08:16.769431201Z
+updated_at: 2021-06-23T19:47:49.604978026Z
 size: 175MB
 description: MUMmer is a system for rapidly aligning entire genomes.
 container_url: https://github.com/orgs/autamus/packages/container/package/mummer
