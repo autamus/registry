@@ -4,7 +4,7 @@ name: scons
 github: https://github.com/autamus/registry/blob/main/containers/s/scons/spack.yaml
 versions:
 - 3.1.2
-updated_at: 2021-06-23T18:30:44.380302238Z
+updated_at: 2021-06-23T19:08:24.994034448Z
 size: 86MB
 description: SCons is a software construction tool
 container_url: https://github.com/orgs/autamus/packages/container/package/scons
