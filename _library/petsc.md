@@ -4,7 +4,7 @@ name: petsc
 github: https://github.com/autamus/registry/blob/main/containers/p/petsc/spack.yaml
 versions:
 - 3.15.1
-updated_at: 2021-06-23T19:02:40.642790901Z
+updated_at: 2021-06-23T19:50:03.807311653Z
 size: 104MB
 description: 'PETSc is a suite of data structures and routines for the scalable (parallel)
   solution of scientific applications modeled by partial differential equations. '
