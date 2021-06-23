@@ -6,7 +6,7 @@ versions:
 - 0.7.1
 - 0.7.0
 - 0.6.0
-updated_at: 2021-06-23T18:41:16.827526549Z
+updated_at: 2021-06-23T19:18:53.523898308Z
 size: 97MB
 description: Ascent is an open source many-core capable lightweight in situ visualization
   and analysis infrastructure for multi-physics HPC simulations.
