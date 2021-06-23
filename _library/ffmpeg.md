@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/f/ffmpeg/spack.
 versions:
 - "4.5"
 - 4.3.2
-updated_at: 2021-05-26T06:24:31.823047686Z
+updated_at: 2021-06-23T18:07:19.431285941Z
 size: 49MB
 description: FFmpeg is a complete, cross-platform solution to record, convert and
   stream audio and video.
