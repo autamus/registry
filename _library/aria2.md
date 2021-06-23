@@ -4,8 +4,8 @@ name: aria2
 github: https://github.com/autamus/registry/blob/main/containers/a/aria2/spack.yaml
 versions:
 - 1.35.0
-updated_at: 2021-05-25T17:15:10.446978375Z
-size: 42MB
+updated_at: 2021-06-23T18:46:26.867153871Z
+size: 43MB
 description: An ultra fast download utility
 container_url: https://github.com/orgs/autamus/packages/container/package/aria2
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/aria2
 # aria2
 ```bash 
 Download        : docker pull ghcr.io/autamus/aria2
-Compressed Size : 42MB
+Compressed Size : 43MB
 ```
 
 ## Description
