@@ -4,8 +4,9 @@ name: py-scipy
 github: https://github.com/autamus/registry/blob/main/containers/p/py-scipy/spack.yaml
 versions:
 - 1.6.3
-updated_at: 2021-06-23T19:50:51.792389717Z
-size: 137MB
+- 1.7.0
+updated_at: 2021-06-23T20:51:59.476903637Z
+size: 145MB
 description: SciPy (pronounced "Sigh
 container_url: https://github.com/orgs/autamus/packages/container/package/py-scipy
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/py-sci
 # py-scipy
 ```bash 
 Download        : docker pull ghcr.io/autamus/py-scipy
-Compressed Size : 137MB
+Compressed Size : 145MB
 ```
 
 ## Description
