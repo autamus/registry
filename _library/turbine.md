@@ -4,7 +4,7 @@ name: turbine
 github: https://github.com/autamus/registry/blob/main/containers/t/turbine/spack.yaml
 versions:
 - 1.3.0
-updated_at: 2021-06-23T19:56:35.475704376Z
+updated_at: 2021-06-23T20:18:49.202583545Z
 size: 70MB
 description: 'Turbine: The Swift/T runtime'
 container_url: https://github.com/orgs/autamus/packages/container/package/turbine
