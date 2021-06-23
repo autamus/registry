@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/g/graphviz/spac
 versions:
 - 2.47.2
 - 2.47.3
-updated_at: 2021-06-20T22:40:23.016542239Z
-size: 32MB
+updated_at: 2021-06-23T17:37:44.643690092Z
+size: 31MB
 description: Graph Visualization Software
 container_url: https://github.com/orgs/autamus/packages/container/package/graphviz
 
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/graphv
 # graphviz
 ```bash 
 Download        : docker pull ghcr.io/autamus/graphviz
-Compressed Size : 32MB
+Compressed Size : 31MB
 ```
 
 ## Description
