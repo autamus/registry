@@ -4,7 +4,7 @@ name: parallel-netcdf
 github: https://github.com/autamus/registry/blob/main/containers/p/parallel-netcdf/spack.yaml
 versions:
 - 1.12.2
-updated_at: 2021-06-22T15:12:23.580890423Z
+updated_at: 2021-06-23T20:14:08.23301818Z
 size: 53MB
 description: 'PnetCDF (Parallel netCDF) is a high-performance parallel I/O library
   for accessing files in format compatibility with Unidata''s NetCDF, specifically
