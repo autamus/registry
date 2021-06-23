@@ -4,7 +4,7 @@ name: cmake
 github: https://github.com/autamus/registry/blob/main/containers/c/cmake/spack.yaml
 versions:
 - 3.20.3
-updated_at: 2021-06-23T18:46:14.519100552Z
+updated_at: 2021-06-23T19:22:01.577141085Z
 size: 53MB
 description: 'A cross-platform, open-source build system. CMake is a family of tools
   designed to build, test and package software. '
