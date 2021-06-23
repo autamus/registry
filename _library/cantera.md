@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/c/cantera/spack
 versions:
 - 2.5.1
 - 2.4.0
-updated_at: 2021-06-23T18:48:48.756036617Z
+updated_at: 2021-06-23T19:22:49.34316747Z
 size: 125MB
 description: Cantera is a suite of object-oriented software tools for problems involving
   chemical kinetics, thermodynamics, and/or transport processes.
