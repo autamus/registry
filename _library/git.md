@@ -4,7 +4,7 @@ name: git
 github: https://github.com/autamus/registry/blob/main/containers/g/git/spack.yaml
 versions:
 - latest
-updated_at: 2021-06-01T18:09:30.360445041Z
+updated_at: 2021-06-23T20:06:53.018331521Z
 size: 299MB
 description: 'Git is a free and open source distributed version control system designed
   to handle everything from small to very large projects with speed and efficiency. '
