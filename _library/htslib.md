@@ -4,7 +4,7 @@ name: htslib
 github: https://github.com/autamus/registry/blob/main/containers/h/htslib/spack.yaml
 versions:
 - "1.12"
-updated_at: 2021-05-26T06:32:58.879271116Z
+updated_at: 2021-06-23T18:11:02.592830283Z
 size: 37MB
 description: C library for high-throughput sequencing data formats.
 container_url: https://github.com/orgs/autamus/packages/container/package/htslib
