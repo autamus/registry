@@ -3,14 +3,12 @@ layout: container
 name: r
 github: https://github.com/autamus/registry/blob/main/containers/r/r/spack.yaml
 versions:
+- 3.0.rc.1
 - 4.0.4
-updated_at: 2021-05-26T17:11:20.09883308Z
+updated_at: 2021-06-23T18:35:08.173842115Z
 size: 273MB
-description: 'R is GNU S, a freely available language and environment for statistical
-  computing and graphics which provides a wide variety of statistical and graphical
-  techniques: linear and nonlinear modelling, statistical tests, time series analysis,
-  classification, clustering, etc. Please consult the R project homepage for further
-  information.'
+description: SCR caches checkpoint data in storage on the compute nodes of a Linux
+  cluster to provide a fast, scalable checkpoint/restart capability for MPI codes
 container_url: https://github.com/orgs/autamus/packages/container/package/r
 
 ---
@@ -21,7 +19,7 @@ Compressed Size : 273MB
 ```
 
 ## Description
-R is GNU S, a freely available language and environment for statistical computing and graphics which provides a wide variety of statistical and graphical techniques: linear and nonlinear modelling, statistical tests, time series analysis, classification, clustering, etc. Please consult the R project homepage for further information.
+SCR caches checkpoint data in storage on the compute nodes of a Linux cluster to provide a fast, scalable checkpoint/restart capability for MPI codes
 
 ## Usage
 ### Pull (Download)
@@ -34,7 +32,7 @@ docker pull ghcr.io/autamus/r:latest
 or to download a specific version of r run,
 
 ```bash
-docker pull ghcr.io/autamus/r:4.0.4
+docker pull ghcr.io/autamus/r:3.0.rc.1
 ```
 ### Run
 To run the container as an application run,
