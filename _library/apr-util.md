@@ -4,8 +4,8 @@ name: apr-util
 github: https://github.com/autamus/registry/blob/main/containers/a/apr-util/spack.yaml
 versions:
 - 1.6.1
-updated_at: 2021-05-25T16:32:11.624024218Z
-size: 35MB
+updated_at: 2021-06-23T18:40:13.754477465Z
+size: 36MB
 description: Apache Portable Runtime Utility
 container_url: https://github.com/orgs/autamus/packages/container/package/apr-util
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/apr-ut
 # apr-util
 ```bash 
 Download        : docker pull ghcr.io/autamus/apr-util
-Compressed Size : 35MB
+Compressed Size : 36MB
 ```
 
 ## Description
