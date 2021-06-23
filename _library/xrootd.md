@@ -4,7 +4,7 @@ name: xrootd
 github: https://github.com/autamus/registry/blob/main/containers/x/xrootd/spack.yaml
 versions:
 - 5.1.0
-updated_at: 2021-06-23T18:37:11.0089369Z
+updated_at: 2021-06-23T19:16:06.517403547Z
 size: 43MB
 description: The XROOTD project aims at giving high performance, scalable fault tolerant
   access to data repositories of many kinds.
