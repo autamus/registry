@@ -4,7 +4,7 @@ name: openmpi
 github: https://github.com/autamus/registry/blob/main/containers/o/openmpi/spack.yaml
 versions:
 - 4.1.1
-updated_at: 2021-06-22T14:48:14.388650147Z
+updated_at: 2021-06-23T19:00:36.965251176Z
 size: 50MB
 description: 'An open source Message Passing Interface implementation. The Open MPI
   Project is an open source Message Passing Interface implementation that is developed
