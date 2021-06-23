@@ -4,8 +4,8 @@ name: cfitsio
 github: https://github.com/autamus/registry/blob/main/containers/c/cfitsio/spack.yaml
 versions:
 - "3.49"
-updated_at: 2021-05-26T04:45:03.73772703Z
-size: 35MB
+updated_at: 2021-06-23T18:03:36.963239883Z
+size: 36MB
 description: 'CFITSIO is a library of C and Fortran subroutines for reading and writing
   data files in FITS (Flexible Image Transport System) data format. '
 container_url: https://github.com/orgs/autamus/packages/container/package/cfitsio
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/cfitsi
 # cfitsio
 ```bash 
 Download        : docker pull ghcr.io/autamus/cfitsio
-Compressed Size : 35MB
+Compressed Size : 36MB
 ```
 
 ## Description
