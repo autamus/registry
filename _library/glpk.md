@@ -4,8 +4,8 @@ name: glpk
 github: https://github.com/autamus/registry/blob/main/containers/g/glpk/spack.yaml
 versions:
 - "4.65"
-updated_at: 2021-05-26T06:15:06.265894661Z
-size: 27MB
+updated_at: 2021-06-23T20:03:36.387358839Z
+size: 28MB
 description: 'The GLPK (GNU Linear Programming Kit) package is intended for solving
   large-scale linear programming (LP), mixed integer programming (MIP), and other
   related problems. It is a set of routines written in ANSI C and organized in the
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/glpk
 # glpk
 ```bash 
 Download        : docker pull ghcr.io/autamus/glpk
-Compressed Size : 27MB
+Compressed Size : 28MB
 ```
 
 ## Description
