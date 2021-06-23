@@ -4,7 +4,7 @@ name: datatransferkit
 github: https://github.com/autamus/registry/blob/main/containers/d/datatransferkit/spack.yaml
 versions:
 - 3.1.rc.2
-updated_at: 2021-06-22T20:21:52.759330655Z
+updated_at: 2021-06-23T18:31:59.82488142Z
 size: 205MB
 description: DataTransferKit is an open-source software library of parallel solution
   transfer services for multiphysics simulations
