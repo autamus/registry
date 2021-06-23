@@ -4,7 +4,7 @@ name: flit
 github: https://github.com/autamus/registry/blob/main/containers/f/flit/spack.yaml
 versions:
 - 2.1.0
-updated_at: 2021-06-22T00:36:48.227803127Z
+updated_at: 2021-06-23T18:09:17.0909201Z
 size: 85MB
 description: Floating-point Litmus Tests (FLiT) is a C++ test infrastructure for detecting
   variability in floating-point code caused by variations in compiler code generation,
