@@ -3,13 +3,14 @@ layout: container
 name: go
 github: https://github.com/autamus/registry/blob/main/containers/g/go/spack.yaml
 versions:
-- 1.56.0
 - 1.16.5
-updated_at: 2021-06-23T20:07:43.829984755Z
+- 1.16.4
+- 1.16.3
+- 1.16.2
+- 1.16.0
+updated_at: 2021-06-07T17:19:36.170302736Z
 size: 245MB
-description: Sequence logos for DNA sequence alignments seqLogo takes the position
-  weight matrix of a DNA sequence motif and plots the corresponding sequence logo
-  as introduced by Schneider and Stephens (1990).
+description: The golang compiler and build environment
 container_url: https://github.com/orgs/autamus/packages/container/package/go
 
 ---
@@ -20,7 +21,7 @@ Compressed Size : 245MB
 ```
 
 ## Description
-Sequence logos for DNA sequence alignments seqLogo takes the position weight matrix of a DNA sequence motif and plots the corresponding sequence logo as introduced by Schneider and Stephens (1990).
+The golang compiler and build environment
 
 ## Usage
 ### Pull (Download)
@@ -33,7 +34,7 @@ docker pull ghcr.io/autamus/go:latest
 or to download a specific version of go run,
 
 ```bash
-docker pull ghcr.io/autamus/go:1.56.0
+docker pull ghcr.io/autamus/go:1.16.5
 ```
 ### Run
 To run the container as an application run,
