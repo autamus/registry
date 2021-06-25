@@ -4,7 +4,7 @@ name: benchmark
 github: https://github.com/autamus/registry/blob/main/containers/b/benchmark/spack.yaml
 versions:
 - 1.5.5
-updated_at: 2021-06-23T19:20:38.014639031Z
+updated_at: 2021-06-25T15:53:31.401923322Z
 size: 27MB
 description: A microbenchmark support library
 container_url: https://github.com/orgs/autamus/packages/container/package/benchmark
