@@ -4,7 +4,7 @@ name: protobuf
 github: https://github.com/autamus/registry/blob/main/containers/p/protobuf/spack.yaml
 versions:
 - 3.17.3
-updated_at: 2021-06-23T20:11:53.280879406Z
+updated_at: 2021-06-25T16:03:24.925603806Z
 size: 29MB
 description: Google's data interchange format.
 container_url: https://github.com/orgs/autamus/packages/container/package/protobuf
