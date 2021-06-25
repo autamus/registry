@@ -4,7 +4,7 @@ name: ginkgo
 github: https://github.com/autamus/registry/blob/main/containers/g/ginkgo/spack.yaml
 versions:
 - 1.3.0
-updated_at: 2021-06-23T19:24:03.355466925Z
+updated_at: 2021-06-25T15:53:20.75009271Z
 size: 30MB
 description: High-performance linear algebra library for manycore systems, with a
   focus on sparse solution of linear systems.
