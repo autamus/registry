@@ -5,8 +5,9 @@ github: https://github.com/autamus/registry/blob/main/containers/l/lmod/spack.ya
 versions:
 - "8.3"
 - 8.5.6
-updated_at: 2021-06-22T14:51:19.677286584Z
-size: 45MB
+- 8.5.7
+updated_at: 2021-06-28T15:00:46.430689898Z
+size: 46MB
 description: ' homepage = ''https://www.tacc.utexas.edu/research-development/tacc-projects/lmod'
 container_url: https://github.com/orgs/autamus/packages/container/package/lmod
 
@@ -14,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/lmod
 # lmod
 ```bash 
 Download        : docker pull ghcr.io/autamus/lmod
-Compressed Size : 45MB
+Compressed Size : 46MB
 ```
 
 ## Description
