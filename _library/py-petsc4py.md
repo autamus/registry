@@ -4,7 +4,7 @@ name: py-petsc4py
 github: https://github.com/autamus/registry/blob/main/containers/p/py-petsc4py/spack.yaml
 versions:
 - 3.15.1
-updated_at: 2021-06-25T16:09:34.4971349Z
+updated_at: 2021-06-28T17:41:56.84158543Z
 size: 162MB
 description: 'This package provides Python bindings for the PETSc package. '
 container_url: https://github.com/orgs/autamus/packages/container/package/py-petsc4py
