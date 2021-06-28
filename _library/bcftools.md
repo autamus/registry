@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/b/bcftools/spac
 versions:
 - "1.12"
 - "1.11"
-updated_at: 2021-06-23T20:04:28.406490719Z
+updated_at: 2021-06-28T17:40:06.147383237Z
 size: 155MB
 description: BCFtools is a set of utilities that manipulate variant calls in the Variant
   Call Format (VCF) and its binary counterpart BCF. All commands work transparently
