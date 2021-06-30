@@ -121,12 +121,13 @@ jobs:
       - name: Push to GitHub Packages & DockerHub
         # Don't push build on pull request
         if: github.ref == 'refs/heads/main'
-        run: docker push --all-tags ghcr.io/autamus/${{steps.builder.outputs.container}}
+        run: |
+          docker push --all-tags ghcr.io/autamus/${{steps.builder.outputs.container}}
+          docker push --all-tags autamus/${{steps.builder.outputs.container}}
 
       - name: Build Summary
         id: summary
         run: |
-          docker system prune -f
           container=${{steps.builder.outputs.container}}
           docker image save "ghcr.io/autamus/$container" > container
           tar -czvf container.tar.gz container > /dev/null
