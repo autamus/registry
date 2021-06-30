@@ -14,6 +14,7 @@ class Admixtools(MakefilePackage):
     homepage = "https://github.com/DReichLab/AdmixTools"
     url      = "https://github.com/DReichLab/AdmixTools/archive/v7.0.2.tar.gz"
 
+    version('7.0.2', sha256='d1dc1963e01017f40e05e28009008e14388a14a3facc75cff46653da585bd91e', url='https://github.com/DReichLab/AdmixTools/archive/v7.0.2.tar.gz')
     version('7.0.1', sha256='182dd6f55109e9a1569b47843b0d1aa89fe4cf4a05f9292519b9811faea67a20')
     version('7.0', sha256='c00faab626f02bbf9c25c6d2dcf661db225776e9ed61251f164e5edeb5a448e5')
     version('6.0', sha256='8fcd6c6834c7b33afdd7188516856d9c66b53c33dc82e133b72b56714fb67ad5')
