@@ -128,10 +128,11 @@ jobs:
       - name: Build Summary
         id: summary
         run: |
+          docker system prune -f
           container=${{steps.builder.outputs.container}}
           docker image save "autamus/$container" > container
           tar -czvf container.tar.gz container > /dev/null
-          docker=$(docker system df -v | grep "ghcr.io/autamus/$container")
+          docker=$(docker system df -v | grep "autamus/$container")
           docker_data=($docker)
           raw=$(ls -lh --block-size=MB | grep "container.tar.gz")
           raw_data=($raw)
