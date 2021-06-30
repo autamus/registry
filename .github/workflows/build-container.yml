@@ -129,7 +129,7 @@ jobs:
         id: summary
         run: |
           container=${{steps.builder.outputs.container}}
-          docker image save "ghcr.io/autamus/$container" > container
+          docker image save "autamus/$container" > container
           tar -czvf container.tar.gz container > /dev/null
           docker=$(docker system df -v | grep "ghcr.io/autamus/$container")
           docker_data=($docker)
