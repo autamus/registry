@@ -6,8 +6,9 @@ versions:
 - 2.0.9
 - 2.0.8
 - 2.0.4
-updated_at: 2021-05-26T06:49:03.882687348Z
-size: 28MB
+- 2.0.10
+updated_at: 2021-06-30T18:00:07.134070144Z
+size: 29MB
 description: DIAMOND is a sequence aligner for protein and translated DNA searches,
   designed for high performance analysis of big sequence data.
 container_url: https://github.com/orgs/autamus/packages/container/package/diamond
@@ -16,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/diamon
 # diamond
 ```bash 
 Download        : docker pull ghcr.io/autamus/diamond
-Compressed Size : 28MB
+Compressed Size : 29MB
 ```
 
 ## Description
