@@ -4,7 +4,8 @@ name: ruby
 github: https://github.com/autamus/registry/blob/main/containers/r/ruby/spack.yaml
 versions:
 - 3.0.0
-updated_at: 2021-06-23T19:48:35.172894697Z
+- 3.0.1
+updated_at: 2021-06-30T17:47:17.081954453Z
 size: 44MB
 description: A dynamic, open source programming language with a focus on simplicity
   and productivity.
