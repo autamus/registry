@@ -4,8 +4,9 @@ name: sz
 github: https://github.com/autamus/registry/blob/main/containers/s/sz/spack.yaml
 versions:
 - 2.1.11.1
-updated_at: 2021-06-28T17:40:53.47125118Z
-size: 30MB
+- 2.1.11.2
+updated_at: 2021-06-30T20:40:51.625428671Z
+size: 29MB
 description: Error-bounded Lossy Compressor for HPC Data
 container_url: https://github.com/orgs/autamus/packages/container/package/sz
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/sz
 # sz
 ```bash 
 Download        : docker pull ghcr.io/autamus/sz
-Compressed Size : 30MB
+Compressed Size : 29MB
 ```
 
 ## Description
