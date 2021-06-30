@@ -4,7 +4,7 @@ name: admixtools
 github: https://github.com/autamus/registry/blob/main/containers/a/admixtools/spack.yaml
 versions:
 - 7.0.1
-updated_at: 2021-06-28T17:41:22.352749339Z
+updated_at: 2021-06-30T17:01:03.11439286Z
 size: 57MB
 description: The ADMIXTOOLS package implements 5 methods described in Patterson et
   al. (2012) Ancient Admixture in Human History. Details of the methods and algorithm
