@@ -7,10 +7,11 @@ class Opencv(CMakePackage, CudaPackage):
     vision and machine learning software library."""
 
     homepage = 'https://opencv.org/'
-    url      = "https://github.com/opencv/opencv/archive/4.5.2.tar.gz"
+    url      = "https://github.com/opencv/opencv/archive/4.5.3-openvino.tar.gz"
     git      = 'https://github.com/opencv/opencv.git'
 
     maintainers = ['bvanessen', 'adamjstewart']
+    version('4.5.3', sha256='a09582b63b0ff46dfc6d47e491eb69ab674a169e99ba585d81a03c46524eaf69', url='https://github.com/opencv/opencv/archive/4.5.3-openvino.tar.gz')
     version('4.5.2', sha256='ae258ed50aa039279c3d36afdea5c6ecf762515836b27871a8957c610d0424f8', url='https://github.com/opencv/opencv/archive/4.5.2.tar.gz')
 
     # Standard variants
