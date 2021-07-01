@@ -4,7 +4,7 @@ name: faodel
 github: https://github.com/autamus/registry/blob/main/containers/f/faodel/spack.yaml
 versions:
 - 1.1906.1
-updated_at: 2021-06-25T15:56:30.612345088Z
+updated_at: 2021-07-01T16:24:07.953957863Z
 size: 74MB
 description: Flexible, Asynchronous, Object Data-Exchange Libraries
 container_url: https://github.com/orgs/autamus/packages/container/package/faodel
