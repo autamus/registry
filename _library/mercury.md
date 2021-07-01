@@ -4,7 +4,7 @@ name: mercury
 github: https://github.com/autamus/registry/blob/main/containers/m/mercury/spack.yaml
 versions:
 - 2.0.1
-updated_at: 2021-06-25T16:01:56.446065354Z
+updated_at: 2021-07-01T16:31:58.78465079Z
 size: 50MB
 description: Mercury is a C library for implementing RPC, optimized for HPC
 container_url: https://github.com/orgs/autamus/packages/container/package/mercury
