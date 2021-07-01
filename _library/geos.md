@@ -4,7 +4,7 @@ name: geos
 github: https://github.com/autamus/registry/blob/main/containers/g/geos/spack.yaml
 versions:
 - 3.8.1
-updated_at: 2021-06-23T19:23:34.627422412Z
+updated_at: 2021-07-01T16:24:46.942823487Z
 size: 28MB
 description: GEOS (Geometry Engine - Open Source) is a C++ port of the Java Topology
   Suite (JTS). As such, it aims to contain the complete functionality of JTS in C++.
