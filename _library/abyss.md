@@ -6,7 +6,7 @@ versions:
 - 2.3.1
 - 2.3.0
 - 2.2.5
-updated_at: 2021-06-23T19:18:33.727920315Z
+updated_at: 2021-07-01T16:21:10.601469209Z
 size: 80MB
 description: ABySS is a de novo, parallel, paired-end sequence assembler that is designed
   for short reads. The single-processor version is useful for assembling genomes up
