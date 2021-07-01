@@ -4,7 +4,8 @@ name: python
 github: https://github.com/autamus/registry/blob/main/containers/p/python/spack.yaml
 versions:
 - 3.9.5
-updated_at: 2021-06-23T19:50:19.175667838Z
+- 3.9.6
+updated_at: 2021-07-01T16:40:30.347891023Z
 size: 83MB
 description: The Python programming language.
 container_url: https://github.com/orgs/autamus/packages/container/package/python
