@@ -4,7 +4,7 @@ name: psi4
 github: https://github.com/autamus/registry/blob/main/containers/p/psi4/spack.yaml
 versions:
 - 1.3.2
-updated_at: 2021-06-25T16:09:09.227625013Z
+updated_at: 2021-07-01T16:41:06.377637338Z
 size: 175MB
 description: Psi4 is an open-source suite of ab initio quantum chemistry programs
   designed for efficient, high-accuracy simulations of a variety of molecular properties.
