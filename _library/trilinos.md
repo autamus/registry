@@ -4,7 +4,7 @@ name: trilinos
 github: https://github.com/autamus/registry/blob/main/containers/t/trilinos/spack.yaml
 versions:
 - 13.0.1
-updated_at: 2021-06-30T20:48:37.357165063Z
+updated_at: 2021-07-01T16:52:50.830122839Z
 size: 203MB
 description: 'The Trilinos Project is an effort to develop algorithms and enabling
   technologies within an object-oriented software framework for the solution of large-scale,
