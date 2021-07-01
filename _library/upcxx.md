@@ -4,8 +4,8 @@ name: upcxx
 github: https://github.com/autamus/registry/blob/main/containers/u/upcxx/spack.yaml
 versions:
 - 2021.3.0
-updated_at: 2021-06-23T20:00:57.938526333Z
-size: 92MB
+updated_at: 2021-07-01T16:54:51.953396251Z
+size: 93MB
 description: UPC++ is a C++ library that supports Partitioned Global Address Space
   (PGAS) programming, and is designed to interoperate smoothly and efficiently with
   MPI, OpenMP, CUDA and AMTs. It leverages GASNet-EX to deliver low-overhead, fine-grained
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/upcxx
 # upcxx
 ```bash 
 Download        : docker pull ghcr.io/autamus/upcxx
-Compressed Size : 92MB
+Compressed Size : 93MB
 ```
 
 ## Description
