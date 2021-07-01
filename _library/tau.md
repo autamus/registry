@@ -4,7 +4,7 @@ name: tau
 github: https://github.com/autamus/registry/blob/main/containers/t/tau/spack.yaml
 versions:
 - 2.30.1
-updated_at: 2021-06-30T20:43:43.252438613Z
+updated_at: 2021-07-01T16:49:41.244444664Z
 size: 156MB
 description: 'A portable profiling and tracing toolkit for performance analysis of
   parallel programs written in Fortran, C, C++, UPC, Java, Python. '
