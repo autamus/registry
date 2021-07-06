@@ -4,8 +4,9 @@ name: cabana
 github: https://github.com/autamus/registry/blob/main/containers/c/cabana/spack.yaml
 versions:
 - 0.3.0
-updated_at: 2021-06-25T15:56:24.671411484Z
-size: 51MB
+- 0.4.0
+updated_at: 2021-07-06T17:35:18.727034608Z
+size: 52MB
 description: 'The Exascale Co-Design Center for Particle Applications Toolkit '
 container_url: https://github.com/orgs/autamus/packages/container/package/cabana
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/cabana
 # cabana
 ```bash 
 Download        : docker pull ghcr.io/autamus/cabana
-Compressed Size : 51MB
+Compressed Size : 52MB
 ```
 
 ## Description
