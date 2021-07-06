@@ -18,6 +18,7 @@ class Grass(AutotoolsPackage):
     git      = "https://github.com/OSGeo/grass.git"
 
     maintainers = ['adamjstewart']
+
     version('master', branch='master')
     version('7.8.5', sha256='a359bb665524ecccb643335d70f5436b1c84ffb6a0e428b78dffebacd983ff37', url='https://grass.osgeo.org/grass78/source/grass-7.8.5.tar.gz')
     version('7.8.2', sha256='33576f7078f805b39ca20c2fa416ac79c64260c0581072a6dc7d813f53aa9abb')
@@ -93,7 +94,7 @@ class Grass(AutotoolsPackage):
     depends_on('opencl', when='+opencl')
     depends_on('bzip2', when='+bzlib')
     depends_on('zstd', when='+zstd')
-    depends_on('gdal', when='+gdal')  # required?
+    depends_on('gdal@:3.2.3', when='+gdal') 
     depends_on('liblas', when='+liblas')
     depends_on('wxwidgets', when='+wxwidgets')
     depends_on('py-wxpython@2.8.10.1:', when='+wxwidgets', type=('build', 'run'))
