@@ -24,7 +24,7 @@ class Libabigail(AutotoolsPackage):
     depends_on('python@3.8:')
 
     # Requires package config
-    depends_on("pkgconfig") 
+    depends_on("pkgconf") 
 
     # Documentation dependencies
     depends_on('doxygen', type="build", when="+docs")
