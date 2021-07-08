@@ -49,13 +49,16 @@ jobs:
       
       - name: Builder
         id: builder
-        uses: autamus/builder@main
+        uses: autamus/builder@add/multistage-build
         with:
           containers_current: ${{ matrix.container }}
           parsers_loaded: spack
           packages_path: spack/
           packages_publickeyurl: 'http://s3.amazonaws.com/autamus-cache/build_cache/_pgp/FFEB24B0A9D81F6D5597F9900B59588C86C41BE7.pub'
           containers_path: containers/
+          multistage_base: spack/ubuntu-bionic
+          multistage_frompath: /opt/software
+          multistage_topath: /opt/spack/opt/spack
 
       - name: Import Registry to Repo
         if: ${{ steps.builder.outputs.type }} == 'Spack'
@@ -72,6 +75,13 @@ jobs:
         with:
           name: ${{steps.builder.outputs.container}}.Dockerfile
           path: Dockerfile
+
+      - name: Upload Multistage Dockerfile
+        if: ${{ steps.builder.outputs.multistage_suffix }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.builder.outputs.container }}.Dockerfile.multistage
+          path: Dockerfile.multistage
 
       - name: Make Space For Build
         run: |
@@ -93,6 +103,24 @@ jobs:
           --secret id=sign_key,src=./sign_key --progress=plain \
           -t ghcr.io/autamus/$package:latest -t ghcr.io/autamus/$package:$version \
           -t autamus/$package:latest -t autamus/$package:$version .
+
+      - name: Build Multistage Container for Package
+        if: ${{ steps.builder.outputs.multistage_suffix }}
+        env:
+          suffix: ${{ steps.builder.outputs.multistage_suffix }}
+          package: ${{ steps.builder.outputs.container }}
+          version: ${{ steps.builder.outputs.version }}
+          access_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          access_secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          if [[ -f Dockerfile.multistage ]]; then
+              DOCKER_BUILDKIT=1 docker build \
+              -f Dockerfile.multistage \
+              -t ghcr.io/autamus/$package$suffix:latest -t ghcr.io/autamus/$package$suffix:$version \
+              -t autamus/$package$suffix:latest -t autamus/$package$suffix:$version .
+          else
+              printf "Dockerfile.multistage does not exist, cannot build.\n"
+          fi
 
       - name: Upload Build Logs
         if: always()
@@ -121,9 +149,14 @@ jobs:
       - name: Push to GitHub Packages & DockerHub
         # Don't push build on pull request
         if: github.ref == 'refs/heads/main'
+        env:
+          suffix: ${{ steps.builder.outputs.multistage_suffix }}
+          package: ${{ steps.builder.outputs.container }}
         run: |
-          docker push --all-tags ghcr.io/autamus/${{steps.builder.outputs.container}}
-          docker push --all-tags autamus/${{steps.builder.outputs.container}}
+          docker push --all-tags ghcr.io/autamus/${package}
+          docker push --all-tags autamus/${package}
+          docker push --all-tags ghcr.io/autamus/${package}${suffix}
+          docker push --all-tags autamus/${package}${suffix}
 
       - name: Build Summary
         id: summary
