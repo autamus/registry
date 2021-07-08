@@ -23,6 +23,9 @@ class Libabigail(AutotoolsPackage):
     # Libabigail won't generate it's bin without Python
     depends_on('python@3.8:')
 
+    # Requires package config
+    depends_on("pkgconfig") 
+
     # Documentation dependencies
     depends_on('doxygen', type="build", when="+docs")
     depends_on('py-sphinx', type='build', when="+docs")
