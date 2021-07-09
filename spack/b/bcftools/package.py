@@ -11,8 +11,9 @@ class Bcftools(AutotoolsPackage):
        uncompressed and BGZF-compressed."""
 
     homepage = "http://samtools.github.io/bcftools/"
-    url      = "https://github.com/samtools/bcftools/releases/download/1.11/bcftools-1.11.tar.bz2"
+    url      = "https://github.com/samtools/bcftools/releases/download/1.13/bcftools-1.13.tar.bz2"
 
+    version('1.13', sha256='13bfa1da2a5edda8fa51196a47a0b4afb3fef17516451e4f0e78477f3dd30b90', url='https://github.com/samtools/bcftools/releases/download/1.13/bcftools-1.13.tar.bz2')
     version('1.12', sha256='3ceee47456ec481f34fa6c34beb6fe892b5b365933191132721fdf126e45a064', url='https://github.com/samtools/bcftools/releases/download/1.11/bcftools-1.11.tar.bz2')
     version('1.11', sha256='3ceee47456ec481f34fa6c34beb6fe892b5b365933191132721fdf126e45a064', url='https://github.com/samtools/bcftools/releases/download/1.11/bcftools-1.11.tar.bz2')
     version('1.10.2', sha256='f57301869d0055ce3b8e26d8ad880c0c1989bf25eaec8ea5db99b60e31354e2c')
