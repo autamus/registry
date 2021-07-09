@@ -11,9 +11,10 @@ class Bcftools(AutotoolsPackage):
        uncompressed and BGZF-compressed."""
 
     homepage = "http://samtools.github.io/bcftools/"
-    url      = "https://github.com/samtools/bcftools/releases/download/1.11/bcftools-1.11.tar.bz2"
+    url      = "https://github.com/samtools/bcftools/releases/download/1.13/bcftools-1.13.tar.bz2"
 
-    version('1.12', sha256='3ceee47456ec481f34fa6c34beb6fe892b5b365933191132721fdf126e45a064', url='https://github.com/samtools/bcftools/releases/download/1.11/bcftools-1.11.tar.bz2')
+    version('1.13', sha256='13bfa1da2a5edda8fa51196a47a0b4afb3fef17516451e4f0e78477f3dd30b90', url='https://github.com/samtools/bcftools/releases/download/1.13/bcftools-1.13.tar.bz2')
+    version('1.12', sha256='3ceee47456ec481f34fa6c34beb6fe892b5b365933191132721fdf126e45a064', url='https://github.com/samtools/bcftools/releases/download/1.12/bcftools-1.12.tar.bz2')
     version('1.11', sha256='3ceee47456ec481f34fa6c34beb6fe892b5b365933191132721fdf126e45a064', url='https://github.com/samtools/bcftools/releases/download/1.11/bcftools-1.11.tar.bz2')
     version('1.10.2', sha256='f57301869d0055ce3b8e26d8ad880c0c1989bf25eaec8ea5db99b60e31354e2c')
     version('1.9', sha256='6f36d0e6f16ec4acf88649fb1565d443acf0ba40f25a9afd87f14d14d13070c8')
@@ -40,16 +41,17 @@ class Bcftools(AutotoolsPackage):
     depends_on('perl', when='@1.8:+perl-filters', type=('build', 'run'))
 
     depends_on('htslib')
-    depends_on('htslib@1.12', when='@1.12')
-    depends_on('htslib@1.11', when='@1.11')
+    depends_on('htslib@1.13',   when='@1.13')
+    depends_on('htslib@1.12',   when='@1.12')
+    depends_on('htslib@1.11',   when='@1.11')
     depends_on('htslib@1.10.2', when='@1.10.2')
-    depends_on('htslib@1.9', when='@1.9')
-    depends_on('htslib@1.8', when='@1.8')
-    depends_on('htslib@1.7',   when='@1.7')
-    depends_on('htslib@1.6',   when='@1.6')
-    depends_on('htslib@1.4',   when='@1.4')
-    depends_on('htslib@1.3.1', when='@1.3.1')
-    depends_on('htslib@1.2', when='@1.2')
+    depends_on('htslib@1.9',    when='@1.9')
+    depends_on('htslib@1.8',    when='@1.8')
+    depends_on('htslib@1.7',    when='@1.7')
+    depends_on('htslib@1.6',    when='@1.6')
+    depends_on('htslib@1.4',    when='@1.4')
+    depends_on('htslib@1.3.1',  when='@1.3.1')
+    depends_on('htslib@1.2',    when='@1.2')
 
     patch('makefile_12.patch', when='@1.2')
     patch('fix_mk.patch', when='@1.2')
