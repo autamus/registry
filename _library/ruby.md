@@ -5,8 +5,9 @@ github: https://github.com/autamus/registry/blob/main/containers/r/ruby/spack.ya
 versions:
 - 3.0.0
 - 3.0.1
-updated_at: 2021-06-30T17:47:17.081954453Z
-size: 44MB
+- 3.0.2
+updated_at: 2021-07-09T17:37:28.806686629Z
+size: 45MB
 description: A dynamic, open source programming language with a focus on simplicity
   and productivity.
 container_url: https://github.com/orgs/autamus/packages/container/package/ruby
@@ -15,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/ruby
 # ruby
 ```bash 
 Download        : docker pull ghcr.io/autamus/ruby
-Compressed Size : 44MB
+Compressed Size : 45MB
 ```
 
 ## Description
