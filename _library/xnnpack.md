@@ -4,7 +4,7 @@ name: xnnpack
 github: https://github.com/autamus/registry/blob/main/containers/x/xnnpack/spack.yaml
 versions:
 - 2021.02.22
-updated_at: 2021-07-01T16:48:57.337325247Z
+updated_at: 2021-07-14T22:53:28.188289884Z
 size: 28MB
 description: High-efficiency floating-point neural network inference operators for
   mobile, server, and Web
