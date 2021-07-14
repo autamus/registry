@@ -5,8 +5,9 @@ github: https://github.com/autamus/registry/blob/main/containers/c/cmake/spack.y
 versions:
 - 3.20.3
 - 3.20.5
-updated_at: 2021-07-01T16:22:11.658446224Z
-size: 53MB
+- 3.21.0
+updated_at: 2021-07-14T22:22:29.975549318Z
+size: 54MB
 description: 'A cross-platform, open-source build system. CMake is a family of tools
   designed to build, test and package software. '
 container_url: https://github.com/orgs/autamus/packages/container/package/cmake
@@ -15,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/cmake
 # cmake
 ```bash 
 Download        : docker pull ghcr.io/autamus/cmake
-Compressed Size : 53MB
+Compressed Size : 54MB
 ```
 
 ## Description
