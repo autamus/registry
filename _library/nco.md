@@ -8,8 +8,9 @@ versions:
 - 4.9.7
 - 4.9.3
 - 5.0.0
-updated_at: 2021-06-23T20:14:16.965140116Z
-size: 62MB
+- 5.0.1
+updated_at: 2021-07-14T16:37:28.838849211Z
+size: 63MB
 description: The NCO toolkit manipulates and analyzes data stored in netCDF-accessible
   formats
 container_url: https://github.com/orgs/autamus/packages/container/package/nco
@@ -18,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/nco
 # nco
 ```bash 
 Download        : docker pull ghcr.io/autamus/nco
-Compressed Size : 62MB
+Compressed Size : 63MB
 ```
 
 ## Description
