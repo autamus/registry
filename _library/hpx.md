@@ -4,8 +4,9 @@ name: hpx
 github: https://github.com/autamus/registry/blob/main/containers/h/hpx/spack.yaml
 versions:
 - 1.6.0
-updated_at: 2021-07-14T22:59:34.880972892Z
-size: 120MB
+- 1.7.0
+updated_at: 2021-07-15T00:55:49.413056847Z
+size: 122MB
 description: C++ runtime system for parallel and distributed applications.
 container_url: https://github.com/orgs/autamus/packages/container/package/hpx
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/hpx
 # hpx
 ```bash 
 Download        : docker pull ghcr.io/autamus/hpx
-Compressed Size : 120MB
+Compressed Size : 122MB
 ```
 
 ## Description
