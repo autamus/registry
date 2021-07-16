@@ -24,6 +24,7 @@ class Poppler(CMakePackage):
     version('0.64.0', sha256='b21df92ca99f78067785cf2dc8e06deb04726b62389c0ee1f5d8b103c77f64b1')
     version('0.61.1', sha256='1266096343f5163c1a585124e9a6d44474e1345de5cdfe55dc7b47357bcfcda9')
 
+    variant('boost',    default=False, description='Enable Boost for Splash')
     variant('cms',      default=False, description='Use color management system')
     variant('cpp',      default=False, description='Compile poppler cpp wrapper')
     variant('glib',     default=False, description='Compile poppler glib wrapper')
@@ -43,6 +44,7 @@ class Poppler(CMakePackage):
     depends_on('fontconfig')
     depends_on('freetype')
 
+    depends_on('boost@1.58.0:', when='+boost')
     depends_on('lcms', when='+cms')
     depends_on('glib@2.41:', when='+glib')
     depends_on('gobject-introspection', when='+gobject')
@@ -86,6 +88,11 @@ class Poppler(CMakePackage):
         # Install header files
         args.append('-DENABLE_UNSTABLE_API_ABI_HEADERS=ON')
 
+        if '+boost' in spec:
+            args.append('-DENABLE_BOOST=ON')
+        else:
+            args.append('-DENABLE_BOOST=OFF')
+            
         if '+cms' in spec:
             args.append('-DENABLE_CMS=lcms2')
         else:
