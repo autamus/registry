@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/g/gdal/spack.ya
 versions:
 - 3.3.0
 - 3.3.1
-updated_at: 2021-07-14T22:24:54.850909655Z
+updated_at: 2021-07-16T17:37:43.737680567Z
 size: 58MB
 description: 'GDAL (Geospatial Data Abstraction Library) is a translator library for
   raster and vector geospatial data formats that is released under an X/MIT style
