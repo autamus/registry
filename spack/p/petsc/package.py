@@ -12,13 +12,11 @@ class Petsc(Package, CudaPackage, ROCmPackage):
     """
 
     homepage = "http://www.mcs.anl.gov/petsc/index.html"
-    url = "http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.15.0.tar.gz"
+    url      = "http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.15.2.tar.gz"
     git = "https://gitlab.com/petsc/petsc.git"
     maintainers = ['balay', 'barrysmith', 'jedbrown']
-
     version('main', branch='main')
-    version('xsdk-0.2.0', tag='xsdk-0.2.0')
-
+    version('3.15.2', sha256='3b10c19c69fc42e01a38132668724a01f1da56f5c353105cd28f1120cc9041d8', url='http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.15.2.tar.gz')
     version('3.15.1', sha256='c0ac6566e69d1d70b431e07e7598e9de95e84891c2452db1367c846b75109deb')
     version('3.15.0', sha256='ac46db6bfcaaec8cd28335231076815bd5438f401a4a05e33736b4f9ff12e59a')
     version('3.14.6', sha256='4de0c8820419fb15bc683b780127ff57067b62ca18749e864a87c6d7c93f1230')
@@ -73,6 +71,7 @@ class Petsc(Package, CudaPackage, ROCmPackage):
     version('3.5.2', sha256='1a8f09af654afab787c732e7b2f5d0c1d856777398148351565389d38d30935e')
     version('3.5.1', sha256='199af205f62dcc572728600670c7d4c8cb0d4efc4172c26f02b895d9dd1df245')
     version('3.4.4', sha256='fa73b99caf70c416a967234f5476cdb1d2c014610ee0619e48f54d8d309631b7')
+    version('0.2.0')
 
     variant('shared',  default=True,
             description='Enables the build of shared libraries')
