@@ -4,7 +4,7 @@ name: ninja
 github: https://github.com/autamus/registry/blob/main/containers/n/ninja/spack.yaml
 versions:
 - 1.10.2
-updated_at: 2021-07-01T16:32:26.180629598Z
+updated_at: 2021-07-20T22:20:22.814059513Z
 size: 27MB
 description: 'Ninja is a small build system with a focus on speed. It differs from
   other build systems in two major respects: it is designed to have its input files
