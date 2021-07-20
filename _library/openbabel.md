@@ -4,7 +4,7 @@ name: openbabel
 github: https://github.com/autamus/registry/blob/main/containers/o/openbabel/spack.yaml
 versions:
 - 3.1.1
-updated_at: 2021-07-14T23:02:45.208476011Z
+updated_at: 2021-07-20T22:45:25.049341092Z
 size: 197MB
 description: Open Babel is a chemical toolbox designed to speak the many languages
   of chemical data. It's an open, collaborative project allowing anyone to search,
