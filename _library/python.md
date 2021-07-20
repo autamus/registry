@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/p/python/spack.
 versions:
 - 3.9.5
 - 3.9.6
-updated_at: 2021-07-01T16:40:30.347891023Z
+updated_at: 2021-07-20T22:28:43.104098136Z
 size: 83MB
 description: The Python programming language.
 container_url: https://github.com/orgs/autamus/packages/container/package/python
