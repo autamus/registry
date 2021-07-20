@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/g/grass/spack.y
 versions:
 - 7.8.5
 - 7.8.2
-updated_at: 2021-07-19T17:13:04.962834808Z
+updated_at: 2021-07-20T22:25:35.512583365Z
 size: 151MB
 description: GRASS GIS (Geographic Resources Analysis Support System), is a free and
   open source Geographic Information System (GIS) software suite used for geospatial
