@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/h/hpx/spack.yam
 versions:
 - 1.6.0
 - 1.7.0
-updated_at: 2021-07-15T00:55:49.413056847Z
+updated_at: 2021-07-20T22:43:40.152116098Z
 size: 122MB
 description: C++ runtime system for parallel and distributed applications.
 container_url: https://github.com/orgs/autamus/packages/container/package/hpx
