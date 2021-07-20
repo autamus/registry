@@ -71,7 +71,6 @@ class Petsc(Package, CudaPackage, ROCmPackage):
     version('3.5.2', sha256='1a8f09af654afab787c732e7b2f5d0c1d856777398148351565389d38d30935e')
     version('3.5.1', sha256='199af205f62dcc572728600670c7d4c8cb0d4efc4172c26f02b895d9dd1df245')
     version('3.4.4', sha256='fa73b99caf70c416a967234f5476cdb1d2c014610ee0619e48f54d8d309631b7')
-    version('0.2.0')
 
     variant('shared',  default=True,
             description='Enables the build of shared libraries')
