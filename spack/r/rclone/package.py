@@ -11,8 +11,9 @@ class Rclone(Package):
        to and from various cloud storage providers"""
 
     homepage = "http://rclone.org"
-    url      = "https://github.com/ncw/rclone/releases/download/v1.55.1/rclone-v1.55.1.tar.gz"
+    url      = "https://github.com/ncw/rclone/releases/download/v1.56.0/rclone-v1.56.0.tar.gz"
 
+    version('1.56.0', sha256='81d2eda23ebaad0a355aab6ff030712470a42505b94c01c9bb5a9ead9168cedb', url='https://github.com/ncw/rclone/releases/download/v1.56.0/rclone-v1.56.0.tar.gz')
     version('1.55.1', sha256='25da7fc5c9269b3897f27b0d946919df595c6dda1b127085fda0fe32aa59d29d', url='https://github.com/ncw/rclone/releases/download/v1.55.1/rclone-v1.55.1.tar.gz')
     version('1.55.0', sha256='75accdaedad3b82edc185dc8824a19a59c30dc6392de7074b6cd98d1dc2c9040', url='https://github.com/ncw/rclone/releases/download/v1.55.0/rclone-v1.55.0.tar.gz')
     version('1.51.0', sha256='3eb5b7ffce17e56fadb29bf854666723a14c93fedc02046c7f34c792dbd227ee')
