@@ -4,7 +4,7 @@ name: mfem
 github: https://github.com/autamus/registry/blob/main/containers/m/mfem/spack.yaml
 versions:
 - 4.2.0
-updated_at: 2021-07-22T17:54:04.620770599Z
+updated_at: 2021-07-22T17:56:13.844815477Z
 size: 83MB
 description: Free, lightweight, scalable C++ library for finite element methods.
 container_url: https://github.com/orgs/autamus/packages/container/package/mfem
