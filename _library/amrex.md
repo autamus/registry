@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/a/amrex/spack.y
 versions:
 - "21.06"
 - "21.07"
-updated_at: 2021-07-20T22:05:28.378210849Z
+updated_at: 2021-07-22T17:49:35.961417843Z
 size: 53MB
 description: AMReX is a publicly available software framework designed for building
   massively parallel block- structured adaptive mesh refinement (AMR) applications.
