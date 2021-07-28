@@ -6,6 +6,7 @@ spack:
   config:
     compiler:
       target: x86_64
+    concretizer: clingo
     install_missing_compilers: true
   container:
     strip: true
