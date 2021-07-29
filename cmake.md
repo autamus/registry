@@ -7,7 +7,7 @@ versions:
 updated_at: 2021-07-29T09:17:47.429294-07:00
 size: 54MB
 description: 'A cross-platform, open-source build system. CMake is a family of tools
-  designed to build, test and package software. '
+  designed to build, test and package software.'
 container_url: https://github.com/orgs/autamus/packages/container/package/cmake
 
 ---
