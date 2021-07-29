@@ -95,7 +95,7 @@ jobs:
           -t autamus/$package:latest -t autamus/$package:$version .
 
       - name: Upload Build Logs
-        if: always()
+        if: always() && github.ref != 'refs/heads/main'
         uses: actions/upload-artifact@v2
         with:
           name: ${{steps.builder.outputs.container}}-build.log
