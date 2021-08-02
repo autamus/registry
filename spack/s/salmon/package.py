@@ -9,8 +9,9 @@ class Salmon(CMakePackage):
        RNA-seq data."""
 
     homepage = "http://combine-lab.github.io/salmon/"
-    url      = "https://github.com/COMBINE-lab/salmon/archive/v0.8.2.tar.gz"
+    url      = "https://github.com/COMBINE-lab/salmon/archive/v1.5.2.tar.gz"
 
+    version('1.5.2', sha256='5a0b8db4a9bebaf5d7d03d8804e7f0c7dce3f340d1c998cea7565bb167d3481c', url='https://github.com/COMBINE-lab/salmon/archive/v1.5.2.tar.gz')
     version('1.4.0', sha256='6d3e25387450710f0aa779a1e9aaa9b4dec842324ff8551d66962d7c7606e71d')
     version('0.14.1', sha256='05289170e69b5f291a8403b40d6b9bff54cc38825e9f721c210192b51a19273e')
     version('0.12.0', sha256='91ebd1efc5b0b4c12ec6babecf3c0b79f7102e42b8895ca07c8c8fea869fefa3')
@@ -23,7 +24,7 @@ class Salmon(CMakePackage):
 
     depends_on('tbb')
     depends_on('boost@:1.66.0', when='@:0.14.1')
-    depends_on('boost@1.72.0', when='@1.4.0')
+    depends_on('boost@1.72.0:', when='@1.4.0:')
     depends_on('cereal')
     depends_on('jemalloc')
     depends_on('xz')
@@ -38,6 +39,7 @@ class Salmon(CMakePackage):
     conflicts('%gcc@:5.1', when='@0.14.1:')
 
     resources = [
+        ('1.5.2', 'pufferfish', '86c7ff465d40b8184dca7f6afee693ad1db63be5bf63242161ea39d3507d6d25'),
         ('1.4.0', 'pufferfish', '059207e8d3134060ed70595e53f4189954c9e5edfaa6361b46304f55d1b71bc7'),
         ('0.14.1', 'RapMap', 'fabac2f360513b803aa3567415eddcd97261ab8a23d4f600af5f98ee8ffd944b'),
         ('0.12.0', 'RapMap', '05102c0bbc8a0c0056a01cd0e8788fa5b504aee58ac226ab8c0e3ffec8019790'),
@@ -76,6 +78,11 @@ class Salmon(CMakePackage):
                         'scripts/fetchPufferfish.sh')
             symlink('./salmon-v{0}.zip'.format(self.version),
                     './external/pufferfish.zip')
+            # Fix issues related to lto-wrapper during install
+            filter_file('INTERPROCEDURAL_OPTIMIZATION True',
+                        'INTERPROCEDURAL_OPTIMIZATION False',
+                        'src/CMakeLists.txt', string=True)
+            filter_file('curl -k.*', '', 'scripts/fetchPufferfish.sh')
 
     def cmake_args(self):
         args = [
@@ -83,4 +90,3 @@ class Salmon(CMakePackage):
         ]
 
         return args
-
