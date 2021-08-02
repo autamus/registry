@@ -10,11 +10,12 @@ class Poppler(CMakePackage):
     """Poppler is a PDF rendering library based on the xpdf-3.0 code base."""
 
     homepage = "https://poppler.freedesktop.org"
-    url      = "https://poppler.freedesktop.org/poppler-21.07.0.tar.xz"
+    url      = "https://poppler.freedesktop.org/poppler-21.08.0.tar.xz"
     list_url = "https://poppler.freedesktop.org/releases.html"
     git      = "https://gitlab.freedesktop.org/poppler/poppler.git"
     version('master', branch='master')
-    version('21.07.0', sha256='e26ab29f68065de4d6562f0a3e2b5435a83ca92be573b99a1c81998fa286a4d4', url='https://poppler.freedesktop.org/poppler-21.07.0.tar.xz')
+    version('21.08.0', sha256='e9cf5dc5964bce4bb0264d1c4f8122706c910588b421cfc30abc97d6b23e602d', expand=False, url='https://poppler.freedesktop.org/poppler-21.08.0.tar.xz')
+    version('21.07.0', sha256='e26ab29f68065de4d6562f0a3e2b5435a83ca92be573b99a1c81998fa286a4d4', expand=False, url='https://poppler.freedesktop.org/poppler-21.07.0.tar.xz')
     version('0.90.1', sha256='984d82e72e91418d280885298c8bdc855a2fd92665fd52a1345b27235e0c71c4')
     version('0.87.0', sha256='6f602b9c24c2d05780be93e7306201012e41459f289b8279a27a79431ad4150e')
     version('0.79.0', sha256='f985a4608fe592d2546d9d37d4182e502ff6b4c42f8db4be0a021a1c369528c8')
