@@ -13,5 +13,6 @@ spack:
     os_packages:
       build:
         - python3-boto3
+        - python3-dev
   mirrors:
     autamus: s3://autamus-cache
