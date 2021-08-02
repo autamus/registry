@@ -24,7 +24,7 @@ class Salmon(CMakePackage):
 
     depends_on('tbb')
     depends_on('boost@:1.66.0', when='@:0.14.1')
-    depends_on('boost@1.72.0', when='@1.4.0')
+    depends_on('boost@1.72.0:', when='@1.4.0:')
     depends_on('cereal')
     depends_on('jemalloc')
     depends_on('xz')
@@ -39,6 +39,7 @@ class Salmon(CMakePackage):
     conflicts('%gcc@:5.1', when='@0.14.1:')
 
     resources = [
+        ('1.5.2', 'pufferfish', 'c67e97baa069499661e8b4bc9501fe5dded22533ec0ddb297ca73ff7faa870f7'),
         ('1.4.0', 'pufferfish', '059207e8d3134060ed70595e53f4189954c9e5edfaa6361b46304f55d1b71bc7'),
         ('0.14.1', 'RapMap', 'fabac2f360513b803aa3567415eddcd97261ab8a23d4f600af5f98ee8ffd944b'),
         ('0.12.0', 'RapMap', '05102c0bbc8a0c0056a01cd0e8788fa5b504aee58ac226ab8c0e3ffec8019790'),
@@ -77,6 +78,11 @@ class Salmon(CMakePackage):
                         'scripts/fetchPufferfish.sh')
             symlink('./salmon-v{0}.zip'.format(self.version),
                     './external/pufferfish.zip')
+            # Fix issues related to lto-wrapper during install
+            filter_file('INTERPROCEDURAL_OPTIMIZATION True',
+                        'INTERPROCEDURAL_OPTIMIZATION False',
+                        'src/CMakeLists.txt', string=True)
+            filter_file('curl -k.*', '', 'scripts/fetchPufferfish.sh')
 
     def cmake_args(self):
         args = [
@@ -84,4 +90,3 @@ class Salmon(CMakePackage):
         ]
 
         return args
-
