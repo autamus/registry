@@ -4,8 +4,9 @@ name: salmon
 github: https://github.com/autamus/registry/blob/main/containers/s/salmon/spack.yaml
 versions:
 - 1.4.0
-updated_at: 2021-07-20T22:31:22.790808379Z
-size: 73MB
+- 1.5.2
+updated_at: 2021-08-02T23:49:21.937444989Z
+size: 64MB
 description: Salmon is a tool for quantifying the expression of transcripts using
   RNA-seq data.
 container_url: https://github.com/orgs/autamus/packages/container/package/salmon
@@ -14,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/salmon
 # salmon
 ```bash 
 Download        : docker pull ghcr.io/autamus/salmon
-Compressed Size : 73MB
+Compressed Size : 64MB
 ```
 
 ## Description
