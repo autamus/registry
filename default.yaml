@@ -4,6 +4,7 @@ spack:
     all:
       target: [x86_64]
   config:
+    concretizer: clingo
     compiler:
       target: x86_64
     install_missing_compilers: true
@@ -12,5 +13,6 @@ spack:
     os_packages:
       build:
         - python3-boto3
+        - python3-dev
   mirrors:
     autamus: s3://autamus-cache
