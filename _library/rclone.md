@@ -3,12 +3,12 @@ layout: container
 name: rclone
 github: https://github.com/autamus/registry/blob/main/containers/r/rclone/spack.yaml
 versions:
-- 1.55.1
-- 1.55.0
 - 1.51.0
+- 1.55.0
+- 1.55.1
 - 1.56.0
-updated_at: 2021-07-21T20:50:57.891407261Z
-size: 45MB
+updated_at: 2021-08-06T17:53:11.0150783Z
+size: 44MB
 description: Rclone is a command line program to sync files and directories to and
   from various cloud storage providers
 container_url: https://github.com/orgs/autamus/packages/container/package/rclone
@@ -17,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/rclone
 # rclone
 ```bash 
 Download        : docker pull ghcr.io/autamus/rclone
-Compressed Size : 45MB
+Compressed Size : 44MB
 ```
 
 ## Description
@@ -34,7 +34,7 @@ docker pull ghcr.io/autamus/rclone:latest
 or to download a specific version of rclone run,
 
 ```bash
-docker pull ghcr.io/autamus/rclone:1.55.1
+docker pull ghcr.io/autamus/rclone:1.51.0
 ```
 ### Run
 To run the container as an application run,
