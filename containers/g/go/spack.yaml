@@ -7,3 +7,4 @@ spack:
       final:
         - ca-certificates
         - gcc
+        - git
