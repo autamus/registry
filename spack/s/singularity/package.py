@@ -24,8 +24,9 @@ class Singularity(MakefilePackage):
     '''
 
     homepage = "https://www.sylabs.io/singularity/"
-    url      = "https://github.com/hpcng/singularity/releases/download/v3.8.0/singularity-3.8.0.tar.gz"
+    url      = "https://github.com/hpcng/singularity/releases/download/v3.8.1/singularity-3.8.1.tar.gz"
 
+    version('3.8.1', sha256='2648366fbc7e8fcba9d32f8f187ea149356c5f9083a57826d641359fa8415d9a', url='https://github.com/hpcng/singularity/releases/download/v3.8.1/singularity-3.8.1.tar.gz')
     version('3.8.0', sha256='e9608b0e0a8c805218bbe795e9176484837b2f7fcb95e5469b853b3809a2412e', url='https://github.com/hpcng/singularity/releases/download/v3.8.0/singularity-3.8.0.tar.gz')
     version('3.7.4', sha256='c266369a8bf2747f44e0759858c3fc3b2325b975a8818b2668f0b97b124d0164', url='https://github.com/hpcng/singularity/releases/download/v3.7.4/singularity-3.7.4.tar.gz')
     version('3.7.3', sha256='6667eb8875d2b66d73504f40c956b42b1351744f488d164204376215d885da5c', url='https://github.com/hpcng/singularity/releases/download/v3.7.3/singularity-3.7.3.tar.gz')
