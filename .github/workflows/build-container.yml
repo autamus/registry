@@ -72,34 +72,12 @@ jobs:
         with:
           name: ${{steps.builder.outputs.container}}.Dockerfile
           path: Dockerfile
+      
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
 
-      - name: Make Space For Build
-        run: |
-          sudo rm -rf /usr/share/dotnet
-          sudo rm -rf /opt/ghc
-          
-      - name: Build Container for Package
-        env:
-          package: ${{ steps.builder.outputs.container }}
-          version: ${{ steps.builder.outputs.version }}
-          access_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          access_secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          echo "${{secrets.SIGN_KEY}}" > sign_key
-          DOCKER_BUILDKIT=1 docker build \
-          --network=host \
-          --secret id=aws_id,env=access_id \
-          --secret id=aws_secret,env=access_secret \
-          --secret id=sign_key,src=./sign_key --progress=plain \
-          -t ghcr.io/autamus/$package:latest -t ghcr.io/autamus/$package:$version \
-          -t autamus/$package:latest -t autamus/$package:$version .
-
-      - name: Upload Build Logs
-        if: always() && github.ref != 'refs/heads/main'
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${{steps.builder.outputs.container}}-build.log
-          path: /smuggler/saved/
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
 
       - name: GHCR Login
         # Don't log into registry on pull request
@@ -118,18 +96,46 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      - name: Push to GitHub Packages & DockerHub
-        # Don't push build on pull request
-        if: github.ref == 'refs/heads/main'
+      - name: Make Space For Build
         run: |
-          docker push --all-tags ghcr.io/autamus/${{steps.builder.outputs.container}}
-          docker push --all-tags autamus/${{steps.builder.outputs.container}}
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+
+      - name: Build Container
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          platforms: ${{ steps.builder.outputs.platforms }}
+          push: ${{ github.ref == 'refs/heads/main' }}
+          network: host
+          secrets: |
+            "aws_id=${{ secrets.AWS_ACCESS_KEY_ID }}"
+            "aws_secret=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+            "sign_key=${{ secrets.SIGN_KEY }}"
+          tags: |
+            ghcr.io/autamus/${{ steps.builder.outputs.container }}:latest
+            autamus/${{ steps.builder.outputs.container }}:latest
+            ghcr.io/autamus/${{ steps.builder.outputs.container }}:${{ steps.builder.outputs.version }}
+            autamus/${{ steps.builder.outputs.container }}:${{ steps.builder.outputs.version }}
+
+      - name: Upload Build Logs
+        if: always() && github.ref != 'refs/heads/main'
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{steps.builder.outputs.container}}-build.log
+          path: /smuggler/saved/
 
       - name: Build Summary
         id: summary
         run: |
-          docker system prune -f
           container=${{steps.builder.outputs.container}}
+          
+          DOCKER_BUILDKIT=1 docker buildx build \
+          -t autamus/$container:latest \
+          --load --network host \
+          --platform linux/amd64 .
+
+          docker system prune -f
           docker image save "autamus/$container" > container
           tar -czvf container.tar.gz container > /dev/null
           docker=$(docker system df -v | grep "autamus/$container")
