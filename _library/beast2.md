@@ -3,9 +3,10 @@ layout: container
 name: beast2
 github: https://github.com/autamus/registry/blob/main/containers/b/beast2/spack.yaml
 versions:
-- 2.6.4
 - 2.6.3
-updated_at: 2021-05-26T02:44:03.468410464Z
+- 2.6.4
+- 2.6.6
+updated_at: 2021-08-19T15:28:04.471410593Z
 size: 226MB
 description: BEAST is a cross-platform program for Bayesian inference using MCMC of
   molecular sequences. It is entirely orientated towards rooted, time-measured phylogenies
@@ -35,7 +36,7 @@ docker pull ghcr.io/autamus/beast2:latest
 or to download a specific version of beast2 run,
 
 ```bash
-docker pull ghcr.io/autamus/beast2:2.6.4
+docker pull ghcr.io/autamus/beast2:2.6.3
 ```
 ### Run
 To run the container as an application run,
