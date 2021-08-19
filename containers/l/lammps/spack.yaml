@@ -1,3 +1,8 @@
 spack:
   specs: 
-    - lammps
+    - lammps+mpi
+    - mpich
+  container:
+    os_packages:
+      final:
+        - libgomp1
