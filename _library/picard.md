@@ -3,16 +3,16 @@ layout: container
 name: picard
 github: https://github.com/autamus/registry/blob/main/containers/p/picard/spack.yaml
 versions:
-- 2.25.5
-- 2.25.4
-- 2.25.3
-- 2.25.2
-- 2.25.1
-- 2.25.0
 - 2.24.0
+- 2.25.0
+- 2.25.1
+- 2.25.2
+- 2.25.3
+- 2.25.4
+- 2.25.5
 - 2.25.6
 - 2.25.7
-updated_at: 2021-07-22T17:07:49.203915139Z
+updated_at: 2021-08-19T14:52:35.59963099Z
 size: 235MB
 description: 'Picard is a set of command line tools for manipulating high-throughput
   sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF. '
@@ -39,7 +39,7 @@ docker pull ghcr.io/autamus/picard:latest
 or to download a specific version of picard run,
 
 ```bash
-docker pull ghcr.io/autamus/picard:2.25.5
+docker pull ghcr.io/autamus/picard:2.24.0
 ```
 ### Run
 To run the container as an application run,
