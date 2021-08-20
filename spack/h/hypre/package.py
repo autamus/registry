@@ -14,7 +14,7 @@ class Hypre(Package, CudaPackage):
        unstructured grid problems."""
 
     homepage = "http://computing.llnl.gov/project/linear_solvers/software.php"
-    url      = "https://github.com/hypre-space/hypre/archive/v2.22.0.tar.gz"
+    url      = "https://github.com/hypre-space/hypre/archive/v2.22.1.tar.gz"
     git      = "https://github.com/hypre-space/hypre.git"
 
     maintainers = ['ulrikeyang', 'osborn9', 'balay']
@@ -25,6 +25,7 @@ class Hypre(Package, CudaPackage):
     # apply to version 2.12.1 and earlier due to changes in the build system
     # between versions 2.12.1 and 2.13.0.
     version('develop', branch='master')
+    version('2.22.1', sha256='c1e7761b907c2ee0098091b69797e9be977bff8b7fd0479dc20cad42f45c4084', url='https://github.com/hypre-space/hypre/archive/v2.22.1.tar.gz')
     version('2.22.0', sha256='2c786eb5d3e722d8d7b40254f138bef4565b2d4724041e56a8fa073bda5cfbb5', url='https://github.com/hypre-space/hypre/archive/v2.22.0.tar.gz')
     version('2.21.0', sha256='e380f914fe7efe22afc44cdf553255410dc8a02a15b2e5ebd279ba88817feaf5', url='https://github.com/hypre-space/hypre/archive/v2.21.0.tar.gz')
     version('2.20.0', sha256='5be77b28ddf945c92cde4b52a272d16fb5e9a7dc05e714fc5765948cba802c01', url='https://github.com/hypre-space/hypre/archive/v2.20.0.tar.gz')
