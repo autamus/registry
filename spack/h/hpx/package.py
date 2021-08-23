@@ -12,12 +12,13 @@ class Hpx(CMakePackage, CudaPackage):
     """C++ runtime system for parallel and distributed applications."""
 
     homepage = "https://hpx.stellar-group.org/"
-    url      = "https://github.com/STEllAR-GROUP/hpx/archive/1.7.0.tar.gz"
+    url      = "https://github.com/STEllAR-GROUP/hpx/archive/1.7.1.tar.gz"
     
     maintainers = ['msimberg', 'albestro', 'teonnik']
     
-    version('master', git='https://github.com/STEllAR-GROUP/hpx.git', branch='master', prefered=False)
-    version('stable', git='https://github.com/STEllAR-GROUP/hpx.git', tag='stable', perfered=False)
+    version('master', branch='master')
+    version('stable')
+    version('1.7.1', sha256='008a0335def3c551cba31452eda035d7e914e3e4f77eec679eea070ac71bd83b', url='https://github.com/STEllAR-GROUP/hpx/archive/1.7.1.tar.gz')
     version('1.7.0', sha256='05099b860410aa5d8a10d6915b1a8818733aa1aa2d5f2b9774730ca7e6de5fac', url='https://github.com/STEllAR-GROUP/hpx/archive/1.7.0.tar.gz')
     version('1.6.0', sha256='4ab715613c1e1808edc93451781cc9bc98feec4e422ccd4322858a680f6d9017')
     version('1.5.1', sha256='b2f9358ce2a9446b9d8fb1998c30913e7199b007aa82e46d0aa05c763331c635')
