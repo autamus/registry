@@ -3,8 +3,9 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
 import sys
+
+from spack import *
 
 
 class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
@@ -18,6 +19,11 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
 
     version('develop', branch='develop')
     version('master', branch='master')
+    version('1.3.0', commit='4678668c66f634169def81620a85c9a20b7cec78')
+    version('1.2.0', commit='b4be2be961fd5db45c3d02b5e004d73550722e31')
+    version('1.1.1', commit='08d2c5200d3c78015ac8a4fd488bafe1e4240cf5')
+    version('1.1.0', commit='b9bec8225442b3eb2a85a870efa112ab767a17fb')
+    version('1.0.0', commit='45244641e0c2b19ba33aecd25153c0bddbcbe1a0')
     version('1.3.0', commit='4678668c66f634169def81620a85c9a20b7cec78')  # v1.3.0
     version('1.2.0', commit='b4be2be961fd5db45c3d02b5e004d73550722e31')  # v1.2.0
     version('1.1.1', commit='08d2c5200d3c78015ac8a4fd488bafe1e4240cf5')  # v1.1.1
@@ -131,7 +137,7 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
             return
         with working_dir(self.build_directory):
             make("test_install")
-        smoke_test_path = join_path(self.build_directory, 'test_install')
+        smoke_test_path = join_path(self.build_directory, 'test', 'test_install')
         with working_dir(smoke_test_path):
             make("install")
 
