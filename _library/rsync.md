@@ -4,8 +4,9 @@ name: rsync
 github: https://github.com/autamus/registry/blob/main/containers/r/rsync/spack.yaml
 versions:
 - 3.2.2
-updated_at: 2021-06-22T20:14:37.927180423Z
-size: 33MB
+- 3.2.3
+updated_at: 2021-08-23T17:29:59.116592279Z
+size: 34MB
 description: An open source utility that provides fast incremental file transfer.
 container_url: https://github.com/orgs/autamus/packages/container/package/rsync
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/rsync
 # rsync
 ```bash 
 Download        : docker pull ghcr.io/autamus/rsync
-Compressed Size : 33MB
+Compressed Size : 34MB
 ```
 
 ## Description
