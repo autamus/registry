@@ -25,8 +25,12 @@ class Mono(AutotoolsPackage):
 
     # Spack's openssl interacts badly with mono's vendored
     # "boringssl", don't drag it in w/ cmake
+    depends_on('autoconf', type=('build'))
+    depends_on('automake', type=('build'))
     depends_on('cmake~openssl', type=('build'))
     depends_on('iconv')
+    depends_on('libtool', type=('build'))
+    depends_on('m4', type=('build'))
     depends_on('perl', type=('build'))
     depends_on('python', type=('build'))
 
