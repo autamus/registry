@@ -10,7 +10,7 @@ class Htslib(AutotoolsPackage):
     """C library for high-throughput sequencing data formats."""
 
     homepage = "https://github.com/samtools/htslib"
-    url      = "https://github.com/samtools/htslib/releases/download/1.13/htslib-1.13.tar.bz2"
+    url      = "https://github.com/samtools/htslib/releases/download/1.10.2/htslib-1.10.2.tar.bz2"
 
     version('1.13', sha256='f2407df9f97f0bb6b07656579e41a1ca5100464067b6b21bf962a2ea4b0efd65', url='https://github.com/samtools/htslib/releases/download/1.13/htslib-1.13.tar.bz2')
     version('1.12', sha256='2280141b46e953ba4ae01b98335a84f8e6ccbdb6d5cdbab7f70ee4f7e3b6f4ca', url='https://github.com/samtools/htslib/releases/download/1.12/htslib-1.12.tar.bz2')
@@ -27,7 +27,7 @@ class Htslib(AutotoolsPackage):
 
     variant('libcurl',
             default=True,
-            description='Enable libcurl-based support for http/https/etc .URLs,'
+            description='Enable libcurl-based support for http/https/etc URLs,'
             ' for versions >= 1.3. This also enables S3 and GCS support.')
 
     depends_on('zlib')
@@ -57,4 +57,3 @@ class Htslib(AutotoolsPackage):
             args.extend(self.enable_or_disable('libcurl'))
 
         return args
-

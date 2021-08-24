@@ -4,18 +4,18 @@
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 
-from spack import *
 import sys
+
+from spack import *
 
 
 class Hpx(CMakePackage, CudaPackage):
     """C++ runtime system for parallel and distributed applications."""
 
     homepage = "https://hpx.stellar-group.org/"
-    url      = "https://github.com/STEllAR-GROUP/hpx/archive/1.7.1.tar.gz"
-    
+    url      = "https://github.com/STEllAR-GROUP/hpx/archive/1.2.1.tar.gz"
     maintainers = ['msimberg', 'albestro', 'teonnik']
-    
+
     version('master', branch='master')
     version('stable')
     version('1.7.1', sha256='008a0335def3c551cba31452eda035d7e914e3e4f77eec679eea070ac71bd83b', url='https://github.com/STEllAR-GROUP/hpx/archive/1.7.1.tar.gz')
@@ -71,7 +71,6 @@ class Hpx(CMakePackage, CudaPackage):
     variant('async_mpi', default=False, description='Enable MPI Futures.')
     variant('async_cuda', default=False, description='Enable CUDA Futures.')
 
-    depends_on('asio', type=('build'))
     depends_on('hwloc')
     depends_on('python', type=('build', 'test', 'run'))
     depends_on('pkgconfig', type='build')
@@ -98,6 +97,11 @@ class Hpx(CMakePackage, CudaPackage):
     depends_on('boost+context', when='+generic_coroutines')
     _msg_generic_coroutines = 'This platform requires +generic_coroutines'
     conflicts('~generic_coroutines', when='platform=darwin', msg=_msg_generic_coroutines)
+
+    # Asio
+    depends_on('asio cxxstd=11', when='@1.7: cxxstd=11')
+    depends_on('asio cxxstd=14', when='@1.7: cxxstd=14')
+    depends_on('asio cxxstd=17', when='@1.7: cxxstd=17')
 
     # CXX Standard
     depends_on('boost cxxstd=11', when='cxxstd=11')

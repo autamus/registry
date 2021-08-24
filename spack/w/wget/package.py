@@ -1,6 +1,6 @@
 # Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
-# 
+#
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 from spack import *
@@ -13,7 +13,7 @@ class Wget(AutotoolsPackage, GNUMirrorPackage):
     cron jobs, terminals without X-Windows support, etc."""
 
     homepage = "http://www.gnu.org/software/wget/"
-    url      = "https://mirrors.rit.edu/gnu/wget/wget-1.21.1.tar.gz"
+    gnu_mirror_path = "wget/wget-1.19.1.tar.gz"
 
     version('1.21.1', sha256='59ba0bdade9ad135eda581ae4e59a7a9f25e3a4bde6a5419632b31906120e26e', url='https://mirrors.rit.edu/gnu/wget/wget-1.21.1.tar.gz')
     version('1.20.3', sha256='31cccfc6630528db1c8e3a06f6decf2a370060b982841cfab2b8677400a5092e')
@@ -55,6 +55,7 @@ class Wget(AutotoolsPackage, GNUMirrorPackage):
 
         args = [
             '--with-ssl={0}'.format(spec.variants['ssl'].value),
+            '--without-included-regex',
         ]
 
         if '+zlib' in spec:

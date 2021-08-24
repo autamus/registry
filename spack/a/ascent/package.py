@@ -1,18 +1,18 @@
 # Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
-# 
+#
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
-
-import sys
-import os
-import socket
 import glob
+import os
 import shutil
+import socket
+import sys
+from os import environ as env
 
 import llnl.util.tty as tty
-from os import environ as env
+
+from spack import *
 
 
 def cmake_cache_entry(name, value, vtype=None):
@@ -35,9 +35,25 @@ class Ascent(Package, CudaPackage):
 
     homepage = "https://github.com/Alpine-DAV/ascent"
     git      = "https://github.com/Alpine-DAV/ascent.git"
-    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz"
+    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.5.1/ascent-v0.5.1-src-with-blt.tar.gz"
 
     maintainers = ['cyrush']
+
+    version('develop', branch='develop', submodules=True)
+    version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
+    version('0.7.0', submodules=True)
+    version('0.6.0', submodules=True)
+
+    version('develop', branch='develop', submodules=True)
+    version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
+    version('0.7.0', submodules=True)
+    version('0.6.0', submodules=True)
+
+    version('develop', branch='develop', submodules=True)
+    version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
+    version('0.7.0', submodules=True)
+    version('0.6.0', submodules=True)
+
     version('develop', branch='develop', submodules=True)
     version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
     version('0.7.0', submodules=True)
@@ -63,7 +79,6 @@ class Ascent(Package, CudaPackage):
 
     variant("openmp", default=(sys.platform != 'darwin'),
             description="build openmp support")
-    variant("cuda", default=False, description="Build cuda support")
     variant("mfem", default=False, description="Build MFEM filter support")
     variant("adios", default=False, description="Build Adios filter support")
     variant("dray", default=False, description="Build with Devil Ray support")
@@ -81,27 +96,25 @@ class Ascent(Package, CudaPackage):
     # Certain CMake versions have been found to break for our use cases
     depends_on("cmake@3.14.1:3.14.99,3.18.2:", type='build')
     depends_on("conduit~python", when="~python")
-    depends_on("conduit+python", when="+python+shared")
-    depends_on("conduit~shared~python", when="~shared")
-    depends_on("conduit~python~mpi", when="~python~mpi")
-    depends_on("conduit+python~mpi", when="+python+shared~mpi")
-    depends_on("conduit~shared~python~mpi", when="~shared~mpi")
+    depends_on("conduit+python", when="+python")
+    depends_on("conduit+mpi", when="+mpi")
+    depends_on("conduit~mpi", when="~mpi")
 
     #######################
     # Python
     #######################
     # we need a shared version of python b/c linking with static python lib
     # causes duplicate state issues when running compiled python modules.
-    depends_on("python+shared", when="+python+shared")
-    extends("python", when="+python+shared")
-    depends_on("py-numpy", when="+python+shared", type=('build', 'run'))
-    depends_on("py-pip", when="+python+shared", type=('build', 'run'))
+    depends_on("python+shared", when="+python")
+    extends("python", when="+python")
+    depends_on("py-numpy", when="+python", type=('build', 'run'))
+    depends_on("py-pip", when="+python", type=('build', 'run'))
 
     #######################
     # MPI
     #######################
     depends_on("mpi", when="+mpi")
-    depends_on("py-mpi4py", when="+mpi+python+shared")
+    depends_on("py-mpi4py", when="+mpi+python")
 
     #######################
     # BabelFlow
@@ -173,7 +186,11 @@ class Ascent(Package, CudaPackage):
         with working_dir('spack-build', create=True):
             py_site_pkgs_dir = None
             if "+python" in spec:
-                py_site_pkgs_dir = site_packages_dir
+                try:
+                    py_site_pkgs_dir = site_packages_dir
+                except NameError:
+                    # spack's site_packages_dir won't exist in a subclass
+                    pass
 
             host_cfg_fname = self.create_host_config(spec,
                                                      prefix,
@@ -188,6 +205,8 @@ class Ascent(Package, CudaPackage):
                 for arg in std_cmake_args:
                     if arg.count("RPATH") == 0:
                         cmake_args.append(arg)
+            if self.spec.satisfies('%cce'):
+                cmake_args.extend(["-DCMAKE_Fortran_FLAGS=-ef"])
             cmake_args.extend(["-C", host_cfg_fname, "../src"])
             print("Configuring Ascent...")
             cmake(*cmake_args)
@@ -336,6 +355,23 @@ class Ascent(Package, CudaPackage):
             cfg.write(cmake_cache_entry("BUILD_SHARED_LIBS", "ON"))
         else:
             cfg.write(cmake_cache_entry("BUILD_SHARED_LIBS", "OFF"))
+
+        # use global spack compiler flags
+        cppflags = ' '.join(spec.compiler_flags['cppflags'])
+        if cppflags:
+            # avoid always ending up with ' ' with no flags defined
+            cppflags += ' '
+        cflags = cppflags + ' '.join(spec.compiler_flags['cflags'])
+        if cflags:
+            cfg.write(cmake_cache_entry("CMAKE_C_FLAGS", cflags))
+        cxxflags = cppflags + ' '.join(spec.compiler_flags['cxxflags'])
+        if cxxflags:
+            cfg.write(cmake_cache_entry("CMAKE_CXX_FLAGS", cxxflags))
+        fflags = ' '.join(spec.compiler_flags['fflags'])
+        if self.spec.satisfies('%cce'):
+            fflags += " -ef"
+        if fflags:
+            cfg.write(cmake_cache_entry("CMAKE_Fortran_FLAGS", fflags))
 
         #######################
         # Unit Tests
@@ -519,4 +555,3 @@ class Ascent(Package, CudaPackage):
         host_cfg_fname = os.path.abspath(host_cfg_fname)
         tty.info("spack generated conduit host-config file: " + host_cfg_fname)
         return host_cfg_fname
-    

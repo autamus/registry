@@ -11,7 +11,9 @@ class Ffmpeg(AutotoolsPackage):
     convert and stream audio and video."""
 
     homepage = "https://ffmpeg.org"
-    url      = "https://github.com/FFmpeg/FFmpeg/archive/n4.5-dev.tar.gz"
+    url      = "http://ffmpeg.org/releases/ffmpeg-4.1.1.tar.bz2"
+
+    maintainers = ['xjrc']
 
     version('4.5', sha256='31a3aae03382068addd8a699c56dfccd2aea00d420bb2af812a9578a761a4ba3', url='https://github.com/FFmpeg/FFmpeg/archive/n4.5-dev.tar.gz')
     version('4.3.2', sha256='d9b650a5aaaa6e2907a5578135b715ca532896fe9a6dc7a823c25f89790ff1ed', url='https://github.com/FFmpeg/FFmpeg/archive/n4.3.2.tar.gz')
@@ -51,6 +53,7 @@ class Ffmpeg(AutotoolsPackage):
     variant('libspeex', default=False, description='Speex de/encoding')
     variant('libssh', default=False, description='SFTP protocol')
     variant('libvorbis', default=False, description='Vorbis en/decoding')
+    variant('libvpx', default=False, description='VP9 en/decoding')
     variant('libwebp', default=False, description='WebP encoding via libwebp')
     # TODO: There is an issue with the spack headers property in the libxml2
     # package recipe. Comment out the libxml2 variant until that is resolved.
@@ -76,6 +79,7 @@ class Ffmpeg(AutotoolsPackage):
     depends_on('lame', when='+libmp3lame')
     depends_on('libssh', when='+libssh')
     depends_on('libvorbis', when='+libvorbis')
+    depends_on('libvpx', when='+libvpx')
     depends_on('libwebp', when='+libwebp')
     # TODO: enable libxml2 when libxml2 header issue is resolved
     # depends_on('libxml2', when='+libxml2')
@@ -163,6 +167,7 @@ class Ffmpeg(AutotoolsPackage):
             'libopus',
             'libspeex',
             'libvorbis',
+            'libvpx',
             'avresample',
             'openssl',
             'shared',
@@ -189,4 +194,3 @@ class Ffmpeg(AutotoolsPackage):
             config_args += self.enable_or_disable(variant_opt)
 
         return config_args
-

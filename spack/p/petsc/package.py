@@ -12,13 +12,71 @@ class Petsc(Package, CudaPackage, ROCmPackage):
     """
 
     homepage = "http://www.mcs.anl.gov/petsc/index.html"
-    url      = "http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.15.2.tar.gz"
+    url      = "http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.15.0.tar.gz"
     git = "https://gitlab.com/petsc/petsc.git"
     maintainers = ['balay', 'barrysmith', 'jedbrown']
 
     version('main', branch='main')
-    version('xsdk-0.2.0', tag='xsdk-0.2.0')
-    version('3.15.2', sha256='3b10c19c69fc42e01a38132668724a01f1da56f5c353105cd28f1120cc9041d8', url='http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.15.2.tar.gz')
+    version('3.15.3', sha256='483028088020001e6f8d57b78a7fc880ed52d6693f57d627779c428f55cff73d')
+    version('3.15.2', sha256='3b10c19c69fc42e01a38132668724a01f1da56f5c353105cd28f1120cc9041d8')
+    version('3.15.1', sha256='c0ac6566e69d1d70b431e07e7598e9de95e84891c2452db1367c846b75109deb')
+    version('3.15.0', sha256='ac46db6bfcaaec8cd28335231076815bd5438f401a4a05e33736b4f9ff12e59a')
+    version('3.14.6', sha256='4de0c8820419fb15bc683b780127ff57067b62ca18749e864a87c6d7c93f1230')
+    version('3.14.5', sha256='8b8ff5c4e10468f696803b354a502d690c7d25c19d694a7e10008a302fdbb048')
+    version('3.14.4', sha256='b030969816e02c251a6d010c07a90b69ade44932f9ddfac3090ff5e95ab97d5c')
+    version('3.14.3', sha256='63ed7e3440f2bbc732a6c44aa878364f88f5016ab375d9b36d742893a049053d')
+    version('3.14.2', sha256='87a04fd05cac20a2ec47094b7d18b96e0651257d8c768ced2ef7db270ecfb9cb')
+    version('3.14.1', sha256='0b4681165a9af96594c794b97ac6993452ec902726679f6b50bb450f89d230ed')
+    version('3.14.0', sha256='a8f9caba03e0d57d8452c08505cf96be5f6949adaa266e819382162c03ddb9c5')
+    version('3.13.6', sha256='67ca2cf3040d08fdc51d27f660ea3157732b24c2f47aae1b19d63f62a39842c2')
+    version('3.13.5', sha256='10fc542dab961c8b17db35ad3a208cb184c237fc84e183817e38e6c7ab4b8732')
+    version('3.13.4', sha256='8d470cba1ceb9638694550134a2f23aac85ed7249cb74992581210597d978b94')
+    version('3.13.3', sha256='dc744895ee6b9c4491ff817bef0d3abd680c5e3c25e601be44240ce65ab4f337')
+    version('3.13.2', sha256='6083422a7c5b8e89e5e4ccf64acade9bf8ab70245e25bca3a3da03caf74602f1')
+    version('3.13.1', sha256='74a895e44e2ff1146838aaccb7613e7626d99e0eed64ca032c87c72d084efac3')
+    version('3.13.0', sha256='f0ea543a54145c5d1387e25b121c3fd1b1ca834032c5a33f6f1d929e95bdf0e5')
+    version('3.12.5', sha256='d676eb67e79314d6cca6422d7c477d2b192c830b89d5edc6b46934f7453bcfc0')
+    version('3.12.4', sha256='56a941130da93bbacb3cfa74dcacea1e3cd8e36a0341f9ced09977b1457084c3')
+    version('3.12.3', sha256='91f77d7b0f54056f085b9e27938922db3d9bb1734a2e2a6d26f43d3e6c0cf631')
+    version('3.12.2', sha256='d874b2e198c4cb73551c2eca1d2c5d27da710be4d00517adb8f9eb3d6d0375e8')
+    version('3.12.1', sha256='b72d895d0f4a79acb13ebc782b47b26d10d4e5706d399f533afcd5b3dba13737')
+    version('3.12.0', sha256='ba9ecf69783c7ebf05bd1c91dd1d4b38bf09b7a2d5f9a774aa6bb46deff7cb14')
+    version('3.11.4', sha256='319cb5a875a692a67fe5b1b90009ba8f182e21921ae645d38106544aff20c3c1')
+    version('3.11.3', sha256='199ad9650a9f58603b49e7fff7cd003ceb03aa231e5d37d0bf0496c6348eca81')
+    version('3.11.2', sha256='4d244dd7d1565d6534e776445fcf6977a6ee2a8bb2be4a36ac1e0fc1f9ad9cfa')
+    version('3.11.1', sha256='cb627f99f7ce1540ebbbf338189f89a5f1ecf3ab3b5b0e357f9e46c209f1fb23')
+    version('3.11.0', sha256='b3bed2a9263193c84138052a1b92d47299c3490dd24d1d0bf79fb884e71e678a')
+    version('3.10.5', sha256='3a81c8406410e0ffa8a3e9f8efcdf2e683cc40613c9bb5cb378a6498f595803e')
+    version('3.10.4', sha256='6c836df84caa9ae683ae401d3f94eb9471353156fec6db602bf2e857e4ec339f')
+    version('3.10.3', sha256='cd106babbae091604fee40c258737c84dec048949be779eaef5a745df3dc8de4')
+    version('3.10.2', sha256='9d3381bcf9c63abe6521b21a88efc70f8e893293503cff497971d0d9c1ec68cc')
+    version('3.10.1', sha256='b6e64ce062113ee0e2e2a6cfffb4d33c085ec91d5bc3afeb33781074aa5a22a5')
+    version('3.10.0', sha256='6ebacc010397ea47649495e8363cd7d7d86b876e6df07c6f6ccfa48b22fa555c')
+    version('3.9.4', sha256='ecc647c9b1ef565a2c113936454c65632eedc1626e0fc99b5a36accb91195a63')
+    version('3.9.3', sha256='6c7f2c7a28433385d74d647b4934aaeea3c1b3053b207973c9497639b6ebf7c8')
+    version('3.9.2', sha256='ab396ae5dbfff808df1b5648f5ce30f3021ec70faec3d5cd63df324d416ac6ac')
+    version('3.9.1', sha256='742e838a35d278693e956ed1ca4592c1d663451f6beea0694bf334aeb67681e8')
+    version('3.9.0', sha256='dcbcab1f321667be1c6e5f8e7b4ee8670bb09e372e51f1ea6471464519d54b2d')
+    version('3.8.4', sha256='9f78dc4dd4c58433fa18d3dd3a9029e39a83e4e4b64f845a029dd9fed44bc4c7')
+    version('3.8.3', sha256='01f9c3ed937eafac6c9e006510b61c7cd07197115ec40c429fc835f346ca3eac')
+    version('3.8.2', sha256='42690508d408e31fb98be738ac097bc869be14c5bfe08dda2184243283ceb16a')
+    version('3.8.1', sha256='9b48a9e72d304046923667d2ab1f201778cc56242928a374ff9e074843a334ff')
+    version('3.8.0', sha256='1e1b4d90ccbf98dc5759a956ac9a771310a6690f1cbb37b31502b29568262d7e')
+    version('3.7.7', sha256='40fd3bc76998e056c4097704c08f28eb89bf3b93164dc9e69abab393f43bf6f0')
+    version('3.7.6', sha256='3c8ee051349587d45baa7910c54ce8e0a571592e3b40f3054a7b7f986919d449')
+    version('3.7.5', sha256='493ab0b6c1b3fe68e71d990eff87c84f499f680e6d2c0c394e78646a82ed4be3')
+    version('3.7.4', sha256='54b804f924ea5be3b6718b4d4e98f8ccb9d1bd6bbbd1e9c0f18c4a90ddf5db18')
+    version('3.7.2', sha256='36681dd0df97e0d5cd182d902e89f527eb8f441f05271159dac5340acb4cf0ec')
+    version('3.6.4', sha256='eb09925a139b52b4dd5a071b3da4fe2165f1d6e8f71d410479603c9976c940f0')
+    version('3.6.3', sha256='776e2644e4003653c56a44a6f7c02c41427af26f7c5cd9bec3aa84ed90223245')
+    version('3.5.3', sha256='68e6a42f5ec75bad87f74d4df8f55ad63f0c4d996f162da6713cb3d6f566830d')
+    version('3.5.2', sha256='1a8f09af654afab787c732e7b2f5d0c1d856777398148351565389d38d30935e')
+    version('3.5.1', sha256='199af205f62dcc572728600670c7d4c8cb0d4efc4172c26f02b895d9dd1df245')
+    version('3.4.4', sha256='fa73b99caf70c416a967234f5476cdb1d2c014610ee0619e48f54d8d309631b7')
+
+    version('main', branch='main')
+    version('3.15.3', sha256='483028088020001e6f8d57b78a7fc880ed52d6693f57d627779c428f55cff73d')
+    version('3.15.2', sha256='3b10c19c69fc42e01a38132668724a01f1da56f5c353105cd28f1120cc9041d8')
     version('3.15.1', sha256='c0ac6566e69d1d70b431e07e7598e9de95e84891c2452db1367c846b75109deb')
     version('3.15.0', sha256='ac46db6bfcaaec8cd28335231076815bd5438f401a4a05e33736b4f9ff12e59a')
     version('3.14.6', sha256='4de0c8820419fb15bc683b780127ff57067b62ca18749e864a87c6d7c93f1230')
@@ -96,6 +154,10 @@ class Petsc(Package, CudaPackage, ROCmPackage):
             description='Activates support for MUMPS (only parallel)')
     variant('superlu-dist', default=True,
             description='Activates support for SuperluDist (only parallel)')
+    variant('strumpack', default=False,
+            description='Activates support for Strumpack')
+    variant('scalapack', default=False,
+            description='Activates support for Scalapack')
     variant('trilinos', default=False,
             description='Activates support for Trilinos (only parallel)')
     variant('mkl-pardiso', default=False,
@@ -254,6 +316,10 @@ class Petsc(Package, CudaPackage, ROCmPackage):
     depends_on('superlu-dist@xsdk-0.2.0+int64', when='@xsdk-0.2.0+superlu-dist+mpi+int64')
     depends_on('superlu-dist@develop~int64', when='@main+superlu-dist+mpi~int64')
     depends_on('superlu-dist@develop+int64', when='@main+superlu-dist+mpi+int64')
+    depends_on('strumpack', when='+strumpack')
+    depends_on('scalapack', when='+strumpack')
+    depends_on('metis', when='+strumpack')
+    depends_on('scalapack', when='+scalapack')
     depends_on('mumps+mpi~int64~metis~parmetis~openmp', when='+mumps~metis~openmp')
     depends_on('mumps+mpi~int64+metis+parmetis~openmp', when='+mumps+metis~openmp')
     depends_on('mumps+mpi~int64~metis~parmetis+openmp', when='+mumps~metis+openmp')
@@ -365,133 +431,98 @@ class Petsc(Package, CudaPackage, ROCmPackage):
         else:
             options.append('--with-clanguage=C')
 
-        # PETSc depends on scalapack when '+mumps' (see depends())
-        # help PETSc pick up Scalapack from MKL
-        if spec.satisfies('+mumps'):
-            scalapack = spec['scalapack'].libs
-            options.extend([
-                '--with-scalapack-lib=%s' % scalapack.joined(),
-                '--with-scalapack=1'
-            ])
-        else:
-            options.extend([
-                '--with-scalapack=0'
-            ])
-
         # Activates library support if needed (i.e. direct dependency)
-        if '^libjpeg-turbo' in spec:
-            jpeg_library = ('libjpeg-turbo', 'libjpeg')
-        else:
-            jpeg_library = 'libjpeg'
+        jpeg_sp = spec['jpeg'].name if 'jpeg' in spec else 'jpeg'
+        scalapack_sp = spec['scalapack'].name if 'scalapack' in spec else 'scalapack'
 
+        # tuple format (spacklibname, petsclibname, useinc, uselib)
+        # default: 'gmp', => ('gmp', 'gmp', True, True)
+        # any other combination needs a full tuple
+        # if not (useinc || uselib): usedir - i.e (False, False)
         for library in (
-                'cuda',
-                'hip',
+                ('cuda', 'cuda', False, False),
+                ('hip', 'hip', False, False),
                 'metis',
                 'hypre',
                 'parmetis',
+                ('superlu-dist', 'superlu_dist', True, True),
+                ('scotch', 'ptscotch', True, True),
+                ('suite-sparse:umfpack,klu,cholmod,btf,ccolamd,colamd,camd,amd, \
+                suitesparseconfig', 'suitesparse', True, True),
+                ('hdf5:hl,fortran', 'hdf5', True, True),
+                'zlib',
                 'mumps',
-                'trilinos',
-                'fftw',
-                'valgrind',
+                ('trilinos', 'trilinos', False, False),
+                ('fftw:mpi', 'fftw', True, True),
+                ('valgrind', 'valgrind', False, False),
                 'gmp',
                 'libpng',
-                'giflib',
+                ('giflib', 'giflib', False, False),
                 'mpfr',
-                ('netcdf-c', 'netcdf'),
-                ('parallel-netcdf', 'pnetcdf'),
-                'moab',
+                ('netcdf-c', 'netcdf', True, True),
+                ('parallel-netcdf', 'pnetcdf', True, True),
+                ('moab', 'moab', False, False),
                 'openmp',
-                'random123',
+                ('random123', 'random123', False, False),
                 'exodusii',
                 'cgns',
                 'memkind',
                 'p4est',
-                'saws',
-                ('libyaml', 'yaml'),
+                ('saws', 'saws', False, False),
+                ('libyaml', 'yaml', True, True),
                 'hwloc',
-                jpeg_library,
+                (jpeg_sp, 'libjpeg', True, True),
+                (scalapack_sp, 'scalapack', False, True),
+                'strumpack',
         ):
             # Cannot check `library in spec` because of transitive deps
             # Cannot check variants because parmetis keys on +metis
             if isinstance(library, tuple):
-                library, petsclibname = library
+                spacklibname, petsclibname, useinc, uselib = library
             else:
+                spacklibname = library
                 petsclibname = library
+                useinc = True
+                uselib = True
 
-            library_requested = library in spec.dependencies_dict()
+            library_requested = spacklibname.split(':')[0] in spec.dependencies_dict()
             options.append(
                 '--with-{library}={value}'.format(
                     library=petsclibname,
                     value=('1' if library_requested else '0'))
             )
             if library_requested:
-                options.append(
-                    '--with-{library}-dir={path}'.format(
-                        library=petsclibname, path=spec[library].prefix)
-                )
+                if useinc or uselib:
+                    if useinc:
+                        options.append(
+                            '--with-{library}-include={value}'.format(
+                                library=petsclibname,
+                                value=spec[spacklibname].prefix.include)
+                        )
+                    if uselib:
+                        options.append(
+                            '--with-{library}-lib={value}'.format(
+                                library=petsclibname,
+                                value=spec[spacklibname].libs.joined())
+                        )
+                else:
+                    options.append(
+                        '--with-{library}-dir={path}'.format(
+                            library=petsclibname, path=spec[spacklibname].prefix)
+                    )
 
-        # PETSc does not pick up SuperluDist from the dir as they look for
-        # superlu_dist_4.1.a
+        if '+cuda' in spec:
+            if not spec.satisfies('cuda_arch=none'):
+                cuda_arch = spec.variants['cuda_arch'].value
+                if spec.satisfies('@3.14:'):
+                    options.append('--with-cuda-gencodearch={0}'.format(cuda_arch[0]))
+                else:
+                    options.append('CUDAFLAGS=-gencode arch=compute_{0},code=sm_{0}'
+                                   .format(cuda_arch[0]))
+
         if 'superlu-dist' in spec:
             if spec.satisfies('@3.10.3:'):
                 options.append('--with-cxx-dialect=C++11')
-            options.extend([
-                '--with-superlu_dist-include=%s' %
-                spec['superlu-dist'].prefix.include,
-                '--with-superlu_dist-lib=%s' %
-                join_path(spec['superlu-dist'].prefix.lib,
-                          'libsuperlu_dist.a'),
-                '--with-superlu_dist=1'
-            ])
-        else:
-            options.append(
-                '--with-superlu_dist=0'
-            )
-        # SuiteSparse: configuring using '--with-suitesparse-dir=...' has some
-        # issues, so specify directly the include path and the libraries.
-        if '+suite-sparse' in spec:
-            ss_spec = 'suite-sparse:umfpack,klu,cholmod,btf,ccolamd,colamd,' \
-                'camd,amd,suitesparseconfig'
-            options.extend([
-                '--with-suitesparse-include=%s' % spec[ss_spec].prefix.include,
-                '--with-suitesparse-lib=%s' % spec[ss_spec].libs.joined(),
-                '--with-suitesparse=1'
-            ])
-        else:
-            options.append('--with-suitesparse=0')
-
-        # PTScotch: Since we are not using the Parmetis wrapper for now,
-        # we cannot use '--with-ptscotch-dir=...'
-        if '+ptscotch' in spec:
-            options.extend([
-                '--with-ptscotch-include=%s' % spec['scotch'].prefix.include,
-                '--with-ptscotch-lib=%s' % spec['scotch'].libs.joined(),
-                '--with-ptscotch=1'
-            ])
-        else:
-            options.append('--with-ptscotch=0')
-
-        # hdf5: configure detection is convoluted for pflotran
-        if '+hdf5' in spec:
-            options.extend([
-                '--with-hdf5-include=%s' % spec['hdf5'].prefix.include,
-                '--with-hdf5-lib=%s' % spec['hdf5:hl,fortran'].libs.joined(),
-                '--with-hdf5=1'
-            ])
-        else:
-            options.append('--with-hdf5=0')
-
-        # zlib: configuring using '--with-zlib-dir=...' has some issues with
-        # SuiteSparse so specify directly the include path and the libraries.
-        if 'zlib' in spec:
-            options.extend([
-                '--with-zlib-include=%s' % spec['zlib'].prefix.include,
-                '--with-zlib-lib=%s'     % spec['zlib'].libs.joined(),
-                '--with-zlib=1'
-            ])
-        else:
-            options.append('--with-zlib=0')
 
         if '+mkl-pardiso' in spec:
             options.append(
@@ -504,54 +535,9 @@ class Petsc(Package, CudaPackage, ROCmPackage):
         make('MAKE_NP=%s' % make_jobs, parallel=False)
         make("install")
 
-        # solve Poisson equation in 2D to make sure nothing is broken:
-        if ('mpi' in spec) and self.run_tests:
-            with working_dir('src/ksp/ksp/examples/tutorials'):
-                env['PETSC_DIR'] = self.prefix
-                cc = Executable(spec['mpi'].mpicc)
-                cc('ex50.c', '-I%s' % prefix.include, '-L%s' % prefix.lib,
-                   '-lpetsc', '-lm', '-o', 'ex50')
-                run = Executable(join_path(spec['mpi'].prefix.bin, 'mpirun'))
-                # For Spectrum MPI, if -np is omitted, the default behavior is
-                # to assign one process per process slot, where the default
-                # process slot allocation is one per core. On systems with
-                # many cores, the number of processes can exceed the size of
-                # the grid specified when the testcase is run and the test case
-                # fails. Specify a small number of processes to prevent
-                # failure.
-                # For more information about Spectrum MPI invocation, see URL
-                # https://www.ibm.com/support/knowledgecenter/en/SSZTET_10.1.0/smpi02/smpi02_mpirun_options.html
-                if ('spectrum-mpi' in spec):
-                    run.add_default_arg('-np')
-                    run.add_default_arg('4')
-                run('ex50', '-da_grid_x', '4', '-da_grid_y', '4')
-                if 'superlu-dist' in spec:
-                    run('ex50',
-                        '-da_grid_x', '4',
-                        '-da_grid_y', '4',
-                        '-pc_type', 'lu',
-                        '-pc_factor_mat_solver_package', 'superlu_dist')
-
-                if 'mumps' in spec:
-                    run('ex50',
-                        '-da_grid_x', '4',
-                        '-da_grid_y', '4',
-                        '-pc_type', 'lu',
-                        '-pc_factor_mat_solver_package', 'mumps')
-
-                if 'hypre' in spec:
-                    run('ex50',
-                        '-da_grid_x', '4',
-                        '-da_grid_y', '4',
-                        '-pc_type', 'hypre',
-                        '-pc_hypre_type', 'boomeramg')
-
-                if 'mkl-pardiso' in spec:
-                    run('ex50',
-                        '-da_grid_x', '4',
-                        '-da_grid_y', '4',
-                        '-pc_type', 'lu',
-                        '-pc_factor_mat_solver_package', 'mkl_pardiso')
+        if self.run_tests:
+            make('check PETSC_ARCH="" PETSC_DIR={0}'.format(self.prefix),
+                 parallel=False)
 
     def setup_build_environment(self, env):
         # configure fails if these env vars are set outside of Spack
@@ -574,3 +560,49 @@ class Petsc(Package, CudaPackage, ROCmPackage):
             or None  # return None to indicate failure
 
     # For the 'libs' property - use the default handler.
+
+    @run_after('install')
+    def setup_build_tests(self):
+        """Copy the build test files after the package is installed to an
+        install test subdirectory for use during `spack test run`."""
+        self.cache_extra_test_sources('src/ksp/ksp/tutorials')
+
+    def test(self):
+        # solve Poisson equation in 2D to make sure nothing is broken:
+        spec = self.spec
+        env['PETSC_DIR'] = self.prefix
+        env['PETSC_ARCH'] = ''
+        if ('+mpi' in spec):
+            runexe = Executable(join_path(spec['mpi'].prefix.bin,
+                                          'mpiexec')).command
+            runopt = ['-n', '4']
+        else:
+            runexe = Executable(join_path(self.prefix,
+                                          'lib/petsc/bin/petsc-mpiexec.uni')).command
+            runopt = ['-n', '1']
+        w_dir = join_path(self.install_test_root, 'src/ksp/ksp/tutorials')
+        with working_dir(w_dir):
+            testexe = ['ex50', '-da_grid_x', '4', '-da_grid_y', '4']
+            testdict = {
+                None: [],
+                '+superlu-dist':
+                ['-pc_type', 'lu', '-pc_factor_mat_solver_type', 'superlu_dist'],
+                '+mumps':
+                ['-pc_type', 'lu', '-pc_factor_mat_solver_type', 'mumps'],
+                '+hypre':
+                ['-pc_type', 'hypre', '-pc_hypre_type', 'boomeramg'],
+                '+mkl-pardiso':
+                ['-pc_type', 'lu', '-pc_factor_mat_solver_type', 'mkl_pardiso'],
+            }
+            make('ex50', parallel=False)
+            for feature, featureopt in testdict.items():
+                if not feature or feature in spec:
+                    self.run_test(runexe, runopt + testexe + featureopt)
+            if '+cuda' in spec:
+                make('ex7', parallel=False)
+                testexe = ['ex7', '-mat_type', 'aijcusparse',
+                           '-sub_pc_factor_mat_solver_type', 'cusparse',
+                           '-sub_ksp_type', 'preonly', '-sub_pc_type', 'ilu',
+                           '-use_gpu_aware_mpi', '0']
+                self.run_test(runexe, runopt + testexe)
+            make('clean', parallel=False)

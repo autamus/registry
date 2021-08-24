@@ -4,18 +4,20 @@
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 
-from spack import *
 import os
+
+from spack import *
 
 
 class Julia(Package):
     """The Julia Language: A fresh approach to technical computing"""
 
     homepage = "http://julialang.org"
-    url      = "https://github.com/JuliaLang/julia/releases/download/v1.6.2/julia-1.6.2-full.tar.gz"
+    url      = "https://github.com/JuliaLang/julia/releases/download/v0.4.3/julia-0.4.3-full.tar.gz"
     git      = "https://github.com/JuliaLang/julia.git"
 
     maintainers = ['glennpj']
+
     version('master', branch='master')
     version('1.6.2', sha256='01241120515cb9435b96179cf301fbd2c24d4405f252588108d13ceac0f41c0a', url='https://github.com/JuliaLang/julia/releases/download/v1.6.2/julia-1.6.2-full.tar.gz')
     version('1.6.1', sha256='71d8e40611361370654e8934c407b2dec04944cf3917c5ecb6482d6b85ed767f', url='https://github.com/JuliaLang/julia/releases/download/v1.6.1/julia-1.6.1-full.tar.gz')
@@ -168,6 +170,8 @@ class Julia(Package):
                 ]
             else:
                 target_str = str(spec.target).replace('_', '-')
+                if target_str == "zen":
+                    target_str = "znver1"
                 if target_str == "zen2":
                     target_str = "znver2"
                 options += [
@@ -200,4 +204,3 @@ class Julia(Package):
             curl('--create-dirs',
                  '--output', cacert_file,
                  'https://curl.haxx.se/ca/cacert.pem')
-

@@ -12,7 +12,7 @@ class Samtools(Package):
        alignments in a per-position format"""
 
     homepage = "http://www.htslib.org"
-    url      = "https://github.com/samtools/samtools/releases/download/1.13/samtools-1.13.tar.bz2"
+    url      = "https://github.com/samtools/samtools/releases/download/1.3.1/samtools-1.3.1.tar.bz2"
 
     version('1.13', sha256='616ca2e051cc8009a1e9c01cfd8c7caf8b70916ddff66f3b76914079465f8c60', url='https://github.com/samtools/samtools/releases/download/1.13/samtools-1.13.tar.bz2')
     version('1.12', sha256='6da3770563b1c545ca8bdf78cf535e6d1753d6383983c7929245d5dba2902dcb', url='https://github.com/samtools/samtools/releases/download/1.12/samtools-1.12.tar.bz2')
@@ -34,9 +34,7 @@ class Samtools(Package):
     depends_on('python', type='run')
 
     # htslib became standalone @1.3.1, must use corresponding version
-    depends_on('htslib@1.13', when='@1.13')
     depends_on('htslib@1.12', when='@1.12')
-    depends_on('htslib@1.11', when='@1.11')
     depends_on('htslib@1.10.2', when='@1.10')
     depends_on('htslib@1.9', when='@1.9')
     depends_on('htslib@1.8', when='@1.8')

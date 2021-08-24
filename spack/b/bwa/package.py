@@ -3,8 +3,9 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
 import platform
+
+from spack import *
 
 
 class Bwa(Package):
@@ -16,8 +17,7 @@ class Bwa(Package):
     version('0.7.17', sha256='de1b4d4e745c0b7fc3e107b5155a51ac063011d33a5d82696331ecf4bed8d0fd')
     version('0.7.15', sha256='2f56afefa49acc9bf45f12edb58e412565086cc20be098b8bf15ec07de8c0515')
     version('0.7.13', sha256='559b3c63266e5d5351f7665268263dbb9592f3c1c4569e7a4a75a15f17f0aedc')
-    version('0.7.12', sha256='285f55b7fa1f9e873eda9a9b06752378a799ecdecbc886bbd9ba238045bf62e0',
-            url='https://github.com/lh3/bwa/archive/0.7.12.tar.gz')
+    version('0.7.12', sha256='285f55b7fa1f9e873eda9a9b06752378a799ecdecbc886bbd9ba238045bf62e0', url='https://github.com/lh3/bwa/archive/0.7.12.tar.gz')
 
     depends_on('zlib')
     depends_on('sse2neon', when='target=aarch64:')
@@ -38,6 +38,11 @@ class Bwa(Package):
                     'Makefile')
         # use spack C compiler
         filter_file('^CC=.*', 'CC={0}'.format(spack_cc), 'Makefile')
+        # fix gcc 10+ errors
+        if self.spec.satisfies('%gcc@10:'):
+            filter_file('const uint8_t rle_auxtab[8]',
+                        'extern const uint8_t rle_auxtab[8]',
+                        'rle.h', string=True)
         make()
 
         mkdirp(prefix.bin)

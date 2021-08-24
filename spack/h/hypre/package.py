@@ -3,9 +3,10 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
 import os
 import sys
+
+from spack import *
 
 
 class Hypre(Package, CudaPackage):
@@ -14,16 +15,13 @@ class Hypre(Package, CudaPackage):
        unstructured grid problems."""
 
     homepage = "http://computing.llnl.gov/project/linear_solvers/software.php"
-    url      = "https://github.com/hypre-space/hypre/archive/v2.22.0.tar.gz"
+    url      = "https://github.com/hypre-space/hypre/archive/v2.14.0.tar.gz"
     git      = "https://github.com/hypre-space/hypre.git"
 
     maintainers = ['ulrikeyang', 'osborn9', 'balay']
 
     test_requires_compiler = True
-    # Versions 2.13.0 and later can be patched to build shared
-    # libraries on Darwin; the patch for this capability does not
-    # apply to version 2.12.1 and earlier due to changes in the build system
-    # between versions 2.12.1 and 2.13.0.
+
     version('develop', branch='master')
     version('2.22.0', sha256='2c786eb5d3e722d8d7b40254f138bef4565b2d4724041e56a8fa073bda5cfbb5', url='https://github.com/hypre-space/hypre/archive/v2.22.0.tar.gz')
     version('2.21.0', sha256='e380f914fe7efe22afc44cdf553255410dc8a02a15b2e5ebd279ba88817feaf5', url='https://github.com/hypre-space/hypre/archive/v2.21.0.tar.gz')
@@ -44,7 +42,11 @@ class Hypre(Package, CudaPackage):
     version('2.10.1', sha256='a4a9df645ebdc11e86221b794b276d1e17974887ead161d5050aaf0b43bb183a')
     version('2.10.0', sha256='b55dbdc692afe5a00490d1ea1c38dd908dae244f7bdd7faaf711680059824c11')
     version('0.2.0')
-    
+
+    # Versions 2.13.0 and later can be patched to build shared
+    # libraries on Darwin; the patch for this capability does not
+    # apply to version 2.12.1 and earlier due to changes in the build system
+    # between versions 2.12.1 and 2.13.0.
     variant('shared', default=(sys.platform != 'darwin'),
             description="Build shared library (disables static library)")
     # Use internal SuperLU routines for FEI - version 2.12.1 and below
@@ -61,6 +63,7 @@ class Hypre(Package, CudaPackage):
     variant('openmp', default=False, description='Enable OpenMP support')
     variant('debug', default=False,
             description='Build debug instead of optimized version')
+    variant('unified-memory', default=False, description='Use unified memory')
 
     # Patch to add ppc64le in config.guess
     patch('ibm-ppc64le.patch', when='@:2.11.1')
@@ -80,6 +83,7 @@ class Hypre(Package, CudaPackage):
     depends_on('superlu-dist', when='+superlu-dist+mpi')
 
     conflicts('+cuda', when='+int64')
+    conflicts('+unified-memory', when='~cuda')
 
     # Patch to build shared libraries on Darwin does not apply to
     # versions before 2.13.0
@@ -179,6 +183,9 @@ class Hypre(Package, CudaPackage):
                 '--disable-cub'
             ])
 
+        if '+unified-memory' in self.spec:
+            configure_args.append('--enable-unified-memory')
+
         return configure_args
 
     def setup_build_environment(self, env):
@@ -216,26 +223,36 @@ class Hypre(Package, CudaPackage):
                         '-rhsone')
             make("install")
 
+    extra_install_tests = join_path('src', 'examples')
+
     @run_after('install')
     def cache_test_sources(self):
-        srcs = ['src/examples']
-        self.cache_extra_test_sources(srcs)
+        self.cache_extra_test_sources(self.extra_install_tests)
+
+    @property
+    def _cached_tests_work_dir(self):
+        """The working directory for cached test sources."""
+        return join_path(self.test_suite.current_test_cache_dir,
+                         self.extra_install_tests)
 
     def test(self):
         """Perform smoke test on installed HYPRE package."""
+        if '+mpi' not in self.spec:
+            print('Skipping: HYPRE must be installed with +mpi to run tests')
+            return
 
-        if '+mpi' in self.spec:
-            examples_dir = join_path(self.install_test_root, 'src/examples')
-            with working_dir(examples_dir, create=False):
-                make("HYPRE_DIR=" + self.prefix, "bigint")
+        # Build copied and cached test examples
+        self.run_test('make',
+                      ['HYPRE_DIR={0}'.format(self.prefix), 'bigint'],
+                      purpose='test: building selected examples',
+                      work_dir=self._cached_tests_work_dir)
 
-                reason = "test: ensuring HYPRE examples run"
-                self.run_test('./ex5big', [], [], installed=True,
-                              purpose=reason, skip_missing=True, work_dir='.')
-                self.run_test('./ex15big', [], [], installed=True,
-                              purpose=reason, skip_missing=True, work_dir='.')
-
-                make("distclean")
+        # Run the examples built above
+        for exe in ['./ex5big', './ex15big']:
+            self.run_test(exe, [], [], installed=False,
+                          purpose='test: ensuring {0} runs'.format(exe),
+                          skip_missing=True,
+                          work_dir=self._cached_tests_work_dir)
 
     @property
     def headers(self):
@@ -255,4 +272,3 @@ class Hypre(Package, CudaPackage):
         libs = find_libraries('libHYPRE', root=self.prefix, shared=is_shared,
                               recursive=True)
         return libs or None
-

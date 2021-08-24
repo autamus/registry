@@ -3,12 +3,11 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
-from spack.operating_systems.mac_os import macos_version
-
 import os
 import sys
 
+from spack import *
+from spack.operating_systems.mac_os import macos_version
 
 MACOS_VERSION = macos_version() if sys.platform == 'darwin' else None
 
@@ -18,7 +17,7 @@ class Graphviz(AutotoolsPackage):
 
     homepage = 'http://www.graphviz.org'
     git      = 'https://gitlab.com/graphviz/graphviz.git'
-    url      = "https://gitlab.com/graphviz/graphviz/-/archive/2.48.0/graphviz-2.48.0.tar.bz2"
+    url      = 'https://gitlab.com/graphviz/graphviz/-/archive/2.46.0/graphviz-2.46.0.tar.bz2'
 
     version('2.48.0', sha256='6ba7b075c3820e7a40fbc8879ad25621f65a6f5fec79e41c7987650ac3f727ae', url='https://gitlab.com/graphviz/graphviz/-/archive/2.48.0/graphviz-2.48.0.tar.bz2')
     version('2.47.3', sha256='655ea74cbdb317653816ec3e5d91841e9bedc419f48a69fc11d937c7b179133e', url='https://gitlab.com/graphviz/graphviz/-/archive/2.47.3/graphviz-2.47.3.tar.bz2')
@@ -87,9 +86,9 @@ class Graphviz(AutotoolsPackage):
         patch('fix-quartz-darwin.patch')
 
     # Language dependencies
-    depends_on('java', when='+java')
     for lang in language_bindings:
         depends_on('swig', when=('+' + lang))
+        depends_on(lang, when=('+' + lang))
 
     # Feature dependencies
     depends_on('zlib')
@@ -115,10 +114,13 @@ class Graphviz(AutotoolsPackage):
     # Build dependencies (graphviz binaries don't include configure file)
     depends_on('automake', type='build')
     depends_on('autoconf', type='build')
-    depends_on('bison', type='build')
+    depends_on('bison@3.0.4:', type='build')
     depends_on('flex', type='build')
+    depends_on('sed', type='build')
     depends_on('libtool', type='build')
     depends_on('pkgconfig', type='build')
+    # to process f-strings used in gen_version.py
+    depends_on('python@3.6:', when='@2.47:', type='build')
 
     conflicts('~doc',
               when='@:2.45',
@@ -127,8 +129,6 @@ class Graphviz(AutotoolsPackage):
               when='@2.40.1+qt ^qt@5:',
               msg='graphviz-2.40.1 needs gcc-6 or greater to compile with QT5 '
               'suppport')
-
-    parallel = False
 
     def autoreconf(self, spec, prefix):
         # We need to generate 'configure' when checking out sources from git
@@ -172,6 +172,12 @@ class Graphviz(AutotoolsPackage):
         for var in ["expat", "gts", "ghostscript", "libgd", "pangocairo",
                     "poppler", "qt", "quartz", "x"]:
             args += self.with_or_without(var)
+        for var in ["zlib", "expat", "java"]:
+            if '+' + var in spec:
+                args.append('--with-{0}includedir={1}'.format(
+                    var, spec[var].prefix.include))
+                args.append('--with-{0}libdir={1}'.format(
+                    var, spec[var].prefix.lib))
 
         args.append('--{0}-gtk'.format(
             "with" if "+gtkplus" in spec else "without"))

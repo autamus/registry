@@ -11,10 +11,11 @@ class PyScipy(PythonPackage):
     It provides many user-friendly and efficient numerical routines such
     as routines for numerical integration and optimization."""
 
-    maintainers = ['adamjstewart']
-
     homepage = "https://www.scipy.org/"
-    url      = "https://github.com/scipy/scipy/releases/download/v1.7.1/scipy-1.7.1.tar.gz"
+    pypi = "scipy/scipy-1.5.4.tar.gz"
+    git = "https://github.com/scipy/scipy.git"
+
+    maintainers = ['adamjstewart']
 
     version('master', branch='master', expand=False)
     version('1.7.1', sha256='6b47d5fa7ea651054362561a28b1ccc8da9368a39514c1bbf6c0977a1c376764', url='https://github.com/scipy/scipy/releases/download/v1.7.1/scipy-1.7.1.tar.gz')
@@ -51,8 +52,9 @@ class PyScipy(PythonPackage):
     depends_on('python@3.6:', when='@1.5:1.5.999', type=('build', 'link', 'run'))
     depends_on('python@3.7:', when='@1.6:1.6.1', type=('build', 'link', 'run'))
     depends_on('python@3.7:3.9.999', when='@1.6.2:', type=('build', 'link', 'run'))
-    depends_on('py-setuptools', when='@:1.6.1', type='build')
-    depends_on('py-setuptools@:51.0.0', when='@1.6.2:', type='build')
+    depends_on('py-setuptools', when='@:1.5', type='build')
+    depends_on('py-setuptools@:51.0.0', when='@1.6', type='build')
+    depends_on('py-setuptools@:57', when='@1.7:', type='build')
     depends_on('py-pybind11@2.2.4:', when='@1.4.0', type=('build', 'link'))
     depends_on('py-pybind11@2.4.0:', when='@1.4.1:1.4.999', type=('build', 'link'))
     depends_on('py-pybind11@2.4.3:', when='@1.5:1.6.1', type=('build', 'link'))
@@ -65,6 +67,7 @@ class PyScipy(PythonPackage):
     depends_on('py-numpy@1.14.5:+blas+lapack', when='@1.5:1.5.999', type=('build', 'link', 'run'))
     depends_on('py-numpy@1.16.5:+blas+lapack', when='@1.6:1.6.1', type=('build', 'link', 'run'))
     depends_on('py-numpy@1.16.5:1.22.999+blas+lapack', when='@1.6.2:', type=('build', 'link', 'run'))
+    depends_on('py-cython@0.29.18:2.9', when='@1.7:', type='build')
     depends_on('py-pythran@0.9.11:', when='@1.7:', type=('build', 'link'))
     depends_on('py-pytest', type='test')
 
