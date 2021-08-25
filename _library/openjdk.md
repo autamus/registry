@@ -4,7 +4,7 @@ name: openjdk
 github: https://github.com/autamus/registry/blob/main/containers/o/openjdk/spack.yaml
 versions:
 - latest
-updated_at: 2021-05-26T06:52:10.762072329Z
+updated_at: 2021-08-25T06:06:27.486216324Z
 size: 218MB
 description: The free and opensource java implementation
 container_url: https://github.com/orgs/autamus/packages/container/package/openjdk
