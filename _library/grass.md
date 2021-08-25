@@ -3,10 +3,10 @@ layout: container
 name: grass
 github: https://github.com/autamus/registry/blob/main/containers/g/grass/spack.yaml
 versions:
-- 7.8.5
 - 7.8.2
-updated_at: 2021-07-20T22:25:35.512583365Z
-size: 151MB
+- 7.8.5
+updated_at: 2021-08-25T06:31:12.828064988Z
+size: 150MB
 description: GRASS GIS (Geographic Resources Analysis Support System), is a free and
   open source Geographic Information System (GIS) software suite used for geospatial
   data management and analysis, image processing, graphics and maps production, spatial
@@ -17,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/grass
 # grass
 ```bash 
 Download        : docker pull ghcr.io/autamus/grass
-Compressed Size : 151MB
+Compressed Size : 150MB
 ```
 
 ## Description
@@ -34,7 +34,7 @@ docker pull ghcr.io/autamus/grass:latest
 or to download a specific version of grass run,
 
 ```bash
-docker pull ghcr.io/autamus/grass:7.8.5
+docker pull ghcr.io/autamus/grass:7.8.2
 ```
 ### Run
 To run the container as an application run,
