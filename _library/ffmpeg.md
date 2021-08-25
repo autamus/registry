@@ -3,10 +3,10 @@ layout: container
 name: ffmpeg
 github: https://github.com/autamus/registry/blob/main/containers/f/ffmpeg/spack.yaml
 versions:
-- "4.5"
 - 4.3.2
-updated_at: 2021-06-23T18:07:19.431285941Z
-size: 49MB
+- "4.5"
+updated_at: 2021-08-25T05:39:37.317266014Z
+size: 50MB
 description: FFmpeg is a complete, cross-platform solution to record, convert and
   stream audio and video.
 container_url: https://github.com/orgs/autamus/packages/container/package/ffmpeg
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/ffmpeg
 # ffmpeg
 ```bash 
 Download        : docker pull ghcr.io/autamus/ffmpeg
-Compressed Size : 49MB
+Compressed Size : 50MB
 ```
 
 ## Description
@@ -32,7 +32,7 @@ docker pull ghcr.io/autamus/ffmpeg:latest
 or to download a specific version of ffmpeg run,
 
 ```bash
-docker pull ghcr.io/autamus/ffmpeg:4.5
+docker pull ghcr.io/autamus/ffmpeg:4.3.2
 ```
 ### Run
 To run the container as an application run,
