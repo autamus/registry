@@ -4,8 +4,9 @@ name: curl
 github: https://github.com/autamus/registry/blob/main/containers/c/curl/spack.yaml
 versions:
 - 7.76.1
-updated_at: 2021-05-26T04:45:56.891309529Z
-size: 34MB
+- 7.78.0
+updated_at: 2021-08-25T05:32:09.52983787Z
+size: 31MB
 description: cURL is an open source command line tool and library for transferring
   data with URL syntax
 container_url: https://github.com/orgs/autamus/packages/container/package/curl
@@ -14,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/curl
 # curl
 ```bash 
 Download        : docker pull ghcr.io/autamus/curl
-Compressed Size : 34MB
+Compressed Size : 31MB
 ```
 
 ## Description
