@@ -4,8 +4,8 @@ name: git
 github: https://github.com/autamus/registry/blob/main/containers/g/git/spack.yaml
 versions:
 - latest
-updated_at: 2021-06-23T20:06:53.018331521Z
-size: 299MB
+updated_at: 2021-08-25T05:51:47.978172071Z
+size: 300MB
 description: 'Git is a free and open source distributed version control system designed
   to handle everything from small to very large projects with speed and efficiency. '
 container_url: https://github.com/orgs/autamus/packages/container/package/git
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/git
 # git
 ```bash 
 Download        : docker pull ghcr.io/autamus/git
-Compressed Size : 299MB
+Compressed Size : 300MB
 ```
 
 ## Description
