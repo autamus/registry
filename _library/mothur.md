@@ -3,12 +3,12 @@ layout: container
 name: mothur
 github: https://github.com/autamus/registry/blob/main/containers/m/mothur/spack.yaml
 versions:
-- 1.45.3
-- 1.45.1
-- 1.44.3
 - 1.43.0
-updated_at: 2021-07-20T22:19:42.591572938Z
-size: 74MB
+- 1.44.3
+- 1.45.1
+- 1.45.3
+updated_at: 2021-08-25T06:06:42.215867671Z
+size: 73MB
 description: This project seeks to develop a single piece of open-source, expandable
   software to fill the bioinformatics needs of the microbial ecology community.
 container_url: https://github.com/orgs/autamus/packages/container/package/mothur
@@ -17,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/mothur
 # mothur
 ```bash 
 Download        : docker pull ghcr.io/autamus/mothur
-Compressed Size : 74MB
+Compressed Size : 73MB
 ```
 
 ## Description
@@ -34,7 +34,7 @@ docker pull ghcr.io/autamus/mothur:latest
 or to download a specific version of mothur run,
 
 ```bash
-docker pull ghcr.io/autamus/mothur:1.45.3
+docker pull ghcr.io/autamus/mothur:1.43.0
 ```
 ### Run
 To run the container as an application run,
