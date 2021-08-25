@@ -4,8 +4,9 @@ name: llvm
 github: https://github.com/autamus/registry/blob/main/containers/l/llvm/spack.yaml
 versions:
 - 12.0.0
-updated_at: 2021-06-04T04:19:42.821496704Z
-size: 1716MB
+- 12.0.1
+updated_at: 2021-08-25T06:35:30.215897374Z
+size: 1692MB
 description: ' homepage = "http://llvm.org/'
 container_url: https://github.com/orgs/autamus/packages/container/package/llvm
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/llvm
 # llvm
 ```bash 
 Download        : docker pull ghcr.io/autamus/llvm
-Compressed Size : 1716MB
+Compressed Size : 1692MB
 ```
 
 ## Description
