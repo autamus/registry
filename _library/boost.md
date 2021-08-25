@@ -4,8 +4,9 @@ name: boost
 github: https://github.com/autamus/registry/blob/main/containers/b/boost/spack.yaml
 versions:
 - 1.75.0
-updated_at: 2021-08-05T15:14:01.832238426Z
-size: 49MB
+- 1.76.0
+updated_at: 2021-08-25T05:23:20.017799452Z
+size: 47MB
 description: 'Boost provides free peer-reviewed portable C++ source libraries, emphasizing
   libraries that work well with the C++ Standard Library. Boost libraries are intended
   to be widely useful, and usable across a broad spectrum of applications. The Boost
@@ -16,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/boost
 # boost
 ```bash 
 Download        : docker pull ghcr.io/autamus/boost
-Compressed Size : 49MB
+Compressed Size : 47MB
 ```
 
 ## Description
