@@ -9,7 +9,7 @@ versions:
 - 3.7.4
 - 3.8.0
 - 3.8.1
-updated_at: 2021-08-23T17:57:35.262170789Z
+updated_at: 2021-08-25T06:28:38.866953086Z
 size: 356MB
 description: ""
 container_url: https://github.com/orgs/autamus/packages/container/package/singularity
