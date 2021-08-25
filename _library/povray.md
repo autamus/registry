@@ -3,10 +3,10 @@ layout: container
 name: povray
 github: https://github.com/autamus/registry/blob/main/containers/p/povray/spack.yaml
 versions:
-- 3.7.0.9
 - 3.7.0.10
-updated_at: 2021-07-20T22:40:53.811743029Z
-size: 1146MB
+- 3.7.0.9
+updated_at: 2021-08-25T06:37:26.649759436Z
+size: 1145MB
 description: 'The Persistence of Vision Raytracer creates three-dimensional, photo-realistic
   images using a rendering technique called ray-tracing. It reads in a text file containing
   information describing the objects and lighting in a scene and generates an image
@@ -19,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/povray
 # povray
 ```bash 
 Download        : docker pull ghcr.io/autamus/povray
-Compressed Size : 1146MB
+Compressed Size : 1145MB
 ```
 
 ## Description
@@ -36,7 +36,7 @@ docker pull ghcr.io/autamus/povray:latest
 or to download a specific version of povray run,
 
 ```bash
-docker pull ghcr.io/autamus/povray:3.7.0.9
+docker pull ghcr.io/autamus/povray:3.7.0.10
 ```
 ### Run
 To run the container as an application run,
