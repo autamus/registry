@@ -3,9 +3,9 @@ layout: container
 name: argobots
 github: https://github.com/autamus/registry/blob/main/containers/a/argobots/spack.yaml
 versions:
-- "1.1"
 - "1.0"
-updated_at: 2021-06-04T17:55:01.573876574Z
+- "1.1"
+updated_at: 2021-08-25T05:20:07.916554558Z
 size: 27MB
 description: 'Argobots, which was developed as a part of the Argo project, is a lightweight
   runtime system that supports integrated computation and data movement with massive
@@ -35,7 +35,7 @@ docker pull ghcr.io/autamus/argobots:latest
 or to download a specific version of argobots run,
 
 ```bash
-docker pull ghcr.io/autamus/argobots:1.1
+docker pull ghcr.io/autamus/argobots:1.0
 ```
 ### Run
 To run the container as an application run,
