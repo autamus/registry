@@ -5,7 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/j/jasper/spack.
 versions:
 - 2.0.32
 - 2.0.33
-updated_at: 2021-08-03T16:52:20.462956513Z
+- "20210822.2247"
+updated_at: 2021-08-25T05:57:02.478457327Z
 size: 28MB
 description: Library for manipulating JPEG-2000 images
 container_url: https://github.com/orgs/autamus/packages/container/package/jasper
