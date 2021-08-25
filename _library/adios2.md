@@ -4,8 +4,8 @@ name: adios2
 github: https://github.com/autamus/registry/blob/main/containers/a/adios2/spack.yaml
 versions:
 - 2.7.1
-updated_at: 2021-07-20T22:06:15.914113706Z
-size: 59MB
+updated_at: 2021-08-25T05:54:45.37485698Z
+size: 61MB
 description: The Adaptable Input Output System version 2, developed in the Exascale
   Computing Program
 container_url: https://github.com/orgs/autamus/packages/container/package/adios2
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/adios2
 # adios2
 ```bash 
 Download        : docker pull ghcr.io/autamus/adios2
-Compressed Size : 59MB
+Compressed Size : 61MB
 ```
 
 ## Description
