@@ -3,11 +3,12 @@ layout: container
 name: gcc
 github: https://github.com/autamus/registry/blob/main/containers/g/gcc/spack.yaml
 versions:
-- 11.1.0
-- 10.3.0
 - 10.2.0
-updated_at: 2021-06-23T20:45:06.108818515Z
-size: 141MB
+- 10.3.0
+- 11.1.0
+- 11.2.0
+updated_at: 2021-08-25T05:49:25.980859032Z
+size: 142MB
 description: The GNU Compiler Collection includes front ends for C, C++, Objective-C,
   Fortran, Ada, and Go, as well as libraries for these languages.
 container_url: https://github.com/orgs/autamus/packages/container/package/gcc
@@ -16,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/gcc
 # gcc
 ```bash 
 Download        : docker pull ghcr.io/autamus/gcc
-Compressed Size : 141MB
+Compressed Size : 142MB
 ```
 
 ## Description
@@ -33,7 +34,7 @@ docker pull ghcr.io/autamus/gcc:latest
 or to download a specific version of gcc run,
 
 ```bash
-docker pull ghcr.io/autamus/gcc:11.1.0
+docker pull ghcr.io/autamus/gcc:10.2.0
 ```
 ### Run
 To run the container as an application run,
