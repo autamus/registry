@@ -4,8 +4,9 @@ name: binutils
 github: https://github.com/autamus/registry/blob/main/containers/b/binutils/spack.yaml
 versions:
 - 2.36.1
-updated_at: 2021-06-23T20:00:50.90277677Z
-size: 53MB
+- "2.37"
+updated_at: 2021-08-25T05:22:02.111992635Z
+size: 54MB
 description: GNU binutils, which contain the linker, assembler, objdump and others
 container_url: https://github.com/orgs/autamus/packages/container/package/binutils
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/binuti
 # binutils
 ```bash 
 Download        : docker pull ghcr.io/autamus/binutils
-Compressed Size : 53MB
+Compressed Size : 54MB
 ```
 
 ## Description
