@@ -4,7 +4,7 @@ name: snappy
 github: https://github.com/autamus/registry/blob/main/containers/s/snappy/spack.yaml
 versions:
 - 1.1.8
-updated_at: 2021-05-26T07:37:52.73490366Z
+updated_at: 2021-08-25T06:16:43.110103568Z
 size: 26MB
 description: 'A fast compressor/decompressor: https://code.google.com/p/snappy'
 container_url: https://github.com/orgs/autamus/packages/container/package/snappy
