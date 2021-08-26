@@ -3,9 +3,9 @@ layout: container
 name: astral
 github: https://github.com/autamus/registry/blob/main/containers/a/astral/spack.yaml
 versions:
-- 5.7.1
 - 5.6.1
-updated_at: 2021-05-26T02:41:34.115420833Z
+- 5.7.1
+updated_at: 2021-08-26T08:06:18.062396885Z
 size: 220MB
 description: ASTRAL is a tool for estimating an unrooted species tree given a set
   of unrooted gene trees.
@@ -32,7 +32,7 @@ docker pull ghcr.io/autamus/astral:latest
 or to download a specific version of astral run,
 
 ```bash
-docker pull ghcr.io/autamus/astral:5.7.1
+docker pull ghcr.io/autamus/astral:5.6.1
 ```
 ### Run
 To run the container as an application run,
