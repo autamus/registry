@@ -13,7 +13,7 @@ class Hpx(CMakePackage, CudaPackage):
     """C++ runtime system for parallel and distributed applications."""
 
     homepage = "https://hpx.stellar-group.org/"
-    url      = "https://github.com/STEllAR-GROUP/hpx/archive/1.2.1.tar.gz"
+    url      = "https://github.com/STEllAR-GROUP/hpx/archive/stable.tar.gz"
     maintainers = ['msimberg', 'albestro', 'teonnik']
 
     version('master', branch='master')
