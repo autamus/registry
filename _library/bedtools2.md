@@ -4,7 +4,7 @@ name: bedtools2
 github: https://github.com/autamus/registry/blob/main/containers/b/bedtools2/spack.yaml
 versions:
 - 2.30.0
-updated_at: 2021-08-26T08:04:18.371727366Z
+updated_at: 2021-08-26T14:10:34.537285903Z
 size: 28MB
 description: 'Collectively, the bedtools utilities are a swiss-army knife of tools
   for a wide-range of genomics analysis tasks. The most widely-used tools enable genome
