@@ -7,8 +7,9 @@ versions:
 - 3.20.5
 - 3.21.0
 - 3.21.1
-updated_at: 2021-08-25T05:42:34.131532894Z
-size: 55MB
+- 3.21.2
+updated_at: 2021-08-26T08:10:30.645222736Z
+size: 54MB
 description: 'A cross-platform, open-source build system. CMake is a family of tools
   designed to build, test and package software. '
 container_url: https://github.com/orgs/autamus/packages/container/package/cmake
@@ -17,7 +18,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/cmake
 # cmake
 ```bash 
 Download        : docker pull ghcr.io/autamus/cmake
-Compressed Size : 55MB
+Compressed Size : 54MB
 ```
 
 ## Description
