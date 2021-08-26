@@ -3,11 +3,11 @@ layout: container
 name: clingo
 github: https://github.com/autamus/registry/blob/main/containers/c/clingo/spack.yaml
 versions:
-- 5.5.0
-- 5.4.1
 - 5.4.0
-updated_at: 2021-07-20T22:14:32.190211788Z
-size: 86MB
+- 5.4.1
+- 5.5.0
+updated_at: 2021-08-26T08:14:18.189736004Z
+size: 87MB
 description: 'Clingo: A grounder and solver for logic programs Clingo is part of the
   Potassco project for Answer Set Programming (ASP). ASP offers a simple and powerful
   modeling language to describe combinatorial problems as logic programs. The clingo
@@ -19,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/clingo
 # clingo
 ```bash 
 Download        : docker pull ghcr.io/autamus/clingo
-Compressed Size : 86MB
+Compressed Size : 87MB
 ```
 
 ## Description
@@ -36,7 +36,7 @@ docker pull ghcr.io/autamus/clingo:latest
 or to download a specific version of clingo run,
 
 ```bash
-docker pull ghcr.io/autamus/clingo:5.5.0
+docker pull ghcr.io/autamus/clingo:5.4.0
 ```
 ### Run
 To run the container as an application run,
