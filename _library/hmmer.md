@@ -4,8 +4,8 @@ name: hmmer
 github: https://github.com/autamus/registry/blob/main/containers/h/hmmer/spack.yaml
 versions:
 - 3.3.2
-updated_at: 2021-06-28T17:35:54.136665367Z
-size: 58MB
+updated_at: 2021-08-26T14:14:02.33994821Z
+size: 59MB
 description: 'HMMER is used for searching sequence databases for sequence homologs,
   and for making sequence alignments. It implements methods using probabilistic models
   called profile hidden Markov models (profile HMMs). '
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/hmmer
 # hmmer
 ```bash 
 Download        : docker pull ghcr.io/autamus/hmmer
-Compressed Size : 58MB
+Compressed Size : 59MB
 ```
 
 ## Description
