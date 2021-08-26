@@ -5,8 +5,9 @@ github: https://github.com/autamus/registry/blob/main/containers/p/poppler/spack
 versions:
 - 0.90.1
 - 21.07.0
-updated_at: 2021-07-20T22:26:19.429861664Z
-size: 76MB
+- 21.08.0
+updated_at: 2021-08-26T14:23:43.870875775Z
+size: 77MB
 description: Poppler is a PDF rendering library based on the xpdf-3.0 code base.
 container_url: https://github.com/orgs/autamus/packages/container/package/poppler
 
@@ -14,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/popple
 # poppler
 ```bash 
 Download        : docker pull ghcr.io/autamus/poppler
-Compressed Size : 76MB
+Compressed Size : 77MB
 ```
 
 ## Description
