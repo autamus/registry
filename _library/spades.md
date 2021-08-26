@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/s/spades/spack.
 versions:
 - 3.15.2
 - 3.15.3
-updated_at: 2021-08-26T08:36:05.614108855Z
+updated_at: 2021-08-26T14:26:35.454587307Z
 size: 103MB
 description: SPAdes - St. Petersburg genome assembler - is intended for both standard
   isolates and single-cell MDA bacteria assemblies.
