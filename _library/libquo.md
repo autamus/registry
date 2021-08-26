@@ -4,8 +4,8 @@ name: libquo
 github: https://github.com/autamus/registry/blob/main/containers/l/libquo/spack.yaml
 versions:
 - 1.3.1
-updated_at: 2021-06-23T20:09:06.22761895Z
-size: 51MB
+updated_at: 2021-08-26T14:14:19.82495364Z
+size: 52MB
 description: QUO (as in "status
 container_url: https://github.com/orgs/autamus/packages/container/package/libquo
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/libquo
 # libquo
 ```bash 
 Download        : docker pull ghcr.io/autamus/libquo
-Compressed Size : 51MB
+Compressed Size : 52MB
 ```
 
 ## Description
