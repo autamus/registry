@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/h/htslib/spack.
 versions:
 - "1.12"
 - "1.13"
-updated_at: 2021-08-25T05:54:29.323663563Z
+updated_at: 2021-08-26T14:12:39.148506191Z
 size: 34MB
 description: C library for high-throughput sequencing data formats.
 container_url: https://github.com/orgs/autamus/packages/container/package/htslib
