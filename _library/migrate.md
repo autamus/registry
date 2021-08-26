@@ -4,7 +4,7 @@ name: migrate
 github: https://github.com/autamus/registry/blob/main/containers/m/migrate/spack.yaml
 versions:
 - 3.7.2
-updated_at: 2021-08-23T17:58:34.203859161Z
+updated_at: 2021-08-26T08:22:19.23127226Z
 size: 27MB
 description: Migrate estimates effective population sizes and past migration rates
   between n population assuming a migration matrix model with asymmetric migration
