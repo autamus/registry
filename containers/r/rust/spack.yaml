@@ -6,4 +6,4 @@ spack:
     os_packages:
       final:
         - ca-certificates
-        - gcc
+        - build-essential
