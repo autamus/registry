@@ -3,13 +3,13 @@ layout: container
 name: diamond
 github: https://github.com/autamus/registry/blob/main/containers/d/diamond/spack.yaml
 versions:
-- 2.0.9
-- 2.0.8
-- 2.0.4
 - 2.0.10
 - 2.0.11
-updated_at: 2021-07-06T17:32:44.544723885Z
-size: 29MB
+- 2.0.4
+- 2.0.8
+- 2.0.9
+updated_at: 2021-08-26T08:11:03.688777048Z
+size: 28MB
 description: DIAMOND is a sequence aligner for protein and translated DNA searches,
   designed for high performance analysis of big sequence data.
 container_url: https://github.com/orgs/autamus/packages/container/package/diamond
@@ -18,7 +18,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/diamon
 # diamond
 ```bash 
 Download        : docker pull ghcr.io/autamus/diamond
-Compressed Size : 29MB
+Compressed Size : 28MB
 ```
 
 ## Description
@@ -35,7 +35,7 @@ docker pull ghcr.io/autamus/diamond:latest
 or to download a specific version of diamond run,
 
 ```bash
-docker pull ghcr.io/autamus/diamond:2.0.9
+docker pull ghcr.io/autamus/diamond:2.0.10
 ```
 ### Run
 To run the container as an application run,
