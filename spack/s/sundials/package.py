@@ -3,9 +3,10 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
 import os
 import sys
+
+from spack import *
 
 
 class Sundials(CMakePackage, CudaPackage, ROCmPackage):
@@ -13,7 +14,8 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
     Solvers)"""
 
     homepage = "https://computing.llnl.gov/projects/sundials"
-    url = "https://github.com/LLNL/sundials/releases/download/v2.7.0/sundials-2.7.0.tar.gz"
+    urls = ["https://computing.llnl.gov/projects/sundials/download/sundials-2.7.0.tar.gz",
+            "https://github.com/LLNL/sundials/releases/download/v2.7.0/sundials-2.7.0.tar.gz"]
     git = "https://github.com/llnl/sundials.git"
     maintainers = ['cswoodward', 'gardner48', 'balos1']
 
@@ -21,7 +23,7 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
     # Versions
     # ==========================================================================
     version('develop', branch='develop')
-    version('5.7.0', sha256='8d6dd094feccbb8d6ecc41340ec16a65fabac82ed4415023f6d7c1c2390ea2f3', url='https://github.com/LLNL/sundials/releases/download/v5.7.0/sundials-5.7.0.tar.gz')
+    version('5.7.0', sha256='8d6dd094feccbb8d6ecc41340ec16a65fabac82ed4415023f6d7c1c2390ea2f3')
     version('5.6.1', sha256='16b77999ec7e7f2157aa1d04ca1de4a2371ca8150e056d24951d0c58966f2a83')
     version('5.6.0', sha256='95e4201912e150f29c6f6f7625de763385e2073dae7f929c4a544561ea29915d')
     version('5.5.0', sha256='2a755e89aab96d2ff096a4e30bf00bb162e80be20e9e99f424dccfb249098237')
@@ -165,7 +167,9 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
     depends_on('mpi', when='+superlu-dist')
 
     # Other parallelism dependencies
-    depends_on('raja', when='+raja')
+    depends_on('raja',      when='+raja')
+    depends_on('raja+cuda', when='+raja +cuda')
+    depends_on('raja+rocm', when='+raja +rocm')
 
     # External libraries
     depends_on('lapack',              when='+lapack')
@@ -199,6 +203,8 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
     patch('FindPackageMultipass.cmake.patch', when='@5.0.0')
     patch('5.5.0-xsdk-patches.patch', when='@5.5.0')
     patch('0001-add-missing-README-to-examples-cvode-hip.patch', when='@5.6.0:5.7.0')
+    # remove sundials_nvecopenmp target from ARKODE SuperLU_DIST example
+    patch('remove-links-to-OpenMP-vector.patch', when='@5.5.0:5.7.0')
 
     # ==========================================================================
     # SUNDIALS Settings
@@ -223,7 +229,7 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
 
         # SUNDIALS solvers
         for pkg in self.sun_solvers:
-            args.extend(['-DBUILD_%s=%s' % (pkg, on_off('+' + pkg))])
+            args.append(self.define_from_variant('BUILD_' + pkg, pkg))
 
         # precision
         args.extend([
@@ -240,13 +246,13 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
                 args.extend(['-DSUNDIALS_INDEX_TYPE=int32_t'])
 
         # Fortran interface
-        args.extend(['-DF77_INTERFACE_ENABLE=%s' % on_off('+fcmix')])
-        args.extend(['-DF2003_INTERFACE_ENABLE=%s' % on_off('+f2003')])
+        args.extend([self.define_from_variant('F77_INTERFACE_ENABLE', 'fcmix')])
+        args.extend([self.define_from_variant('F2003_INTERFACE_ENABLE', 'f2003')])
 
         # library type
         args.extend([
-            '-DBUILD_SHARED_LIBS=%s' % on_off('+shared'),
-            '-DBUILD_STATIC_LIBS=%s' % on_off('+static')
+            self.define_from_variant('BUILD_SHARED_LIBS', 'shared'),
+            self.define_from_variant('BUILD_STATIC_LIBS', 'static')
         ])
 
         # generic (std-c) math libraries
@@ -256,14 +262,14 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
 
         # Monitoring
         args.extend([
-            '-DSUNDIALS_BUILD_WITH_MONITORING=%s' % on_off('+monitoring')
+            self.define_from_variant('SUNDIALS_BUILD_WITH_MONITORING', 'monitoring')
         ])
 
         # parallelism
         args.extend([
-            '-DMPI_ENABLE=%s'     % on_off('+mpi'),
-            '-DOPENMP_ENABLE=%s'  % on_off('+openmp'),
-            '-DPTHREAD_ENABLE=%s' % on_off('+pthread')
+            self.define_from_variant('MPI_ENABLE', 'mpi'),
+            self.define_from_variant('OPENMP_ENABLE', 'openmp'),
+            self.define_from_variant('PTHREAD_ENABLE', 'pthread')
         ])
 
         if '+cuda' in spec:
@@ -271,7 +277,7 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
             archs = spec.variants['cuda_arch'].value
             if archs != 'none':
                 arch_str = ",".join(archs)
-            args.append('CMAKE_CUDA_ARCHITECTURES=%s' % arch_str)
+            args.append('-DCMAKE_CUDA_ARCHITECTURES=%s' % arch_str)
         else:
             args.append('-DCUDA_ENABLE=OFF')
 
@@ -355,7 +361,7 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
         if '+raja' in spec:
             args.extend([
                 '-DRAJA_ENABLE=ON',
-                '-DRAJA_DIR=%s' % spec['raja'].prefix.share.raja.cmake
+                '-DRAJA_DIR=%s' % spec['raja'].prefix
             ])
         else:
             args.extend([
@@ -420,8 +426,8 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
         # Examples
         if spec.satisfies('@3.0.0:'):
             args.extend([
-                '-DEXAMPLES_ENABLE_C=%s'      % on_off('+examples'),
-                '-DEXAMPLES_ENABLE_CXX=%s'    % on_off('+examples'),
+                self.define_from_variant('EXAMPLES_ENABLE_C', 'examples'),
+                self.define_from_variant('EXAMPLES_ENABLE_CXX', 'examples'),
                 '-DEXAMPLES_ENABLE_CUDA=%s'   % on_off('+examples+cuda'),
                 '-DEXAMPLES_ENABLE_F77=%s'    % on_off('+examples+fcmix'),
                 '-DEXAMPLES_ENABLE_F90=%s'    % on_off('+examples+fcmix'),
@@ -429,8 +435,8 @@ class Sundials(CMakePackage, CudaPackage, ROCmPackage):
             ])
         else:
             args.extend([
-                '-DEXAMPLES_ENABLE=%s' % on_off('+examples'),
-                '-DCXX_ENABLE=%s'      % on_off('+examples'),
+                self.define_from_variant('EXAMPLES_ENABLE', 'examples'),
+                self.define_from_variant('CXX_ENABLE', 'examples'),
                 '-DF90_ENABLE=%s'      % on_off('+examples+fcmix')
             ])
 

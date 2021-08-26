@@ -12,6 +12,7 @@ class Opencv(CMakePackage, CudaPackage):
 
     maintainers = ['bvanessen', 'adamjstewart']
 
+    version('4.5.3', sha256='77f616ae4bea416674d8c373984b20c8bd55e7db887fd38c6df73463a0647bab')
     version('4.5.2', sha256='ae258ed50aa039279c3d36afdea5c6ecf762515836b27871a8957c610d0424f8', url='https://github.com/opencv/opencv/archive/4.5.2.tar.gz')
 
     # OpenCV modules (variants)

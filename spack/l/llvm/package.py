@@ -20,7 +20,7 @@ class Llvm(CMakePackage, CudaPackage):
     """
 
     homepage = "http://llvm.org/"
-    url      = "https://github.com/llvm/llvm-project/archive/llvmorg-7.1.0.tar.gz"
+    url      = "https://github.com/llvm/llvm-project/archive/llvmorg-14-init.tar.gz"
     list_url = "http://releases.llvm.org/download.html"
     git = "https://github.com/llvm/llvm-project"
     maintainers = ['trws', 'naromero77']
@@ -29,6 +29,7 @@ class Llvm(CMakePackage, CudaPackage):
 
     # fmt: off
     version('main', branch='main')
+    version('14', sha256='0d91a1188f0ecf3b87208a30ec6a37d117f7f86ed4bcf49082b9abab3ab51a58')
     version('12.0.1', sha256='66b64aa301244975a4aea489f402f205cde2f53dd722dad9e7b77a0459b4c8df')
     version('12.0.0', sha256='8e6c99e482bb16a450165176c2d881804976a2d770e0445af4375e78a1fbf19c')
     version('11.1.0', sha256='53a0719f3f4b0388013cfffd7b10c7d5682eece1929a9553c722348d1f866e79')
