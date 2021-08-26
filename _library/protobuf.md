@@ -4,8 +4,8 @@ name: protobuf
 github: https://github.com/autamus/registry/blob/main/containers/p/protobuf/spack.yaml
 versions:
 - 3.17.3
-updated_at: 2021-07-20T22:23:34.826774621Z
-size: 29MB
+updated_at: 2021-08-26T08:26:50.696309359Z
+size: 30MB
 description: Google's data interchange format.
 container_url: https://github.com/orgs/autamus/packages/container/package/protobuf
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/protob
 # protobuf
 ```bash 
 Download        : docker pull ghcr.io/autamus/protobuf
-Compressed Size : 29MB
+Compressed Size : 30MB
 ```
 
 ## Description
