@@ -4,8 +4,8 @@ name: caliper
 github: https://github.com/autamus/registry/blob/main/containers/c/caliper/spack.yaml
 versions:
 - 2.6.0
-updated_at: 2021-08-25T05:52:28.543672986Z
-size: 72MB
+updated_at: 2021-08-26T08:10:27.146533258Z
+size: 71MB
 description: 'Caliper is a program instrumentation and performance measurement framework.
   It is designed as a performance analysis toolbox in a library, allowing one to bake
   performance analysis capabilities directly into applications and activate them at
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/calipe
 # caliper
 ```bash 
 Download        : docker pull ghcr.io/autamus/caliper
-Compressed Size : 72MB
+Compressed Size : 71MB
 ```
 
 ## Description
