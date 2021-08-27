@@ -3,8 +3,9 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
 import os
+
+from spack import *
 
 
 class Legion(CMakePackage):
@@ -21,15 +22,15 @@ class Legion(CMakePackage):
        that is orthogonal to correctness, thereby enabling easy porting and
        tuning of Legion applications to new architectures."""
 
-    homepage = "http://legion.stanford.edu/"
+    homepage = "https://legion.stanford.edu/"
     git = "https://github.com/StanfordLegion/legion.git"
 
     maintainers = ['pmccormick', 'streichler']
 
-    version('21.03.0', tag='legion-21.03.0')
-    version('stable', branch='stable')
-    version('master', branch='master')
     version('cr', branch='control_replication')
+    version('master', branch='master')
+    version('stable', branch='stable')
+    version('21.03.0')
 
     depends_on("cmake@3.16:", type='build')
     # TODO: Need to spec version of MPI v3 for use of the low-level MPI transport
