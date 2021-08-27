@@ -4,8 +4,8 @@ name: perl
 github: https://github.com/autamus/registry/blob/main/containers/p/perl/spack.yaml
 versions:
 - 5.35.0
-updated_at: 2021-06-01T18:04:37.510354801Z
-size: 48MB
+updated_at: 2021-08-27T23:16:12.756707369Z
+size: 47MB
 description: Perl 5 is a highly capable, feature-rich programming language with over
   27 years of development.
 container_url: https://github.com/orgs/autamus/packages/container/package/perl
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/perl
 # perl
 ```bash 
 Download        : docker pull ghcr.io/autamus/perl
-Compressed Size : 48MB
+Compressed Size : 47MB
 ```
 
 ## Description
