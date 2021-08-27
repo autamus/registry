@@ -13,8 +13,8 @@ class Mono(AutotoolsPackage):
        standards for C# and the Common Language Runtime.
     """
 
-    homepage = "http://www.mono-project.com/"
-    url      = "https://download.mono-project.com/sources/mono/mono-5.0.1.1.tar.bz2"
+    homepage = "https://www.mono-project.com/"
+    url      = "https://download.mono-project.com/sources/mono/mono-6.12.0.122.tar.xz"
     maintainers = ['grospelliergilles']
 
     # /usr/share/.mono/keypairs needs to exist or be able to be
