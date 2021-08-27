@@ -4,8 +4,8 @@ name: bowtie2
 github: https://github.com/autamus/registry/blob/main/containers/b/bowtie2/spack.yaml
 versions:
 - 2.4.2
-updated_at: 2021-08-25T05:40:39.955384133Z
-size: 106MB
+updated_at: 2021-08-27T17:39:28.580208303Z
+size: 105MB
 description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing
   reads to long reference sequences
 container_url: https://github.com/orgs/autamus/packages/container/package/bowtie2
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/bowtie
 # bowtie2
 ```bash 
 Download        : docker pull ghcr.io/autamus/bowtie2
-Compressed Size : 106MB
+Compressed Size : 105MB
 ```
 
 ## Description
