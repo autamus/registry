@@ -4,8 +4,8 @@ name: tcsh
 github: https://github.com/autamus/registry/blob/main/containers/t/tcsh/spack.yaml
 versions:
 - 6.22.02
-updated_at: 2021-06-23T19:54:55.572900869Z
-size: 30MB
+updated_at: 2021-08-27T17:55:29.970860667Z
+size: 29MB
 description: Tcsh is an enhanced but completely compatible version of csh, the C shell.
   Tcsh is a command language interpreter which can be used both as an interactive
   login shell and as a shell script command processor. Tcsh includes a command line
@@ -17,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/tcsh
 # tcsh
 ```bash 
 Download        : docker pull ghcr.io/autamus/tcsh
-Compressed Size : 30MB
+Compressed Size : 29MB
 ```
 
 ## Description
