@@ -3,12 +3,10 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
-
 import os
-
-# to get system platform type
 import sys
+
+from spack import *
 
 
 def detect_scheduler():
@@ -24,31 +22,38 @@ class Scr(CMakePackage):
        Linux cluster to provide a fast, scalable checkpoint/restart
        capability for MPI codes"""
 
-    homepage = "http://computing.llnl.gov/projects/scalable-checkpoint-restart-for-mpi"
+    homepage = "https://computing.llnl.gov/projects/scalable-checkpoint-restart-for-mpi"
     url      = "https://github.com/LLNL/scr/archive/v1.2.0.tar.gz"
     git      = "https://github.com/llnl/scr.git"
 
     version('develop', branch='develop')
-    version('legacy', branch='legacy', deprecated=True)
+    version('legacy', branch='legacy')
+    version('3.0.rc.1', sha256='bd31548a986f050024429d8ee3644eb135f047f98a3d503a40c5bd4a85291308')
+    version('2.0.0', sha256='471978ae0afb56a20847d3989b994fbd680d1dea21e77a5a46a964b6e3deed6b')
+    version('1.2.2', sha256='764a85638a9e8762667ec1f39fa5f7da7496fca78de379a22198607b3e027847')
+    version('1.2.1', sha256='23acab2dc7203e9514455a5168f2fd57bc590affb7a1876912b58201513628fe')
+    version('1.2.0', sha256='e3338ab2fa6e9332d2326c59092b584949a083a876adf5a19d4d5c7a1bbae047')
 
-    version('3.0rc1', sha256='bd31548a986f050024429d8ee3644eb135f047f98a3d503a40c5bd4a85291308')
-    version('2.0.0', sha256='471978ae0afb56a20847d3989b994fbd680d1dea21e77a5a46a964b6e3deed6b', deprecated=True)
-    version('1.2.2', sha256='764a85638a9e8762667ec1f39fa5f7da7496fca78de379a22198607b3e027847', deprecated=True)
-    version('1.2.1', sha256='23acab2dc7203e9514455a5168f2fd57bc590affb7a1876912b58201513628fe', deprecated=True)
-    version('1.2.0', sha256='e3338ab2fa6e9332d2326c59092b584949a083a876adf5a19d4d5c7a1bbae047', deprecated=True)
+    version('develop', branch='develop')
+    version('legacy', branch='legacy')
+    version('3.0.rc.1', sha256='bd31548a986f050024429d8ee3644eb135f047f98a3d503a40c5bd4a85291308')
+    version('2.0.0', sha256='471978ae0afb56a20847d3989b994fbd680d1dea21e77a5a46a964b6e3deed6b')
+    version('1.2.2', sha256='764a85638a9e8762667ec1f39fa5f7da7496fca78de379a22198607b3e027847')
+    version('1.2.1', sha256='23acab2dc7203e9514455a5168f2fd57bc590affb7a1876912b58201513628fe')
+    version('1.2.0', sha256='e3338ab2fa6e9332d2326c59092b584949a083a876adf5a19d4d5c7a1bbae047')
 
     depends_on('pdsh+static_modules', type=('build', 'run'))
     depends_on('zlib')
     depends_on('mpi')
 
     # Use the latest iteration of the components when installing scr@develop
-    depends_on('axl@master',      when="@develop")
-    depends_on('er@master',       when="@develop")
-    depends_on('kvtree@master',   when="@develop")
-    depends_on('rankstr@master',  when="@develop")
-    depends_on('redset@master',   when="@develop")
-    depends_on('shuffile@master', when="@develop")
-    depends_on('spath@master',    when="@develop")
+    depends_on('axl@main',      when="@develop")
+    depends_on('er@main',       when="@develop")
+    depends_on('kvtree@main',   when="@develop")
+    depends_on('rankstr@main',  when="@develop")
+    depends_on('redset@main',   when="@develop")
+    depends_on('shuffile@main', when="@develop")
+    depends_on('spath@main',    when="@develop")
 
     # SCR legacy is anything 2.x.x or earlier
     # SCR components is anything 3.x.x or later
