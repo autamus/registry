@@ -3,10 +3,10 @@ layout: container
 name: angsd
 github: https://github.com/autamus/registry/blob/main/containers/a/angsd/spack.yaml
 versions:
-- "0.935"
 - "0.933"
-updated_at: 2021-08-03T15:07:47.893466009Z
-size: 44MB
+- "0.935"
+updated_at: 2021-08-27T17:32:13.959689485Z
+size: 280MB
 description: Angsd is a program for analysing NGS data. The software can handle a
   number of different input types from mapped reads to imputed genotype probabilities.
   Most methods take genotype uncertainty into account instead of basing the analysis
@@ -17,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/angsd
 # angsd
 ```bash 
 Download        : docker pull ghcr.io/autamus/angsd
-Compressed Size : 44MB
+Compressed Size : 280MB
 ```
 
 ## Description
@@ -34,7 +34,7 @@ docker pull ghcr.io/autamus/angsd:latest
 or to download a specific version of angsd run,
 
 ```bash
-docker pull ghcr.io/autamus/angsd:0.935
+docker pull ghcr.io/autamus/angsd:0.933
 ```
 ### Run
 To run the container as an application run,
