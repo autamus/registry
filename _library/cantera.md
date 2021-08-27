@@ -3,9 +3,9 @@ layout: container
 name: cantera
 github: https://github.com/autamus/registry/blob/main/containers/c/cantera/spack.yaml
 versions:
-- 2.5.1
 - 2.4.0
-updated_at: 2021-07-20T22:45:07.560761966Z
+- 2.5.1
+updated_at: 2021-08-27T18:06:06.68277882Z
 size: 126MB
 description: Cantera is a suite of object-oriented software tools for problems involving
   chemical kinetics, thermodynamics, and/or transport processes.
@@ -32,7 +32,7 @@ docker pull ghcr.io/autamus/cantera:latest
 or to download a specific version of cantera run,
 
 ```bash
-docker pull ghcr.io/autamus/cantera:2.5.1
+docker pull ghcr.io/autamus/cantera:2.4.0
 ```
 ### Run
 To run the container as an application run,
