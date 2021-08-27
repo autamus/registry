@@ -68,7 +68,23 @@ class Rust(Package):
     depends_on('libssh2')
     depends_on('libgit2')
 
-    # Pre-release Versions
+    # These version strings are officially supported, but aren't explicitly
+    # listed because there's no stable checksum for them.
+    # version('nightly')
+    # version('beta')
+
+    # Version Notes:
+    # Here's some information on why your favorite Rust version may be missing.
+    #
+    # < 1.23:
+    # Rust seems to eagerly search for ar next to cc. Spack makes wrappers for
+    # cc and c++, but not for ar, so no ar is found. In future versions, ar
+    # can be specified in the config.
+    #
+    # < 1.17:
+    # The `x.py` bootstrapping script did not exist prior to Rust 1.17. It
+    # would be possible to support both, but for simplicitly, we only support
+    # Rust 1.17 and newer
     version('master', branch='master', submodules=True)
     version('1.54.0', sha256='ac8511633e9b5a65ad030a1a2e5bdaa841fdfe3132f2baaa52cc04e71c6c6976')
     version('1.53.0', sha256='5cf7ca39a10f6bf4e0b0bd15e3b9a61ce721f301e12d148262e5ba968ab825b9')
