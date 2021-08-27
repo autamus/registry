@@ -7,7 +7,7 @@ versions:
 - 1.55.0
 - 1.55.1
 - 1.56.0
-updated_at: 2021-08-26T14:25:22.488009461Z
+updated_at: 2021-08-27T20:33:03.188336977Z
 size: 43MB
 description: Rclone is a command line program to sync files and directories to and
   from various cloud storage providers
