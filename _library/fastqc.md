@@ -4,7 +4,7 @@ name: fastqc
 github: https://github.com/autamus/registry/blob/main/containers/f/fastqc/spack.yaml
 versions:
 - 0.11.9
-updated_at: 2021-06-01T18:05:36.712281528Z
+updated_at: 2021-08-27T17:31:33.775355759Z
 size: 249MB
 description: A quality control tool for high throughput sequence data.
 container_url: https://github.com/orgs/autamus/packages/container/package/fastqc
