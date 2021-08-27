@@ -25,7 +25,6 @@ class Clingo(CMakePackage):
 
     version('master', branch='master', submodules=True)
     version('spack', commit='2a025667090d71b2c9dce60fe924feb6bde8f667', submodules=True)
-
     version('5.5.0', sha256='c9d7004a0caec61b636ad1c1960fbf339ef8fdee9719321fc1b6b210613a8499')
     version('5.4.1', sha256='ac6606388abfe2482167ce8fd4eb0737ef6abeeb35a9d3ac3016c6f715bfee02')
     version('5.4.0', sha256='e2de331ee0a6d254193aab5995338a621372517adcf91568092be8ac511c18f3')
@@ -66,7 +65,8 @@ class Clingo(CMakePackage):
         current spec is the one found by CMake find_package(Python, ...)
         """
         python_spec = self.spec['python']
-        include_dir = python_spec.package.get_python_inc()
+        include_dir = join_path(
+            python_spec.prefix, python_spec.package.config_vars['python_inc']['false'])
         return [
             self.define('Python_EXECUTABLE', str(python_spec.command)),
             self.define('Python_INCLUDE_DIR', include_dir)
