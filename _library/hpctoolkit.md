@@ -4,7 +4,7 @@ name: hpctoolkit
 github: https://github.com/autamus/registry/blob/main/containers/h/hpctoolkit/spack.yaml
 versions:
 - 2021.05.15
-updated_at: 2021-08-25T06:14:58.88755063Z
+updated_at: 2021-08-27T18:10:56.057182579Z
 size: 381MB
 description: HPCToolkit is an integrated suite of tools for measurement and analysis
   of program performance on computers ranging from multicore desktop systems to the
