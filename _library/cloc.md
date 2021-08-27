@@ -3,10 +3,10 @@ layout: container
 name: cloc
 github: https://github.com/autamus/registry/blob/main/containers/c/cloc/spack.yaml
 versions:
-- "1.90"
-- "1.88"
 - "1.84"
-updated_at: 2021-06-01T18:05:11.230421531Z
+- "1.88"
+- "1.90"
+updated_at: 2021-08-27T23:10:23.825826551Z
 size: 48MB
 description: Count, or compute differences of, physical lines of source code in the
   given files (may be archives such as compressed tarballs or zip files) and/or recursively
@@ -34,7 +34,7 @@ docker pull ghcr.io/autamus/cloc:latest
 or to download a specific version of cloc run,
 
 ```bash
-docker pull ghcr.io/autamus/cloc:1.90
+docker pull ghcr.io/autamus/cloc:1.84
 ```
 ### Run
 To run the container as an application run,
