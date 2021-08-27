@@ -4,7 +4,7 @@ name: bbmap
 github: https://github.com/autamus/registry/blob/main/containers/b/bbmap/spack.yaml
 versions:
 - "38.63"
-updated_at: 2021-05-26T02:44:07.186269418Z
+updated_at: 2021-08-27T17:29:04.838439587Z
 size: 231MB
 description: Short read aligner for DNA and RNA-seq data.
 container_url: https://github.com/orgs/autamus/packages/container/package/bbmap
