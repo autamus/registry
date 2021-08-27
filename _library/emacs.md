@@ -4,7 +4,7 @@ name: emacs
 github: https://github.com/autamus/registry/blob/main/containers/e/emacs/spack.yaml
 versions:
 - "27.2"
-updated_at: 2021-08-25T05:50:39.456124631Z
+updated_at: 2021-08-27T17:39:56.652042277Z
 size: 83MB
 description: The Emacs programmable text editor.
 container_url: https://github.com/orgs/autamus/packages/container/package/emacs
