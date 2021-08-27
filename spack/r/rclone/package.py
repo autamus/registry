@@ -11,7 +11,7 @@ class Rclone(Package):
        to and from various cloud storage providers"""
 
     homepage = "https://rclone.org"
-    url      = "https://github.com/ncw/rclone/releases/download/v1.56.0/rclone-v1.56.0.tar.gz"
+    url      = "https://github.com/ncw/rclone/releases/download/v1.43/rclone-v1.43.tar.gz"
 
     maintainers = ['alecbcs']
 
