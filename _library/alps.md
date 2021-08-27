@@ -4,7 +4,7 @@ name: alps
 github: https://github.com/autamus/registry/blob/main/containers/a/alps/spack.yaml
 versions:
 - 2.3.0
-updated_at: 2021-08-25T07:21:24.617037781Z
+updated_at: 2021-08-27T18:13:04.168710936Z
 size: 261MB
 description: 'Algorithms for Physics Simulations Tags: Condensed Matter Physics, Computational
   Physics '
