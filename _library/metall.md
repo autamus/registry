@@ -5,8 +5,9 @@ github: https://github.com/autamus/registry/blob/main/containers/m/metall/spack.
 versions:
 - "0.13"
 - "0.15"
-updated_at: 2021-07-20T22:19:36.863703284Z
-size: 49MB
+- "0.16"
+updated_at: 2021-08-27T18:04:55.480667339Z
+size: 48MB
 description: A Persistent Memory Allocator For Data-Centric Analytics
 container_url: https://github.com/orgs/autamus/packages/container/package/metall
 
@@ -14,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/metall
 # metall
 ```bash 
 Download        : docker pull ghcr.io/autamus/metall
-Compressed Size : 49MB
+Compressed Size : 48MB
 ```
 
 ## Description
