@@ -103,7 +103,6 @@ jobs:
             autamus/${{ steps.builder.outputs.container }}:latest
             ghcr.io/autamus/${{ steps.builder.outputs.container }}:${{ steps.builder.outputs.version }}
             autamus/${{ steps.builder.outputs.container }}:${{ steps.builder.outputs.version }}
-          cache-to: type=gha,mode=max
 
       - name: Upload Build Logs
         if: always() && github.ref != 'refs/heads/main'
@@ -191,7 +190,6 @@ jobs:
             autamus/${{ steps.builder.outputs.container }}:latest
             ghcr.io/autamus/${{ steps.builder.outputs.container }}:${{ steps.builder.outputs.version }}
             autamus/${{ steps.builder.outputs.container }}:${{ steps.builder.outputs.version }}
-          cache-from: type=gha
 
       - name: Load x86 Container Stats
         uses: docker/build-push-action@v2
