@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/h/hdf5/spack.ya
 versions:
 - 1.12.0
 - "1.13"
-updated_at: 2021-08-25T05:57:26.305695283Z
+updated_at: 2021-08-27T17:45:35.787375746Z
 size: 85MB
 description: .format(version=str(spec.version.up_to(3))) with open("check.c", 'w
 container_url: https://github.com/orgs/autamus/packages/container/package/hdf5
