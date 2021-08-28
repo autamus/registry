@@ -4,7 +4,7 @@ name: zfp
 github: https://github.com/autamus/registry/blob/main/containers/z/zfp/spack.yaml
 versions:
 - 0.5.5
-updated_at: 2021-08-27T18:37:30.69878945Z
+updated_at: 2021-08-28T01:48:22.401994646Z
 size: 27MB
 description: 'zfp is a compressed number format for multidimensional floating-point
   and integer arrays. zfp provides compressed-array classes that support high throughput
