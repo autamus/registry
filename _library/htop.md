@@ -4,7 +4,7 @@ name: htop
 github: https://github.com/autamus/registry/blob/main/containers/h/htop/spack.yaml
 versions:
 - 2.2.0
-updated_at: 2021-08-27T17:45:19.595235906Z
+updated_at: 2021-08-28T01:31:38.954107482Z
 size: 29MB
 description: htop is an interactive text-mode process viewer for Unix systems.
 container_url: https://github.com/orgs/autamus/packages/container/package/htop
