@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/p/pumi/spack.ya
 versions:
 - 2.2.5
 - 2.2.6
-updated_at: 2021-08-27T17:53:58.728997863Z
+updated_at: 2021-08-28T01:41:59.77005937Z
 size: 76MB
 description: SCOREC RPI's Parallel Unstructured Mesh Infrastructure (PUMI). An efficient
   distributed mesh data structure and methods to support parallel adaptive analysis
