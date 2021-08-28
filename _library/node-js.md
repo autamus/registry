@@ -4,8 +4,8 @@ name: node-js
 github: https://github.com/autamus/registry/blob/main/containers/n/node-js/spack.yaml
 versions:
 - 15.3.0
-updated_at: 2021-07-20T22:22:04.368524896Z
-size: 55MB
+updated_at: 2021-08-28T01:38:26.662675932Z
+size: 56MB
 description: Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 container_url: https://github.com/orgs/autamus/packages/container/package/node-js
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/node-j
 # node-js
 ```bash 
 Download        : docker pull ghcr.io/autamus/node-js
-Compressed Size : 55MB
+Compressed Size : 56MB
 ```
 
 ## Description
