@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/s/stringtie/spa
 versions:
 - 2.1.6
 - 2.1.7
-updated_at: 2021-08-27T23:22:50.202933262Z
+updated_at: 2021-08-28T01:48:48.50454403Z
 size: 106MB
 description: StringTie is a fast and highly efficient assembler of RNA-Seq alignments
   into potential transcripts.
