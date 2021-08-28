@@ -4,7 +4,7 @@ name: ior
 github: https://github.com/autamus/registry/blob/main/containers/i/ior/spack.yaml
 versions:
 - 3.3.0
-updated_at: 2021-08-27T23:14:20.446100102Z
+updated_at: 2021-08-28T01:31:21.732062331Z
 size: 52MB
 description: The IOR software is used for benchmarking parallel file systems using
   POSIX, MPI-IO, or HDF5 interfaces.
