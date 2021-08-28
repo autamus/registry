@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/b/benchmark/spa
 versions:
 - 1.5.5
 - 1.5.6
-updated_at: 2021-08-27T18:16:28.069001416Z
+updated_at: 2021-08-28T01:23:22.454915607Z
 size: 27MB
 description: A microbenchmark support library
 container_url: https://github.com/orgs/autamus/packages/container/package/benchmark
