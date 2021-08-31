@@ -19,6 +19,7 @@ class Graphviz(AutotoolsPackage):
     git      = 'https://gitlab.com/graphviz/graphviz.git'
     url      = 'https://gitlab.com/graphviz/graphviz/-/archive/2.46.0/graphviz-2.46.0.tar.bz2'
 
+    version('2.49.0', sha256='b129555743bb9bfb7b63c55825da51763b2f1ee7c0eaa6234a42a61a3aff6cc9')
     version('2.48.0', sha256='6ba7b075c3820e7a40fbc8879ad25621f65a6f5fec79e41c7987650ac3f727ae', url='https://gitlab.com/graphviz/graphviz/-/archive/2.48.0/graphviz-2.48.0.tar.bz2')
     version('2.47.3', sha256='655ea74cbdb317653816ec3e5d91841e9bedc419f48a69fc11d937c7b179133e', url='https://gitlab.com/graphviz/graphviz/-/archive/2.47.3/graphviz-2.47.3.tar.bz2')
     version('2.47.2', sha256='b5ebb00d4283c6d12cf16b2323e1820b535cc3823c8f261b783f7903b1d5b7fb', url='https://gitlab.com/graphviz/graphviz/-/archive/2.47.2/graphviz-2.47.2.tar.bz2')
