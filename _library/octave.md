@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/o/octave/spack.
 versions:
 - 6.2.0
 - 6.3.0
-updated_at: 2021-08-28T01:38:13.317179442Z
+updated_at: 2021-08-31T19:13:33.782914698Z
 size: 73MB
 description: 'GNU Octave is a high-level language, primarily intended for numerical
   computations. It provides a convenient command line interface for solving linear
