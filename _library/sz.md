@@ -6,8 +6,8 @@ versions:
 - 2.1.11.1
 - 2.1.11.2
 - 2.1.12
-updated_at: 2021-08-27T18:33:07.208391857Z
-size: 30MB
+updated_at: 2021-08-31T19:17:34.062494745Z
+size: 29MB
 description: Error-bounded Lossy Compressor for HPC Data
 container_url: https://github.com/orgs/autamus/packages/container/package/sz
 
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/sz
 # sz
 ```bash 
 Download        : docker pull ghcr.io/autamus/sz
-Compressed Size : 30MB
+Compressed Size : 29MB
 ```
 
 ## Description
