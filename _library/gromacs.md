@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/g/gromacs/spack
 versions:
 - "2021.1"
 - "2021.2"
-updated_at: 2021-08-28T01:32:29.885243598Z
+updated_at: 2021-08-31T19:08:40.090214386Z
 size: 62MB
 description: 'GROMACS (GROningen MAchine for Chemical Simulations) is a molecular
   dynamics package primarily designed for simulations of proteins, lipids and nucleic
