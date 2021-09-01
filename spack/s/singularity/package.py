@@ -21,10 +21,11 @@ class Singularity(SingularityBase):
     '''
 
     homepage = "https://singularity.hpcng.org/"
-    url      = "https://github.com/hpcng/singularity/releases/download/v3.6.4/singularity-3.6.4.tar.gz"
+    url      = "https://github.com/hpcng/singularity/releases/download/v3.8.2/singularity-3.8.2.tar.gz"
     git      = "https://github.com/hpcng/singularity.git"
 
     maintainers = ['alalazo']
+    version('3.8.2', sha256='996611dec402b4d372b8b9456dd9ec1cb43712d08502e455f38521bd199856d3')
     version('3.8.1', sha256='2648366fbc7e8fcba9d32f8f187ea149356c5f9083a57826d641359fa8415d9a', url='https://github.com/hpcng/singularity/releases/download/v3.8.1/singularity-3.8.1.tar.gz')
     version('3.8.0', sha256='e9608b0e0a8c805218bbe795e9176484837b2f7fcb95e5469b853b3809a2412e', url='https://github.com/hpcng/singularity/releases/download/v3.8.0/singularity-3.8.0.tar.gz')
     version('3.7.4', sha256='c266369a8bf2747f44e0759858c3fc3b2325b975a8818b2668f0b97b124d0164', url='https://github.com/hpcng/singularity/releases/download/v3.7.4/singularity-3.7.4.tar.gz')
@@ -43,6 +44,7 @@ class Singularity(SingularityBase):
     version('3.2.1', sha256='d4388fb5f7e0083f0c344354c9ad3b5b823e2f3f27980e56efa7785140c9b616')
     version('3.1.1', sha256='7f0df46458d8894ba0c2071b0848895304ae6b1137d3d4630f1600ed8eddf1a4')
 
+    version('3.8.2', sha256='996611dec402b4d372b8b9456dd9ec1cb43712d08502e455f38521bd199856d3')
     version('3.8.1', sha256='2648366fbc7e8fcba9d32f8f187ea149356c5f9083a57826d641359fa8415d9a', url='https://github.com/hpcng/singularity/releases/download/v3.8.1/singularity-3.8.1.tar.gz')
     version('3.8.0', sha256='e9608b0e0a8c805218bbe795e9176484837b2f7fcb95e5469b853b3809a2412e', url='https://github.com/hpcng/singularity/releases/download/v3.8.0/singularity-3.8.0.tar.gz')
     version('3.7.4', sha256='c266369a8bf2747f44e0759858c3fc3b2325b975a8818b2668f0b97b124d0164', url='https://github.com/hpcng/singularity/releases/download/v3.7.4/singularity-3.7.4.tar.gz')
