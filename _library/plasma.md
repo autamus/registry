@@ -4,8 +4,9 @@ name: plasma
 github: https://github.com/autamus/registry/blob/main/containers/p/plasma/spack.yaml
 versions:
 - 20.9.20
-updated_at: 2021-06-22T05:03:54.045946875Z
-size: 52MB
+- 21.8.29
+updated_at: 2021-09-01T18:54:39.330044564Z
+size: 51MB
 description: Parallel Linear Algebra Software for Multicore Architectures, PLASMA
   is a software package for solving problems in dense linear algebra using multicore
   processors and Xeon Phi coprocessors. PLASMA provides implementations of state-of-the-art
@@ -18,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/plasma
 # plasma
 ```bash 
 Download        : docker pull ghcr.io/autamus/plasma
-Compressed Size : 52MB
+Compressed Size : 51MB
 ```
 
 ## Description
