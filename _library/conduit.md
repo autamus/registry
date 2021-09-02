@@ -4,8 +4,8 @@ name: conduit
 github: https://github.com/autamus/registry/blob/main/containers/c/conduit/spack.yaml
 versions:
 - 0.7.2
-updated_at: 2021-07-20T22:07:52.756579722Z
-size: 56MB
+updated_at: 2021-09-02T16:08:33.965083381Z
+size: 71MB
 description: Conduit is an open source project from Lawrence Livermore National Laboratory
   that provides an intuitive model for describing hierarchical scientific data in
   C++, C, Fortran, and Python. It is used for data coupling between packages in-core,
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/condui
 # conduit
 ```bash 
 Download        : docker pull ghcr.io/autamus/conduit
-Compressed Size : 56MB
+Compressed Size : 71MB
 ```
 
 ## Description
