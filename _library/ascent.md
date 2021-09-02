@@ -3,11 +3,11 @@ layout: container
 name: ascent
 github: https://github.com/autamus/registry/blob/main/containers/a/ascent/spack.yaml
 versions:
-- 0.7.1
-- 0.7.0
 - 0.6.0
-updated_at: 2021-07-22T17:50:48.922527277Z
-size: 97MB
+- 0.7.0
+- 0.7.1
+updated_at: 2021-09-02T16:08:28.840437774Z
+size: 114MB
 description: Ascent is an open source many-core capable lightweight in situ visualization
   and analysis infrastructure for multi-physics HPC simulations.
 container_url: https://github.com/orgs/autamus/packages/container/package/ascent
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/ascent
 # ascent
 ```bash 
 Download        : docker pull ghcr.io/autamus/ascent
-Compressed Size : 97MB
+Compressed Size : 114MB
 ```
 
 ## Description
@@ -33,7 +33,7 @@ docker pull ghcr.io/autamus/ascent:latest
 or to download a specific version of ascent run,
 
 ```bash
-docker pull ghcr.io/autamus/ascent:0.7.1
+docker pull ghcr.io/autamus/ascent:0.6.0
 ```
 ### Run
 To run the container as an application run,
