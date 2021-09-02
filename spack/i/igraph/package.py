@@ -15,4 +15,8 @@ class Igraph(AutotoolsPackage):
     version('0.9.4', sha256='a3285cccf4f043c9ced2bc8d8d2609ff8398cb92ed49fdf86264ed91929137dd')
     version('0.7.1', sha256='d978030e27369bf698f3816ab70aa9141e9baf81c56cc4f55efbe5489b46b0df')
 
+    depends_on('autoconf', type='build')
+    depends_on('automake', type='build')
+    depends_on('libtool', type='build')
     depends_on('libxml2')
+    depends_on('m4', type='build')
