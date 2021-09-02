@@ -3,19 +3,20 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
 import os
+
+from spack import *
 
 
 class Psi4(CMakePackage):
     """Psi4 is an open-source suite of ab initio quantum chemistry
     programs designed for efficient, high-accuracy simulations of
-    a variety of molecular properties.""" 
+    a variety of molecular properties."""
 
-    homepage = "http://www.psicode.org/"
+    homepage = "https://www.psicode.org/"
     url      = "https://github.com/psi4/psi4/archive/v1.4.tar.gz"
 
-    version('1.4', sha256='83eb7799294f8d52d16a2e1c9f7698b2de30582e74d3a05f782c2f3e764dd607', url='https://github.com/psi4/psi4/archive/v1.4.tar.gz')
+    version('1.4', sha256='83eb7799294f8d52d16a2e1c9f7698b2de30582e74d3a05f782c2f3e764dd607')
     version('1.3.2', sha256='ed76c67803b6420f35f57a6dd31c47108b9145b8c9fced5c94cdc179f6b5fbf3')
 
     variant('build_type', default='Release',
@@ -26,9 +27,9 @@ class Psi4(CMakePackage):
     depends_on('blas')
     depends_on('lapack')
     depends_on('boost+chrono+filesystem+python+regex+serialization+system+timer+thread')
-    depends_on('python@3.6.0:3.6.13')
+    depends_on('python')
     depends_on('cmake@3.3:', type='build')
-    depends_on('py-numpy@1.19.4', type=('build', 'run'))
+    depends_on('py-numpy', type=('build', 'run'))
 
     # Optional dependencies
     # TODO: add packages for these
