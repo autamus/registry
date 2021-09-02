@@ -4,8 +4,8 @@ name: bart
 github: https://github.com/autamus/registry/blob/main/containers/b/bart/spack.yaml
 versions:
 - 0.7.00
-updated_at: 2021-06-17T20:40:13.184256674Z
-size: 152MB
+updated_at: 2021-09-02T01:58:48.558064357Z
+size: 154MB
 description: 'BART: Toolbox for Computational Magnetic Resonance Imaging'
 container_url: https://github.com/orgs/autamus/packages/container/package/bart
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/bart
 # bart
 ```bash 
 Download        : docker pull ghcr.io/autamus/bart
-Compressed Size : 152MB
+Compressed Size : 154MB
 ```
 
 ## Description
