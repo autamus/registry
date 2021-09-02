@@ -11,7 +11,7 @@ class Samtools(Package):
        the SAM format, including sorting, merging, indexing and generating
        alignments in a per-position format"""
 
-    homepage = "http://www.htslib.org"
+    homepage = "https://www.htslib.org"
     url      = "https://github.com/samtools/samtools/releases/download/1.13/samtools-1.13.tar.bz2"
 
     version('1.13', sha256='616ca2e051cc8009a1e9c01cfd8c7caf8b70916ddff66f3b76914079465f8c60')
