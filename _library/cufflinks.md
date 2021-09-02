@@ -4,7 +4,7 @@ name: cufflinks
 github: https://github.com/autamus/registry/blob/main/containers/c/cufflinks/spack.yaml
 versions:
 - 2.2.1
-updated_at: 2021-05-26T04:30:43.261624996Z
+updated_at: 2021-09-02T16:02:37.538696952Z
 size: 32MB
 description: Cufflinks assembles transcripts, estimates their abundances, and tests
   for differential expression and regulation in RNA-Seq samples.
