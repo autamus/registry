@@ -12,10 +12,11 @@ class Wget(AutotoolsPackage, GNUMirrorPackage):
     non-interactive commandline tool, so it may easily be called from scripts,
     cron jobs, terminals without X-Windows support, etc."""
 
-    homepage = "http://www.gnu.org/software/wget/"
+    homepage = "https://www.gnu.org/software/wget/"
     gnu_mirror_path = "wget/wget-1.19.1.tar.gz"
 
-    version('1.21.1', sha256='59ba0bdade9ad135eda581ae4e59a7a9f25e3a4bde6a5419632b31906120e26e', url='https://mirrors.rit.edu/gnu/wget/wget-1.21.1.tar.gz')
+    version('1.21.1', sha256='59ba0bdade9ad135eda581ae4e59a7a9f25e3a4bde6a5419632b31906120e26e')
+    version('1.21', sha256='b3bc1a9bd0c19836c9709c318d41c19c11215a07514f49f89b40b9d50ab49325')
     version('1.20.3', sha256='31cccfc6630528db1c8e3a06f6decf2a370060b982841cfab2b8677400a5092e')
     version('1.19.1', sha256='9e4f12da38cc6167d0752d934abe27c7b1599a9af294e73829be7ac7b5b4da40')
     version('1.17', sha256='3e04ad027c5b6ebd67c616eec13e66fbedb3d4d8cbe19cc29dadde44b92bda55')
