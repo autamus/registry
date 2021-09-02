@@ -11,11 +11,11 @@ class Migrate(AutotoolsPackage):
        between n population assuming a migration matrix model with asymmetric
        migration rates and different subpopulation sizes"""
 
-    homepage = "http://popgen.sc.fsu.edu/"
+    homepage = "https://popgen.sc.fsu.edu/"
     url      = "https://peterbeerli.com/migrate-html5/download_version3/migrate-3.7.2.src.tar.gz"
 
-    version('3.7.2', sha256='1be9ee06184c74a623ed986eba39dedcb8798dbf727fab058aa630e91c3143dc', url='https://peterbeerli.com/migrate-html5/download_version3/migrate-3.7.2.src.tar.gz')
-    version('3.6.11', sha256='a9ba06a4e995a45b8d04037f5f2da23e1fe64a2f3565189bdd50c62c6fe01fb8', url='http://popgen.sc.fsu.edu/currentversions/migrate-3.6.11.src.tar.gz')
+    version('3.7.2', sha256='1be9ee06184c74a623ed986eba39dedcb8798dbf727fab058aa630e91c3143dc')
+    version('3.6.11', sha256='a9ba06a4e995a45b8d04037f5f2da23e1fe64a2f3565189bdd50c62c6fe01fb8')
 
     variant('mpi', default=False,
             description='Build MPI binaries')
@@ -74,4 +74,3 @@ class Migrate(AutotoolsPackage):
         mkdirp(prefix.man)
         with working_dir('src'):
             make('install')
-
