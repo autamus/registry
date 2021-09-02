@@ -4,7 +4,7 @@ name: superlu
 github: https://github.com/autamus/registry/blob/main/containers/s/superlu/spack.yaml
 versions:
 - 5.2.2
-updated_at: 2021-08-31T19:17:47.716659424Z
+updated_at: 2021-09-02T16:20:56.18985071Z
 size: 50MB
 description: SuperLU is a general purpose library for the direct solution of large,
   sparse, nonsymmetric systems of linear equations on high performance machines. SuperLU
