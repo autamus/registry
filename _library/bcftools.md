@@ -6,7 +6,7 @@ versions:
 - "1.11"
 - "1.12"
 - "1.13"
-updated_at: 2021-09-02T02:05:37.164471513Z
+updated_at: 2021-09-03T05:54:57.018328313Z
 size: 154MB
 description: BCFtools is a set of utilities that manipulate variant calls in the Variant
   Call Format (VCF) and its binary counterpart BCF. All commands work transparently
