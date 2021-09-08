@@ -4,7 +4,7 @@ name: libtiff
 github: https://github.com/autamus/registry/blob/main/containers/l/libtiff/spack.yaml
 versions:
 - 4.1.0
-updated_at: 2021-08-25T06:00:45.170966328Z
+updated_at: 2021-09-08T18:01:29.608810629Z
 size: 29MB
 description: LibTIFF - Tag Image File Format (TIFF) Library and Utilities.
 container_url: https://github.com/orgs/autamus/packages/container/package/libtiff
