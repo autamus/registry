@@ -17,9 +17,9 @@ class Benchmark(CMakePackage):
     # 1.2.0 release: https://github.com/google/benchmark/issues/363
     version('develop', branch='master')
     version('1.6.0', sha256='1f71c72ce08d2c1310011ea6436b31e39ccab8c2db94186d26657d41747c85d6')
-    version('1.5.6', sha256='789f85b4810d13ff803834ea75999e41b326405d83d6a538baf01499eda96102', url='https://github.com/google/benchmark/archive/v1.5.6.tar.gz')
-    version('1.5.5', sha256='3bff5f237c317ddfd8d5a9b96b3eede7c0802e799db520d38ce756a2a46a18a0', url='https://github.com/google/benchmark/archive/v1.5.5.tar.gz')
-    version('1.5.4', sha256='e3adf8c98bb38a198822725c0fc6c0ae4711f16fbbf6aeb311d5ad11e5a081b5', url='https://github.com/google/benchmark/archive/v1.5.4.tar.gz')
+    version('1.5.6', sha256='789f85b4810d13ff803834ea75999e41b326405d83d6a538baf01499eda96102')
+    version('1.5.5', sha256='3bff5f237c317ddfd8d5a9b96b3eede7c0802e799db520d38ce756a2a46a18a0')
+    version('1.5.4', sha256='e3adf8c98bb38a198822725c0fc6c0ae4711f16fbbf6aeb311d5ad11e5a081b5')
     version('1.5.0', sha256='3c6a165b6ecc948967a1ead710d4a181d7b0fbcaa183ef7ea84604994966221a')
     version('1.4.1', sha256='f8e525db3c42efc9c7f3bc5176a8fa893a9a9920bbd08cef30fb56a51854d60d')
     version('1.4.0', sha256='616f252f37d61b15037e3c2ef956905baf9c9eecfeab400cb3ad25bae714e214')
