@@ -10,8 +10,9 @@ versions:
 - 3.8.0
 - 3.8.1
 - 3.8.2
-updated_at: 2021-09-01T19:04:36.421254842Z
-size: 355MB
+- 3.8.3
+updated_at: 2021-09-08T18:27:47.193182377Z
+size: 356MB
 description: ""
 container_url: https://github.com/orgs/autamus/packages/container/package/singularity
 
@@ -19,7 +20,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/singul
 # singularity
 ```bash 
 Download        : docker pull ghcr.io/autamus/singularity
-Compressed Size : 355MB
+Compressed Size : 356MB
 ```
 
 ## Description
