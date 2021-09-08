@@ -4,7 +4,7 @@ name: legion
 github: https://github.com/autamus/registry/blob/main/containers/l/legion/spack.yaml
 versions:
 - 21.03.0
-updated_at: 2021-09-02T16:28:04.938481609Z
+updated_at: 2021-09-08T18:01:34.509383631Z
 size: 32MB
 description: Legion is a data-centric parallel programming system for writing portable
   high performance programs targeted at distributed heterogeneous architectures. Legion
