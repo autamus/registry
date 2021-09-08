@@ -4,7 +4,7 @@ name: hmmer
 github: https://github.com/autamus/registry/blob/main/containers/h/hmmer/spack.yaml
 versions:
 - 3.3.2
-updated_at: 2021-08-26T14:14:02.33994821Z
+updated_at: 2021-09-08T17:15:58.122182327Z
 size: 59MB
 description: 'HMMER is used for searching sequence databases for sequence homologs,
   and for making sequence alignments. It implements methods using probabilistic models
