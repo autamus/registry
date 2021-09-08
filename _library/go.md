@@ -11,7 +11,7 @@ versions:
 - 1.16.6
 - 1.16.7
 - "1.17"
-updated_at: 2021-08-27T23:16:21.036547627Z
+updated_at: 2021-09-08T17:03:31.597413106Z
 size: 296MB
 description: The golang compiler and build environment
 container_url: https://github.com/orgs/autamus/packages/container/package/go
