@@ -4,7 +4,7 @@ name: kraken2
 github: https://github.com/autamus/registry/blob/main/containers/k/kraken2/spack.yaml
 versions:
 - 2.1.2
-updated_at: 2021-09-02T16:21:27.164849515Z
+updated_at: 2021-09-08T17:00:27.515877757Z
 size: 56MB
 description: Kraken2 is a system for assigning taxonomic labels to short DNA sequences,
   usually obtained through metagenomic studies.
