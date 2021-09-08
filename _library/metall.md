@@ -6,7 +6,7 @@ versions:
 - "0.13"
 - "0.15"
 - "0.16"
-updated_at: 2021-08-31T19:12:06.708782247Z
+updated_at: 2021-09-08T17:33:04.949157937Z
 size: 48MB
 description: A Persistent Memory Allocator For Data-Centric Analytics
 container_url: https://github.com/orgs/autamus/packages/container/package/metall
