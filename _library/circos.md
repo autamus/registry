@@ -4,7 +4,7 @@ name: circos
 github: https://github.com/autamus/registry/blob/main/containers/c/circos/spack.yaml
 versions:
 - 0.69.6
-updated_at: 2021-08-27T23:14:34.639037109Z
+updated_at: 2021-09-08T17:00:34.667191794Z
 size: 126MB
 description: Circos is a software package for visualizing data and information.
 container_url: https://github.com/orgs/autamus/packages/container/package/circos
