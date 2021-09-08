@@ -6,8 +6,8 @@ versions:
 - 3.15.1
 - 3.15.2
 - 3.15.3
-updated_at: 2021-08-25T06:18:08.916684883Z
-size: 134MB
+updated_at: 2021-09-08T16:54:18.328250092Z
+size: 126MB
 description: 'PETSc is a suite of data structures and routines for the scalable (parallel)
   solution of scientific applications modeled by partial differential equations. '
 container_url: https://github.com/orgs/autamus/packages/container/package/petsc
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/petsc
 # petsc
 ```bash 
 Download        : docker pull ghcr.io/autamus/petsc
-Compressed Size : 134MB
+Compressed Size : 126MB
 ```
 
 ## Description
