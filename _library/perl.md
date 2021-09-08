@@ -4,7 +4,7 @@ name: perl
 github: https://github.com/autamus/registry/blob/main/containers/p/perl/spack.yaml
 versions:
 - 5.35.0
-updated_at: 2021-08-27T23:16:12.756707369Z
+updated_at: 2021-09-08T17:02:47.144106368Z
 size: 47MB
 description: Perl 5 is a highly capable, feature-rich programming language with over
   27 years of development.
