@@ -4,7 +4,7 @@ name: heaptrack
 github: https://github.com/autamus/registry/blob/main/containers/h/heaptrack/spack.yaml
 versions:
 - 1.2.0
-updated_at: 2021-08-31T19:09:43.164543964Z
+updated_at: 2021-09-08T17:32:22.433269762Z
 size: 65MB
 description: 'Heaptrack is a heap memory profiler that traces all memory allocations
   and annotates these events with stack traces. '
