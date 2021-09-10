@@ -15,7 +15,7 @@ class Rust(Package):
     """
 
     homepage = "https://www.rust-lang.org"
-    url      = "https://static.rust-lang.org/dist/rustc-1.54.0-src.tar.gz"
+    url      = "https://static.rust-lang.org/dist/rustc-1.55.0-src.tar.gz"
     git = "https://github.com/rust-lang/rust.git"
 
     maintainers = ["AndrewGaspar"]
@@ -86,6 +86,7 @@ class Rust(Package):
     # would be possible to support both, but for simplicitly, we only support
     # Rust 1.17 and newer
     version('master', branch='master', submodules=True)
+    version('1.55.0', sha256='b2379ac710f5f876ee3c3e03122fe33098d6765d371cac6c31b1b6fc8e43821e')
     version('1.54.0', sha256='ac8511633e9b5a65ad030a1a2e5bdaa841fdfe3132f2baaa52cc04e71c6c6976')
     version('1.53.0', sha256='5cf7ca39a10f6bf4e0b0bd15e3b9a61ce721f301e12d148262e5ba968ab825b9')
     version('1.52.1', sha256='3a6f23a26d0e8f87abbfbf32c5cd7daa0c0b71d0986abefc56b9a5fbfbd0bf98')
