@@ -1,6 +1,6 @@
 # Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
-# 
+#
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 from spack import *
@@ -15,9 +15,9 @@ class Arborx(CMakePackage):
 
     maintainers = ['aprokop']
 
-    version('master',   branch='master')
-    version('1.0',      sha256='9b5f45c8180622c907ef0b7cc27cb18ba272ac6558725d9e460c3f3e764f1075')
-    version('0.9-beta', sha256='b349b5708d1aa00e8c20c209ac75dc2d164ff9bf1b85adb5437346d194ba6c0d')
+    version('master', branch='master')
+    version('1.0', sha256='9b5f45c8180622c907ef0b7cc27cb18ba272ac6558725d9e460c3f3e764f1075')
+    version('0.9', sha256='b349b5708d1aa00e8c20c209ac75dc2d164ff9bf1b85adb5437346d194ba6c0d')
 
     # ArborX relies on Kokkos to provide devices, providing one-to-one matching
     # variants. The only way to disable those devices is to make sure Kokkos
@@ -26,7 +26,8 @@ class Arborx(CMakePackage):
         'serial': (True,  "enable Serial backend (default)"),
         'cuda': (False,  "enable Cuda backend"),
         'openmp': (False,  "enable OpenMP backend"),
-        'rocm': (False,  "enable HIP backend")
+        'rocm': (False,  "enable HIP backend"),
+        'sycl': (False, "enable SYCL backend")
     }
 
     variant('mpi', default=True, description='enable MPI')
