@@ -17,7 +17,7 @@ class Mpich(AutotoolsPackage):
     homepage = "https://www.mpich.org"
     url      = "http://www.mpich.org/static/downloads/3.0.4/mpich-3.0.4.tar.gz"
     git      = "https://github.com/pmodels/mpich.git"
-    list_url = "http://www.mpich.org/static/downloads/"
+    list_url = "https://www.mpich.org/static/downloads/"
     list_depth = 1
 
     maintainers = ['raffenet', 'yfguo']
