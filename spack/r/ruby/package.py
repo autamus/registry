@@ -12,8 +12,9 @@ class Ruby(AutotoolsPackage):
 
     homepage = "https://www.ruby-lang.org/"
     url      = "http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.0.tar.gz"
-    list_url = "http://cache.ruby-lang.org/pub/ruby/"
+    list_url = "https://cache.ruby-lang.org/pub/ruby/"
     list_depth = 1
+
     version('3.0.2', sha256='5085dee0ad9f06996a8acec7ebea4a8735e6fac22f22e2d98c3f2bc3bef7e6f1')
     version('3.0.1', sha256='369825db2199f6aeef16b408df6a04ebaddb664fb9af0ec8c686b0ce7ab77727')
     version('3.0.0', sha256='a13ed141a1c18eb967aac1e33f4d6ad5f21be1ac543c344e0d6feeee54af8e28')
@@ -66,7 +67,7 @@ class Ruby(AutotoolsPackage):
         return match.group(1) if match else None
 
     def url_for_version(self, version):
-        url = "http://cache.ruby-lang.org/pub/ruby/{0}/ruby-{1}.tar.gz"
+        url = "https://cache.ruby-lang.org/pub/ruby/{0}/ruby-{1}.tar.gz"
         return url.format(version.up_to(2), version)
 
     def configure_args(self):
@@ -113,7 +114,7 @@ class Ruby(AutotoolsPackage):
         """ RubyGems updated their SSL certificates at some point, so
         new certificates must be installed after Ruby is installed
         in order to download gems; see
-        http://guides.rubygems.org/ssl-certificate-update/
+        https://guides.rubygems.org/ssl-certificate-update/
         for details.
         """
         if self.spec.satisfies("+openssl"):
