@@ -35,27 +35,27 @@ class Ascent(Package, CudaPackage):
 
     homepage = "https://github.com/Alpine-DAV/ascent"
     git      = "https://github.com/Alpine-DAV/ascent.git"
-    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.5.1/ascent-v0.5.1-src-with-blt.tar.gz"
+    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz"
 
     maintainers = ['cyrush']
 
     version('develop', branch='develop', submodules=True)
-    version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
+    version('0.7.1', submodules=True)
     version('0.7.0', submodules=True)
     version('0.6.0', submodules=True)
 
     version('develop', branch='develop', submodules=True)
-    version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
+    version('0.7.1', submodules=True)
     version('0.7.0', submodules=True)
     version('0.6.0', submodules=True)
 
     version('develop', branch='develop', submodules=True)
-    version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
+    version('0.7.1', submodules=True)
     version('0.7.0', submodules=True)
     version('0.6.0', submodules=True)
 
     version('develop', branch='develop', submodules=True)
-    version('0.7.1', sha256='7aeb34c19278fb39563e4705eb960950326160fa93c03e82eec72ad6dfc37291', url='https://github.com/Alpine-DAV/ascent/releases/download/v0.7.1/ascent-v0.7.1-src-with-blt.tar.gz')
+    version('0.7.1', submodules=True)
     version('0.7.0', submodules=True)
     version('0.6.0', submodules=True)
 
@@ -267,7 +267,7 @@ class Ascent(Package, CudaPackage):
         all of the options used to configure and build ascent.
 
         For more details about 'host-config' files see:
-            http://ascent.readthedocs.io/en/latest/BuildingAscent.html
+            https://ascent.readthedocs.io/en/latest/BuildingAscent.html
 
         Note:
           The `py_site_pkgs_dir` arg exists to allow a package that
