@@ -10,7 +10,6 @@ class Zlib(Package):
     """A free, general-purpose, legally unencumbered lossless
     data-compression library.
     """
-
     homepage = "https://zlib.net"
     # URL must remain http:// so Spack can bootstrap curl
     url      = "http://zlib.net/fossils/zlib-1.2.11.tar.gz"
