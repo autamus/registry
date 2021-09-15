@@ -12,14 +12,12 @@ class OmegaH(CMakePackage):
     """
 
     homepage = "https://github.com/SNLComputation/omega_h"
-    url      = "https://github.com/SNLComputation/omega_h/archive/v9.34.1.tar.gz"
+    url      = "https://github.com/SNLComputation/omega_h/archive/v9.29.0.tar.gz"
     git      = "https://github.com/SNLComputation/omega_h.git"
 
     maintainers = ['ibaned']
+
     version('main', branch='main')
-    version('9.34.1', sha256='3a812da3b8df3e0e5d78055e91ad23333761bcd9ed9b2c8c13ee1ba3d702e46c')
-    version('9.33.4', sha256='f590d0186ca1cf727921dc6a230cdec1c858ae538611d6f615fd81e029297652', url='https://github.com/SNLComputation/omega_h/archive/v9.33.4.tar.gz')
-    version('9.33.3', sha256='b545c0e958911f9c9e849d3b05bb77e3dee4378e24b13fd08d9ad1811cddf569', url='https://github.com/SNLComputation/omega_h/archive/v9.33.3.tar.gz')
     version('9.32.5', sha256='963a203e9117024cd48d829d82b8543cd9133477fdc15386113b594fdc3246d8')
     version('9.29.0', sha256='b41964b018909ffe9cea91c23a0509b259bfbcf56874fcdf6bd9f6a179938014')
     version('9.27.0', sha256='aa51f83508cbd14a41ae953bda7da98a6ad2979465c76e5b3a3d9a7a651cb34a')
@@ -43,7 +41,7 @@ class OmegaH(CMakePackage):
 
     depends_on('gmsh', when='+examples', type='build')
     depends_on('mpi', when='+mpi')
-    depends_on('trilinos +kokkos +teuchos', when='+trilinos')
+    depends_on('trilinos +kokkos', when='+trilinos')
     depends_on('zlib', when='+zlib')
 
     # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=86610

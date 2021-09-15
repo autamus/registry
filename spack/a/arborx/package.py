@@ -1,6 +1,6 @@
 # Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
-# 
+#
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 from spack import *
@@ -26,7 +26,8 @@ class Arborx(CMakePackage):
         'serial': (True,  "enable Serial backend (default)"),
         'cuda': (False,  "enable Cuda backend"),
         'openmp': (False,  "enable OpenMP backend"),
-        'rocm': (False,  "enable HIP backend")
+        'rocm': (False,  "enable HIP backend"),
+        'sycl': (False, "enable SYCL backend")
     }
 
     variant('mpi', default=True, description='enable MPI')

@@ -11,12 +11,13 @@ class PyPetsc4py(PythonPackage):
     """
 
     homepage = "https://gitlab.com/petsc/petsc4py"
-    url      = "http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc4py-3.15.0.tar.gz"
+    url      = "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc4py-3.15.0.tar.gz"
     git      = "https://gitlab.com/petsc/petsc.git"
 
     maintainers = ['balay']
 
     version('main', branch='main')
+    version('3.15.4', sha256='f3e1ae8db824d7ac6994f6ae4e04fdd76381f060ca350fee2a85aac668125a8c')
     version('3.15.3', sha256='06e7a5de3509067d8625330b10c1ab200b36df1dfdc2e93922038784b2722f8e')
     version('3.15.2', sha256='d7ed1d79d88b35da563d25e733f276595ba538c52756225f79ba92e1cc4658d3')
     version('3.15.1', sha256='4ec8f42081e4d6a61157b32869b352dcb18c69077f2d1e4160f3837efd9e150f')
@@ -28,11 +29,11 @@ class PyPetsc4py(PythonPackage):
     version('3.11.0', sha256='ec114b303aadaee032c248a02021e940e43c6437647af0322d95354e6f2c06ad')
     version('3.10.1', sha256='11b59693af0e2067f029924dd6b5220f7a7ec00089f6e2c2361332d6123ea6f7')
     version('3.10.0', sha256='4e58b9e7d4343adcf905751261b789c8c3489496f8de5c3fc3844664ef5ec5a3')
-    version('3.9.1', sha256='8b7f56e0904c57cca08d1c24a1d8151d1554f06c9c5a31b16fb6db3bc928bbd8')
-    version('3.9.0', sha256='ae077dffd455014de16b6ed4ba014ac9e10227dc6b93f919a4229e8e1c870aec')
-    version('3.8.1', sha256='f6260a52dab02247f5b8d686a0587441b1a2048dff52263f1db42e75d2e3f330')
-    version('3.8.0', sha256='3445da12becf23ade4d40cdd04c746581982ab6a27f55fbb5cd29bc5560df4b1')
-    version('3.7.0', sha256='c04931a5ba3fd7c8c8d165aa7908688921ce3cf4cf8725d0cba73380c2107386')
+    version('3.9.1',  sha256='8b7f56e0904c57cca08d1c24a1d8151d1554f06c9c5a31b16fb6db3bc928bbd8')
+    version('3.9.0',  sha256='ae077dffd455014de16b6ed4ba014ac9e10227dc6b93f919a4229e8e1c870aec')
+    version('3.8.1',  sha256='f6260a52dab02247f5b8d686a0587441b1a2048dff52263f1db42e75d2e3f330')
+    version('3.8.0',  sha256='3445da12becf23ade4d40cdd04c746581982ab6a27f55fbb5cd29bc5560df4b1')
+    version('3.7.0',  sha256='c04931a5ba3fd7c8c8d165aa7908688921ce3cf4cf8725d0cba73380c2107386')
 
     variant('mpi', default=True,  description='Activates MPI support')
 

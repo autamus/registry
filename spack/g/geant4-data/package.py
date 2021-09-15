@@ -3,9 +3,10 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
-import os
 import glob
+import os
+
+from spack import *
 
 
 class Geant4Data(BundlePackage):
@@ -17,7 +18,6 @@ class Geant4Data(BundlePackage):
 
     tags = ['hep']
 
-    version('10.7.2')
     version('10.7.1')
     version('10.7.0')
     version('10.6.3')

@@ -1,6 +1,6 @@
 # Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
-# 
+#
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 from spack import *
@@ -10,7 +10,7 @@ class Bart(MakefilePackage, CudaPackage):
     """BART: Toolbox for Computational Magnetic Resonance Imaging"""
 
     homepage = "https://mrirecon.github.io/bart/"
-    url      = "https://github.com/mrirecon/bart/archive/ISMRM21_NN.tar.gz"
+    url      = "https://github.com/mrirecon/bart/archive/v0.5.00.tar.gz"
 
     maintainers = ['glennpj']
 

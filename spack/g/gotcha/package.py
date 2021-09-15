@@ -15,9 +15,9 @@ class Gotcha(CMakePackage):
 
     version('develop', branch='develop')
     version('master', branch='master')
-    version('1.0.3')
-    version('1.0.2')
-    version('0.0.2')
+    version('1.0.3', tag='1.0.3')
+    version('1.0.2', tag='1.0.2')
+    version('0.0.2', tag='0.0.2')
 
     variant('test', default=False, description='Build tests for Gotcha')
     patch(
