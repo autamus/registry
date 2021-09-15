@@ -4,8 +4,8 @@ name: gasnet
 github: https://github.com/autamus/registry/blob/main/containers/g/gasnet/spack.yaml
 versions:
 - 2021.3.0
-updated_at: 2021-06-22T04:12:12.822882851Z
-size: 31MB
+updated_at: 2021-09-15T23:40:29.679354229Z
+size: 30MB
 description: 'GASNet is a language-independent, networking middleware layer that provides
   network-independent, high-performance communication primitives including Remote
   Memory Access (RMA) and Active Messages (AM). It has been used to implement parallel
@@ -23,7 +23,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/gasnet
 # gasnet
 ```bash 
 Download        : docker pull ghcr.io/autamus/gasnet
-Compressed Size : 31MB
+Compressed Size : 30MB
 ```
 
 ## Description
