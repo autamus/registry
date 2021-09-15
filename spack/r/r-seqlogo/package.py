@@ -22,4 +22,3 @@ class RSeqlogo(RPackage):
     version('1.46.0', commit='e78be03db5f6a516138aeea6aa9512685633a4a2')
     version('1.44.0', commit='4cac14ff29f413d6de1a9944eb5d21bfe5045fac')
     version('1.42.0', commit='d7e04726c813282aa3f47a9ee98c5e1cec9bdddd')
-

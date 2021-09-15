@@ -10,12 +10,10 @@ class Jasper(Package):
     """Library for manipulating JPEG-2000 images"""
 
     homepage = "https://www.ece.uvic.ca/~frodo/jasper/"
-    url      = "https://github.com/mdadams/jasper/archive/manual-version-mdadams-20210822-2247.tar.gz"
+    url      = "https://github.com/mdadams/jasper/archive/version-2.0.32.tar.gz"
 
-    version('20210822.2247', sha256='d252b47b765d65dc571d4bd3891577f892d7ed1456fd97b418110fff2d36856b', url='https://github.com/mdadams/jasper/archive/manual-version-mdadams-20210822-2247.tar.gz')
-    version('2.0.33', sha256='38b8f74565ee9e7fec44657e69adb5c9b2a966ca5947ced5717cde18a7d2eca6', url='https://github.com/mdadams/jasper/archive/version-2.0.33.tar.gz')
-    version('2.0.32', sha256='a3583a06698a6d6106f2fc413aa42d65d86bedf9a988d60e5cfa38bf72bc64b9', url='https://github.com/mdadams/jasper/archive/version-2.0.32.tar.gz')
-    version('2.0.31', sha256='d419baa2f8a6ffda18472487f6314f0f08b673204723bf11c3a1f5b3f1b8e768', url='https://github.com/mdadams/jasper/archive/version-2.0.31.tar.gz')
+    version('2.0.32', sha256='a3583a06698a6d6106f2fc413aa42d65d86bedf9a988d60e5cfa38bf72bc64b9')
+    version('2.0.31', sha256='d419baa2f8a6ffda18472487f6314f0f08b673204723bf11c3a1f5b3f1b8e768')
     version('2.0.16', sha256='f1d8b90f231184d99968f361884e2054a1714fdbbd9944ba1ae4ebdcc9bbfdb1')
     version('2.0.14', sha256='85266eea728f8b14365db9eaf1edc7be4c348704e562bb05095b9a077cf1a97b')
     version('1.900.1', sha256='c2b03f28166f9dc8ae434918839ae9aa9962b880fcfd24eebddd0a2daeb9192c')

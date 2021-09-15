@@ -26,4 +26,3 @@ class Jags(AutotoolsPackage):
         args = ['--with-blas=%s' % self.spec['blas'].libs.ld_flags,
                 '--with-lapack=%s' % self.spec['lapack'].libs.ld_flags]
         return args
-

@@ -11,16 +11,15 @@ class Ffmpeg(AutotoolsPackage):
     convert and stream audio and video."""
 
     homepage = "https://ffmpeg.org"
-    url      = "http://ffmpeg.org/releases/ffmpeg-4.1.1.tar.bz2"
+    url      = "https://ffmpeg.org/releases/ffmpeg-4.1.1.tar.bz2"
 
     maintainers = ['xjrc']
 
-    version('4.5', sha256='31a3aae03382068addd8a699c56dfccd2aea00d420bb2af812a9578a761a4ba3', url='https://github.com/FFmpeg/FFmpeg/archive/n4.5-dev.tar.gz')
-    version('4.3.2', sha256='d9b650a5aaaa6e2907a5578135b715ca532896fe9a6dc7a823c25f89790ff1ed', url='https://github.com/FFmpeg/FFmpeg/archive/n4.3.2.tar.gz')
-    version('4.2.2', sha256='b620d187c26f76ca19e74210a0336c3b8380b97730df5cdf45f3e69e89000e5c')
-    version('4.1.1', sha256='0cb40e3b8acaccd0ecb38aa863f66f0c6e02406246556c2992f67bf650fab058')
-    version('4.1', sha256='b684fb43244a5c4caae652af9022ed5d85ce15210835bce054a33fb26033a1a5')
-    version('3.2.4', sha256='c0fa3593a2e9e96ace3c1757900094437ad96d1d6ca19f057c378b5f394496a4')
+    version('4.3.2',  sha256='ab3a6d6a70358ba0a5f67f37f91f6656b7302b02e98e5b8c846c16763c99913a')
+    version('4.2.2',  sha256='b620d187c26f76ca19e74210a0336c3b8380b97730df5cdf45f3e69e89000e5c')
+    version('4.1.1',  sha256='0cb40e3b8acaccd0ecb38aa863f66f0c6e02406246556c2992f67bf650fab058')
+    version('4.1',    sha256='b684fb43244a5c4caae652af9022ed5d85ce15210835bce054a33fb26033a1a5')
+    version('3.2.4',  sha256='c0fa3593a2e9e96ace3c1757900094437ad96d1d6ca19f057c378b5f394496a4')
     version('2.8.15', sha256='35647f6c1f6d4a1719bc20b76bf4c26e4ccd665f46b5676c0e91c5a04622ee21')
     version('1.0.10', sha256='1dbde434c3b5c573d3b2ffc1babe3814f781c10c4bc66193a4132a44c9715176')
 
