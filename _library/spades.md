@@ -3,9 +3,10 @@ layout: container
 name: spades
 github: https://github.com/autamus/registry/blob/main/containers/s/spades/spack.yaml
 versions:
+- 3.15.0
 - 3.15.2
 - 3.15.3
-updated_at: 2021-09-02T16:21:42.785165388Z
+updated_at: 2021-09-16T00:17:03.764050737Z
 size: 103MB
 description: SPAdes - St. Petersburg genome assembler - is intended for both standard
   isolates and single-cell MDA bacteria assemblies.
@@ -32,7 +33,7 @@ docker pull ghcr.io/autamus/spades:latest
 or to download a specific version of spades run,
 
 ```bash
-docker pull ghcr.io/autamus/spades:3.15.2
+docker pull ghcr.io/autamus/spades:3.15.0
 ```
 ### Run
 To run the container as an application run,
