@@ -15,7 +15,7 @@ class Hypre(Package, CudaPackage):
        unstructured grid problems."""
 
     homepage = "https://computing.llnl.gov/project/linear_solvers/software.php"
-    url      = "https://github.com/hypre-space/hypre/archive/v2.14.0.tar.gz"
+    url      = "https://github.com/hypre-space/hypre/archive/v2.22.1.tar.gz"
     git      = "https://github.com/hypre-space/hypre.git"
 
     maintainers = ['ulrikeyang', 'osborn9', 'balay']
@@ -23,6 +23,7 @@ class Hypre(Package, CudaPackage):
     test_requires_compiler = True
 
     version('develop', branch='master')
+    version('2.22.1', sha256='c1e7761b907c2ee0098091b69797e9be977bff8b7fd0479dc20cad42f45c4084')
     version('2.22.0', sha256='2c786eb5d3e722d8d7b40254f138bef4565b2d4724041e56a8fa073bda5cfbb5')
     version('2.21.0', sha256='e380f914fe7efe22afc44cdf553255410dc8a02a15b2e5ebd279ba88817feaf5')
     version('2.20.0', sha256='5be77b28ddf945c92cde4b52a272d16fb5e9a7dc05e714fc5765948cba802c01')
@@ -40,7 +41,7 @@ class Hypre(Package, CudaPackage):
     version('2.11.2', sha256='25b6c1226411593f71bb5cf3891431afaa8c3fd487bdfe4faeeb55c6fdfb269e')
     version('2.11.1', sha256='6bb2ff565ff694596d0e94d0a75f0c3a2cd6715b8b7652bc71feb8698554db93')
     version('2.10.1', sha256='a4a9df645ebdc11e86221b794b276d1e17974887ead161d5050aaf0b43bb183a')
-    version('2.10.0b', sha256='b55dbdc692afe5a00490d1ea1c38dd908dae244f7bdd7faaf711680059824c11')
+    version('2.10.0', sha256='b55dbdc692afe5a00490d1ea1c38dd908dae244f7bdd7faaf711680059824c11')
 
     # Versions 2.13.0 and later can be patched to build shared
     # libraries on Darwin; the patch for this capability does not
