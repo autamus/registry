@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/r/rsync/spack.y
 versions:
 - 3.2.2
 - 3.2.3
-updated_at: 2021-09-08T18:09:00.016715494Z
+updated_at: 2021-09-16T00:11:46.540772085Z
 size: 34MB
 description: An open source utility that provides fast incremental file transfer.
 container_url: https://github.com/orgs/autamus/packages/container/package/rsync
