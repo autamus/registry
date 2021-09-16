@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/o/omega-h/spack
 versions:
 - 9.32.5
 - 9.33.3
-updated_at: 2021-06-23T18:15:07.603150381Z
-size: 206MB
+updated_at: 2021-09-16T00:06:35.951206277Z
+size: 108MB
 description: 'Omega_h is a C++11 library providing data structures and algorithms
   for adaptive discretizations. Its specialty is anisotropic triangle and tetrahedral
   mesh adaptation. It runs efficiently on most modern HPC hardware including GPUs. '
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/omega-
 # omega-h
 ```bash 
 Download        : docker pull ghcr.io/autamus/omega-h
-Compressed Size : 206MB
+Compressed Size : 108MB
 ```
 
 ## Description
