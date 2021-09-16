@@ -4,7 +4,7 @@ name: tcsh
 github: https://github.com/autamus/registry/blob/main/containers/t/tcsh/spack.yaml
 versions:
 - 6.22.02
-updated_at: 2021-08-27T18:11:47.313953357Z
+updated_at: 2021-09-16T00:16:13.730365065Z
 size: 29MB
 description: Tcsh is an enhanced but completely compatible version of csh, the C shell.
   Tcsh is a command language interpreter which can be used both as an interactive
