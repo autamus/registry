@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/a/angsd/spack.y
 versions:
 - "0.933"
 - "0.935"
-updated_at: 2021-09-15T23:32:13.869740917Z
+updated_at: 2021-09-16T14:54:27.560248634Z
 size: 280MB
 description: Angsd is a program for analysing NGS data. The software can handle a
   number of different input types from mapped reads to imputed genotype probabilities.
