@@ -3,9 +3,10 @@ layout: container
 name: sparsehash
 github: https://github.com/autamus/registry/blob/main/containers/s/sparsehash/spack.yaml
 versions:
+- 2.0.3
 - 2.0.4
-updated_at: 2021-05-26T18:41:39.658672341Z
-size: 26MB
+updated_at: 2021-09-16T00:13:44.888976725Z
+size: 27MB
 description: Sparse and dense hash-tables for C++ by Google
 container_url: https://github.com/orgs/autamus/packages/container/package/sparsehash
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/sparse
 # sparsehash
 ```bash 
 Download        : docker pull ghcr.io/autamus/sparsehash
-Compressed Size : 26MB
+Compressed Size : 27MB
 ```
 
 ## Description
@@ -30,7 +31,7 @@ docker pull ghcr.io/autamus/sparsehash:latest
 or to download a specific version of sparsehash run,
 
 ```bash
-docker pull ghcr.io/autamus/sparsehash:2.0.4
+docker pull ghcr.io/autamus/sparsehash:2.0.3
 ```
 ### Run
 To run the container as an application run,
