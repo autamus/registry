@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/l/llvm/spack.ya
 versions:
 - 12.0.0
 - 12.0.1
-updated_at: 2021-08-25T06:35:30.215897374Z
+updated_at: 2021-09-16T00:37:35.406254485Z
 size: 1692MB
 description: ' homepage = "http://llvm.org/'
 container_url: https://github.com/orgs/autamus/packages/container/package/llvm
