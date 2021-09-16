@@ -4,8 +4,8 @@ name: rempi
 github: https://github.com/autamus/registry/blob/main/containers/r/rempi/spack.yaml
 versions:
 - 1.1.0
-updated_at: 2021-06-22T15:26:00.861209447Z
-size: 51MB
+updated_at: 2021-09-16T00:12:06.506467854Z
+size: 52MB
 description: ReMPI is a record-and-replay tool for MPI applications.
 container_url: https://github.com/orgs/autamus/packages/container/package/rempi
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/rempi
 # rempi
 ```bash 
 Download        : docker pull ghcr.io/autamus/rempi
-Compressed Size : 51MB
+Compressed Size : 52MB
 ```
 
 ## Description
