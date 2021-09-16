@@ -9,8 +9,9 @@ class Salmon(CMakePackage):
        RNA-seq data."""
 
     homepage = "https://combine-lab.github.io/salmon/"
-    url      = "https://github.com/COMBINE-lab/salmon/archive/v0.8.2.tar.gz"
+    url      = "https://github.com/COMBINE-lab/salmon/archive/v1.5.2.tar.gz"
 
+    version('1.5.2', sha256='5a0b8db4a9bebaf5d7d03d8804e7f0c7dce3f340d1c998cea7565bb167d3481c')
     version('1.4.0', sha256='6d3e25387450710f0aa779a1e9aaa9b4dec842324ff8551d66962d7c7606e71d')
     version('0.14.1', sha256='05289170e69b5f291a8403b40d6b9bff54cc38825e9f721c210192b51a19273e')
     version('0.12.0', sha256='91ebd1efc5b0b4c12ec6babecf3c0b79f7102e42b8895ca07c8c8fea869fefa3')
