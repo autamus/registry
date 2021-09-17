@@ -4,8 +4,8 @@ name: raxml
 github: https://github.com/autamus/registry/blob/main/containers/r/raxml/spack.yaml
 versions:
 - 8.2.12
-updated_at: 2021-05-26T07:37:38.68285015Z
-size: 51MB
+updated_at: 2021-09-17T06:35:52.046692063Z
+size: 55MB
 description: 'RAxML (Randomized Axelerated Maximum Likelihood) is a program for sequential
   and parallel Maximum Likelihood based inference of large phylogenetic trees. '
 container_url: https://github.com/orgs/autamus/packages/container/package/raxml
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/raxml
 # raxml
 ```bash 
 Download        : docker pull ghcr.io/autamus/raxml
-Compressed Size : 51MB
+Compressed Size : 55MB
 ```
 
 ## Description
