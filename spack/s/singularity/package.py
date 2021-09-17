@@ -21,12 +21,12 @@ class Singularity(SingularityBase):
     '''
 
     homepage = "https://singularity.hpcng.org/"
-    url      = "https://github.com/hpcng/singularity/releases/download/v3.6.4/singularity-3.6.4.tar.gz"
+    url      = "https://github.com/hpcng/singularity/releases/download/v3.8.3/singularity-3.8.3.tar.gz"
     git      = "https://github.com/hpcng/singularity.git"
 
     maintainers = ['alalazo']
     version('master', branch='master')
-
+    version('3.8.3', sha256='2e22eb9ee1b73fdd51b8783149f0e4d83c0d2d8a0c1edf6034157d50eeefb835')
     version('3.8.0', sha256='e9608b0e0a8c805218bbe795e9176484837b2f7fcb95e5469b853b3809a2412e')
     version('3.7.4', sha256='c266369a8bf2747f44e0759858c3fc3b2325b975a8818b2668f0b97b124d0164')
     version('3.7.3', sha256='6667eb8875d2b66d73504f40c956b42b1351744f488d164204376215d885da5c')
@@ -44,5 +44,4 @@ class Singularity(SingularityBase):
     version('3.3.0', sha256='070530a472e7e78492f1f142c8d4b77c64de4626c4973b0589f0d18e1fcf5b4f')
     version('3.2.1', sha256='d4388fb5f7e0083f0c344354c9ad3b5b823e2f3f27980e56efa7785140c9b616')
     version('3.1.1', sha256='7f0df46458d8894ba0c2071b0848895304ae6b1137d3d4630f1600ed8eddf1a4')
-
     patch('singularity_v3.4.0_remove_root_check.patch', level=0, when='@3.4.0:3.4.1')
