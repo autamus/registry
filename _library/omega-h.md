@@ -5,7 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/o/omega-h/spack
 versions:
 - 9.32.5
 - 9.33.3
-updated_at: 2021-09-16T00:06:35.951206277Z
+- 9.34.1
+updated_at: 2021-09-17T06:41:02.046979221Z
 size: 108MB
 description: 'Omega_h is a C++11 library providing data structures and algorithms
   for adaptive discretizations. Its specialty is anisotropic triangle and tetrahedral
