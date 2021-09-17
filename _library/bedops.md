@@ -3,10 +3,10 @@ layout: container
 name: bedops
 github: https://github.com/autamus/registry/blob/main/containers/b/bedops/spack.yaml
 versions:
-- 2.4.39
 - 2.4.35
+- 2.4.39
 - 2.4.40
-updated_at: 2021-07-22T17:09:59.050618016Z
+updated_at: 2021-09-17T06:27:15.829264089Z
 size: 30MB
 description: BEDOPS is an open-source command-line toolkit that performs highly efficient
   and scalable Boolean and other set operations, statistical calculations, archiving,
@@ -34,7 +34,7 @@ docker pull ghcr.io/autamus/bedops:latest
 or to download a specific version of bedops run,
 
 ```bash
-docker pull ghcr.io/autamus/bedops:2.4.39
+docker pull ghcr.io/autamus/bedops:2.4.35
 ```
 ### Run
 To run the container as an application run,
