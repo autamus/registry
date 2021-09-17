@@ -4,8 +4,8 @@ name: siesta
 github: https://github.com/autamus/registry/blob/main/containers/s/siesta/spack.yaml
 versions:
 - 4.0.2
-updated_at: 2021-05-26T08:43:38.157691978Z
-size: 92MB
+updated_at: 2021-09-17T06:36:38.232515844Z
+size: 118MB
 description: SIESTA performs electronic structure calculations and ab initio molecular
   dynamics simulations of molecules and solids.
 container_url: https://github.com/orgs/autamus/packages/container/package/siesta
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/siesta
 # siesta
 ```bash 
 Download        : docker pull ghcr.io/autamus/siesta
-Compressed Size : 92MB
+Compressed Size : 118MB
 ```
 
 ## Description
