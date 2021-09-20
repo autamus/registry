@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/p/protobuf/spac
 versions:
 - 3.17.3
 - 3.18.0
-updated_at: 2021-09-17T06:42:59.600104979Z
+updated_at: 2021-09-20T04:33:59.30099164Z
 size: 30MB
 description: Google's data interchange format.
 container_url: https://github.com/orgs/autamus/packages/container/package/protobuf
