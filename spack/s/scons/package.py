@@ -21,11 +21,13 @@ class Scons(PythonPackage):
     version('2.5.1', sha256='c8de85fc02ed1a687b1f2ac791eaa0c1707b4382a204f17d782b5b111b9fdf07')
     version('2.5.0', sha256='01f1b3d6023516a8e1b5e77799e5a82a23b32953b1102d339059ffeca8600493')
 
+
     # Python 3 support was added in SCons 3.0.0
     depends_on('python@:2', when='@:2', type=('build', 'run'))
     depends_on('py-setuptools', when='@3.0.2:', type=('build', 'run'))
 
     patch('fjcompiler.patch', when='%fj')
+    patch('py3-hashbang.patch', when='^python@3:')
 
     # Prevent passing --single-version-externally-managed to
     # setup.py, which it does not support.
