@@ -40,10 +40,6 @@ class Boost(Package):
     version('1.66.0', sha256='5721818253e6a0989583192f96782c4a98eb6204965316df9f5ad75819225ca9')
     version('1.65.1', sha256='9807a5d16566c57fd74fb522764e0b134a8bbe6b6e8967b83afefd30dcd3be81')
     version('1.65.0', sha256='ea26712742e2fb079c2a566a31f3266973b76e38222b9f88b387e3c8b2f9902c')
-    # NOTE: 1.64.0 seems fine for *most* applications, but if you need
-    #       +python and +mpi, there seem to be errors with out-of-date
-    #       API calls from mpi/python.
-    #       See: https://github.com/spack/spack/issues/3963
     version('1.64.0', sha256='7bcc5caace97baa948931d712ea5f37038dbb1c5d89b43ad4def4ed7cb683332')
     version('1.63.0', sha256='beae2529f759f6b3bf3f4969a19c2e9d6f0c503edcb2de4a61d1428519fcb3b0')
     version('1.62.0', sha256='36c96b0f6155c98404091d8ceb48319a28279ca0333fba1ad8611eb90afb2ca0')
@@ -77,6 +73,7 @@ class Boost(Package):
     version('1.35.0', sha256='f8bf7368a22ccf2e2cf77048ab2129744be4c03f8488c76ad31c0aa229b280da')
     version('1.34.1', sha256='0f866c75b025a4f1340117a106595cc0675f48ba1e5a9b5c221ec7f19e96ec4c')
     version('1.34.0', sha256='455cb8fa41b759272768257c2e7bdc5c47ec113245dfa533f275e787a855efd2')
+
 
     default_install_libs = set(['atomic',
                                 'chrono',
@@ -297,6 +294,12 @@ class Boost(Package):
           sha256="3b159d65a0d3d2df2a21c6bf56ffaba943fce92d2d41d628b2c4d2e924e0f421",
           when="@:1.76%cce",
           level=2)
+
+    # Fix building with Intel compilers
+    patch("https://github.com/bfgroup/b2/commit/23212066f0f20358db54568bb16b3fe1d76f88ce.patch",
+          sha256="93f4aad8f88d1437e50d95a2d066390ef3753b99ef5de24f7a46bc083bd6df06",
+          when="@1.77.0",
+          working_dir="tools/build")
 
     def patch(self):
         # Disable SSSE3 and AVX2 when using the NVIDIA compiler
