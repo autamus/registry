@@ -3,7 +3,9 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
+import os
 import re
+from tempfile import NamedTemporaryFile
 
 from spack import architecture
 
@@ -31,6 +33,7 @@ class Sqlite(AutotoolsPackage):
     version('3.27.1', sha256='54a92b8ff73ff6181f89b9b0c08949119b99e8cccef93dbef90e852a8b10f4f8')
     version('3.27.0', sha256='dbfb0fb4fc32569fa427d3658e888f5e3b84a0952f706ccab1fd7c62a54f10f0')
     version('3.26.0', sha256='5daa6a3fb7d1e8c767cd59c4ded8da6e4b00c61d3b466d0685e35c4dd6d7bf5d')
+
     # All versions prior to 3.26.0 are vulnerable to Magellan when FTS
     # is enabled, see https://blade.tencent.com/magellan/index_en.html
 
@@ -84,6 +87,53 @@ class Sqlite(AutotoolsPackage):
         # version number as well.
         match = re.match(r'(\S+) \d{4}-\d{2}-\d{2}', output)
         return match.group(1) if match else None
+
+    @classmethod
+    def determine_variants(cls, exes, version_str):
+        all_variants = []
+
+        def call(exe, query):
+            with NamedTemporaryFile(mode='w', buffering=1) as sqlite_stdin:
+                sqlite_stdin.write(query + '\n')
+                e = Executable(exe)
+                e(fail_on_error=False,
+                  input=sqlite_stdin.name,
+                  output=os.devnull,
+                  error=os.devnull)
+            return e.returncode
+
+        def get_variant(name, has_variant):
+            fmt = "+{:s}" if has_variant else "~{:s}"
+            return fmt.format(name)
+
+        for exe in exes:
+            variants = []
+
+            # check for fts
+            def query_fts(version):
+                return 'CREATE VIRTUAL TABLE name ' \
+                       'USING fts{:d}(sender, title, body);'.format(version)
+
+            rc_fts4 = call(exe, query_fts(4))
+            rc_fts5 = call(exe, query_fts(5))
+            variants.append(get_variant('fts', rc_fts4 == 0 and rc_fts5 == 0))
+
+            # check for functions
+            # SQL query taken from extension-functions.c usage instructions
+            query_functions = "SELECT load_extension('libsqlitefunctions');"
+            rc_functions = call(exe, query_functions)
+            variants.append(get_variant('functions', rc_functions == 0))
+
+            # check for rtree
+            query_rtree = 'CREATE VIRTUAL TABLE name USING rtree(id, x, y);'
+            rc_rtree = call(exe, query_rtree)
+            variants.append(get_variant('rtree', rc_rtree == 0))
+
+            # TODO: column_metadata
+
+            all_variants.append(''.join(variants))
+
+        return all_variants
 
     def url_for_version(self, version):
         full_version = list(version.version) + [0 * (4 - len(version.version))]
