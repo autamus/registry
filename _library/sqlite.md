@@ -4,7 +4,8 @@ name: sqlite
 github: https://github.com/autamus/registry/blob/main/containers/s/sqlite/spack.yaml
 versions:
 - 3.35.5
-updated_at: 2021-06-23T19:51:11.919529879Z
+- 3.36.0
+updated_at: 2021-09-23T15:42:41.247420304Z
 size: 32MB
 description: 'SQLite3 is an SQL database engine in a C library. Programs that link
   the SQLite3 library can have SQL database access without running a separate RDBMS
