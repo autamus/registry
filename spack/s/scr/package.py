@@ -25,11 +25,11 @@ class Scr(CMakePackage):
     homepage = "https://computing.llnl.gov/projects/scalable-checkpoint-restart-for-mpi"
     url      = "https://github.com/LLNL/scr/archive/v1.2.0.tar.gz"
     git      = "https://github.com/llnl/scr.git"
+    tags     = ['radiuss']
 
     version('develop', branch='develop')
     version('legacy', branch='legacy', deprecated=True)
-
-    version('3.0rc1', sha256='bd31548a986f050024429d8ee3644eb135f047f98a3d503a40c5bd4a85291308')
+    version('3.0.rc.1', sha256='bd31548a986f050024429d8ee3644eb135f047f98a3d503a40c5bd4a85291308')
     version('2.0.0', sha256='471978ae0afb56a20847d3989b994fbd680d1dea21e77a5a46a964b6e3deed6b', deprecated=True)
     version('1.2.2', sha256='764a85638a9e8762667ec1f39fa5f7da7496fca78de379a22198607b3e027847', deprecated=True)
     version('1.2.1', sha256='23acab2dc7203e9514455a5168f2fd57bc590affb7a1876912b58201513628fe', deprecated=True)
