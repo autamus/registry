@@ -21,6 +21,7 @@ class Zfp(CMakePackage, CudaPackage):
     url         = 'https://github.com/LLNL/zfp/releases/download/0.5.5/zfp-0.5.5.tar.gz'
     git         = 'https://github.com/LLNL/zfp.git'
     maintainers = ['lindstro', 'GarrettDMorrison']
+    tags        = ['radiuss']
 
     # Versions
     version('develop', branch='develop')
@@ -29,6 +30,7 @@ class Zfp(CMakePackage, CudaPackage):
     version('0.5.3', sha256='a5d2f8e5b47a7c92e2a5775b82cbfb3a76c87d0ac83d25abb4ac10ea75a2856e')
     version('0.5.2', sha256='9c738ec525cc76b4bb80b2b3f7c9f07507eeda3a341470e5942cda97efbe9a4f', url='https://github.com/LLNL/zfp/archive/0.5.2/zfp-0.5.2.tar.gz')
     version('0.5.1', sha256='f255dd1708c9ae4dc6a56dd2614e8b47a10d833c87fd349cbd47545a19c2b779', url='https://github.com/LLNL/zfp/archive/0.5.1/zfp-0.5.1.tar.gz')
+
 
     # Build targets
     # TODO: variant('utilities', default=True,  description='Build utilities')
