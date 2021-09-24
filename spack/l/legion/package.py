@@ -30,8 +30,7 @@ class Legion(CMakePackage):
     version('cr', branch='control_replication')
     version('master', branch='master')
     version('stable', branch='stable')
-    version('21.03.0')
-
+    version('21.03.0', tag='legion-21.03.0')
 
     depends_on("cmake@3.16:", type='build')
     # TODO: Need to spec version of MPI v3 for use of the low-level MPI transport
