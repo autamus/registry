@@ -27,10 +27,11 @@ class Legion(CMakePackage):
 
     maintainers = ['pmccormick', 'streichler']
 
-    version('21.03.0', tag='legion-21.03.0')
-    version('stable', branch='stable')
-    version('master', branch='master')
     version('cr', branch='control_replication')
+    version('master', branch='master')
+    version('stable', branch='stable')
+    version('21.03.0')
+
 
     depends_on("cmake@3.16:", type='build')
     # TODO: Need to spec version of MPI v3 for use of the low-level MPI transport
@@ -56,7 +57,7 @@ class Legion(CMakePackage):
                    when="%clang+kokkos+cuda cuda_arch={0}".format(nvarch))
 
     depends_on('kokkos@3.3.01~cuda', when='+kokkos~cuda')
-    depends_on("kokkos@3.3.01~cuda+openmp", when='kokkos+openmp')
+    depends_on("kokkos@3.3.01~cuda+openmp", when='+kokkos+openmp')
 
     depends_on('python@3', when='+python')
     depends_on('papi', when='+papi')
