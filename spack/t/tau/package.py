@@ -33,7 +33,7 @@ class Tau(Package):
     version('2.28.2', sha256='64e129a482056755012b91dae2fb4f728dbf3adbab53d49187eca952891c5457')
     version('2.28.1', sha256='b262e5c9977471e9f5a8d729b3db743012df9b0ab8244da2842039f8a3b98b34')
     version('2.28', sha256='68c6f13ae748d12c921456e494006796ca2b0efebdeef76ee7c898c81592883e')
-    version('2.27.2p1', sha256='3256771fb71c2b05932b44d0650e6eadc712f1bdedf4c0fb2781db3b266225dd')
+    version('2.27.2.p.1', sha256='3256771fb71c2b05932b44d0650e6eadc712f1bdedf4c0fb2781db3b266225dd')
     version('2.27.2', sha256='d319a4588ad303b71082254f4f40aa76f6183a01b5bc4bd987f76e1a6026efa1')
     version('2.27.1', sha256='315babab4da25dd08633ad8dbf33d93db77f57d240bcbd3527ed5b8710cb9d8f')
     version('2.27', sha256='d48fdca49cda2d9f25a0cf5dbd961201c8a2b1f025bcbb121d96ad43f211f1a7')
@@ -45,6 +45,7 @@ class Tau(Package):
     version('2.24.1', sha256='bc27052c36377e4b8fc0bbb4afaa57eaa8bcb3f5e5066e576b0f40d341c28a0e')
     version('2.24', sha256='5d28e8b26561c7cd7d0029b56ec0f95fc26803ac0b100c98e00af0b02e7f55e2')
     version('2.23.1', sha256='31a4d0019cec6ef57459a9cd18a220f0130838a5f1a0b5ea7879853f5a38cf88')
+
 
     # Disable some default dependencies on Darwin/OSX
     darwin_default = False
@@ -74,6 +75,7 @@ class Tau(Package):
     variant('rocm', default=False, description='Activates ROCm support')
     variant('level_zero', default=False, description='Activates Intel OneAPI Level Zero support')
     variant('rocprofiler', default=False, description='Activates ROCm rocprofiler support')
+    variant('roctracer', default=False, description='Activates ROCm roctracer support')
     variant('opencl', default=False, description='Activates OpenCL support')
     variant('fortran', default=darwin_default, description='Activates Fortran support')
     variant('io', default=True, description='Activates POSIX I/O support')
@@ -106,6 +108,9 @@ class Tau(Package):
     depends_on('adios2', when='+adios2')
     depends_on('sqlite', when='+sqlite')
     depends_on('hwloc')
+    depends_on('rocprofiler-dev', when='+rocprofiler')
+    depends_on('roctracer-dev', when='+roctracer')
+    depends_on('hsa-rocr-dev', when='+rocm')
 
     # Elf only required from 2.28.1 on
     conflicts('+elf', when='@:2.28.0')
@@ -258,10 +263,13 @@ class Tau(Package):
             options.append("-opencl")
 
         if '+rocm' in spec:
-            options.append("-rocm")
+            options.append("-rocm=%s" % spec['hsa-rocr-dev'].prefix)
 
         if '+rocprofiler' in spec:
-            options.append("-rocprofiler=%s" % spec['rocprofiler'].prefix)
+            options.append("-rocprofiler=%s" % spec['rocprofiler-dev'].prefix)
+
+        if '+roctracer' in spec:
+            options.append("-roctracer=%s" % spec['roctracer-dev'].prefix)
 
         if '+adios2' in spec:
             options.append("-adios=%s" % spec['adios2'].prefix)
