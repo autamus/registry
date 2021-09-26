@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/g/gatk/spack.ya
 versions:
 - 4.2.0.0
 - 4.2.2.0
-updated_at: 2021-09-17T18:29:42.356984707Z
+updated_at: 2021-09-26T23:43:04.731676658Z
 size: 745MB
 description: ' Genome Analysis Toolkit Variant Discovery in High-Throughput Sequencing
   Data '
