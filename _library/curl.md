@@ -5,7 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/c/curl/spack.ya
 versions:
 - 7.76.1
 - 7.78.0
-updated_at: 2021-09-15T23:37:21.39585406Z
+- 7.79.0
+updated_at: 2021-09-26T23:35:45.341799767Z
 size: 31MB
 description: cURL is an open source command line tool and library for transferring
   data with URL syntax
