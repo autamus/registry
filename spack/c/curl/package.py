@@ -46,7 +46,6 @@ class Curl(AutotoolsPackage):
     version('7.43.0', sha256='baa654a1122530483ccc1c58cc112fec3724a82c11c6a389f1e6a37dc8858df9')
     version('7.42.1', sha256='e2905973391ec2dfd7743a8034ad10eeb58dab8b3a297e7892a41a7999cac887')
 
-
     default_tls = 'openssl'
     if sys.platform == 'darwin':
         default_tls = 'secure_transport'
