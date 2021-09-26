@@ -16,6 +16,7 @@ class Curl(AutotoolsPackage):
     # URL must remain http:// so Spack can bootstrap curl
     url      = "http://curl.haxx.se/download/curl-7.78.0.tar.bz2"
 
+    version('7.79.0', sha256='d607a677f473f79f96c964100327125a6204a39d835dc00dab7fc0129b959f42')
     version('7.78.0', sha256='98530b317dc95ccb324bbe4f834f07bb642fbc393b794ddf3434f246a71ea44a')
     version('7.77.0', sha256='6c0c28868cb82593859fc43b9c8fdb769314c855c05cf1b56b023acf855df8ea')
     version('7.76.1', sha256='7a8e184d7d31312c4ebf6a8cb59cd757e61b2b2833a9ed4f9bf708066e7695e9')
@@ -44,6 +45,7 @@ class Curl(AutotoolsPackage):
     version('7.44.0', sha256='1e2541bae6582bb697c0fbae49e1d3e6fad5d05d5aa80dbd6f072e0a44341814')
     version('7.43.0', sha256='baa654a1122530483ccc1c58cc112fec3724a82c11c6a389f1e6a37dc8858df9')
     version('7.42.1', sha256='e2905973391ec2dfd7743a8034ad10eeb58dab8b3a297e7892a41a7999cac887')
+
 
     default_tls = 'openssl'
     if sys.platform == 'darwin':
