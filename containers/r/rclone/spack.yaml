@@ -1,3 +1,7 @@
 spack:
   specs: 
     - rclone
+  container:
+    os_packages:
+      final:
+        - ca-certificates
