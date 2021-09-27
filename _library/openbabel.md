@@ -3,8 +3,9 @@ layout: container
 name: openbabel
 github: https://github.com/autamus/registry/blob/main/containers/o/openbabel/spack.yaml
 versions:
+- 3.0.0
 - 3.1.1
-updated_at: 2021-07-20T22:45:25.049341092Z
+updated_at: 2021-09-27T00:15:58.057422775Z
 size: 197MB
 description: Open Babel is a chemical toolbox designed to speak the many languages
   of chemical data. It's an open, collaborative project allowing anyone to search,
@@ -33,7 +34,7 @@ docker pull ghcr.io/autamus/openbabel:latest
 or to download a specific version of openbabel run,
 
 ```bash
-docker pull ghcr.io/autamus/openbabel:3.1.1
+docker pull ghcr.io/autamus/openbabel:3.0.0
 ```
 ### Run
 To run the container as an application run,
