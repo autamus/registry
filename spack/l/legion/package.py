@@ -26,7 +26,7 @@ class Legion(CMakePackage):
     git = "https://github.com/StanfordLegion/legion.git"
 
     maintainers = ['pmccormick', 'streichler']
-
+    tags = ['e4s']
     version('cr', branch='control_replication')
     version('master', branch='master')
     version('stable', branch='stable')
