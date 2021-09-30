@@ -15,6 +15,8 @@ class Faodel(CMakePackage):
 
     maintainers = ['tkordenbrock', 'craigulmer']
 
+    tags = ['e4s']
+
     version('master', branch='master')
     version('1.1906.2', sha256='fd61c0a9c4303cd6b8c33bf04414acfc80ceaf08272be99bf3ebc854b37656a0')
     version('1.1906.1', sha256='4b3caf469ae7db50e9bb8d652e4cb532d33d474279def0f8a483f69385648058')
