@@ -20,10 +20,12 @@ class Llvm(CMakePackage, CudaPackage):
     """
 
     homepage = "https://llvm.org/"
-    url = "https://github.com/llvm/llvm-project/archive/llvmorg-7.1.0.tar.gz"
+    url      = "https://github.com/llvm/llvm-project/archive/llvmorg-7.1.0.tar.gz"
     list_url = "https://releases.llvm.org/download.html"
     git = "https://github.com/llvm/llvm-project"
     maintainers = ['trws', 'naromero77']
+
+    tags = ['e4s']
 
     family = "compiler"  # Used by lmod
 
