@@ -16,12 +16,13 @@ class Cabana(CMakePackage):
 
     maintainers = ["junghans", "sslattery", "streeve"]
 
+    tags = ['e4s']
+
     version('master', branch='master')
     version('0.4.0', sha256='c347d23dc4a5204f9cc5906ccf3454f0b0b1612351bbe0d1c58b14cddde81e85')
     version('0.3.0', sha256='fb67ab9aaf254b103ae0eb5cc913ddae3bf3cd0cf6010e9686e577a2981ca84f')
     version('0.2.0', sha256='3e0c0e224e90f4997f6c7e2b92f00ffa18f8bcff72f789e0908cea0828afc2cb')
     version('0.1.0', sha256='3280712facf6932b9d1aff375b24c932abb9f60a8addb0c0a1950afd0cb9b9cf')
-
 
     _kokkos_backends = Kokkos.devices_variants
     for _backend in _kokkos_backends:
