@@ -74,7 +74,6 @@ class Boost(Package):
     version('1.34.1', sha256='0f866c75b025a4f1340117a106595cc0675f48ba1e5a9b5c221ec7f19e96ec4c')
     version('1.34.0', sha256='455cb8fa41b759272768257c2e7bdc5c47ec113245dfa533f275e787a855efd2')
 
-
     default_install_libs = set(['atomic',
                                 'chrono',
                                 'date_time',
@@ -208,8 +207,9 @@ class Boost(Package):
     patch('boost_11856.patch', when='@1.60.0%gcc@4.4.7')
 
     # Patch fix from https://svn.boost.org/trac/boost/ticket/11120
-    patch('python_jam.patch', when='@1.56.0: ^python@3:')
-    patch('python_jam_pre156.patch', when='@:1.55.0 ^python@3:')
+    patch('python_jam-1_77.patch',   when='@1.77:     ^python@3:')
+    patch('python_jam.patch',        when='@1.56:1.76 ^python@3:')
+    patch('python_jam_pre156.patch', when='@:1.55.0   ^python@3:')
 
     # Patch fix for IBM XL compiler
     patch('xl_1_62_0_le.patch', when='@1.62.0%xl_r')
