@@ -4,7 +4,7 @@ name: bolt
 github: https://github.com/autamus/registry/blob/main/containers/b/bolt/spack.yaml
 versions:
 - "2.0"
-updated_at: 2021-09-15T23:33:10.065818377Z
+updated_at: 2021-10-03T23:40:46.332247244Z
 size: 27MB
 description: BOLT targets a high-performing OpenMP implementation, especially specialized
   for fine-grain parallelism. Unlike other OpenMP implementations, BOLT utilizes a
