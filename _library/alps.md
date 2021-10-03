@@ -4,8 +4,8 @@ name: alps
 github: https://github.com/autamus/registry/blob/main/containers/a/alps/spack.yaml
 versions:
 - 2.3.0
-updated_at: 2021-09-27T00:10:46.959287112Z
-size: 252MB
+updated_at: 2021-10-03T22:51:38.983891317Z
+size: 253MB
 description: 'Algorithms for Physics Simulations Tags: Condensed Matter Physics, Computational
   Physics '
 container_url: https://github.com/orgs/autamus/packages/container/package/alps
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/alps
 # alps
 ```bash 
 Download        : docker pull ghcr.io/autamus/alps
-Compressed Size : 252MB
+Compressed Size : 253MB
 ```
 
 ## Description
