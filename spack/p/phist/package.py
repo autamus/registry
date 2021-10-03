@@ -24,6 +24,7 @@ class Phist(CMakePackage):
     git      = "https://bitbucket.org/essex/phist.git"
 
     maintainers = ['jthies']
+    tags = ['e4s']
 
     version('develop', branch='devel')
     version('master', branch='master')
@@ -41,7 +42,6 @@ class Phist(CMakePackage):
     version('1.6.1', sha256='4ed4869f24f920a494aeae0f7d1d94fe9efce55ebe0d298a5948c9603e07994d')
     version('1.6.0', sha256='667a967b37d248242c275226c96efc447ef73a2b15f241c6a588d570d7fac07b')
     version('1.4.3', sha256='9cc1c7ba7f7a04e94f4497da14199e4631a0d02d0e4187f3e16f4c242dc777c1')
-
 
     variant(name='kernel_lib', default='builtin',
             description='select the kernel library (backend) for phist',
