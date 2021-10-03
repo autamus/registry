@@ -14,10 +14,12 @@ class Datatransferkit(CMakePackage):
     url      = "https://github.com/ORNL-CEES/DataTransferKit/archive/3.1-rc2.tar.gz"
     git      = "https://github.com/ORNL-CEES/DataTransferKit.git"
 
+    tags = ['e4s']
+
     maintainers = ['Rombur']
 
     version('master', branch='master', submodules=True)
-    version('3.1-rc2', commit='1abc1a43b33dffc7a16d7497b4185d09d865e36a', submodules=True)
+    version('3.1.rc.2', commit='1abc1a43b33dffc7a16d7497b4185d09d865e36a', submodules=True)
 
     variant('external-arborx', default=False,
             description='use an external ArborX library instead of the submodule')
