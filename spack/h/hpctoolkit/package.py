@@ -18,8 +18,10 @@ class Hpctoolkit(AutotoolsPackage):
     git      = "https://github.com/HPCToolkit/hpctoolkit.git"
     maintainers = ['mwkrentel']
 
+    tags = ['e4s']
+
     version('develop', branch='develop')
-    version('master',  branch='master')
+    version('master', branch='master')
     version('2021.05.15', commit='004ea0c2aea6a261e7d5d216c24f8a703fc6c408')
     version('2021.03.01', commit='68a051044c952f0f4dac459d9941875c700039e7')
     version('2020.08.03', commit='d9d13c705d81e5de38e624254cf0875cce6add9a')
