@@ -4,8 +4,8 @@ name: slate
 github: https://github.com/autamus/registry/blob/main/containers/s/slate/spack.yaml
 versions:
 - 2021.05.02
-updated_at: 2021-06-22T15:56:05.623338469Z
-size: 79MB
+updated_at: 2021-10-03T22:56:20.430460459Z
+size: 80MB
 description: The Software for Linear Algebra Targeting Exascale (SLATE) project is
   to provide fundamental dense linear algebra capabilities to the US Department of
   Energy and to the high-performance computing (HPC) community at large. To this end,
@@ -18,7 +18,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/slate
 # slate
 ```bash 
 Download        : docker pull ghcr.io/autamus/slate
-Compressed Size : 79MB
+Compressed Size : 80MB
 ```
 
 ## Description
