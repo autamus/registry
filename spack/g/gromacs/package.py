@@ -48,14 +48,14 @@ class Gromacs(CMakePackage):
     version('2018.3', sha256='4423a49224972969c52af7b1f151579cea6ab52148d8d7cbae28c183520aa291')
     version('2018.2', sha256='4bdde8120c510b6543afb4b18f82551fddb11851f7edbd814aa24022c5d37857')
     version('2018.1', sha256='4d3533340499323fece83b4a2d4251fa856376f2426c541e00b8e6b4c0d705cd')
-    version('2018',   sha256='deb5d0b749a52a0c6083367b5f50a99e08003208d81954fb49e7009e1b1fd0e9')
+    version('2018', sha256='deb5d0b749a52a0c6083367b5f50a99e08003208d81954fb49e7009e1b1fd0e9')
     version('2016.6', sha256='bac0117d2cad21f9b94fe5b854fb9ae7435b098a6da4e732ee745f18e52473d7')
     version('2016.5', sha256='57db26c6d9af84710a1e0c47a1f5bf63a22641456448dcd2eeb556ebd14e0b7c')
     version('2016.4', sha256='4be9d3bfda0bdf3b5c53041e0b8344f7d22b75128759d9bfa9442fe65c289264')
     version('2016.3', sha256='7bf00e74a9d38b7cef9356141d20e4ba9387289cbbfd4d11be479ef932d77d27')
-    version('5.1.5',  sha256='c25266abf07690ecad16ed3996899b1d489cbb1ef733a1befb3b5c75c91a703e')
-    version('5.1.4',  sha256='0f3793d8f1f0be747cf9ebb0b588fb2b2b5dc5acc32c3046a7bee2d2c03437bc')
-    version('5.1.2',  sha256='39d6f1d7ae8ba38cea6089da40676bfa4049a49903d21551abc030992a58f304')
+    version('5.1.5', sha256='c25266abf07690ecad16ed3996899b1d489cbb1ef733a1befb3b5c75c91a703e')
+    version('5.1.4', sha256='0f3793d8f1f0be747cf9ebb0b588fb2b2b5dc5acc32c3046a7bee2d2c03437bc')
+    version('5.1.2', sha256='39d6f1d7ae8ba38cea6089da40676bfa4049a49903d21551abc030992a58f304')
     version('4.6.7', sha256='6afb1837e363192043de34b188ca3cf83db6bd189601f2001a1fc5b0b2a214d9')
     version('4.5.5', sha256='e0605e4810b0d552a8761fef5540c545beeaf85893f4a6e21df9905a33f871ba')
 
@@ -131,34 +131,34 @@ class Gromacs(CMakePackage):
     depends_on('plumed@2.5.3:2.6.0~mpi', when='@2019.4+plumed~mpi')
     depends_on('plumed@2.5.2+mpi', when='@2019.2+plumed+mpi')
     depends_on('plumed@2.5.2~mpi', when='@2019.2+plumed~mpi')
-    depends_on('plumed@2.5.3:2.6.99+mpi', when='@2018.8+plumed+mpi')
-    depends_on('plumed@2.5.3:2.6.99~mpi', when='@2018.8+plumed~mpi')
+    depends_on('plumed@2.5.3:2.6+mpi', when='@2018.8+plumed+mpi')
+    depends_on('plumed@2.5.3:2.6~mpi', when='@2018.8+plumed~mpi')
     depends_on('plumed@2.5.1:2.5.2+mpi', when='@2018.6+plumed+mpi')
     depends_on('plumed@2.5.1:2.5.2~mpi', when='@2018.6+plumed~mpi')
     depends_on('plumed@2.5.0+mpi', when='@2018.4+plumed+mpi')
     depends_on('plumed@2.5.0~mpi', when='@2018.4+plumed~mpi')
-    depends_on('plumed@2.5.1:2.5.99+mpi', when='@2016.6+plumed+mpi')
-    depends_on('plumed@2.5.1:2.5.99~mpi', when='@2016.6+plumed~mpi')
+    depends_on('plumed@2.5.1:2.5+mpi', when='@2016.6+plumed+mpi')
+    depends_on('plumed@2.5.1:2.5~mpi', when='@2016.6+plumed~mpi')
     depends_on('plumed@2.5.0+mpi', when='@2016.5+plumed+mpi')
     depends_on('plumed@2.5.0~mpi', when='@2016.5+plumed~mpi')
 
     depends_on('fftw-api@3')
-    depends_on('cmake@2.8.8:3.99.99', type='build')
-    depends_on('cmake@3.4.3:3.99.99', type='build', when='@2018:')
-    depends_on('cmake@3.9.6:3.99.99', type='build', when='@2020')
-    depends_on('cmake@3.13.0:3.99.99', type='build', when='@2021:')
-    depends_on('cmake@3.16.0:3.99.99', type='build', when='@master')
-    depends_on('cmake@3.16.0:3.99.99', type='build', when='%fj')
+    depends_on('cmake@2.8.8:3', type='build')
+    depends_on('cmake@3.4.3:3', type='build', when='@2018:')
+    depends_on('cmake@3.9.6:3', type='build', when='@2020')
+    depends_on('cmake@3.13.0:3', type='build', when='@2021:')
+    depends_on('cmake@3.16.0:3', type='build', when='@master')
+    depends_on('cmake@3.16.0:3', type='build', when='%fj')
     depends_on('cuda', when='+cuda')
     depends_on('sycl', when='+sycl')
     depends_on('lapack', when='+lapack')
     depends_on('blas', when='+blas')
 
-    depends_on('hwloc@1:1.999', when='+hwloc@2016:2018.999')
+    depends_on('hwloc@1.0:1', when='+hwloc@2016:2018')
     depends_on('hwloc', when='+hwloc@2019:')
 
     patch('gmxDetectCpu-cmake-3.14.patch', when='@2018:2019.3^cmake@3.14.0:')
-    patch('gmxDetectSimd-cmake-3.14.patch', when='@5.0:2017.99^cmake@3.14.0:')
+    patch('gmxDetectSimd-cmake-3.14.patch', when='@5.0:2017^cmake@3.14.0:')
 
     filter_compiler_wrappers(
         '*.cmake',
@@ -198,7 +198,7 @@ class Gromacs(CMakePackage):
                 filter_file(r'-gencode;arch=compute_20,code=compute_20;?', '',
                             'cmake/gmxManageNvccConfig.cmake')
 
-            if self.spec.satisfies('@4.6:5.0.999^cuda@9:'):
+            if self.spec.satisfies('@4.6:5.0^cuda@9:'):
                 filter_file(r'-gencode;arch=compute_20,code=sm_21;?', '',
                             'cmake/gmxManageNvccConfig.cmake')
 
