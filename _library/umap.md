@@ -4,7 +4,7 @@ name: umap
 github: https://github.com/autamus/registry/blob/main/containers/u/umap/spack.yaml
 versions:
 - 2.1.0
-updated_at: 2021-06-22T16:25:57.415867732Z
+updated_at: 2021-10-03T22:08:27.325732018Z
 size: 27MB
 description: Umap is a library that provides an mmap()-like interface to a simple,
   user-space page fault handler based on the userfaultfd Linux feature (starting with
