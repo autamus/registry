@@ -4,7 +4,7 @@ name: gasnet
 github: https://github.com/autamus/registry/blob/main/containers/g/gasnet/spack.yaml
 versions:
 - 2021.3.0
-updated_at: 2021-09-15T23:40:29.679354229Z
+updated_at: 2021-10-03T23:22:01.040042673Z
 size: 30MB
 description: 'GASNet is a language-independent, networking middleware layer that provides
   network-independent, high-performance communication primitives including Remote
