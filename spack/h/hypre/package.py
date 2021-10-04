@@ -15,15 +15,18 @@ class Hypre(Package, CudaPackage):
        unstructured grid problems."""
 
     homepage = "https://computing.llnl.gov/project/linear_solvers/software.php"
-    url      = "https://github.com/hypre-space/hypre/archive/v2.22.1.tar.gz"
+    url      = "https://github.com/hypre-space/hypre/archive/v2.23.0.tar.gz"
     git      = "https://github.com/hypre-space/hypre.git"
+    tags     = ['radiuss']
 
     maintainers = ['ulrikeyang', 'osborn9', 'balay']
+
+    tags = ['e4s']
 
     test_requires_compiler = True
 
     version('develop', branch='master')
-    version('2.22.1', sha256='c1e7761b907c2ee0098091b69797e9be977bff8b7fd0479dc20cad42f45c4084')
+    version('2.23.0', sha256='8a9f9fb6f65531b77e4c319bf35bfc9d34bf529c36afe08837f56b635ac052e2')
     version('2.22.0', sha256='2c786eb5d3e722d8d7b40254f138bef4565b2d4724041e56a8fa073bda5cfbb5')
     version('2.21.0', sha256='e380f914fe7efe22afc44cdf553255410dc8a02a15b2e5ebd279ba88817feaf5')
     version('2.20.0', sha256='5be77b28ddf945c92cde4b52a272d16fb5e9a7dc05e714fc5765948cba802c01')
