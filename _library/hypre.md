@@ -6,7 +6,7 @@ versions:
 - 2.21.0
 - 2.22.0
 - 2.22.1
-updated_at: 2021-10-03T23:15:54.131627158Z
+updated_at: 2021-10-04T01:54:39.515500423Z
 size: 76MB
 description: Hypre is a library of high performance preconditioners that features
   parallel multigrid methods for both structured and unstructured grid problems.
