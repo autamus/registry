@@ -26,7 +26,7 @@ class Adios(AutotoolsPackage):
     version('1.11.1', sha256='9f5c10b9471a721ba57d1cf6e5a55a7ad139a6c12da87b4dc128539e9eef370e')
     version('1.11.0', sha256='e89d14ccbe7181777225e0ba6c272c0941539b8ccd440e72ed5a9457441dae83')
     version('1.10.0', sha256='6713069259ee7bfd4d03f47640bf841874e9114bab24e7b0c58e310c42a0ec48')
-    version('1.9.0',  sha256='23b2bb70540d51ab0855af0b205ca484fd1bd963c39580c29e3133f9e6fffd46')
+    version('1.9.0', sha256='23b2bb70540d51ab0855af0b205ca484fd1bd963c39580c29e3133f9e6fffd46')
 
     variant('shared', default=True,
             description='Builds a shared version of the library')
@@ -77,9 +77,9 @@ class Adios(AutotoolsPackage):
     depends_on('bzip2', when='+bzip2')
     depends_on('szip', when='+szip')
     depends_on('sz@:1.4.10', when='@:1.12.0 +sz')
-    depends_on('sz@1.4.11.0:1.4.11.99', when='@1.13.0 +sz')
-    depends_on('sz@1.4.12.3:1.4.12.99', when='@1.13.1: +sz')
-    depends_on('zfp@0.5.1:0.5.99', when='+zfp')
+    depends_on('sz@1.4.11.0:1.4.11', when='@1.13.0 +sz')
+    depends_on('sz@1.4.12.3:1.4.12', when='@1.13.1: +sz')
+    depends_on('zfp@0.5.1:0.5', when='+zfp')
     depends_on('lz4', when='+lz4')
     depends_on('c-blosc@1.12.0:', when='+blosc')
     # optional transports & file converters
