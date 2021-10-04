@@ -12,11 +12,12 @@ class Petsc(Package, CudaPackage, ROCmPackage):
     """
 
     homepage = "https://www.mcs.anl.gov/petsc/index.html"
-    url      = "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.15.0.tar.gz"
+    url      = "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.16.0.tar.gz"
     git = "https://gitlab.com/petsc/petsc.git"
     maintainers = ['balay', 'barrysmith', 'jedbrown']
 
     version('main', branch='main')
+    version('3.16.0', sha256='5aaad7deea127a4790c8aa95c42fd9451ab10b5d6c68b226b92d4853002f438d')
     version('3.15.4', sha256='1e62fb0859a12891022765d1e24660cfcd704291c58667082d81a0618d6b0047')
     version('3.15.3', sha256='483028088020001e6f8d57b78a7fc880ed52d6693f57d627779c428f55cff73d')
     version('3.15.2', sha256='3b10c19c69fc42e01a38132668724a01f1da56f5c353105cd28f1120cc9041d8')
