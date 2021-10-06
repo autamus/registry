@@ -5,3 +5,4 @@ spack:
     os_packages:
       final:
         - ca-certificates
+
