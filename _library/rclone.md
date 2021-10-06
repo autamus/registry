@@ -8,8 +8,9 @@ versions:
 - 1.55.1
 - 1.56.0
 - 1.56.1
-updated_at: 2021-09-27T00:16:49.404389088Z
-size: 48MB
+- 1.56.2
+updated_at: 2021-10-06T16:11:58.571782381Z
+size: 29MB
 description: Rclone is a command line program to sync files and directories to and
   from various cloud storage providers
 container_url: https://github.com/orgs/autamus/packages/container/package/rclone
@@ -18,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/rclone
 # rclone
 ```bash 
 Download        : docker pull ghcr.io/autamus/rclone
-Compressed Size : 48MB
+Compressed Size : 29MB
 ```
 
 ## Description
