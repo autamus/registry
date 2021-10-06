@@ -4,8 +4,9 @@ name: gnuplot
 github: https://github.com/autamus/registry/blob/main/containers/g/gnuplot/spack.yaml
 versions:
 - 5.2.8
-updated_at: 2021-06-23T19:39:12.980903535Z
-size: 175MB
+- 5.4.2
+updated_at: 2021-10-06T23:26:18.31060355Z
+size: 28MB
 description: 'Gnuplot is a portable command-line driven graphing utility for Linux,
   OS/2, MS Windows, OSX, VMS, and many other platforms. The source code is copyrighted
   but freely distributed (i.e., you don''t have to pay for it). It was originally
@@ -19,7 +20,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/gnuplo
 # gnuplot
 ```bash 
 Download        : docker pull ghcr.io/autamus/gnuplot
-Compressed Size : 175MB
+Compressed Size : 28MB
 ```
 
 ## Description
