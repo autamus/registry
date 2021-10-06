@@ -67,7 +67,6 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
     version('4.6.4', sha256='35af16afa0b67af9b8eb15cafb76d2bc5f568540552522f5dc2c88dd45d977e8')
     version('4.5.4', sha256='eef3f0456db8c3d992cbb51d5d32558190bc14f3bc19383dd93acc27acc6befc')
 
-
     # We specifically do not add 'all' variant here because:
     # (i) Ada, Go, Jit, and Objective-C++ are not default languages.
     # In that respect, the name 'all' is rather misleading.
@@ -284,7 +283,10 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
     patch('zstd.patch', when='@10')
 
     # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=100102
-    patch('https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=fc930b3010bd0de899a3da3209eab20664ddb703', sha256='28c5ab3b564d83dd7e6e35b9c683141a4cb57ee886c5367e54a0828538b3c789', when='@10.3,11.1')
+    patch('https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=fc930b3010bd0de899a3da3209eab20664ddb703',
+          sha256='28c5ab3b564d83dd7e6e35b9c683141a4cb57ee886c5367e54a0828538b3c789', when='@10.1:10.3')
+    patch('https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=f1feb74046e0feb0596b93bbb822fae02940a90e',
+          sha256='3e5029489b79fc0d47fd6719f3d5c9d3bbc727a4a0cbff161a5517e8a3c98cb6',  when='@11.1')
 
     build_directory = 'spack-build'
 
