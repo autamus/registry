@@ -13,7 +13,7 @@ class Julia(Package):
     """The Julia Language: A fresh approach to technical computing"""
 
     homepage = "https://julialang.org"
-    url      = "https://github.com/JuliaLang/julia/archive/v1.6.3.tar.gz"
+    url      = "https://github.com/JuliaLang/julia/releases/download/v0.4.3/julia-0.4.3-full.tar.gz"
     git      = "https://github.com/JuliaLang/julia.git"
 
     maintainers = ['glennpj']
@@ -43,7 +43,6 @@ class Julia(Package):
     version('0.4.6', sha256='4c23c9fc72398014bd39327c2f7efd3a301884567d4cb2a89105c984d4d633ba')
     version('0.4.5', sha256='cbf361c23a77e7647040e8070371691083e92aa93c8a318afcc495ad1c3a71d9')
     version('0.4.3', sha256='2b9df25a8f58df8e43038ec30bae195dfb160abdf925f3fa193b59d40e4113c5')
-
 
     variant('cxx', default=False, description='Prepare for Julia Cxx package')
     variant('mkl', default=False, description='Use Intel MKL')
