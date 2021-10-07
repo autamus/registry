@@ -3,13 +3,14 @@ layout: container
 name: julia
 github: https://github.com/autamus/registry/blob/main/containers/j/julia/spack.yaml
 versions:
-- 1.6.1
-- 1.6.0
-- 1.5.4
 - 1.5.3
+- 1.5.4
+- 1.6.0
+- 1.6.1
 - 1.6.2
-updated_at: 2021-07-20T22:16:35.058487388Z
-size: 103MB
+- 1.6.3
+updated_at: 2021-10-07T00:12:38.127665281Z
+size: 27MB
 description: 'The Julia Language: A fresh approach to technical computing'
 container_url: https://github.com/orgs/autamus/packages/container/package/julia
 
@@ -17,7 +18,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/julia
 # julia
 ```bash 
 Download        : docker pull ghcr.io/autamus/julia
-Compressed Size : 103MB
+Compressed Size : 27MB
 ```
 
 ## Description
@@ -34,7 +35,7 @@ docker pull ghcr.io/autamus/julia:latest
 or to download a specific version of julia run,
 
 ```bash
-docker pull ghcr.io/autamus/julia:1.6.1
+docker pull ghcr.io/autamus/julia:1.5.3
 ```
 ### Run
 To run the container as an application run,
