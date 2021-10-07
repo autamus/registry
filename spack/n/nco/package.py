@@ -11,9 +11,9 @@ class Nco(AutotoolsPackage):
     netCDF-accessible formats"""
 
     homepage = "http://nco.sourceforge.net/"
-    url      = "https://github.com/nco/nco/archive/5.0.2.tar.gz"
+    url      = "https://github.com/nco/nco/archive/5.0.3.tar.gz"
 
-    version('5.0.2', sha256='7486e7e03da4caf2736e8eb3d2299a686fb58dbcc04391ce073e0a8c2baf80d6')
+    version('5.0.3', sha256='61b45cdfbb772718f00d40da1a4ce268201fd00a61ebb9515460b8dda8557bdb')
     version('5.0.1', sha256='37d11ffe582aa0ee89f77a7b9a176b41e41900e9ab709e780ec0caf52ad60c4b')
     version('4.9.3', sha256='eade5b79f3814b11ae3f52c34159567e76a73f05f0ab141eccaac68f0ca94aee')
     version('4.9.2', sha256='1a98c37c946c00232fa7319d00d1d80f77603adda7c9239d10d68a8a3545a4d5')
@@ -30,7 +30,6 @@ class Nco(AutotoolsPackage):
     version('4.6.2', sha256='cec82e35d47a6bbf8ab9301d5ff4cf08051f489b49e8529ebf780380f2c21ed3')
     version('4.6.1', sha256='7433fe5901f48eb5170f24c6d53b484161e1c63884d9350600070573baf8b8b0')
     version('4.5.5', sha256='bc6f5b976fdfbdec51f2ebefa158fa54672442c2fd5f042ba884f9f32c2ad666')
-
 
     # https://github.com/nco/nco/issues/43
     patch('NUL-0-NULL.patch', when='@:4.6.7')
