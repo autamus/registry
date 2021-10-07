@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/g/gnuplot/spack
 versions:
 - 5.2.8
 - 5.4.2
-updated_at: 2021-10-06T23:26:18.31060355Z
+updated_at: 2021-10-07T01:40:29.740843254Z
 size: 28MB
 description: 'Gnuplot is a portable command-line driven graphing utility for Linux,
   OS/2, MS Windows, OSX, VMS, and many other platforms. The source code is copyrighted
