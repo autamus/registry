@@ -7,7 +7,7 @@ from spack import *
 
 
 def cross_detect():
-    if spack.architecture.platform().name == 'cray':
+    if spack.platforms.host().name == 'cray':
         if which('srun'):
             return 'cray-aries-slurm'
         if which('aprun'):
@@ -60,7 +60,7 @@ class Upcxx(Package):
     depends_on('mpi', when='+mpi')
     depends_on('cuda', when='+cuda')
     # Require Python2 2.7.5+ up to v2019.9.0
-    depends_on('python@2.7.5:2.999',
+    depends_on('python@2.7.5:2',
                type=("build", "run"), when='@:2019.9.0')
     # v2020.3.0 and later also permit Python3
     depends_on('python@2.7.5:', type=("build", "run"), when='@2020.3.0:')
