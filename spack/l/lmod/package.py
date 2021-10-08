@@ -17,9 +17,9 @@ class Lmod(AutotoolsPackage):
     """
 
     homepage = 'https://www.tacc.utexas.edu/research-development/tacc-projects/lmod'
-    url      = "https://github.com/TACC/Lmod/archive/8.5.16.tar.gz"
+    url      = "https://github.com/TACC/Lmod/archive/8.5.17.tar.gz"
 
-    version('8.5.16', sha256='0643a871c5a32fa25534cffd4babde80a0a7580672899d6c102f2aee0ee8421c')
+    version('8.5.17', sha256='ace14be6c88fe0ffab460fd02c941ae466d365ea1ced9b9e09d10c3e19fed23a')
     version('8.5.6', sha256='1d1058ffa33a661994c1b2af4bfee4aa1539720cd5c13d61e18adbfb231bbe88')
     version('8.3', sha256='c2c2e9e6b387b011ee617cb009a2199caac8bf200330cb8a065ceedee09e664a')
     version('8.2.10', sha256='15676d82235faf5c755a747f0e318badb1a5c3ff1552fa8022c67ff083ee9e2f')
@@ -42,7 +42,6 @@ class Lmod(AutotoolsPackage):
     version('6.4.5', sha256='741744a2837c9d92fceeccfebdc8e07ce4f4b7e56f67b214d317955bbd8786b7')
     version('6.4.1', sha256='a260b4e42269a80b517c066ba8484658362ea095e80767a2376bbe33d9b070a5')
     version('6.3.7', sha256='55ddb52cbdc0e2e389b3405229336df9aabfa582c874f5df2559ea264e2ee4ae')
-
 
     depends_on('lua@5.1:')
     depends_on('lua-luaposix', type=('build', 'run'))
