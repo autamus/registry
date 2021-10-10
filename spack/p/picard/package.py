@@ -16,7 +16,7 @@ class Picard(Package):
     """
 
     homepage = "https://broadinstitute.github.io/picard/"
-    url      = "https://github.com/broadinstitute/picard/releases/download/2.26.2/picard.jar"
+    url      = "https://github.com/broadinstitute/picard/releases/download/2.9.2/picard.jar"
     _urlfmt  = "https://github.com/broadinstitute/picard/releases/download/{0}/picard.jar"
     _oldurlfmt = 'https://github.com/broadinstitute/picard/releases/download/{0}/picard-tools-{0}.zip'
 
