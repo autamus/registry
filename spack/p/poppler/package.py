@@ -10,7 +10,7 @@ class Poppler(CMakePackage):
     """Poppler is a PDF rendering library based on the xpdf-3.0 code base."""
 
     homepage = "https://poppler.freedesktop.org"
-    url      = "https://poppler.freedesktop.org/poppler-21.09.0.tar.xz"
+    url      = "https://poppler.freedesktop.org/poppler-21.07.0.tar.xz"
     list_url = "https://poppler.freedesktop.org/releases.html"
     git      = "https://gitlab.freedesktop.org/poppler/poppler.git"
 
