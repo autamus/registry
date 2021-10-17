@@ -19,14 +19,13 @@ class Graphviz(AutotoolsPackage):
     git      = 'https://gitlab.com/graphviz/graphviz.git'
     url      = 'https://gitlab.com/graphviz/graphviz/-/archive/2.46.0/graphviz-2.46.0.tar.bz2'
 
-    version('2.49.1', sha256='c84e17cee66500aae992ffad05a218f6a9619c59d15198f2a9f26d39cebf2bfc')
+    version('2.49.2', sha256='2ad28686122af8094389bc04ce5790b7f6b4c0afcc83aa4390c8088316f7385d')
     version('2.49.0', sha256='b129555743bb9bfb7b63c55825da51763b2f1ee7c0eaa6234a42a61a3aff6cc9')
     version('2.47.2', sha256='b5ebb00d4283c6d12cf16b2323e1820b535cc3823c8f261b783f7903b1d5b7fb')
     version('2.46.0', sha256='1b11684fd5488940b45bf4624393140da6032abafae08f33dc3e986cffd55d71')
     version('2.44.1', sha256='0f8f3fbeaddd474e0a270dc9bb0e247a1ae4284ae35125af4adceffae5c7ae9b')
     version('2.42.4', sha256='a1ca0c4273d96bbf32fbfcbb784c8da2e38da13e7d2bbf9b24fe94ae45e79c4c')
     version('2.38.0', sha256='c1b1e326b5d1f45b0ce91edd7acc68e80ff6be6b470008766e4d466aafc9801f')
-
 
     # Language bindings
     language_bindings = ['java']
@@ -83,7 +82,7 @@ class Graphviz(AutotoolsPackage):
                   msg="Graphviz can only be build with Quartz on macOS.")
     elif MACOS_VERSION >= Version('10.9'):
         # Doesn't detect newer mac os systems as being new
-        patch('fix-quartz-darwin.patch')
+        patch('fix-quartz-darwin.patch', when='@:2.47.2')
 
     # Language dependencies
     for lang in language_bindings:
