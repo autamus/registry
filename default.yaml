@@ -13,9 +13,6 @@ spack:
       padded_length: 512
   container:
     strip: true
-    images:
-      os: "ubuntu:20.04"
-      spack: develop
     os_packages:
       build:
         - python3-boto3
