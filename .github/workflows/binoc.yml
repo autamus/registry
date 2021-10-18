@@ -45,6 +45,7 @@ jobs:
              export OPEN_PULL_REQUEST=0
              printf "No changes\n"
           else
+             export OPEN_PULL_REQUEST=1
              printf "Changes\n"
              git commit -a -m "Automated pull of changes from Upstream Spack $(date '+%Y-%m-%d')"
              git push origin "${BRANCH_FROM}"
