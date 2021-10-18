@@ -45,6 +45,7 @@ jobs:
              export OPEN_PULL_REQUEST=0
              printf "No changes\n"
           else
+             export OPEN_PULL_REQUEST=1
              printf "Changes\n"
              git commit -a -m "Automated pull of changes from Upstream Spack $(date '+%Y-%m-%d')"
              git push origin "${BRANCH_FROM}"
@@ -52,7 +53,7 @@ jobs:
           echo "OPEN_PULL_REQUEST=${OPEN_PULL_REQUEST}" >> $GITHUB_ENV
           echo "PULL_REQUEST_FROM_BRANCH=${BRANCH_FROM}" >> $GITHUB_ENV
           echo "PULL_REQUEST_TITLE=[bot] ${BRANCH_FROM}" >> $GITHUB_ENV
-          echo "PULL_REQUEST_BODY=Update Packages from Spack Upstream" >> $GITHUB_ENV
+          echo "PULL_REQUEST_BODY=Pull Changes From Spack Upstream" >> $GITHUB_ENV
 
       - name: Open Pull Request
         uses: vsoch/pull-request-action@1.0.16
