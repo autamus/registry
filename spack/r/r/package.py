@@ -17,7 +17,7 @@ class R(AutotoolsPackage):
     Please consult the R project homepage for further information."""
 
     homepage = "https://www.r-project.org"
-    url      = "https://cloud.r-project.org/src/base/R-3/R-3.4.3.tar.gz"
+    url = "https://cloud.r-project.org/src/base/R-3/R-3.4.3.tar.gz"
 
     extendable = True
 

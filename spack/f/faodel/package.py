@@ -10,7 +10,7 @@ class Faodel(CMakePackage):
     """Flexible, Asynchronous, Object Data-Exchange Libraries"""
 
     homepage = "https://github.com/faodel/faodel"
-    url      = "https://github.com/faodel/faodel/archive/v1.1906.2.tar.gz"
+    url      = "https://github.com/faodel/faodel/archive/v1.2108.1.tar.gz"
     git      = "https://github.com/faodel/faodel.git"
 
     maintainers = ['tkordenbrock', 'craigulmer']

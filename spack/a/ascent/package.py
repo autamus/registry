@@ -40,10 +40,22 @@ class Ascent(CMakePackage, CudaPackage):
 
     maintainers = ['cyrush']
 
-    version('develop', branch='develop', submodules=True)
-    version('0.7.1', submodules=True, tag='v0.7.1')
-    version('0.7.0', submodules=True, tag='v0.7.0')
-    version('0.6.0', submodules=True, tag='v0.6.0')
+    version('develop',
+            branch='develop',
+            submodules=True)
+
+    version('0.7.1',
+            tag='v0.7.1',
+            submodules=True,
+            preferred=True)
+
+    version('0.7.0',
+            tag='v0.7.0',
+            submodules=True)
+
+    version('0.6.0',
+            tag='v0.6.0',
+            submodules=True)
 
     ###########################################################################
     # package variants

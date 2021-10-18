@@ -1,6 +1,6 @@
 # Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
-# 
+#
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 from spack import *
 
@@ -11,9 +11,8 @@ class Heaptrack(CMakePackage):
     """
 
     homepage = "https://github.com/KDE/heaptrack"
-    url      = "https://github.com/KDE/heaptrack/archive/v1.2.0.tar.gz"
+    url      = "https://github.com/KDE/heaptrack/archive/v1.1.0.tar.gz"
 
-    version('1.2.0', sha256='f299a4846b80e607a412f439e17cddae13f0529701ffdb05eaa7ba878865717e', url='https://github.com/KDE/heaptrack/archive/v1.2.0.tar.gz')
     version('1.1.0', sha256='bd247ac67d1ecf023ec7e2a2888764bfc03e2f8b24876928ca6aa0cdb3a07309')
 
     depends_on('boost@1.41:')

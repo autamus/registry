@@ -13,7 +13,7 @@ class Slepc(Package, CudaPackage, ROCmPackage):
     """Scalable Library for Eigenvalue Problem Computations."""
 
     homepage = "https://slepc.upv.es"
-    url      = "https://slepc.upv.es/download/distrib/slepc-3.15.2.tar.gz"
+    url      = "https://slepc.upv.es/download/distrib/slepc-3.16.0.tar.gz"
     git      = "https://gitlab.com/slepc/slepc.git"
 
     maintainers = ['joseeroman', 'balay']
