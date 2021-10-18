@@ -47,7 +47,7 @@ jobs:
           else
              printf "Changes\n"
              git commit -a -m "Automated pull of changes from Upstream Spack $(date '+%Y-%m-%d')"
-             git push
+             git push origin "${BRANCH_FROM}"
           fi
           echo "OPEN_PULL_REQUEST=${OPEN_PULL_REQUEST}" >> $GITHUB_ENV
           echo "PULL_REQUEST_FROM_BRANCH=${BRANCH_FROM}" >> $GITHUB_ENV
