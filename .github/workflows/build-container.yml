@@ -84,6 +84,8 @@ jobs:
 
       - name: Make Space For Build and Clear Cache
         run: |
+          # Force re-pull of image
+          docker pull ghcr.io/spack/ubuntu-bionic:latest
           docker builder prune --filter type=exec.cachemount
           sudo rm -rf /usr/share/dotnet
           sudo rm -rf /opt/ghc
