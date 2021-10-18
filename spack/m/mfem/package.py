@@ -13,7 +13,7 @@ from spack import *
 class Mfem(Package, CudaPackage, ROCmPackage):
     """Free, lightweight, scalable C++ library for finite element methods."""
 
-    tags = ['FEM', 'finite elements', 'high-order', 'AMR', 'HPC']
+    tags = ['fem', 'finite-elements', 'high-order', 'amr', 'hpc', 'radiuss', 'e4s']
 
     homepage = 'http://www.mfem.org'
     git      = 'https://github.com/mfem/mfem.git'
@@ -48,51 +48,18 @@ class Mfem(Package, CudaPackage, ROCmPackage):
     # 'develop' is a special version that is always larger (or newer) than any
     # other version.
     version('develop', branch='master')
-
-    version('4.3.0',
-            sha256='3a495602121b986049286ea0b23512279cdbdfb43c15c42a1511b521051fbe38',
-            url='https://bit.ly/mfem-4-3', extension='tar.gz')
-
-    version('4.2.0',
-            '4352a225b55948d2e73a5ee88cece0e88bdbe7ba6726a23d68b2736d3221a86d',
-            url='https://bit.ly/mfem-4-2', extension='tar.gz')
-
-    version('4.1.0',
-            '4c83fdcf083f8e2f5b37200a755db843cdb858811e25a8486ad36b2cbec0e11d',
-            url='https://bit.ly/mfem-4-1', extension='tar.gz')
-
-    # Tagged development version used by xSDK
-    version('4.0.1-xsdk', commit='c55c80d17b82d80de04b849dd526e17044f8c99a')
-
-    version('4.0.0',
-            'df5bdac798ea84a263979f6fbf79de9013e1c55562f95f98644c3edcacfbc727',
-            url='https://bit.ly/mfem-4-0', extension='tar.gz')
-
-    # Tagged development version used by the laghos package:
-    version('3.4.1-laghos-v2.0', tag='laghos-v2.0')
-
-    version('3.4.0',
-            sha256='4e73e4fe0482636de3c5dc983cd395839a83cb16f6f509bd88b053e8b3858e05',
-            url='https://bit.ly/mfem-3-4', extension='tar.gz')
-
-    version('3.3.2',
-            sha256='b70fa3c5080b9ec514fc05f4a04ff74322b99ac4ecd6d99c229f0ed5188fc0ce',
-            url='https://goo.gl/Kd7Jk8', extension='tar.gz')
-
-    # Tagged development version used by the laghos package:
-    version('3.3.1-laghos-v1.0', tag='laghos-v1.0')
-
-    version('3.3',
-            sha256='b17bd452593aada93dc0fee748fcfbbf4f04ce3e7d77fdd0341cc9103bcacd0b',
-            url='http://goo.gl/Vrpsns', extension='tar.gz')
-
-    version('3.2',
-            sha256='2938c3deed4ec4f7fd5b5f5cfe656845282e86e2dcd477d292390058b7b94340',
-            url='http://goo.gl/Y9T75B', extension='tar.gz')
-
-    version('3.1',
-            sha256='841ea5cf58de6fae4de0f553b0e01ebaab9cd9c67fa821e8a715666ecf18fc57',
-            url='http://goo.gl/xrScXn', extension='tar.gz')
+    version('4.3.0', sha256='3a495602121b986049286ea0b23512279cdbdfb43c15c42a1511b521051fbe38', expand=False, url='https://bit.ly/mfem-4-3', extension='tar.gz')
+    version('4.2.0', expand=False, url='https://bit.ly/mfem-4-2', extension='tar.gz')
+    version('4.1.0', expand=False, url='https://bit.ly/mfem-4-1', extension='tar.gz')
+    version('4.0.1', commit='c55c80d17b82d80de04b849dd526e17044f8c99a')
+    version('4.0.0', expand=False, url='https://bit.ly/mfem-4-0', extension='tar.gz')
+    version('3.4.1.laghos.v.2.0', tag='laghos-v2.0')
+    version('3.4.0', sha256='4e73e4fe0482636de3c5dc983cd395839a83cb16f6f509bd88b053e8b3858e05', expand=False, url='https://bit.ly/mfem-3-4', extension='tar.gz')
+    version('3.3.2', sha256='b70fa3c5080b9ec514fc05f4a04ff74322b99ac4ecd6d99c229f0ed5188fc0ce', expand=False, url='https://goo.gl/Kd7Jk8', extension='tar.gz')
+    version('3.3.1.laghos.v.1.0', tag='laghos-v1.0')
+    version('3.3', sha256='b17bd452593aada93dc0fee748fcfbbf4f04ce3e7d77fdd0341cc9103bcacd0b', expand=False, url='http://goo.gl/Vrpsns', extension='tar.gz')
+    version('3.2', sha256='2938c3deed4ec4f7fd5b5f5cfe656845282e86e2dcd477d292390058b7b94340', expand=False, url='http://goo.gl/Y9T75B', extension='tar.gz')
+    version('3.1', sha256='841ea5cf58de6fae4de0f553b0e01ebaab9cd9c67fa821e8a715666ecf18fc57', expand=False, url='http://goo.gl/xrScXn', extension='tar.gz')
 
     variant('static', default=True,
             description='Build static library')
@@ -160,34 +127,34 @@ class Mfem(Package, CudaPackage, ROCmPackage):
 
     conflicts('+shared', when='@:3.3.2')
     conflicts('~static~shared')
-    conflicts('~threadsafe', when='@:3.99.99+openmp')
+    conflicts('~threadsafe', when='@:3+openmp')
 
-    conflicts('+cuda', when='@:3.99.99')
-    conflicts('+rocm', when='@:4.1.99')
+    conflicts('+cuda', when='@:3')
+    conflicts('+rocm', when='@:4.1')
     conflicts('+cuda+rocm')
     conflicts('+netcdf', when='@:3.1')
     conflicts('+superlu-dist', when='@:3.1')
     # STRUMPACK support was added in mfem v3.3.2, however, here we allow only
     # strumpack v3+ support for which is available starting with mfem v4.0:
-    conflicts('+strumpack', when='@:3.99.99')
+    conflicts('+strumpack', when='@:3')
     conflicts('+gnutls', when='@:3.1')
     conflicts('+zlib', when='@:3.2')
     conflicts('+mpfr', when='@:3.2')
     conflicts('+petsc', when='@:3.2')
-    conflicts('+slepc', when='@:4.1.99')
+    conflicts('+slepc', when='@:4.1')
     conflicts('+sundials', when='@:3.2')
     conflicts('+pumi', when='@:3.3.2')
-    conflicts('+gslib', when='@:4.0.99')
+    conflicts('+gslib', when='@:4.0')
     conflicts('timer=mac', when='@:3.3.0')
     conflicts('timer=mpi', when='@:3.3.0')
     conflicts('~metis+mpi', when='@:3.3.0')
     conflicts('+metis~mpi', when='@:3.3.0')
     conflicts('+conduit', when='@:3.3.2')
-    conflicts('+occa', when='mfem@:3.99.99')
-    conflicts('+raja', when='mfem@:3.99.99')
-    conflicts('+libceed', when='mfem@:4.0.99')
-    conflicts('+umpire', when='mfem@:4.0.99')
-    conflicts('+amgx', when='mfem@:4.1.99')
+    conflicts('+occa', when='mfem@:3')
+    conflicts('+raja', when='mfem@:3')
+    conflicts('+libceed', when='mfem@:4.0')
+    conflicts('+umpire', when='mfem@:4.0')
+    conflicts('+amgx', when='mfem@:4.1')
     conflicts('+amgx', when='~cuda')
 
     conflicts('+superlu-dist', when='~mpi')
@@ -198,9 +165,10 @@ class Mfem(Package, CudaPackage, ROCmPackage):
     conflicts('timer=mpi', when='~mpi')
 
     depends_on('mpi', when='+mpi')
-    depends_on('hypre@2.10.0:2.13.99', when='@:3.3.99+mpi')
-    depends_on('hypre@:2.20.0', when='@3.4:4.2.99+mpi')
-    depends_on('hypre', when='@4.3.0:+mpi')
+    depends_on('hypre@2.10.0:2.13', when='@:3.3+mpi')
+    depends_on('hypre@:2.20.0', when='@3.4:4.2+mpi')
+    depends_on('hypre@:2.23.0', when='@4.3.0+mpi')
+    depends_on('hypre', when='+mpi')
 
     depends_on('metis', when='+metis')
     depends_on('blas', when='+lapack')
@@ -247,14 +215,14 @@ class Mfem(Package, CudaPackage, ROCmPackage):
     # superlu-dist@6.1.1. See https://github.com/mfem/mfem/issues/983.
     # This issue was resolved in v4.1.
     conflicts('+superlu-dist',
-              when='mfem@:4.0.99 ^hypre@2.16.0: ^superlu-dist@6:')
+              when='mfem@:4.0 ^hypre@2.16.0: ^superlu-dist@6:')
     # The STRUMPACK v3 interface in MFEM seems to be broken as of MFEM v4.1
     # when using hypre version >= 2.16.0.
     # This issue is resolved in v4.2.
-    conflicts('+strumpack', when='mfem@4.0.0:4.1.99 ^hypre@2.16.0:')
+    conflicts('+strumpack', when='mfem@4.0.0:4.1 ^hypre@2.16.0:')
     conflicts('+strumpack ^strumpack+cuda', when='~cuda')
 
-    depends_on('occa@1.0.8:', when='@:4.1.99+occa')
+    depends_on('occa@1.0.8:', when='@:4.1+occa')
     depends_on('occa@1.1.0:', when='@4.2.0:+occa')
     depends_on('occa+cuda', when='+occa+cuda')
     # TODO: propagate '+rocm' variant to occa when it is supported
@@ -268,7 +236,7 @@ class Mfem(Package, CudaPackage, ROCmPackage):
         depends_on('raja+rocm amdgpu_target={0}'.format(gfx),
                    when='+raja+rocm amdgpu_target={0}'.format(gfx))
 
-    depends_on('libceed@0.6:', when='@:4.1.99+libceed')
+    depends_on('libceed@0.6:', when='@:4.1+libceed')
     depends_on('libceed@0.7:', when='@4.2.0:+libceed')
     for sm_ in CudaPackage.cuda_arch_values:
         depends_on('libceed+cuda cuda_arch={0}'.format(sm_),
@@ -299,6 +267,7 @@ class Mfem(Package, CudaPackage, ROCmPackage):
     patch('mfem-4.2-umpire.patch', when='@4.2.0+umpire')
     patch('mfem-4.2-slepc.patch', when='@4.2.0+slepc')
     patch('mfem-4.2-petsc-3.15.0.patch', when='@4.2.0+petsc ^petsc@3.15.0:')
+    patch('mfem-4.3-hypre-2.23.0.patch', when='@4.3.0')
 
     # Patch to fix MFEM makefile syntax error. See
     # https://github.com/mfem/mfem/issues/1042 for the bug report and

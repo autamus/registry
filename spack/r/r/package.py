@@ -17,12 +17,13 @@ class R(AutotoolsPackage):
     Please consult the R project homepage for further information."""
 
     homepage = "https://www.r-project.org"
-    url = "https://cloud.r-project.org/src/base/R-3/R-3.4.3.tar.gz"
+    url      = "https://cloud.r-project.org/src/base/R-3/R-3.4.3.tar.gz"
 
     extendable = True
 
     maintainers = ['glennpj']
 
+    version('4.1.1', sha256='515e03265752257d0b7036f380f82e42b46ed8473f54f25c7b67ed25bbbdd364')
     version('4.1.0', sha256='e8e68959d7282ca147360fc9644ada9bd161bab781bab14d33b8999a95182781')
     version('4.0.5', sha256='0a3ee079aa772e131fe5435311ab627fcbccb5a50cabc54292e6f62046f1ffef')
     version('4.0.4', sha256='523f27d69744a08c8f0bd5e1e6c3d89a4db29ed983388ba70963a3cd3a4a802e')
