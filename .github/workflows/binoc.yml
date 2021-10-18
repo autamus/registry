@@ -3,10 +3,45 @@ name: "Automatic Binoc Scan"
 on:
   schedule:
     - cron: '0 14 * * *'
+  workflow_dispatch:
     
 jobs:
-  auto-scan:
+  upstream-scan:
+      runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+
+      - name: Run Binoc Upstream Scan
+        uses: autamus/binoc@main
+        with:
+          git_token: ${{ secrets.BINOC_GIT_TOKEN }}
+          general_action: 'true'
+          pr_skip: 'true'
+          repo_upstreamonly: 'true'
+          repo_spackupstreamlink: 'https://raw.githubusercontent.com/spack/spack/develop/var/spack/repos/builtin/packages/{{package}}/package.py'
+      
+      - name: Push Changes to Main
+        run: |
+          git config --global user.name "${{ secrets.BINOC_GIT_NAME }}"
+          git config --global user.email "${{ secrets.BINOC_GIT_EMAIL }}"
+          git add spack/*
+          git status
+          if git diff-index --quiet HEAD --; then
+             export OPEN_PULL_REQUEST=0
+             printf "No changes\n"
+          else
+             printf "Changes\n"
+             git commit -a -m "Automated pull of changes from Upstream Spack $(date '+%Y-%m-%d')"
+             git push
+          fi
+
+  update-scan:
     runs-on: ubuntu-latest
+    needs:
+      - upstream-scan
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,4 +56,3 @@ jobs:
           git_email: ${{ secrets.BINOC_GIT_EMAIL }}
           git_name: ${{ secrets.BINOC_GIT_NAME }}
           general_action: 'true'
-          repo_spackupstreamlink: 'https://raw.githubusercontent.com/spack/spack/develop/var/spack/repos/builtin/packages/{{package}}/package.py'
