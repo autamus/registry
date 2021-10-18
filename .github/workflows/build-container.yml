@@ -82,8 +82,9 @@ jobs:
         with:
           driver-opts: network=host
 
-      - name: Make Space For Build
+      - name: Make Space For Build and Clear Cache
         run: |
+          docker builder prune --filter type=exec.cachemount
           sudo rm -rf /usr/share/dotnet
           sudo rm -rf /opt/ghc
 
