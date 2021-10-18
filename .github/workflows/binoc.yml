@@ -7,7 +7,7 @@ on:
     
 jobs:
   upstream-scan:
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -25,6 +25,18 @@ jobs:
       
       - name: Push Changes to Main
         run: |
+          export BRANCH_FROM="binoc/upstream"
+          git remote set-url origin "https://x-access-token:${{secrets.BINOC_GIT_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git"
+          BRANCH_EXISTS=$(git ls-remote --heads origin ${BRANCH_FROM})
+          if [[ -z ${BRANCH_EXISTS} ]]; then
+              printf "Branch does not exist in remote.\n"
+          else
+              printf "Branch already exists in remote.\n"
+              exit 1
+          fi
+          git branch
+          git checkout -b "${BRANCH_FROM}" || git checkout "${BRANCH_FROM}"
+          git branch
           git config --global user.name "${{ secrets.BINOC_GIT_NAME }}"
           git config --global user.email "${{ secrets.BINOC_GIT_EMAIL }}"
           git add spack/*
@@ -37,6 +49,17 @@ jobs:
              git commit -a -m "Automated pull of changes from Upstream Spack $(date '+%Y-%m-%d')"
              git push
           fi
+          echo "OPEN_PULL_REQUEST=${OPEN_PULL_REQUEST}" >> $GITHUB_ENV
+          echo "PULL_REQUEST_FROM_BRANCH=${BRANCH_FROM}" >> $GITHUB_ENV
+          echo "PULL_REQUEST_TITLE=[bot] ${BRANCH_FROM}" >> $GITHUB_ENV
+          echo "PULL_REQUEST_BODY=Update container modules pull request." >> $GITHUB_ENV
+
+      - name: Open Pull Request
+        uses: vsoch/pull-request-action@1.0.16
+        if: ${{ env.OPEN_PULL_REQUEST == '1' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PULL_REQUEST_BRANCH: "main"
 
   update-scan:
     runs-on: ubuntu-latest
