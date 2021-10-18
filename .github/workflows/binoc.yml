@@ -58,7 +58,7 @@ jobs:
         uses: vsoch/pull-request-action@1.0.16
         if: ${{ env.OPEN_PULL_REQUEST == '1' }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BINOC_GIT_TOKEN }}
           PULL_REQUEST_BRANCH: "main"
 
   update-scan:
