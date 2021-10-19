@@ -24,8 +24,9 @@ jobs:
           repo_spackupstreamlink: 'https://raw.githubusercontent.com/spack/spack/develop/var/spack/repos/builtin/packages/{{package}}/package.py'
       
       - name: Push Changes to Main
+        env:
+          GITHUB\_TOKEN: ${{ secrets.BINOC_GIT_TOKEN }}
         run: |
-          git remote set-url origin "https://x-access-token:${{secrets.BINOC_GIT_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git"
           git config --global user.name "${{ secrets.BINOC_GIT_NAME }}"
           git config --global user.email "${{ secrets.BINOC_GIT_EMAIL }}"
           git add spack/*
