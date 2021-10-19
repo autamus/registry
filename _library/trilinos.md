@@ -4,8 +4,8 @@ name: trilinos
 github: https://github.com/autamus/registry/blob/main/containers/t/trilinos/spack.yaml
 versions:
 - 13.0.1
-updated_at: 2021-07-21T01:06:46.37919562Z
-size: 204MB
+updated_at: 2021-10-19T07:59:55.068750818Z
+size: 106MB
 description: 'The Trilinos Project is an effort to develop algorithms and enabling
   technologies within an object-oriented software framework for the solution of large-scale,
   complex multi-physics engineering and scientific problems. A unique design feature
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/trilin
 # trilinos
 ```bash 
 Download        : docker pull ghcr.io/autamus/trilinos
-Compressed Size : 204MB
+Compressed Size : 106MB
 ```
 
 ## Description
