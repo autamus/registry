@@ -5,8 +5,9 @@ github: https://github.com/autamus/registry/blob/main/containers/p/phist/spack.y
 versions:
 - 1.9.4
 - 1.9.5
-updated_at: 2021-10-03T22:58:24.528896182Z
-size: 76MB
+- 1.9.6
+updated_at: 2021-10-19T07:46:53.700290861Z
+size: 77MB
 description: 'The Pipelined, Hybrid-parallel Iterative Solver Toolkit provides implementations
   of and interfaces to block iterative solvers for sparse linear and eigenvalue problems.
   In contrast to other libraries we support multiple backends (e.g. Trilinos, PETSc
@@ -20,7 +21,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/phist
 # phist
 ```bash 
 Download        : docker pull ghcr.io/autamus/phist
-Compressed Size : 76MB
+Compressed Size : 77MB
 ```
 
 ## Description
