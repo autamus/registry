@@ -4,7 +4,8 @@ name: qhull
 github: https://github.com/autamus/registry/blob/main/containers/q/qhull/spack.yaml
 versions:
 - "2020.1"
-updated_at: 2021-09-26T23:53:01.662116222Z
+- "2020.2"
+updated_at: 2021-10-19T07:49:33.474603485Z
 size: 29MB
 description: Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram,
   halfspace intersection about a point, furt hest-site Delaunay triangulation, and
