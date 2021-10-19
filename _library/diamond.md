@@ -5,11 +5,12 @@ github: https://github.com/autamus/registry/blob/main/containers/d/diamond/spack
 versions:
 - 2.0.10
 - 2.0.11
+- 2.0.12
 - 2.0.4
 - 2.0.8
 - 2.0.9
-updated_at: 2021-09-15T23:39:10.996601817Z
-size: 28MB
+updated_at: 2021-10-19T05:03:04.891890865Z
+size: 29MB
 description: DIAMOND is a sequence aligner for protein and translated DNA searches,
   designed for high performance analysis of big sequence data.
 container_url: https://github.com/orgs/autamus/packages/container/package/diamond
@@ -18,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/diamon
 # diamond
 ```bash 
 Download        : docker pull ghcr.io/autamus/diamond
-Compressed Size : 28MB
+Compressed Size : 29MB
 ```
 
 ## Description
