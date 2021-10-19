@@ -32,8 +32,10 @@ class Gatk(Package):
     version('4.0.11.0', sha256="5ee23159be7c65051335ac155444c6a49c4d8e3515d4227646c0686819934536")
     version('4.0.8.1', sha256="e4bb082d8c8826d4f8bc8c2f83811d0e81e5088b99099d3396d284f82fbf28c9")
     version('4.0.4.0', sha256="801bbb181c275cfabc96dc0cb21f3f901634cec11efde9ba9c8b91e2834feef4")
-    version('3.8.1', sha256='a0829534d2d0ca3ebfbd3b524a9b50427ff238e0db400d6e9e479242d98cbe5c', extension="tar.bz2", url='https://storage.googleapis.com/gatk-software/package-archive/gatk/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2')
-    version('3.8.0', sha256="d1017b851f0cc6442b75ac88dd438e58203fa3ef1d1c38eb280071ae3803b9f1", extension="tar.bz2", url='https://storage.googleapis.com/gatk-software/package-archive/gatk/GenomeAnalysisTK-3.8-0-ge9d806836.tar.bz2')
+    version('3.8.1', sha256='a0829534d2d0ca3ebfbd3b524a9b50427ff238e0db400d6e9e479242d98cbe5c', extension="tar.bz2",
+            url='https://storage.googleapis.com/gatk-software/package-archive/gatk/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef.tar.bz2')
+    version('3.8.0', sha256="d1017b851f0cc6442b75ac88dd438e58203fa3ef1d1c38eb280071ae3803b9f1", extension="tar.bz2",
+            url='https://storage.googleapis.com/gatk-software/package-archive/gatk/GenomeAnalysisTK-3.8-0-ge9d806836.tar.bz2')
 
     # Make r a variant. According to the gatk docs it is not essential and not
     # tested.

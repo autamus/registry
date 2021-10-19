@@ -24,7 +24,7 @@ class Papi(AutotoolsPackage, ROCmPackage):
 
     tags = ['e4s']
 
-    url      = "https://icl.cs.utk.edu/projects/papi/downloads/papi-5.4.1.tar.gz"
+    url = "https://icl.cs.utk.edu/projects/papi/downloads/papi-5.4.1.tar.gz"
     git = "https://bitbucket.org/icl/papi/src/master/"
 
     version('master', branch='master')

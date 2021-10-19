@@ -19,7 +19,7 @@ class Binutils(AutotoolsPackage, GNUMirrorPackage):
     version('2.35', sha256='7d24660f87093670738e58bcc7b7b06f121c0fcb0ca8fc44368d675a5ef9cff7')
     version('2.34', sha256='89f010078b6cf69c23c27897d686055ab89b198dddf819efb0a4f2c38a0b36e6')
     version('2.33.1', sha256='0cb4843da15a65a953907c96bad658283f3c4419d6bcc56bf2789db16306adb2')
-    version('2.32', sha256='de38b15c902eb2725eac6af21183a5f34ea4634cb0bcef19612b50e5ed31072d')
+    version('2.32',   sha256='de38b15c902eb2725eac6af21183a5f34ea4634cb0bcef19612b50e5ed31072d')
     version('2.31.1', sha256='ffcc382695bf947da6135e7436b8ed52d991cf270db897190f19d6f9838564d0')
     version('2.29.1', sha256='1509dff41369fb70aed23682351b663b56db894034773e6dbf7d5d6071fc55cc')
     version('2.28', sha256='6297433ee120b11b4b0a1c8f3512d7d73501753142ab9e2daa13c5a3edd32a72')
@@ -47,6 +47,10 @@ class Binutils(AutotoolsPackage, GNUMirrorPackage):
 
     patch('cr16.patch', when='@:2.29.1')
     patch('update_symbol-2.26.patch', when='@2.26')
+
+    # 2.36 is missing some dependencies, this patch allows a parallel build.
+    # https://sourceware.org/bugzilla/show_bug.cgi?id=27482
+    patch('parallel-build-2.36.patch', when='@2.36')
 
     depends_on('zlib')
     depends_on('diffutils', type='build')
@@ -122,13 +126,6 @@ class Binutils(AutotoolsPackage, GNUMirrorPackage):
             args.append('--program-prefix=g')
 
         return args
-
-    # 2.36 is missing some dependencies and requires serial make install.
-    # https://sourceware.org/bugzilla/show_bug.cgi?id=27482
-    @when('@2.36:')
-    def install(self, spec, prefix):
-        with working_dir(self.build_directory):
-            make('-j', '1', *self.install_targets)
 
     @run_after('install')
     def install_headers(self):
