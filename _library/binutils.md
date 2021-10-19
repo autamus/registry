@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/b/binutils/spac
 versions:
 - 2.36.1
 - "2.37"
-updated_at: 2021-10-03T20:56:37.42648501Z
+updated_at: 2021-10-19T07:17:29.037381116Z
 size: 54MB
 description: GNU binutils, which contain the linker, assembler, objdump and others
 container_url: https://github.com/orgs/autamus/packages/container/package/binutils
