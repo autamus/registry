@@ -3,9 +3,10 @@ layout: container
 name: mono
 github: https://github.com/autamus/registry/blob/main/containers/m/mono/spack.yaml
 versions:
+- 6.12.0.122
 - 6.8.0.123
-updated_at: 2021-07-20T22:34:21.030062326Z
-size: 145MB
+updated_at: 2021-10-19T07:47:28.355004734Z
+size: 146MB
 description: 'Mono is a software platform designed to allow developers to easily create
   cross platform applications. It is an open source implementation of Microsoft''s
   .NET Framework based on the ECMA standards for C# and the Common Language Runtime. '
@@ -15,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/mono
 # mono
 ```bash 
 Download        : docker pull ghcr.io/autamus/mono
-Compressed Size : 145MB
+Compressed Size : 146MB
 ```
 
 ## Description
@@ -32,7 +33,7 @@ docker pull ghcr.io/autamus/mono:latest
 or to download a specific version of mono run,
 
 ```bash
-docker pull ghcr.io/autamus/mono:6.8.0.123
+docker pull ghcr.io/autamus/mono:6.12.0.122
 ```
 ### Run
 To run the container as an application run,
