@@ -3,11 +3,12 @@ layout: container
 name: rust
 github: https://github.com/autamus/registry/blob/main/containers/r/rust/spack.yaml
 versions:
+- 1.51.0
 - 1.52.1
 - 1.53.0
 - 1.54.0
-updated_at: 2021-09-08T18:14:32.651126546Z
-size: 249MB
+updated_at: 2021-10-19T07:54:13.398980197Z
+size: 254MB
 description: .format( cargo=join_path(boot_bin, 'cargo
 container_url: https://github.com/orgs/autamus/packages/container/package/rust
 
@@ -15,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/rust
 # rust
 ```bash 
 Download        : docker pull ghcr.io/autamus/rust
-Compressed Size : 249MB
+Compressed Size : 254MB
 ```
 
 ## Description
@@ -32,7 +33,7 @@ docker pull ghcr.io/autamus/rust:latest
 or to download a specific version of rust run,
 
 ```bash
-docker pull ghcr.io/autamus/rust:1.52.1
+docker pull ghcr.io/autamus/rust:1.51.0
 ```
 ### Run
 To run the container as an application run,
