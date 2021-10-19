@@ -6,8 +6,8 @@ versions:
 - 2.6.3
 - 2.6.4
 - 2.6.6
-updated_at: 2021-08-19T15:28:04.471410593Z
-size: 226MB
+updated_at: 2021-10-19T04:47:08.045500082Z
+size: 227MB
 description: BEAST is a cross-platform program for Bayesian inference using MCMC of
   molecular sequences. It is entirely orientated towards rooted, time-measured phylogenies
   inferred using strict or relaxed molecular clock models. It can be used as a method
@@ -19,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/beast2
 # beast2
 ```bash 
 Download        : docker pull ghcr.io/autamus/beast2
-Compressed Size : 226MB
+Compressed Size : 227MB
 ```
 
 ## Description
