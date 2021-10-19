@@ -3,8 +3,9 @@ layout: container
 name: bismark
 github: https://github.com/autamus/registry/blob/main/containers/b/bismark/spack.yaml
 versions:
+- 0.23.0
 - 0.23.1
-updated_at: 2021-10-19T04:50:18.688468732Z
+updated_at: 2021-10-19T07:19:15.870110813Z
 size: 109MB
 description: A tool to map bisulfite converted sequence reads and determine cytosine
   methylation states
@@ -31,7 +32,7 @@ docker pull ghcr.io/autamus/bismark:latest
 or to download a specific version of bismark run,
 
 ```bash
-docker pull ghcr.io/autamus/bismark:0.23.1
+docker pull ghcr.io/autamus/bismark:0.23.0
 ```
 ### Run
 To run the container as an application run,
