@@ -5,8 +5,9 @@ github: https://github.com/autamus/registry/blob/main/containers/s/slepc/spack.y
 versions:
 - 3.15.1
 - 3.15.2
-updated_at: 2021-10-04T02:09:11.45280203Z
-size: 132MB
+- 3.16.0
+updated_at: 2021-10-19T07:58:49.654295803Z
+size: 134MB
 description: Scalable Library for Eigenvalue Problem Computations.
 container_url: https://github.com/orgs/autamus/packages/container/package/slepc
 
@@ -14,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/slepc
 # slepc
 ```bash 
 Download        : docker pull ghcr.io/autamus/slepc
-Compressed Size : 132MB
+Compressed Size : 134MB
 ```
 
 ## Description
