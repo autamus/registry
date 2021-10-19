@@ -3,8 +3,9 @@ layout: container
 name: kraken2
 github: https://github.com/autamus/registry/blob/main/containers/k/kraken2/spack.yaml
 versions:
+- 2.1.1
 - 2.1.2
-updated_at: 2021-10-19T04:47:14.164945077Z
+updated_at: 2021-10-19T07:34:23.587357632Z
 size: 56MB
 description: Kraken2 is a system for assigning taxonomic labels to short DNA sequences,
   usually obtained through metagenomic studies.
@@ -31,7 +32,7 @@ docker pull ghcr.io/autamus/kraken2:latest
 or to download a specific version of kraken2 run,
 
 ```bash
-docker pull ghcr.io/autamus/kraken2:2.1.2
+docker pull ghcr.io/autamus/kraken2:2.1.1
 ```
 ### Run
 To run the container as an application run,
