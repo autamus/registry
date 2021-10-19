@@ -4,8 +4,9 @@ name: superlu
 github: https://github.com/autamus/registry/blob/main/containers/s/superlu/spack.yaml
 versions:
 - 5.2.2
-updated_at: 2021-10-03T22:09:44.941123715Z
-size: 50MB
+- 5.3.0
+updated_at: 2021-10-19T07:56:52.996304437Z
+size: 51MB
 description: SuperLU is a general purpose library for the direct solution of large,
   sparse, nonsymmetric systems of linear equations on high performance machines. SuperLU
   is designed for sequential machines.
@@ -15,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/superl
 # superlu
 ```bash 
 Download        : docker pull ghcr.io/autamus/superlu
-Compressed Size : 50MB
+Compressed Size : 51MB
 ```
 
 ## Description
