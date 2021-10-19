@@ -15,8 +15,8 @@ class Metall(CMakePackage):
 
     tags = ['e4s']
 
-    version('develop', branch='develop')
     version('master', branch='master')
+    version('develop', branch='develop')
     version('0.17', sha256='8de6ec2a430a141a2ad465ccd40ba9d0eb0c57d9f2f2de657fe837a73c466e61')
     version('0.16', sha256='190fa6936cbbfad1844659eb1fcfd1ad8c5880f60e76e223e33c506d371ea3a3')
     version('0.15', sha256='a1ea475ce1297b0c4cdf450544dc60ecf1b0a30c548b08ba77ccda5585df7248')
@@ -29,9 +29,12 @@ class Metall(CMakePackage):
 
     depends_on('cmake@3.10:', type='build')
     depends_on('boost@1.64:', type=('build', 'link'))
+
     # googletest is required only for test
-    # 'make test' is executed if '--run-tests' or '--test=root' is specified
-    depends_on('googletest', type=('test'))
+    # GCC is also required only for test (Metall is a header-only library)
+    # Hint: Use 'spack install --test=root metall' or 'spack install --test=all metall'
+    # to run test (adds a call to 'make test' to the build)
+    depends_on('googletest %gcc@8.1.0:', type=('test'))
 
     def cmake_args(self):
         if self.run_tests:
