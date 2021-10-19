@@ -4,7 +4,7 @@ name: pdt
 github: https://github.com/autamus/registry/blob/main/containers/p/pdt/spack.yaml
 versions:
 - 3.25.1
-updated_at: 2021-10-03T22:30:05.365151197Z
+updated_at: 2021-10-19T07:43:10.75421173Z
 size: 81MB
 description: 'Program Database Toolkit (PDT) is a framework for analyzing source code
   written in several programming languages and for making rich program knowledge accessible
