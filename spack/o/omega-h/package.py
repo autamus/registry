@@ -12,13 +12,13 @@ class OmegaH(CMakePackage):
     """
 
     homepage = "https://github.com/SNLComputation/omega_h"
-    url      = "https://github.com/SNLComputation/omega_h/archive/v9.34.3.tar.gz"
+    url      = "https://github.com/SNLComputation/omega_h/archive/v9.34.5.tar.gz"
     git      = "https://github.com/SNLComputation/omega_h.git"
 
     maintainers = ['ibaned']
     tags = ['e4s']
     version('main', branch='main')
-    version('9.34.3', sha256='70db006c940924619cb156ab43f9fbea59695048ff90f49136c9aee37d303050')
+    version('9.34.5', sha256='1fa67122d2b6d2b3d0d05fa0c5ed1fa24234d072292b29cb334879ffb5adcc92')
     version('9.34.1', sha256='3a812da3b8df3e0e5d78055e91ad23333761bcd9ed9b2c8c13ee1ba3d702e46c')
     version('9.32.5', sha256='963a203e9117024cd48d829d82b8543cd9133477fdc15386113b594fdc3246d8')
     version('9.29.0', sha256='b41964b018909ffe9cea91c23a0509b259bfbcf56874fcdf6bd9f6a179938014')
@@ -30,7 +30,6 @@ class OmegaH(CMakePackage):
     version('9.14.0', sha256='035d0f47142f965a57818d1cb6c5c00b5ae6b5a0178b67b0bc9177fa99ba083d')
     version('9.13.14', sha256='f617dfd024c9cc323e56800ca23df3386bfa37e1b9bd378847d1f5d32d2b8e5d')
     version('9.13.13', sha256='753702edf4bda9ae57ea21f09ca071e341604a468d8c86468c9aebba049f581c')
-
 
     variant('shared', default=True, description='Build shared libraries')
     variant('mpi', default=True, description='Activates MPI support')
