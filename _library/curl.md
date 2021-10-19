@@ -6,7 +6,7 @@ versions:
 - 7.76.1
 - 7.78.0
 - 7.79.0
-updated_at: 2021-09-26T23:35:45.341799767Z
+updated_at: 2021-10-19T07:21:48.611597077Z
 size: 31MB
 description: cURL is an open source command line tool and library for transferring
   data with URL syntax
