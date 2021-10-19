@@ -1,3 +1,10 @@
 spack:
   specs: 
     - julia
+  packages:
+    all:
+      target: [x86_64]
+  config:
+    concretizer: clingo
+    compiler:
+      target: [x86_64]

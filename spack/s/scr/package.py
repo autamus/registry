@@ -25,11 +25,12 @@ class Scr(CMakePackage):
     homepage = "https://computing.llnl.gov/projects/scalable-checkpoint-restart-for-mpi"
     url      = "https://github.com/LLNL/scr/archive/v1.2.0.tar.gz"
     git      = "https://github.com/llnl/scr.git"
-    tags     = ['radiuss']
+    tags     = ['e4s', 'radiuss']
 
     version('develop', branch='develop')
     version('legacy', branch='legacy', deprecated=True)
-    version('3.0.rc.1', sha256='bd31548a986f050024429d8ee3644eb135f047f98a3d503a40c5bd4a85291308')
+
+    version('3.0rc1', sha256='bd31548a986f050024429d8ee3644eb135f047f98a3d503a40c5bd4a85291308')
     version('2.0.0', sha256='471978ae0afb56a20847d3989b994fbd680d1dea21e77a5a46a964b6e3deed6b', deprecated=True)
     version('1.2.2', sha256='764a85638a9e8762667ec1f39fa5f7da7496fca78de379a22198607b3e027847', deprecated=True)
     version('1.2.1', sha256='23acab2dc7203e9514455a5168f2fd57bc590affb7a1876912b58201513628fe', deprecated=True)
@@ -62,7 +63,7 @@ class Scr(CMakePackage):
     variant('dtcmp', default=True,
             description="Build with DTCMP. "
             "Necessary to enable user directory naming at runtime")
-    depends_on('dtcmp', when="@:2.999 +dtcmp")
+    depends_on('dtcmp', when="@:2 +dtcmp")
 
     # DTCMP is a required dependency with 3.x and later
     conflicts('~dtcmp', when="@3:", msg="<SCR> DTCMP required for versions >=3")
@@ -153,7 +154,7 @@ class Scr(CMakePackage):
         args.append('-DSCR_RESOURCE_MANAGER={0}'.format(
             spec.variants['resource_manager'].value.upper()))
 
-        if spec.satisfies('@:2.999'):
+        if spec.satisfies('@:2'):
             args.append('-DSCR_ASYNC_API={0}'.format(
                 spec.variants['async_api'].value.upper()))
 

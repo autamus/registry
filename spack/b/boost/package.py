@@ -40,6 +40,10 @@ class Boost(Package):
     version('1.66.0', sha256='5721818253e6a0989583192f96782c4a98eb6204965316df9f5ad75819225ca9')
     version('1.65.1', sha256='9807a5d16566c57fd74fb522764e0b134a8bbe6b6e8967b83afefd30dcd3be81')
     version('1.65.0', sha256='ea26712742e2fb079c2a566a31f3266973b76e38222b9f88b387e3c8b2f9902c')
+    # NOTE: 1.64.0 seems fine for *most* applications, but if you need
+    #       +python and +mpi, there seem to be errors with out-of-date
+    #       API calls from mpi/python.
+    #       See: https://github.com/spack/spack/issues/3963
     version('1.64.0', sha256='7bcc5caace97baa948931d712ea5f37038dbb1c5d89b43ad4def4ed7cb683332')
     version('1.63.0', sha256='beae2529f759f6b3bf3f4969a19c2e9d6f0c503edcb2de4a61d1428519fcb3b0')
     version('1.62.0', sha256='36c96b0f6155c98404091d8ceb48319a28279ca0333fba1ad8611eb90afb2ca0')
@@ -73,7 +77,6 @@ class Boost(Package):
     version('1.35.0', sha256='f8bf7368a22ccf2e2cf77048ab2129744be4c03f8488c76ad31c0aa229b280da')
     version('1.34.1', sha256='0f866c75b025a4f1340117a106595cc0675f48ba1e5a9b5c221ec7f19e96ec4c')
     version('1.34.0', sha256='455cb8fa41b759272768257c2e7bdc5c47ec113245dfa533f275e787a855efd2')
-
 
     default_install_libs = set(['atomic',
                                 'chrono',
@@ -173,19 +176,19 @@ class Boost(Package):
     depends_on('py-numpy', when='+numpy', type=('build', 'run'))
 
     # Coroutine, Context, Fiber, etc., are not straightforward.
-    conflicts('+context', when='@:1.50.99')  # Context since 1.51.0.
+    conflicts('+context', when='@:1.50')  # Context since 1.51.0.
     conflicts('cxxstd=98', when='+context')  # Context requires >=C++11.
-    conflicts('+coroutine', when='@:1.52.99')  # Context since 1.53.0.
+    conflicts('+coroutine', when='@:1.52')  # Context since 1.53.0.
     conflicts('~context', when='+coroutine')  # Coroutine requires Context.
-    conflicts('+fiber', when='@:1.61.99')  # Fiber since 1.62.0.
+    conflicts('+fiber', when='@:1.61')  # Fiber since 1.62.0.
     conflicts('cxxstd=98', when='+fiber')  # Fiber requires >=C++11.
     conflicts('~context', when='+fiber')  # Fiber requires Context.
 
     # C++20/2a is not support by Boost < 1.73.0
-    conflicts('cxxstd=2a', when='@:1.72.99')
+    conflicts('cxxstd=2a', when='@:1.72')
 
     # C++17 is not supported by Boost<1.63.0.
-    conflicts('cxxstd=17', when='@:1.62.99')
+    conflicts('cxxstd=17', when='@:1.62')
 
     conflicts('+taggedlayout', when='+versionedlayout')
     conflicts('+numpy', when='~python')
@@ -194,7 +197,7 @@ class Boost(Package):
     conflicts('cxxstd=98', when='+mpi+python @1.72.0')
 
     # Container's Extended Allocators were not added until 1.56.0
-    conflicts('+container', when='@:1.55.99')
+    conflicts('+container', when='@:1.55')
 
     # Boost.System till 1.76 (included) was relying on mutex, which was not
     # detected correctly on Darwin platform when using GCC
@@ -208,33 +211,38 @@ class Boost(Package):
     patch('boost_11856.patch', when='@1.60.0%gcc@4.4.7')
 
     # Patch fix from https://svn.boost.org/trac/boost/ticket/11120
-    patch('python_jam.patch', when='@1.56.0: ^python@3:')
-    patch('python_jam_pre156.patch', when='@:1.55.0 ^python@3:')
+    patch('python_jam-1_77.patch',   when='@1.77:     ^python@3:')
+    patch('python_jam.patch',        when='@1.56:1.76 ^python@3:')
+    patch('python_jam_pre156.patch', when='@:1.55.0   ^python@3:')
 
     # Patch fix for IBM XL compiler
     patch('xl_1_62_0_le.patch', when='@1.62.0%xl_r')
     patch('xl_1_62_0_le.patch', when='@1.62.0%xl')
 
     # Patch fix from https://svn.boost.org/trac/boost/ticket/10125
-    patch('call_once_variadic.patch', when='@1.54.0:1.55.9999%gcc@5.0:')
+    patch('call_once_variadic.patch', when='@1.54.0:1.55%gcc@5.0:')
 
     # Patch fix for PGI compiler
-    patch('boost_1.67.0_pgi.patch', when='@1.67.0:1.68.9999%pgi')
+    patch('boost_1.67.0_pgi.patch', when='@1.67.0:1.68%pgi')
     patch('boost_1.63.0_pgi.patch', when='@1.63.0%pgi')
     patch('boost_1.63.0_pgi_17.4_workaround.patch', when='@1.63.0%pgi@17.4')
 
     # Patch to override the PGI toolset when using the NVIDIA compilers
-    patch('nvhpc-1.74.patch', when='@1.74.0:1.75.9999%nvhpc')
-    patch('nvhpc-1.76.patch', when='@1.76.0:1.76.9999%nvhpc')
+    patch('nvhpc-1.74.patch', when='@1.74.0:1.75%nvhpc')
+    patch('nvhpc-1.76.patch', when='@1.76.0:1.76%nvhpc')
 
     # Patch to workaround compiler bug
-    patch('nvhpc-find_address.patch', when='@1.75.0:1.76.999%nvhpc')
+    patch('nvhpc-find_address.patch', when='@1.75.0:1.76%nvhpc')
 
     # Fix for version comparison on newer Clang on darwin
     # See: https://github.com/boostorg/build/issues/440
     # See: https://github.com/macports/macports-ports/pull/6726
     patch('darwin_clang_version.patch', level=0,
           when='@1.56.0:1.72.0 platform=darwin')
+
+    # Fix missing declaration of uintptr_t with glibc>=2.17 - https://bugs.gentoo.org/482372
+    patch('https://482372.bugs.gentoo.org/attachment.cgi?id=356970', when='@1.53.0:1.54',
+          sha256='b6f6ce68282159d46c716a1e6c819c815914bdb096cddc516fa48134209659f2')
 
     # Fix: "Unable to compile code using boost/process.hpp"
     # See: https://github.com/boostorg/process/issues/116
@@ -272,11 +280,11 @@ class Boost(Package):
 
     # Support bzip2 and gzip in other directory
     # See https://github.com/boostorg/build/pull/154
-    patch('boost_154.patch', when='@1.56.0:1.63.99')
+    patch('boost_154.patch', when='@1.56.0:1.63')
 
     # Backport Python3 import problem
     # See https://github.com/boostorg/python/pull/218
-    patch('boost_218.patch', when='@1.63.0:1.67.99')
+    patch('boost_218.patch', when='@1.63.0:1.67')
 
     # Fix B2 bootstrap toolset during installation
     # See https://github.com/spack/spack/issues/20757
