@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/d/dyninst/spack
 versions:
 - 11.0.0
 - 11.0.1
-updated_at: 2021-07-20T22:10:25.839141175Z
+updated_at: 2021-10-19T07:24:58.924920411Z
 size: 70MB
 description: API for dynamic binary instrumentation. Modify programs while they are
   executing without recompiling, re-linking, or re-executing.
