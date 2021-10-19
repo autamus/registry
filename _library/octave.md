@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/o/octave/spack.
 versions:
 - 6.2.0
 - 6.3.0
-updated_at: 2021-10-07T01:18:26.182238403Z
-size: 27MB
+updated_at: 2021-10-19T07:41:43.101639567Z
+size: 74MB
 description: 'GNU Octave is a high-level language, primarily intended for numerical
   computations. It provides a convenient command line interface for solving linear
   and nonlinear problems numerically, and for performing other numerical experiments
@@ -18,7 +18,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/octave
 # octave
 ```bash 
 Download        : docker pull ghcr.io/autamus/octave
-Compressed Size : 27MB
+Compressed Size : 74MB
 ```
 
 ## Description
