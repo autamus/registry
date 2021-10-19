@@ -27,10 +27,10 @@ class Legion(CMakePackage):
 
     maintainers = ['pmccormick', 'streichler']
     tags = ['e4s']
-    version('21.03.0', tag='legion-21.03.0')
-    version('stable', branch='stable')
-    version('master', branch='master')
     version('cr', branch='control_replication')
+    version('master', branch='master')
+    version('stable', branch='stable')
+    version('21.03.0', tag='legion-21.03.0')
 
     depends_on("cmake@3.16:", type='build')
     # TODO: Need to spec version of MPI v3 for use of the low-level MPI transport
@@ -73,6 +73,14 @@ class Legion(CMakePackage):
             values=('gasnet', 'mpi', 'none'),
             description="The network communications/transport layer to use.",
             multi=False)
+
+    # Add Gasnet tarball dependency in spack managed manner
+    # TODO: Provide less mutable tag instead of branch
+    resource(name='stanfordgasnet',
+             git='https://github.com/StanfordLegion/gasnet.git',
+             destination='stanfordgasnet',
+             branch='master',
+             when='network=gasnet')
 
     # We default to automatically embedding a gasnet build. To override this
     # point the package a pre-installed version of GASNet-Ex via the gasnet_root
@@ -204,7 +212,11 @@ class Legion(CMakePackage):
                 gasnet_dir = spec.variants['gasnet_root'].value
                 options.append('-DGASNet_ROOT_DIR=%s' % gasnet_dir)
             else:
+                gasnet_dir = join_path(self.stage.source_path,
+                                       "stanfordgasnet",
+                                       "gasnet")
                 options.append('-DLegion_EMBED_GASNet=ON')
+                options.append('-DLegion_EMBED_GASNet_LOCALSRC=%s' % gasnet_dir)
 
             gasnet_conduit = spec.variants['conduit'].value
             options.append('-DGASNet_CONDUIT=%s' % gasnet_conduit)
