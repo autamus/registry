@@ -13,7 +13,7 @@ class Adios2(CMakePackage):
     developed in the Exascale Computing Program"""
 
     homepage = "https://csmd.ornl.gov/software/adios2"
-    url      = "https://github.com/ornladios/ADIOS2/archive/v2.6.0.tar.gz"
+    url = "https://github.com/ornladios/ADIOS2/archive/v2.6.0.tar.gz"
     git = "https://github.com/ornladios/ADIOS2.git"
 
     maintainers = ['ax3l', 'chuckatkins', 'williamfgc']

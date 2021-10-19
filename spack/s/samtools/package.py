@@ -25,7 +25,8 @@ class Samtools(Package):
     version('1.4', sha256='9aae5bf835274981ae22d385a390b875aef34db91e6355337ca8b4dd2960e3f4')
     version('1.3.1', sha256='6c3d74355e9cf2d9b2e1460273285d154107659efa36a155704b1e4358b7d67e')
     version('1.2', sha256='420e7a4a107fe37619b9d300b6379452eb8eb04a4a9b65c3ec69de82ccc26daa')
-    version('0.1.8', sha256='343daf96f035c499c5b82dce7b4d96b10473308277e40c435942b6449853815b', url='https://github.com/samtools/samtools/archive/0.1.8.tar.gz')
+    version('0.1.8', sha256='343daf96f035c499c5b82dce7b4d96b10473308277e40c435942b6449853815b',
+            url="https://github.com/samtools/samtools/archive/0.1.8.tar.gz")
 
     depends_on('zlib')
     depends_on('ncurses')

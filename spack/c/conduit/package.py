@@ -39,7 +39,10 @@ class Conduit(CMakePackage):
     tags     = ['radiuss', 'e4s']
 
     version('develop', branch='develop', submodules=True)
+    # note: the main branch in conduit was renamed to develop, this next entry
+    # is to bridge any spack dependencies that are still using the name master
     version('master', branch='develop', submodules=True)
+    # note: 2021-05-05 latest tagged release is now preferred instead of develop
     version('0.7.2', sha256='359fd176297700cdaed2c63e3b72d236ff3feec21a655c7c8292033d21d5228a')
     version('0.7.1', sha256='460a480cf08fedbf5b38f707f94f20828798327adadb077f80dbab048fd0a07d')
     version('0.7.0', sha256='ecaa9668ebec5d4efad19b104d654a587c0adbd5f502128f89601408cb4d7d0c')
@@ -49,6 +52,7 @@ class Conduit(CMakePackage):
     version('0.4.0', sha256='c228e6f0ce5a9c0ffb98e0b3d886f2758ace1a4b40d00f3f118542c0747c1f52')
     version('0.3.1', sha256='7b358ca03bb179876291d4a55d6a1c944b7407a80a588795b9e47940b1990521')
     version('0.3.0', sha256='52e9cf5720560e5f7492876c39ef2ea20ae73187338361d2744bdf67567da155')
+    # note: checksums on github automatic release source tars changed ~9/17
     version('0.2.1', sha256='796576b9c69717c52f0035542c260eb7567aa351ee892d3fbe3521c38f1520c4')
     version('0.2.0', sha256='31eff8dbc654a4b235cfcbc326a319e1752728684296721535c7ca1c9b463061')
 
@@ -114,8 +118,8 @@ class Conduit(CMakePackage):
     #
     # Use HDF5 1.8, for wider output compatibly
     # variants reflect we are not using hdf5's mpi or fortran features.
-    depends_on("hdf5@1.8.19:1.8.999~cxx", when="+hdf5+hdf5_compat+shared")
-    depends_on("hdf5@1.8.19:1.8.999~shared~cxx", when="+hdf5+hdf5_compat~shared")
+    depends_on("hdf5@1.8.19:1.8~cxx", when="+hdf5+hdf5_compat+shared")
+    depends_on("hdf5@1.8.19:1.8~shared~cxx", when="+hdf5+hdf5_compat~shared")
     depends_on("hdf5~cxx", when="+hdf5~hdf5_compat+shared")
     depends_on("hdf5~shared~cxx", when="+hdf5~hdf5_compat~shared")
     # we need to hand this to conduit so it can properly
