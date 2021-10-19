@@ -31,6 +31,7 @@ jobs:
           git_token: ${{ secrets.BINOC_GIT_TOKEN }}
            
   build-container:
+    if: needs.config.outputs.build_containers != '[]'
     needs:
       - config
     runs-on: ubuntu-latest
@@ -112,7 +113,7 @@ jobs:
           path: /smuggler/saved/
   
   publish-container:
-    if: always() && github.ref == 'refs/heads/main'
+    if: always() && github.ref == 'refs/heads/main' && needs.config.outputs.publish_containers != '[]'
     needs:
       - build-container
       - config
