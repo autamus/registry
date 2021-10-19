@@ -19,6 +19,8 @@ class Unifyfs(AutotoolsPackage):
     url      = "https://github.com/LLNL/UnifyFS/archive/v1.0b.tar.gz"
     maintainers = ['CamStan']
 
+    tags = ['e4s']
+
     version('develop', branch='dev')
     version('1.0', sha256='3d7ac4eec50356c893a0a756554bca9107daf99d939133e6dfd5844a4a159008')
     version('0.9.2', sha256='7046625dc0677535f5d960187cb2e2d58a6f8cfb4dc6a3604f825257eb0891aa')
@@ -45,7 +47,7 @@ class Unifyfs(AutotoolsPackage):
     depends_on('mochi-margo@0.4.3', when='@:0.9.1')
     depends_on('mochi-margo',       when='@0.9.2:')
     depends_on('mpi')
-    depends_on('openssl')
+    depends_on('openssl@:1')
 
     # Optional dependencies
     depends_on('hdf5', when='+hdf5')
