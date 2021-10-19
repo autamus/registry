@@ -4,7 +4,7 @@ name: gmp
 github: https://github.com/autamus/registry/blob/main/containers/g/gmp/spack.yaml
 versions:
 - 6.2.1
-updated_at: 2021-09-08T17:12:48.040828087Z
+updated_at: 2021-10-19T07:26:53.252094956Z
 size: 27MB
 description: GMP is a free library for arbitrary precision arithmetic, operating on
   signed integers, rational numbers, and floating-point numbers.
