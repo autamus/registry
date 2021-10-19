@@ -50,7 +50,7 @@ jobs:
       
       - name: Builder
         id: builder
-        uses: autamus/builder@add/clingo
+        uses: autamus/builder@main
         with:
           containers_current: ${{ matrix.container.container }}
           parsers_loaded: spack
