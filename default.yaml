@@ -8,6 +8,9 @@ spack:
     compiler:
       target: [x86_64_v3]
     install_missing_compilers: true
+    install_tree:
+      root: /opt/software
+      padded_length: 512
   container:
     strip: true
     os_packages:
