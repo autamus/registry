@@ -4,7 +4,7 @@ name: libunwind
 github: https://github.com/autamus/registry/blob/main/containers/l/libunwind/spack.yaml
 versions:
 - "1.5"
-updated_at: 2021-09-08T17:59:17.601699014Z
+updated_at: 2021-10-19T07:33:04.186167778Z
 size: 27MB
 description: A portable and efficient C programming interface (API) to determine the
   call-chain of a program.
