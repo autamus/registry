@@ -10,9 +10,8 @@ class Igraph(AutotoolsPackage):
     """igraph is a library for creating and manipulating graphs."""
 
     homepage = "https://igraph.org/"
-    url      = "https://github.com/igraph/igraph/releases/download/0.9.4/igraph-0.9.4.tar.gz"
+    url      = "https://github.com/igraph/igraph/releases/download/0.7.1/igraph-0.7.1.tar.gz"
 
-    version('0.9.4', sha256='a3285cccf4f043c9ced2bc8d8d2609ff8398cb92ed49fdf86264ed91929137dd')
     version('0.7.1', sha256='d978030e27369bf698f3816ab70aa9141e9baf81c56cc4f55efbe5489b46b0df')
 
     depends_on('libxml2')

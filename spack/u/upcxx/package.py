@@ -7,7 +7,7 @@ from spack import *
 
 
 def cross_detect():
-    if spack.architecture.platform().name == 'cray':
+    if spack.platforms.host().name == 'cray':
         if which('srun'):
             return 'cray-aries-slurm'
         if which('aprun'):
@@ -29,9 +29,11 @@ class Upcxx(Package):
     tags = ['e4s']
 
     version('develop', branch='develop')
-    version('master', branch='master')
+    version('master',  branch='master')
+
     version('2021.3.0', sha256='3433714cd4162ffd8aad9a727c12dbf1c207b7d6664879fc41259a4b351595b7')
-    version('2020.11.0', sha256='f6f212760a485a9f346ca11bb4751e7095bbe748b8e5b2389ff9238e9e321317', url='https://bitbucket.org/berkeleylab/upcxx/downloads/upcxx-2020.11.0-memory_kinds_prototype.tar.gz')
+    version('2020.11.0', sha256='f6f212760a485a9f346ca11bb4751e7095bbe748b8e5b2389ff9238e9e321317',
+            url='https://bitbucket.org/berkeleylab/upcxx/downloads/upcxx-2020.11.0-memory_kinds_prototype.tar.gz')
     version('2020.10.0', sha256='623e074b512bf8cad770a04040272e1cc660d2749760398b311f9bcc9d381a37')
     version('2020.3.0', sha256='01be35bef4c0cfd24e9b3d50c88866521b9cac3ad4cbb5b1fc97aea55078810f')
     version('2019.9.0', sha256='7d67ccbeeefb59de9f403acc719f52127a30801a2c2b9774a1df03f850f8f1d4')
@@ -60,7 +62,7 @@ class Upcxx(Package):
     depends_on('mpi', when='+mpi')
     depends_on('cuda', when='+cuda')
     # Require Python2 2.7.5+ up to v2019.9.0
-    depends_on('python@2.7.5:2.999',
+    depends_on('python@2.7.5:2',
                type=("build", "run"), when='@:2019.9.0')
     # v2020.3.0 and later also permit Python3
     depends_on('python@2.7.5:', type=("build", "run"), when='@2020.3.0:')

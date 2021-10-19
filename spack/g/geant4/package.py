@@ -13,7 +13,7 @@ class Geant4(CMakePackage):
     science."""
 
     homepage = "http://geant4.cern.ch/"
-    url      = "https://gitlab.cern.ch/geant4/geant4/-/archive/v10.7.1/geant4-v10.7.1.tar.gz"
+    url = "https://gitlab.cern.ch/geant4/geant4/-/archive/v10.7.1/geant4-v10.7.1.tar.gz"
 
     tags = ['hep']
 
