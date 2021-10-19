@@ -4,7 +4,7 @@ name: papyrus
 github: https://github.com/autamus/registry/blob/main/containers/p/papyrus/spack.yaml
 versions:
 - 1.0.2
-updated_at: 2021-09-01T18:51:45.712822844Z
+updated_at: 2021-10-19T07:44:02.802764686Z
 size: 52MB
 description: Parallel Aggregate Persistent Storage
 container_url: https://github.com/orgs/autamus/packages/container/package/papyrus
