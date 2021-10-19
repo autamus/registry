@@ -4,8 +4,9 @@ name: raja
 github: https://github.com/autamus/registry/blob/main/containers/r/raja/spack.yaml
 versions:
 - 0.13.0
-updated_at: 2021-07-22T17:50:27.215150574Z
-size: 37MB
+- 0.14.0
+updated_at: 2021-10-19T07:50:38.261013251Z
+size: 65MB
 description: RAJA Parallel Framework.
 container_url: https://github.com/orgs/autamus/packages/container/package/raja
 
@@ -13,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/raja
 # raja
 ```bash 
 Download        : docker pull ghcr.io/autamus/raja
-Compressed Size : 37MB
+Compressed Size : 65MB
 ```
 
 ## Description
