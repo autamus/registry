@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/a/aria2/spack.y
 versions:
 - 1.35.0
 - 1.36.0
-updated_at: 2021-10-03T20:56:45.937466734Z
+updated_at: 2021-10-19T04:55:51.555264913Z
 size: 43MB
 description: An ultra fast download utility
 container_url: https://github.com/orgs/autamus/packages/container/package/aria2
