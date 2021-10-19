@@ -208,8 +208,6 @@ jobs:
             autamus/${{ steps.builder.outputs.container }}:latest
             ghcr.io/autamus/${{ steps.builder.outputs.container }}:${{ steps.builder.outputs.version }}
             autamus/${{ steps.builder.outputs.container }}:${{ steps.builder.outputs.version }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
 
       - name: Build Summary
         id: summary
