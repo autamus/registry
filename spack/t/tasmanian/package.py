@@ -19,16 +19,14 @@ class Tasmanian(CMakePackage, CudaPackage, ROCmPackage):
     maintainers = ['mkstoyanov']
 
     version('develop', branch='master')
-
+    version('7.7', sha256='85fb3a7b302ea21a3b700712767a59a623d9ab93da03308fa47d4413654c3878')
     version('7.5', sha256='d621bd36dced4db86ef638693ba89b336762e7a3d7fedb3b5bcefb03390712b3')
     version('7.3', sha256='5bd1dd89cc5c84506f6900b6569b17e50becd73eb31ec85cfa11d6f1f912c4fa')
     version('7.1', sha256='9c24a591506a478745b802f1fa5c557da7bc80b12d8070855de6bc7aaca7547a')
-    version('7.0', sha256='4094ba4ee2f1831c575d00368c8471d3038f813398be2e500739cef5c7c4a47b')  # use for xsdk-0.5.0
-    version('6.0', sha256='ceab842e9fbce2f2de971ba6226967caaf1627b3e5d10799c3bd2e7c3285ba8b')  # use for xsdk-0.4.0
+    version('7.0', sha256='4094ba4ee2f1831c575d00368c8471d3038f813398be2e500739cef5c7c4a47b')
+    version('6.0', sha256='ceab842e9fbce2f2de971ba6226967caaf1627b3e5d10799c3bd2e7c3285ba8b')
     version('5.1', sha256='b0c1be505ce5f8041984c63edca9100d81df655733681858f5cc10e8c0c72711')
-
-    version('5.0', sha256='2540bb63dea987ab205f7b375aff41f320b1de9bd7f1d1064ef96b22eeda1251',
-            url='https://tasmanian.ornl.gov/documents/Tasmanian_v5.0.zip')
+    version('5.0', sha256='2540bb63dea987ab205f7b375aff41f320b1de9bd7f1d1064ef96b22eeda1251', url='https://tasmanian.ornl.gov/documents/Tasmanian_v5.0.zip')
 
     variant('xsdkflags', default=False,
             description='enable XSDK defaults for Tasmanian')
