@@ -6,8 +6,8 @@ versions:
 - 7.8.2
 - 7.8.5
 - 7.8.6
-updated_at: 2021-10-19T07:32:33.367243016Z
-size: 149MB
+updated_at: 2021-10-20T03:37:12.509140606Z
+size: 151MB
 description: GRASS GIS (Geographic Resources Analysis Support System), is a free and
   open source Geographic Information System (GIS) software suite used for geospatial
   data management and analysis, image processing, graphics and maps production, spatial
@@ -18,7 +18,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/grass
 # grass
 ```bash 
 Download        : docker pull ghcr.io/autamus/grass
-Compressed Size : 149MB
+Compressed Size : 151MB
 ```
 
 ## Description
