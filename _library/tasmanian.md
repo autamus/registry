@@ -4,7 +4,8 @@ name: tasmanian
 github: https://github.com/autamus/registry/blob/main/containers/t/tasmanian/spack.yaml
 versions:
 - "7.5"
-updated_at: 2021-10-19T07:57:17.747118692Z
+- "7.7"
+updated_at: 2021-10-20T22:02:44.043245486Z
 size: 55MB
 description: The Toolkit for Adaptive Stochastic Modeling and Non-Intrusive ApproximatioN
   is a robust library for high dimensional integration and interpolation as well as
