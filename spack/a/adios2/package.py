@@ -13,7 +13,7 @@ class Adios2(CMakePackage):
     developed in the Exascale Computing Program"""
 
     homepage = "https://csmd.ornl.gov/software/adios2"
-    url = "https://github.com/ornladios/ADIOS2/archive/v2.6.0.tar.gz"
+    url      = "https://github.com/ornladios/ADIOS2/archive/v2.6.0.tar.gz"
     git = "https://github.com/ornladios/ADIOS2.git"
 
     maintainers = ['ax3l', 'chuckatkins', 'williamfgc']
@@ -124,6 +124,10 @@ class Adios2(CMakePackage):
     # Fix an unnecessary python dependency when testing is disabled
     # See https://github.com/ornladios/ADIOS2/pull/2596
     patch('2.7-fix-python-test-deps.patch', when='@2.5.0:2.7.0')
+
+    # Fix unresolved symbols when built with gcc10.
+    # See https://github.com/ornladios/ADIOS2/pull/2714
+    patch('2.6-fix-gcc10-symbols.patch', when='@2.6.0')
 
     @when('%fj')
     def patch(self):
