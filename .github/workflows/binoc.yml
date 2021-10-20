@@ -3,8 +3,7 @@ name: "Automatic Binoc Scan"
 on:
   schedule:
     - cron: '0 14 * * *'
-  workflow_dispatch:
-    
+
 jobs:
   upstream-scan:
     runs-on: ubuntu-latest
