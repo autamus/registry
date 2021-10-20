@@ -5,8 +5,9 @@ github: https://github.com/autamus/registry/blob/main/containers/l/libtiff/spack
 versions:
 - 4.1.0
 - 4.2.0
-updated_at: 2021-10-19T07:35:01.642477184Z
-size: 29MB
+- 4.3.0
+updated_at: 2021-10-20T03:32:00.886224006Z
+size: 27MB
 description: LibTIFF - Tag Image File Format (TIFF) Library and Utilities.
 container_url: https://github.com/orgs/autamus/packages/container/package/libtiff
 
@@ -14,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/libtif
 # libtiff
 ```bash 
 Download        : docker pull ghcr.io/autamus/libtiff
-Compressed Size : 29MB
+Compressed Size : 27MB
 ```
 
 ## Description
