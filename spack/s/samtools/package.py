@@ -12,8 +12,9 @@ class Samtools(Package):
        alignments in a per-position format"""
 
     homepage = "https://www.htslib.org"
-    url      = "https://github.com/samtools/samtools/releases/download/1.13/samtools-1.13.tar.bz2"
+    url      = "https://github.com/samtools/samtools/releases/download/1.14/samtools-1.14.tar.bz2"
 
+    version('1.14', sha256='9341dabaa98b0ea7d60fd47e42af25df43a7d3d64d8e654cdf852974546b7d74')
     version('1.13', sha256='616ca2e051cc8009a1e9c01cfd8c7caf8b70916ddff66f3b76914079465f8c60')
     version('1.12', sha256='6da3770563b1c545ca8bdf78cf535e6d1753d6383983c7929245d5dba2902dcb')
     version('1.10', sha256='7b9ec5f05d61ec17bd9a82927e45d8ef37f813f79eb03fe06c88377f1bd03585')
@@ -25,8 +26,7 @@ class Samtools(Package):
     version('1.4', sha256='9aae5bf835274981ae22d385a390b875aef34db91e6355337ca8b4dd2960e3f4')
     version('1.3.1', sha256='6c3d74355e9cf2d9b2e1460273285d154107659efa36a155704b1e4358b7d67e')
     version('1.2', sha256='420e7a4a107fe37619b9d300b6379452eb8eb04a4a9b65c3ec69de82ccc26daa')
-    version('0.1.8', sha256='343daf96f035c499c5b82dce7b4d96b10473308277e40c435942b6449853815b',
-            url="https://github.com/samtools/samtools/archive/0.1.8.tar.gz")
+    version('0.1.8', sha256='343daf96f035c499c5b82dce7b4d96b10473308277e40c435942b6449853815b', url='https://github.com/samtools/samtools/archive/0.1.8.tar.gz')
 
     depends_on('zlib')
     depends_on('ncurses')
@@ -34,6 +34,7 @@ class Samtools(Package):
     depends_on('python', type='run')
 
     # htslib became standalone @1.3.1, must use corresponding version
+    depends_on('htslib@1.14', when='@1.14')
     depends_on('htslib@1.13', when='@1.13')
     depends_on('htslib@1.12', when='@1.12')
     depends_on('htslib@1.11', when='@1.11')
@@ -67,9 +68,11 @@ class Samtools(Package):
             else:
                 make('prefix={0}'.format(prefix), 'install')
 
+        # Legacy samtools API removed in version 1.14
         # Install dev headers and libs for legacy apps depending on them
-        mkdir(prefix.include)
-        mkdir(prefix.lib)
-        install('sam.h', prefix.include)
-        install('bam.h', prefix.include)
-        install('libbam.a', prefix.lib)
+        if self.spec.version < Version('1.14'):
+            mkdir(prefix.include)
+            mkdir(prefix.lib)
+            install('sam.h', prefix.include)
+            install('bam.h', prefix.include)
+            install('libbam.a', prefix.lib)
