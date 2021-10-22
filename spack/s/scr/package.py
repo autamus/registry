@@ -28,13 +28,12 @@ class Scr(CMakePackage):
     tags     = ['e4s', 'radiuss']
 
     version('develop', branch='develop')
-    version('legacy', branch='legacy', deprecated=True)
-
-    version('3.0rc1', sha256='bd31548a986f050024429d8ee3644eb135f047f98a3d503a40c5bd4a85291308')
-    version('2.0.0', sha256='471978ae0afb56a20847d3989b994fbd680d1dea21e77a5a46a964b6e3deed6b', deprecated=True)
-    version('1.2.2', sha256='764a85638a9e8762667ec1f39fa5f7da7496fca78de379a22198607b3e027847', deprecated=True)
-    version('1.2.1', sha256='23acab2dc7203e9514455a5168f2fd57bc590affb7a1876912b58201513628fe', deprecated=True)
-    version('1.2.0', sha256='e3338ab2fa6e9332d2326c59092b584949a083a876adf5a19d4d5c7a1bbae047', deprecated=True)
+    version('legacy', branch='legacy')
+    version('3.0.rc.1', sha256='bd31548a986f050024429d8ee3644eb135f047f98a3d503a40c5bd4a85291308')
+    version('2.0.0', sha256='471978ae0afb56a20847d3989b994fbd680d1dea21e77a5a46a964b6e3deed6b')
+    version('1.2.2', sha256='764a85638a9e8762667ec1f39fa5f7da7496fca78de379a22198607b3e027847')
+    version('1.2.1', sha256='23acab2dc7203e9514455a5168f2fd57bc590affb7a1876912b58201513628fe')
+    version('1.2.0', sha256='e3338ab2fa6e9332d2326c59092b584949a083a876adf5a19d4d5c7a1bbae047')
 
     depends_on('pdsh+static_modules', type=('build', 'run'))
     depends_on('zlib')
@@ -51,13 +50,13 @@ class Scr(CMakePackage):
 
     # SCR legacy is anything 2.x.x or earlier
     # SCR components is anything 3.x.x or later
-    depends_on('axl@0.4.0:',      when="@3:")
-    depends_on('er@0.0.4:',       when="@3:")
-    depends_on('kvtree@1.1.1:',   when="@3:")
-    depends_on('rankstr@0.0.3:',  when="@3:")
-    depends_on('redset@0.0.5:',   when="@3:")
-    depends_on('shuffile@0.0.4:', when="@3:")
-    depends_on('spath@0.0.2:',    when="@3:")
+    depends_on('axl@0.4.0',      when="@3.0rc1")
+    depends_on('er@0.0.4',       when="@3.0rc1")
+    depends_on('kvtree@1.1.1',   when="@3.0rc1")
+    depends_on('rankstr@0.0.3',  when="@3.0rc1")
+    depends_on('redset@0.0.5',   when="@3.0rc1")
+    depends_on('shuffile@0.0.4', when="@3.0rc1")
+    depends_on('spath@0.0.2',    when="@3.0rc1")
 
     # DTCMP is an optional dependency up until 3.x
     variant('dtcmp', default=True,
