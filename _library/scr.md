@@ -4,7 +4,7 @@ name: scr
 github: https://github.com/autamus/registry/blob/main/containers/s/scr/spack.yaml
 versions:
 - 3.0.rc.1
-updated_at: 2021-10-19T07:58:42.496563935Z
+updated_at: 2021-10-22T14:47:48.620583603Z
 size: 138MB
 description: SCR caches checkpoint data in storage on the compute nodes of a Linux
   cluster to provide a fast, scalable checkpoint/restart capability for MPI codes
