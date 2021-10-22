@@ -5,7 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/s/samtools/spac
 versions:
 - "1.12"
 - "1.13"
-updated_at: 2021-10-22T17:00:07.342307788Z
+- "1.14"
+updated_at: 2021-10-22T19:34:36.142571763Z
 size: 106MB
 description: SAM Tools provide various utilities for manipulating alignments in the
   SAM format, including sorting, merging, indexing and generating alignments in a
