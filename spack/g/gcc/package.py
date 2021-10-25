@@ -12,6 +12,7 @@ import llnl.util.tty as tty
 
 import spack.platforms
 import spack.util.executable
+from spack.build_environment import dso_suffix
 from spack.operating_systems.mac_os import macos_sdk_path, macos_version
 
 
@@ -28,43 +29,35 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
     maintainers = ['michaelkuhn', 'alalazo']
 
     version('master', branch='master')
-
     version('11.2.0', sha256='d08edc536b54c372a1010ff6619dd274c0f1603aa49212ba20f7aa2cda36fa8b')
     version('11.1.0', sha256='4c4a6fb8a8396059241c2e674b85b351c26a5d678274007f076957afa1cc9ddf')
-
     version('10.3.0', sha256='64f404c1a650f27fc33da242e1f2df54952e3963a49e06e73f6940f3223ac344')
     version('10.2.0', sha256='b8dd4368bb9c7f0b98188317ee0254dd8cc99d1e3a18d0ff146c855fe16c1d8c')
     version('10.1.0', sha256='b6898a23844b656f1b68691c5c012036c2e694ac4b53a8918d4712ad876e7ea2')
-
     version('9.4.0', sha256='c95da32f440378d7751dd95533186f7fc05ceb4fb65eb5b85234e6299eb9838e')
     version('9.3.0', sha256='71e197867611f6054aa1119b13a0c0abac12834765fe2d81f35ac57f84f742d1')
     version('9.2.0', sha256='ea6ef08f121239da5695f76c9b33637a118dcf63e24164422231917fa61fb206')
     version('9.1.0', sha256='79a66834e96a6050d8fe78db2c3b32fb285b230b855d0a66288235bc04b327a0')
-
     version('8.5.0', sha256='d308841a511bb830a6100397b0042db24ce11f642dab6ea6ee44842e5325ed50')
     version('8.4.0', sha256='e30a6e52d10e1f27ed55104ad233c30bd1e99cfb5ff98ab022dc941edd1b2dd4')
     version('8.3.0', sha256='64baadfe6cc0f4947a84cb12d7f0dfaf45bb58b7e92461639596c21e02d97d2c')
     version('8.2.0', sha256='196c3c04ba2613f893283977e6011b2345d1cd1af9abeac58e916b1aab3e0080')
     version('8.1.0', sha256='1d1866f992626e61349a1ccd0b8d5253816222cdc13390dcfaa74b093aa2b153')
-
     version('7.5.0', sha256='b81946e7f01f90528a1f7352ab08cc602b9ccc05d4e44da4bd501c5a189ee661')
     version('7.4.0', sha256='eddde28d04f334aec1604456e536416549e9b1aa137fc69204e65eb0c009fe51')
     version('7.3.0', sha256='832ca6ae04636adbb430e865a1451adf6979ab44ca1c8374f61fba65645ce15c')
     version('7.2.0', sha256='1cf7adf8ff4b5aa49041c8734bbcf1ad18cc4c94d0029aae0f4e48841088479a')
     version('7.1.0', sha256='8a8136c235f64c6fef69cac0d73a46a1a09bb250776a050aec8f9fc880bebc17')
-
     version('6.5.0', sha256='7ef1796ce497e89479183702635b14bb7a46b53249209a5e0f999bebf4740945')
     version('6.4.0', sha256='850bf21eafdfe5cd5f6827148184c08c4a0852a37ccf36ce69855334d2c914d4')
     version('6.3.0', sha256='f06ae7f3f790fbf0f018f6d40e844451e6bc3b7bc96e128e63b09825c1f8b29f')
     version('6.2.0', sha256='9944589fc722d3e66308c0ce5257788ebd7872982a718aa2516123940671b7c5')
     version('6.1.0', sha256='09c4c85cabebb971b1de732a0219609f93fc0af5f86f6e437fd8d7f832f1a351')
-
     version('5.5.0', sha256='530cea139d82fe542b358961130c69cfde8b3d14556370b65823d2f91f0ced87')
     version('5.4.0', sha256='608df76dec2d34de6558249d8af4cbee21eceddbcb580d666f7a5a583ca3303a')
     version('5.3.0', sha256='b84f5592e9218b73dbae612b5253035a7b34a9a1f7688d2e1bfaaf7267d5c4db')
     version('5.2.0', sha256='5f835b04b5f7dd4f4d2dc96190ec1621b8d89f2dc6f638f9f8bc1b1014ba8cad')
     version('5.1.0', sha256='b7dafdf89cbb0e20333dbf5b5349319ae06e3d1a30bf3515b5488f7e89dca5ad')
-
     version('4.9.4', sha256='6c11d292cd01b294f9f84c9a59c230d80e9e4a47e5c6355f046bb36d4f358092')
     version('4.9.3', sha256='2332b2a5a321b57508b9031354a8503af6fdfb868b8c1748d33028d100a8b67e')
     version('4.9.2', sha256='2020c98295856aa13fda0f2f3a4794490757fc24bcca918d52cc8b4917b972dd')
@@ -647,22 +640,74 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
     @run_after('install')
     def write_rpath_specs(self):
         """Generate a spec file so the linker adds a rpath to the libs
-           the compiler used to build the executable."""
+           the compiler used to build the executable.
+
+           .. caution::
+
+              The custom spec file by default with *always* pass ``-Wl,-rpath
+              ...`` to the linker, which will cause the linker to *ignore* the
+              value of ``LD_RUN_PATH``, which otherwise would be saved to the
+              binary as the default rpath. See the mitigation below for how to
+              temporarily disable this behavior.
+
+           Structure the specs file so that users can define a custom spec file
+           to suppress the spack-linked rpaths to facilitate rpath adjustment
+           for relocatable binaries. The custom spec file
+           :file:`{norpath}.spec` will have a single
+           line followed by two blanks lines::
+
+               *link_libgcc_rpath:
+
+
+
+           It can be passed to the GCC linker using the argument
+           ``--specs=norpath.spec`` to disable the automatic rpath and restore
+           the behavior of ``LD_RUN_PATH``."""
         if not self.spec_dir:
             tty.warn('Could not install specs for {0}.'.format(
                      self.spec.format('{name}{@version}')))
             return
 
         gcc = self.spec['gcc'].command
-        lines = gcc('-dumpspecs', output=str).strip().split('\n')
+        lines = gcc('-dumpspecs', output=str).splitlines(True)
         specs_file = join_path(self.spec_dir, 'specs')
+
+        # Save a backup
+        with open(specs_file + '.orig', 'w') as out:
+            out.writelines(lines)
+
+        # Find which directories have shared libraries
+        rpath_libdirs = []
+        for dir in ['lib', 'lib64']:
+            libdir = join_path(self.prefix, dir)
+            if glob.glob(join_path(libdir, "*." + dso_suffix)):
+                rpath_libdirs.append(libdir)
+
+        if not rpath_libdirs:
+            # No shared libraries
+            tty.warn('No dynamic libraries found in lib/lib64')
+            return
+
+        # Overwrite the specs file
         with open(specs_file, 'w') as out:
             for line in lines:
-                out.write(line + '\n')
-                if line.startswith('*link:'):
-                    out.write('-rpath {0}:{1} '.format(
-                              self.prefix.lib, self.prefix.lib64))
+                out.write(line)
+                if line.startswith('*link_libgcc:'):
+                    # Insert at start of line following link_libgcc, which gets
+                    # inserted into every call to the linker
+                    out.write('%(link_libgcc_rpath) ')
+
+            # Add easily-overridable rpath string at the end
+            out.write('*link_libgcc_rpath:\n')
+            if 'platform=darwin' in self.spec:
+                # macOS linker requires separate rpath commands
+                out.write(' '.join('-rpath ' + lib for lib in rpath_libdirs))
+            else:
+                # linux linker uses colon-separated rpath
+                out.write('-rpath ' + ':'.join(rpath_libdirs))
+            out.write('\n')
         set_install_permissions(specs_file)
+        tty.info('Wrote new spec file to {0}'.format(specs_file))
 
     def setup_run_environment(self, env):
         # Search prefix directory for possibly modified compiler names
