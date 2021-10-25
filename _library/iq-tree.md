@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/i/iq-tree/spack
 versions:
 - 2.0.6
 - 2.1.3
-updated_at: 2021-10-19T07:32:33.100987029Z
+updated_at: 2021-10-25T16:33:28.815602643Z
 size: 53MB
 description: IQ-TREE Efficient software for phylogenomic inference
 container_url: https://github.com/orgs/autamus/packages/container/package/iq-tree
