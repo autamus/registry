@@ -6,10 +6,11 @@ versions:
 - 2.0.10
 - 2.0.11
 - 2.0.12
+- 2.0.13
 - 2.0.4
 - 2.0.8
 - 2.0.9
-updated_at: 2021-10-19T05:03:04.891890865Z
+updated_at: 2021-10-26T04:22:29.767910478Z
 size: 29MB
 description: DIAMOND is a sequence aligner for protein and translated DNA searches,
   designed for high performance analysis of big sequence data.
