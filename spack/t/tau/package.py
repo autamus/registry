@@ -28,6 +28,7 @@ class Tau(Package):
     tags = ['e4s']
 
     version('master', branch='master')
+    version('2.30.2', sha256='43f84a15b71a226f8a64d966f0cb46022bcfbaefb341295ecc6fa80bb82bbfb4')
     version('2.30.1', sha256='9c20ca1b4f4e80d885f24491cee598068871f0e9dd67906a5e47e4b4147d08fc')
     version('2.30', sha256='e581c33e21488d69839a00d97fd4451ea579f47249b2750d5c36bea773041eaf')
     version('2.29.1', sha256='4195a0a236bba510ab50a93e13c7f00d9472e8bc46c91de3f0696112a34e34e2')
@@ -35,7 +36,7 @@ class Tau(Package):
     version('2.28.2', sha256='64e129a482056755012b91dae2fb4f728dbf3adbab53d49187eca952891c5457')
     version('2.28.1', sha256='b262e5c9977471e9f5a8d729b3db743012df9b0ab8244da2842039f8a3b98b34')
     version('2.28', sha256='68c6f13ae748d12c921456e494006796ca2b0efebdeef76ee7c898c81592883e')
-    version('2.27.2p1', sha256='3256771fb71c2b05932b44d0650e6eadc712f1bdedf4c0fb2781db3b266225dd')
+    version('2.27.2.p.1', sha256='3256771fb71c2b05932b44d0650e6eadc712f1bdedf4c0fb2781db3b266225dd')
     version('2.27.2', sha256='d319a4588ad303b71082254f4f40aa76f6183a01b5bc4bd987f76e1a6026efa1')
     version('2.27.1', sha256='315babab4da25dd08633ad8dbf33d93db77f57d240bcbd3527ed5b8710cb9d8f')
     version('2.27', sha256='d48fdca49cda2d9f25a0cf5dbd961201c8a2b1f025bcbb121d96ad43f211f1a7')
