@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/t/tasmanian/spa
 versions:
 - "7.5"
 - "7.7"
-updated_at: 2021-10-25T16:47:34.735748212Z
+updated_at: 2021-10-27T18:19:04.55627607Z
 size: 55MB
 description: The Toolkit for Adaptive Stochastic Modeling and Non-Intrusive ApproximatioN
   is a robust library for high dimensional integration and interpolation as well as
