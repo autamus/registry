@@ -13,7 +13,7 @@ class Geant4(CMakePackage):
     science."""
 
     homepage = "http://geant4.cern.ch/"
-    url = "https://gitlab.cern.ch/geant4/geant4/-/archive/v10.7.1/geant4-v10.7.1.tar.gz"
+    url      = "https://gitlab.cern.ch/geant4/geant4/-/archive/v10.7.1/geant4-v10.7.1.tar.gz"
 
     tags = ['hep']
 
@@ -82,7 +82,7 @@ class Geant4(CMakePackage):
         depends_on('xerces-c netaccessor=curl cxxstd=' + std, when='cxxstd=' + std)
 
         # Vecgeom specific versions for each Geant4 version
-        depends_on('vecgeom@1.1.8 cxxstd=' + std,
+        depends_on('vecgeom@1.1.8:1.1 cxxstd=' + std,
                    when='@10.7.0: +vecgeom cxxstd=' + std)
         depends_on('vecgeom@1.1.5 cxxstd=' + std,
                    when='@10.6.0:10.6 +vecgeom cxxstd=' + std)
