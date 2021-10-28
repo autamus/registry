@@ -9,7 +9,7 @@ versions:
 - 1.6.1
 - 1.6.2
 - 1.6.3
-updated_at: 2021-10-25T17:02:56.922015041Z
+updated_at: 2021-10-28T16:07:32.339474525Z
 size: 104MB
 description: 'The Julia Language: A fresh approach to technical computing'
 container_url: https://github.com/orgs/autamus/packages/container/package/julia
