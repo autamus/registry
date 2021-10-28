@@ -8,7 +8,7 @@ versions:
 - 21.08.0
 - 21.09.0
 - 21.10.0
-updated_at: 2021-10-25T16:42:38.685499335Z
+updated_at: 2021-10-28T15:46:23.637085465Z
 size: 77MB
 description: Poppler is a PDF rendering library based on the xpdf-3.0 code base.
 container_url: https://github.com/orgs/autamus/packages/container/package/poppler
