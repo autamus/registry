@@ -4,7 +4,7 @@ name: gawk
 github: https://github.com/autamus/registry/blob/main/containers/g/gawk/spack.yaml
 versions:
 - 5.1.0
-updated_at: 2021-10-19T07:25:47.898077242Z
+updated_at: 2021-10-29T14:57:55.980413866Z
 size: 47MB
 description: 'If you are like many computer users, you would frequently like to make
   changes in various text files wherever certain patterns appear, or extract data
