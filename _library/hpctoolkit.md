@@ -4,8 +4,9 @@ name: hpctoolkit
 github: https://github.com/autamus/registry/blob/main/containers/h/hpctoolkit/spack.yaml
 versions:
 - 2021.05.15
-updated_at: 2021-10-25T16:39:32.568567346Z
-size: 385MB
+- 2021.10.15
+updated_at: 2021-10-29T15:06:44.901319882Z
+size: 382MB
 description: HPCToolkit is an integrated suite of tools for measurement and analysis
   of program performance on computers ranging from multicore desktop systems to the
   nation's largest supercomputers. By using statistical sampling of timers and hardware
@@ -18,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/hpctoo
 # hpctoolkit
 ```bash 
 Download        : docker pull ghcr.io/autamus/hpctoolkit
-Compressed Size : 385MB
+Compressed Size : 382MB
 ```
 
 ## Description
