@@ -13,8 +13,9 @@ class Protobuf(Package):
     """Google's data interchange format."""
 
     homepage = "https://developers.google.com/protocol-buffers"
-    url      = "https://github.com/protocolbuffers/protobuf/archive/v3.19.0.tar.gz"
+    url      = "https://github.com/protocolbuffers/protobuf/archive/v3.19.1.tar.gz"
 
+    version('3.19.1', sha256='87407cd28e7a9c95d9f61a098a53cf031109d451a7763e7dd1253abf8b4df422')
     version('3.19.0', sha256='4a045294ec76cb6eae990a21adb5d8b3c78be486f1507faa601541d1ccefbd6b')
     version('3.18.1', sha256='9111bf0b542b631165fadbd80aa60e7fb25b25311c532139ed2089d76ddf6dd7')
     version('3.18.0', sha256='14e8042b5da37652c92ef6a2759e7d2979d295f60afd7767825e3de68c856c54')
@@ -56,7 +57,7 @@ class Protobuf(Package):
     version('3.2.0', sha256='a839d3f1519ff9d68ab908de5a0f269650ef1fc501c10f6eefd4cae51d29b86f')
     version('3.1.0', sha256='fb2a314f4be897491bb2446697be693d489af645cb0e165a85e7e64e07eb134d')
     version('3.0.2', sha256='a0a265bcc9d4e98c87416e59c33afc37cede9fb277292523739417e449b18c1e')
-    version('2.5.0', sha256='c2665a7aa2ac1a206e61b28e014486e3de59009ea2be2bde9182e0847f38b62f', deprecated=True)
+    version('2.5.0', sha256='c2665a7aa2ac1a206e61b28e014486e3de59009ea2be2bde9182e0847f38b62f')
 
     variant('shared', default=True,
             description='Enables the build of shared libraries')
