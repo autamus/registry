@@ -15,7 +15,8 @@ versions:
 - 2.26.0
 - 2.26.2
 - 2.26.3
-updated_at: 2021-10-19T04:48:38.796971399Z
+- 2.26.4
+updated_at: 2021-10-29T18:22:08.315983189Z
 size: 235MB
 description: 'Picard is a set of command line tools for manipulating high-throughput
   sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF. '
