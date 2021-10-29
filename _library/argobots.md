@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/a/argobots/spac
 versions:
 - "1.0"
 - "1.1"
-updated_at: 2021-10-19T07:13:04.469085541Z
+updated_at: 2021-10-29T14:56:04.134205016Z
 size: 27MB
 description: 'Argobots, which was developed as a part of the Argo project, is a lightweight
   runtime system that supports integrated computation and data movement with massive
