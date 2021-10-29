@@ -4,7 +4,7 @@ name: pandaseq
 github: https://github.com/autamus/registry/blob/main/containers/p/pandaseq/spack.yaml
 versions:
 - "2.11"
-updated_at: 2021-10-19T07:42:25.505695162Z
+updated_at: 2021-10-29T15:05:39.476566949Z
 size: 28MB
 description: PANDASEQ is a program to align Illumina reads, optionally with PCR primers
   embedded in the sequence, and reconstruct an overlapping sequence.
