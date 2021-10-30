@@ -6,7 +6,7 @@ versions:
 - "2021.1"
 - "2021.2"
 - "2021.3"
-updated_at: 2021-10-29T15:02:30.059581693Z
+updated_at: 2021-10-30T15:15:28.160555685Z
 size: 66MB
 description: 'GROMACS (GROningen MAchine for Chemical Simulations) is a molecular
   dynamics package primarily designed for simulations of proteins, lipids and nucleic
