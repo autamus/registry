@@ -6,7 +6,7 @@ versions:
 - 1.6.0
 - 1.7.0
 - 1.7.1
-updated_at: 2021-10-29T15:04:40.569072295Z
+updated_at: 2021-10-30T15:17:21.564981771Z
 size: 122MB
 description: C++ runtime system for parallel and distributed applications.
 container_url: https://github.com/orgs/autamus/packages/container/package/hpx
