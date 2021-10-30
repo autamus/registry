@@ -37,11 +37,11 @@ class Trilinos(CMakePackage, CudaPackage):
 
     # ###################### Versions ##########################
 
-    version('master', branch='master')
     version('develop', branch='develop')
-    version('13.0.1', commit='4796b92fb0644ba8c531dd9953e7a4878b05c62d')  # tag trilinos-release-13-0-1
-    version('13.0.0', commit='9fec35276d846a667bc668ff4cbdfd8be0dfea08')  # tag trilinos-release-13-0-0
-    version('12.18.1', commit='55a75997332636a28afc9db1aee4ae46fe8d93e7')  # tag trilinos-release-12-8-1
+    version('master', branch='master')
+    version('13.0.1', commit='4796b92fb0644ba8c531dd9953e7a4878b05c62d')
+    version('13.0.0', commit='9fec35276d846a667bc668ff4cbdfd8be0dfea08')
+    version('12.18.1', commit='55a75997332636a28afc9db1aee4ae46fe8d93e7')
     version('12.14.1', sha256='52a4406cca2241f5eea8e166c2950471dd9478ad6741cbb2a7fc8225814616f0')
     version('12.12.1', sha256='5474c5329c6309224a7e1726cf6f0d855025b2042959e4e2be2748bd6bb49e18')
     version('12.10.1', sha256='ab81d917196ffbc21c4927d42df079dd94c83c1a08bda43fef2dd34d0c1a5512')
@@ -363,6 +363,9 @@ class Trilinos(CMakePackage, CudaPackage):
                 flags.append('-DMUMPS_5_0')
             if '+stk platform=darwin' in spec:
                 flags.append('-DSTK_NO_BOOST_STACKTRACE')
+            if '+stk%intel' in spec:
+                # Workaround for Intel compiler segfaults with STK and IPO
+                flags.append('-no-ipo')
             if '+wrapper' in spec:
                 flags.append('--expt-extended-lambda')
         elif name == 'ldflags' and is_cce:
@@ -394,6 +397,8 @@ class Trilinos(CMakePackage, CudaPackage):
         if '+cuda' in spec and '+wrapper' in spec:
             if '+mpi' in spec:
                 env.set('OMPI_CXX', spec["kokkos-nvcc-wrapper"].kokkos_cxx)
+                env.set('MPICH_CXX', spec["kokkos-nvcc-wrapper"].kokkos_cxx)
+                env.set('MPICXX_CXX', spec["kokkos-nvcc-wrapper"].kokkos_cxx)
             else:
                 env.set('CXX', spec["kokkos-nvcc-wrapper"].kokkos_cxx)
 
