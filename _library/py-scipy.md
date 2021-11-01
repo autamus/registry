@@ -6,7 +6,7 @@ versions:
 - 1.6.3
 - 1.7.0
 - 1.7.1
-updated_at: 2021-10-25T16:46:48.319024776Z
+updated_at: 2021-11-01T16:15:49.80155343Z
 size: 144MB
 description: SciPy (pronounced "Sigh
 container_url: https://github.com/orgs/autamus/packages/container/package/py-scipy
