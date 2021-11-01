@@ -6,7 +6,7 @@ versions:
 - 3.15.0
 - 3.15.2
 - 3.15.3
-updated_at: 2021-10-25T16:45:52.511523222Z
+updated_at: 2021-11-01T16:14:38.507855508Z
 size: 103MB
 description: SPAdes - St. Petersburg genome assembler - is intended for both standard
   isolates and single-cell MDA bacteria assemblies.
