@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/h/heaptrack/spa
 versions:
 - 1.1.0
 - 1.2.0
-updated_at: 2021-10-30T15:13:39.753741751Z
+updated_at: 2021-11-01T16:00:11.897283771Z
 size: 65MB
 description: 'Heaptrack is a heap memory profiler that traces all memory allocations
   and annotates these events with stack traces. '
