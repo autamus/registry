@@ -4,7 +4,7 @@ name: dakota
 github: https://github.com/autamus/registry/blob/main/containers/d/dakota/spack.yaml
 versions:
 - "6.12"
-updated_at: 2021-10-30T15:14:42.503096677Z
+updated_at: 2021-11-01T15:58:34.829660462Z
 size: 161MB
 description: 'The Dakota toolkit provides a flexible, extensible interface between
   analysis codes and iterative systems analysis methods. Dakota contains algorithms
