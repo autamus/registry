@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/s/salmon/spack.
 versions:
 - 1.4.0
 - 1.5.2
-updated_at: 2021-10-30T15:23:43.550822373Z
+updated_at: 2021-11-01T16:13:20.396433704Z
 size: 60MB
 description: Salmon is a tool for quantifying the expression of transcripts using
   RNA-seq data.
