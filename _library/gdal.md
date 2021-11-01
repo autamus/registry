@@ -7,7 +7,7 @@ versions:
 - 3.3.1
 - 3.3.2
 - 3.3.3
-updated_at: 2021-10-30T15:13:04.916351204Z
+updated_at: 2021-11-01T15:56:27.99043948Z
 size: 55MB
 description: 'GDAL (Geospatial Data Abstraction Library) is a translator library for
   raster and vector geospatial data formats that is released under an X/MIT style
