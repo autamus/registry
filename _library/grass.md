@@ -6,7 +6,7 @@ versions:
 - 7.8.2
 - 7.8.5
 - 7.8.6
-updated_at: 2021-10-30T15:17:08.041132742Z
+updated_at: 2021-11-01T16:05:06.791162148Z
 size: 151MB
 description: GRASS GIS (Geographic Resources Analysis Support System), is a free and
   open source Geographic Information System (GIS) software suite used for geospatial
