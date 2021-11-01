@@ -4,7 +4,7 @@ name: unifyfs
 github: https://github.com/autamus/registry/blob/main/containers/u/unifyfs/spack.yaml
 versions:
 - 0.9.2
-updated_at: 2021-10-30T15:29:28.132260446Z
+updated_at: 2021-11-01T16:19:21.148717574Z
 size: 79MB
 description: User level file system that enables applications to use node-local storage
   as burst buffers for shared files. Supports scalable and efficient aggregation of
