@@ -27,21 +27,21 @@ class Pumi(CMakePackage):
     # of pumi in spack.  The master branch is more stable than the
     # scorec/core develop branch and we prefer not to expose spack users
     # to the added instability.
-    version('master', submodules=True, branch='master')
-    version('2.2.6', commit='4dd330e960b1921ae0d8d4039b8de8680a20d993')  # tag 2.2.6
-    version('2.2.5', commit='73c16eae073b179e45ec625a5abe4915bc589af2')  # tag 2.2.5
-    version('2.2.4', commit='8072fdbafd53e0c9a63248a269f4cce5000a4a8e')  # tag 2.2.4
-    version('2.2.3', commit='d200cb366813695d0f18b514d8d8ecc382cb79fc')  # tag 2.2.3
-    version('2.2.2', commit='bc34e3f7cfd8ab314968510c71486b140223a68f')  # tag 2.2.2
-    version('2.2.1', commit='cd826205db21b8439026db1f6af61a8ed4a18564')  # tag 2.2.1
-    version('2.2.0', commit='8c7e6f13943893b2bc1ece15003e4869a0e9634f')  # tag 2.2.0
+    version('master', branch='master', submodules=True)
+    version('2.2.6', commit='4dd330e960b1921ae0d8d4039b8de8680a20d993')
+    version('2.2.5', commit='73c16eae073b179e45ec625a5abe4915bc589af2')
+    version('2.2.4', commit='8072fdbafd53e0c9a63248a269f4cce5000a4a8e')
+    version('2.2.3', commit='d200cb366813695d0f18b514d8d8ecc382cb79fc')
+    version('2.2.2', commit='bc34e3f7cfd8ab314968510c71486b140223a68f')
+    version('2.2.1', commit='cd826205db21b8439026db1f6af61a8ed4a18564')
+    version('2.2.0', commit='8c7e6f13943893b2bc1ece15003e4869a0e9634f')
     version('2.1.0', commit='840fbf6ec49a63aeaa3945f11ddb224f6055ac9f')
 
     variant('int64', default=False, description='Enable 64bit mesh entity ids')
     variant('shared', default=False, description='Build shared libraries')
     variant('zoltan', default=False, description='Enable Zoltan Features')
     variant('fortran', default=False, description='Enable FORTRAN interface')
-    variant('testing', default=False, description='Enable tests')
+    variant('testing', default=False, description='Enable all tests')
     variant('simmodsuite', default='none',
             values=('none', 'base', 'kernels', 'full'),
             description="Enable Simmetrix SimModSuite Support: 'base' enables "
@@ -97,10 +97,21 @@ class Pumi(CMakePackage):
             args.append('-DSIM_MPI=' + mpi_id)
         return args
 
-    @run_after('build')
-    @on_package_attributes(run_tests=True)
-    def check(self):
-        """Run ctest after building project."""
+    def test(self):
+        if self.spec.version <= Version('2.2.6'):
+            return
+        exe = 'uniform'
+        options = ['../testdata/pipe.dmg', '../testdata/pipe.smb', 'pipe_unif.smb']
+        expected = 'mesh pipe_unif.smb written'
+        description = 'testing pumi uniform mesh refinement'
+        self.run_test(exe, options, expected, purpose=description,
+                      work_dir=self.prefix.bin)
 
-        with working_dir(self.build_directory):
-            ctest(parallel=False)
+        mpiexec = Executable(join_path(self.spec['mpi'].prefix.bin, 'mpiexec')).command
+        mpiopt = ['-n', '2']
+        exe = ['split']
+        options = ['../testdata/pipe.dmg', '../testdata/pipe.smb', 'pipe_2_.smb', '2']
+        expected = 'mesh pipe_2_.smb written'
+        description = 'testing pumi mesh partitioning'
+        self.run_test(mpiexec, mpiopt + exe + options, expected,
+                      purpose=description, work_dir=self.prefix.bin)
