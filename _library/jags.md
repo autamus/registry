@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/j/jags/spack.ya
 versions:
 - 4.3.0
 - latest
-updated_at: 2021-09-15T23:51:43.075655079Z
-size: 50MB
+updated_at: 2021-11-02T14:50:21.554760708Z
+size: 51MB
 description: JAGS is Just Another Gibbs Sampler. It is a program for analysis of Bayesian
   hierarchical models using Markov Chain Monte Carlo (MCMC) simulation not wholly
   unlike BUGS
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/jags
 # jags
 ```bash 
 Download        : docker pull ghcr.io/autamus/jags
-Compressed Size : 50MB
+Compressed Size : 51MB
 ```
 
 ## Description
