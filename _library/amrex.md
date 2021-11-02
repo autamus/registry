@@ -8,7 +8,8 @@ versions:
 - "21.08"
 - "21.09"
 - "21.10"
-updated_at: 2021-10-19T07:14:21.031414824Z
+- "21.11"
+updated_at: 2021-11-02T14:51:01.2716188Z
 size: 54MB
 description: AMReX is a publicly available software framework designed for building
   massively parallel block- structured adaptive mesh refinement (AMR) applications.
