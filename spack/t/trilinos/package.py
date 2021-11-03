@@ -39,6 +39,7 @@ class Trilinos(CMakePackage, CudaPackage):
 
     version('develop', branch='develop')
     version('master', branch='master')
+    version('13.2.0', commit='4a5f7906a6420ee2f9450367e9cc95b28c00d744')
     version('13.0.1', commit='4796b92fb0644ba8c531dd9953e7a4878b05c62d')
     version('13.0.0', commit='9fec35276d846a667bc668ff4cbdfd8be0dfea08')
     version('12.18.1', commit='55a75997332636a28afc9db1aee4ae46fe8d93e7')
@@ -62,7 +63,7 @@ class Trilinos(CMakePackage, CudaPackage):
     # Build options
     variant('complex', default=False, description='Enable complex numbers in Trilinos')
     variant('cuda_rdc', default=False, description='turn on RDC for CUDA build')
-    variant('cxxstd', default='11', values=['11', '14', '17'], multi=False)
+    variant('cxxstd', default='14', values=['11', '14', '17'], multi=False)
     variant('debug', default=False, description='Enable runtime safety and debug checks')
     variant('explicit_template_instantiation', default=True, description='Enable explicit template instantiation (ETI)')
     variant('float', default=False, description='Enable single precision (float) numbers in Trilinos')
@@ -179,6 +180,7 @@ class Trilinos(CMakePackage, CudaPackage):
         conflicts('+epetraext')
         conflicts('+ifpack')
         conflicts('+isorropia')
+        conflicts('+ml', when='@13.2:')
     with when('~epetraext'):
         conflicts('+isorropia')
         conflicts('+teko')
@@ -301,6 +303,8 @@ class Trilinos(CMakePackage, CudaPackage):
     depends_on('py-mpi4py', when='+mpi+python', type=('build', 'run'))
     depends_on('py-numpy', when='+python', type=('build', 'run'))
     depends_on('python', when='+python')
+    depends_on('python', when='@13.2: +ifpack +hypre', type='build')
+    depends_on('python', when='@13.2: +ifpack2 +hypre', type='build')
     depends_on('scalapack', when='+mumps')
     depends_on('scalapack', when='+strumpack+mpi')
     depends_on('strumpack+shared', when='+strumpack')
@@ -731,13 +735,18 @@ class Trilinos(CMakePackage, CudaPackage):
         # run-time error: Symbol not found: _PyBool_Type and prevents
         # Trilinos to be used in any C++ code, which links executable
         # against the libraries listed in Trilinos_LIBRARIES.  See
-        # https://github.com/Homebrew/homebrew-science/issues/2148#issuecomment-103614509
-        # A workaround is to remove PyTrilinos from the COMPONENTS_LIST :
+        # https://github.com/trilinos/Trilinos/issues/569 and
+        # https://github.com/trilinos/Trilinos/issues/866
+        # A workaround is to remove PyTrilinos from the COMPONENTS_LIST
+        # and to remove -lpytrilonos from Makefile.export.Trilinos
         if '+python' in self.spec:
             filter_file(r'(SET\(COMPONENTS_LIST.*)(PyTrilinos;)(.*)',
                         (r'\1\3'),
                         '%s/cmake/Trilinos/TrilinosConfig.cmake' %
                         self.prefix.lib)
+            filter_file(r'-lpytrilinos', '',
+                        '%s/Makefile.export.Trilinos' %
+                        self.prefix.include)
 
     def setup_run_environment(self, env):
         if '+exodus' in self.spec:
