@@ -8,7 +8,8 @@ versions:
 - 3.15.3
 - 3.15.4
 - 3.16.0
-updated_at: 2021-11-03T15:46:42.697656228Z
+- 3.16.1
+updated_at: 2021-11-04T16:03:44.589622297Z
 size: 127MB
 description: 'PETSc is a suite of data structures and routines for the scalable (parallel)
   solution of scientific applications modeled by partial differential equations. '
