@@ -13,13 +13,13 @@ class Hpx(CMakePackage, CudaPackage, ROCmPackage):
     """C++ runtime system for parallel and distributed applications."""
 
     homepage = "https://hpx.stellar-group.org/"
-    url = "https://github.com/STEllAR-GROUP/hpx/archive/1.2.1.tar.gz"
+    url      = "https://github.com/STEllAR-GROUP/hpx/archive/1.2.1.tar.gz"
     maintainers = ['msimberg', 'albestro', 'teonnik']
 
     tags = ['e4s']
 
-    version('master', git='https://github.com/STEllAR-GROUP/hpx.git', branch='master')
-    version('stable', git='https://github.com/STEllAR-GROUP/hpx.git', tag='stable')
+    version('master', branch='master')
+    version('stable', tag='stable')
     version('1.7.1', sha256='008a0335def3c551cba31452eda035d7e914e3e4f77eec679eea070ac71bd83b')
     version('1.7.0', sha256='05099b860410aa5d8a10d6915b1a8818733aa1aa2d5f2b9774730ca7e6de5fac')
     version('1.6.0', sha256='4ab715613c1e1808edc93451781cc9bc98feec4e422ccd4322858a680f6d9017')
@@ -163,13 +163,16 @@ class Hpx(CMakePackage, CudaPackage, ROCmPackage):
     patch('git_external.patch', when='@1.3.0 instrumentation=apex')
 
     def instrumentation_args(self):
-        for value in self.variants['instrumentation'].values:
+        args = []
+        for value in self.variants['instrumentation'][0].values:
             if value == 'none':
                 continue
 
             condition = 'instrumentation={0}'.format(value)
-            yield self.define(
-                'HPX_WITH_{0}'.format(value.upper()), condition in self.spec)
+            args.append(self.define(
+                'HPX_WITH_{0}'.format(value.upper()), condition in self.spec
+            ))
+        return args
 
     def cmake_args(self):
         spec, args = self.spec, []
