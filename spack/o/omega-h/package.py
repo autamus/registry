@@ -11,11 +11,11 @@ class OmegaH(CMakePackage):
     hardware including GPUs.
     """
 
-    homepage = "https://github.com/SNLComputation/omega_h"
+    homepage = "https://github.com/sandialabs/omega_h"
     url      = "https://github.com/SNLComputation/omega_h/archive/v9.34.6.tar.gz"
-    git      = "https://github.com/SNLComputation/omega_h.git"
+    git      = "https://github.com/sandialabs/omega_h.git"
 
-    maintainers = ['ibaned']
+    maintainers = ['cwsmith']
     tags = ['e4s']
     version('main', branch='main')
     version('9.34.6', sha256='0fcdfedab6afb855ca982c429698eaa2c25e78909152b8bee508c80a54234aac')
@@ -101,3 +101,24 @@ class OmegaH(CMakePackage):
                 flags.append("-Wno-final-dtor-non-final-class")
 
         return (None, None, flags)
+
+    def test(self):
+        if self.spec.version < Version('9.34.1'):
+            print('Skipping tests since only relevant for versions > 9.34.1')
+            return
+
+        exe = join_path(self.prefix.bin, 'osh_box')
+        options = ['1', '1', '1', '2', '2', '2', 'box.osh']
+        description = 'testing mesh construction'
+        self.run_test(exe, options, purpose=description)
+
+        exe = join_path(self.prefix.bin, 'osh_scale')
+        options = ['box.osh', '100', 'box_100.osh']
+        expected = 'adapting took'
+        description = 'testing mesh adaptation'
+        self.run_test(exe, options, expected, purpose=description)
+
+        exe = join_path(self.prefix.bin, 'osh2vtk')
+        options = ['box_100.osh', 'box_100_vtk']
+        description = 'testing mesh to vtu conversion'
+        self.run_test(exe, options, purpose=description)
