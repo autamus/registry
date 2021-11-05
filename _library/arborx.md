@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/a/arborx/spack.
 versions:
 - "1.0"
 - "1.1"
-updated_at: 2021-11-04T16:01:29.985907634Z
+updated_at: 2021-11-05T15:07:00.246288407Z
 size: 53MB
 description: ArborX is a performance-portable library for geometric search
 container_url: https://github.com/orgs/autamus/packages/container/package/arborx
