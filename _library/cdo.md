@@ -4,8 +4,8 @@ name: cdo
 github: https://github.com/autamus/registry/blob/main/containers/c/cdo/spack.yaml
 versions:
 - 1.9.10
-updated_at: 2021-11-01T15:55:16.597076724Z
-size: 116MB
+updated_at: 2021-11-05T15:10:08.769390314Z
+size: 126MB
 description: 'CDO is a collection of command line Operators to manipulate and analyse
   Climate and NWP model Data. '
 container_url: https://github.com/orgs/autamus/packages/container/package/cdo
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/cdo
 # cdo
 ```bash 
 Download        : docker pull ghcr.io/autamus/cdo
-Compressed Size : 116MB
+Compressed Size : 126MB
 ```
 
 ## Description
