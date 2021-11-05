@@ -8,7 +8,7 @@ versions:
 - 3.18.1
 - 3.19.0
 - 3.19.1
-updated_at: 2021-11-01T16:08:26.591552667Z
+updated_at: 2021-11-05T15:10:39.101741425Z
 size: 30MB
 description: Google's data interchange format.
 container_url: https://github.com/orgs/autamus/packages/container/package/protobuf
