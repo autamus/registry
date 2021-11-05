@@ -4,8 +4,8 @@ name: kallisto
 github: https://github.com/autamus/registry/blob/main/containers/k/kallisto/spack.yaml
 versions:
 - 0.46.2
-updated_at: 2021-11-01T16:04:40.213676441Z
-size: 77MB
+updated_at: 2021-11-05T15:07:21.461342686Z
+size: 86MB
 description: kallisto is a program for quantifying abundances of transcripts from
   RNA-Seq data.
 container_url: https://github.com/orgs/autamus/packages/container/package/kallisto
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/kallis
 # kallisto
 ```bash 
 Download        : docker pull ghcr.io/autamus/kallisto
-Compressed Size : 77MB
+Compressed Size : 86MB
 ```
 
 ## Description
