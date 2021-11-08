@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/t/trilinos/spac
 versions:
 - 13.0.1
 - 13.2.0
-updated_at: 2021-11-05T15:14:00.470481506Z
+updated_at: 2021-11-08T14:51:07.74584051Z
 size: 108MB
 description: 'The Trilinos Project is an effort to develop algorithms and enabling
   technologies within an object-oriented software framework for the solution of large-scale,
