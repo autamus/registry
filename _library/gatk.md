@@ -5,8 +5,9 @@ github: https://github.com/autamus/registry/blob/main/containers/g/gatk/spack.ya
 versions:
 - 4.2.0.0
 - 4.2.2.0
-updated_at: 2021-11-01T15:58:38.352389034Z
-size: 655MB
+- 4.2.3.0
+updated_at: 2021-11-08T19:47:47.838257975Z
+size: 643MB
 description: ' Genome Analysis Toolkit Variant Discovery in High-Throughput Sequencing
   Data '
 container_url: https://github.com/orgs/autamus/packages/container/package/gatk
@@ -15,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/gatk
 # gatk
 ```bash 
 Download        : docker pull ghcr.io/autamus/gatk
-Compressed Size : 655MB
+Compressed Size : 643MB
 ```
 
 ## Description
