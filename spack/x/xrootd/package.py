@@ -14,6 +14,7 @@ class Xrootd(CMakePackage):
     url      = "http://xrootd.org/download/v5.3.1/xrootd-5.3.1.tar.gz"
     list_url = 'https://xrootd.slac.stanford.edu/dload.html'
 
+    version('5.3.2', sha256='e8371fb9e86769bece74b9b9d67cb695023cd6a20a1199386fddd9ed840b0875')
     version('5.3.1', sha256='7ea3a112ae9d8915eb3a06616141e5a0ee366ce9a5e4d92407b846b37704ee98')
     version('5.1.0', sha256='c639536f1bdc5b6b365e807f3337ed2d41012cd3df608d40e91ed05f1c568b6d')
     version('5.0.3', sha256='be40a1897d6c1f153d3e23c39fe96e45063bfafc3cc073db88a1a9531db79ac5')
@@ -26,20 +27,20 @@ class Xrootd(CMakePackage):
     version('4.11.3', sha256='8e7a64fd55dfb452b6d5f76a9a97c493593943227b377623a3032da9197c7f65')
     version('4.11.2', sha256='4620824db97fcc37dc3dd26110da8e5c3aab1d8302e4921d4f32e83207060603')
     version('4.10.0', sha256='f07f85e27d72e9e8ff124173c7b53619aed8fcd36f9d6234c33f8f7fd511995b')
-    version('4.8.5',  sha256='42e4d2cc6f8b442135f09bcc12c7be38b1a0c623a005cb5e69ff3d27997bdf73')
-    version('4.8.4',  sha256='f148d55b16525567c0f893edf9bb2975f7c09f87f0599463e19e1b456a9d95ba')
-    version('4.8.3',  sha256='9cd30a343758b8f50aea4916fa7bd37de3c37c5b670fe059ae77a8b2bbabf299')
-    version('4.8.2',  sha256='8f28ec53e799d4aa55bd0cc4ab278d9762e0e57ac40a4b02af7fc53dcd1bef39')
-    version('4.8.1',  sha256='edee2673d941daf7a6e5c963d339d4a69b4db5c4b6f77b4548b3129b42198029')
-    version('4.8.0',  sha256='0b59ada295341902ca01e9d23e29780fb8df99a6d2bd1c2d654e9bb70c877ad8')
-    version('4.7.1',  sha256='90ddc7042f05667045b06e02c8d9c2064c55d9a26c02c50886254b8df85fc577')
-    version('4.7.0',  sha256='6cc69d9a3694e8dcf2392e9c3b518bd2497a89b3a9f25ffaec62efa52170349b')
-    version('4.6.1',  sha256='0261ce760e8788f85d68918d7702ae30ec677a8f331dae14adc979b4cc7badf5')
-    version('4.6.0',  sha256='b50f7c64ed2a4aead987de3fdf6fce7ee082407ba9297b6851cd917db72edd1d')
-    version('4.5.0',  sha256='27a8e4ef1e6bb6bfe076fef50afe474870edd198699d43359ef01de2f446c670')
-    version('4.4.1',  sha256='3c295dbf750de086c04befc0d3c7045fd3976611c2e75987c1477baca37eb549')
-    version('4.4.0',  sha256='f066e7488390c0bc50938d23f6582fb154466204209ca92681f0aa06340e77c8')
-    version('4.3.0',  sha256='d34865772d975b5d58ad80bb05312bf49aaf124d5431e54dc8618c05a0870e3c')
+    version('4.8.5', sha256='42e4d2cc6f8b442135f09bcc12c7be38b1a0c623a005cb5e69ff3d27997bdf73')
+    version('4.8.4', sha256='f148d55b16525567c0f893edf9bb2975f7c09f87f0599463e19e1b456a9d95ba')
+    version('4.8.3', sha256='9cd30a343758b8f50aea4916fa7bd37de3c37c5b670fe059ae77a8b2bbabf299')
+    version('4.8.2', sha256='8f28ec53e799d4aa55bd0cc4ab278d9762e0e57ac40a4b02af7fc53dcd1bef39')
+    version('4.8.1', sha256='edee2673d941daf7a6e5c963d339d4a69b4db5c4b6f77b4548b3129b42198029')
+    version('4.8.0', sha256='0b59ada295341902ca01e9d23e29780fb8df99a6d2bd1c2d654e9bb70c877ad8')
+    version('4.7.1', sha256='90ddc7042f05667045b06e02c8d9c2064c55d9a26c02c50886254b8df85fc577')
+    version('4.7.0', sha256='6cc69d9a3694e8dcf2392e9c3b518bd2497a89b3a9f25ffaec62efa52170349b')
+    version('4.6.1', sha256='0261ce760e8788f85d68918d7702ae30ec677a8f331dae14adc979b4cc7badf5')
+    version('4.6.0', sha256='b50f7c64ed2a4aead987de3fdf6fce7ee082407ba9297b6851cd917db72edd1d')
+    version('4.5.0', sha256='27a8e4ef1e6bb6bfe076fef50afe474870edd198699d43359ef01de2f446c670')
+    version('4.4.1', sha256='3c295dbf750de086c04befc0d3c7045fd3976611c2e75987c1477baca37eb549')
+    version('4.4.0', sha256='f066e7488390c0bc50938d23f6582fb154466204209ca92681f0aa06340e77c8')
+    version('4.3.0', sha256='d34865772d975b5d58ad80bb05312bf49aaf124d5431e54dc8618c05a0870e3c')
 
     variant('http', default=True,
             description='Build with HTTP support')
@@ -49,6 +50,9 @@ class Xrootd(CMakePackage):
 
     variant('readline', default=True,
             description='Use readline')
+
+    variant('krb5', default=False,
+            description='Build with KRB5 support')
 
     variant('cxxstd',
             default='11',
@@ -67,9 +71,15 @@ class Xrootd(CMakePackage):
     depends_on('readline', when='+readline')
     depends_on('xz')
     depends_on('zlib')
+    depends_on('curl')
+    depends_on('krb5', when='+krb5')
+    depends_on('json-c')
 
     extends('python', when='+python')
     patch('python-support.patch', level=1, when='@:4.8+python')
+
+    # do not use systemd
+    patch('no-systemd.patch')
 
     def patch(self):
         """Remove hardcoded -std=c++0x flag
@@ -86,6 +96,8 @@ class Xrootd(CMakePackage):
             format('ON' if '+python' in spec else 'OFF'),
             '-DENABLE_READLINE:BOOL={0}'.
             format('ON' if '+readline' in spec else 'OFF'),
+            '-DENABLE_KRB5:BOOL={0}'.
+            format('ON' if '+krb5' in spec else 'OFF'),
             '-DENABLE_CEPH:BOOL=OFF'
         ]
         # see https://github.com/spack/spack/pull/11581
