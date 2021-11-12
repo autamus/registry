@@ -16,8 +16,9 @@ versions:
 - 2.26.2
 - 2.26.3
 - 2.26.4
-updated_at: 2021-10-29T18:22:08.315983189Z
-size: 235MB
+- 2.26.5
+updated_at: 2021-11-12T15:57:40.671202071Z
+size: 234MB
 description: 'Picard is a set of command line tools for manipulating high-throughput
   sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF. '
 container_url: https://github.com/orgs/autamus/packages/container/package/picard
@@ -26,7 +27,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/picard
 # picard
 ```bash 
 Download        : docker pull ghcr.io/autamus/picard
-Compressed Size : 235MB
+Compressed Size : 234MB
 ```
 
 ## Description
