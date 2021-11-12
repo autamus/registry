@@ -5,7 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/t/tau/spack.yam
 versions:
 - 2.30.1
 - 2.30.2
-updated_at: 2021-10-26T14:50:28.995105464Z
+- "2.31"
+updated_at: 2021-11-12T16:11:32.740003958Z
 size: 158MB
 description: 'A portable profiling and tracing toolkit for performance analysis of
   parallel programs written in Fortran, C, C++, UPC, Java, Python. '
