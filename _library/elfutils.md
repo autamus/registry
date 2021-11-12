@@ -4,7 +4,8 @@ name: elfutils
 github: https://github.com/autamus/registry/blob/main/containers/e/elfutils/spack.yaml
 versions:
 - "0.185"
-updated_at: 2021-10-30T15:08:24.461551475Z
+- "0.186"
+updated_at: 2021-11-12T16:00:56.591701158Z
 size: 43MB
 description: elfutils is a collection of various binary tools such as eu-objdump,
   eu-readelf, and other utilities that allow you to inspect and manipulate ELF files.
