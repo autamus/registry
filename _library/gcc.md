@@ -7,7 +7,7 @@ versions:
 - 10.3.0
 - 11.1.0
 - 11.2.0
-updated_at: 2021-10-29T14:59:55.966852548Z
+updated_at: 2021-11-12T16:04:23.457407934Z
 size: 142MB
 description: The GNU Compiler Collection includes front ends for C, C++, Objective-C,
   Fortran, Ada, and Go, as well as libraries for these languages.
