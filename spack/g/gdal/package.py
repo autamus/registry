@@ -24,6 +24,7 @@ class Gdal(AutotoolsPackage):
 
     maintainers = ['adamjstewart']
 
+    version('3.4.0', sha256='ac7bd2bb9436f3fc38bc7309704672980f82d64b4d57627d27849259b8f71d5c')
     version('3.3.3', sha256='1e8fc8b19c77238c7f4c27857d04857b65d8b7e8050d3aac256d70fa48a21e76')
     version('3.3.2', sha256='630e34141cf398c3078d7d8f08bb44e804c65bbf09807b3610dcbfbc37115cc3')
     version('3.3.1', sha256='48ab00b77d49f08cf66c60ccce55abb6455c3079f545e60c90ee7ce857bccb70')
@@ -177,7 +178,7 @@ class Gdal(AutotoolsPackage):
     conflicts('%xl_r@:13.0', msg=msg)
 
     conflicts('+mdb', when='~java', msg='MDB driver requires Java')
-
+    conflicts('+mdb', when='@3.5:', msg='MDB driver removed in GDAL 3.5, use ODBC instead')
     conflicts('+jasper', when='@3.5:', msg='JPEG2000 driver removed in GDAL 3.5')
     conflicts('+perl', when='@3.5:', msg='Perl bindings removed in GDAL 3.5')
 

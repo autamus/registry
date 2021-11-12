@@ -40,10 +40,6 @@ class Boost(Package):
     version('1.66.0', sha256='5721818253e6a0989583192f96782c4a98eb6204965316df9f5ad75819225ca9')
     version('1.65.1', sha256='9807a5d16566c57fd74fb522764e0b134a8bbe6b6e8967b83afefd30dcd3be81')
     version('1.65.0', sha256='ea26712742e2fb079c2a566a31f3266973b76e38222b9f88b387e3c8b2f9902c')
-    # NOTE: 1.64.0 seems fine for *most* applications, but if you need
-    #       +python and +mpi, there seem to be errors with out-of-date
-    #       API calls from mpi/python.
-    #       See: https://github.com/spack/spack/issues/3963
     version('1.64.0', sha256='7bcc5caace97baa948931d712ea5f37038dbb1c5d89b43ad4def4ed7cb683332')
     version('1.63.0', sha256='beae2529f759f6b3bf3f4969a19c2e9d6f0c503edcb2de4a61d1428519fcb3b0')
     version('1.62.0', sha256='36c96b0f6155c98404091d8ceb48319a28279ca0333fba1ad8611eb90afb2ca0')
@@ -333,6 +329,7 @@ class Boost(Package):
     def determine_toolset(self, spec):
         toolsets = {'g++': 'gcc',
                     'icpc': 'intel',
+                    'icpx': 'intel',
                     'clang++': 'clang',
                     'armclang++': 'clang',
                     'xlc++': 'xlcpp',
@@ -343,6 +340,8 @@ class Boost(Package):
 
         if spec.satisfies('@1.47:'):
             toolsets['icpc'] += '-linux'
+            toolsets['icpx'] += '-linux'
+
         for cc, toolset in toolsets.items():
             if cc in self.compiler.cxx_names:
                 return toolset
@@ -383,14 +382,8 @@ class Boost(Package):
         with open('user-config.jam', 'w') as f:
             # Boost may end up using gcc even though clang+gfortran is set in
             # compilers.yaml. Make sure this does not happen:
-            if not spec.satisfies('%intel'):
-                # using intel-linux : : spack_cxx in user-config.jam leads to
-                # error: at project-config.jam:12
-                # error: duplicate initialization of intel-linux with the following parameters:  # noqa
-                # error: version = <unspecified>
-                # error: previous initialization at ./user-config.jam:1
-                f.write("using {0} : : {1} ;\n".format(boost_toolset_id,
-                                                       spack_cxx))
+            f.write("using {0} : : {1} ;\n".format(boost_toolset_id,
+                                                   spack_cxx))
 
             if '+mpi' in spec:
                 # Use the correct mpi compiler.  If the compiler options are
@@ -571,6 +564,11 @@ class Boost(Package):
         self.determine_bootstrap_options(spec, with_libs, bootstrap_options)
 
         bootstrap(*bootstrap_options)
+
+        # strip the toolchain to avoid double include errors (intel) or
+        # user-config being overwritten (again intel, but different boost version)
+        filter_file(r'^\s*using {0}.*'.format(self.determine_toolset(spec)),  '',
+                    os.path.join(self.stage.source_path, 'project-config.jam'))
 
         # b2 used to be called bjam, before 1.47 (sigh)
         b2name = './b2' if spec.satisfies('@1.47:') else './bjam'
