@@ -4,7 +4,8 @@ name: upcxx
 github: https://github.com/autamus/registry/blob/main/containers/u/upcxx/spack.yaml
 versions:
 - 2021.3.0
-updated_at: 2021-11-01T16:18:51.575685388Z
+- 2021.9.0
+updated_at: 2021-11-13T19:11:34.122300434Z
 size: 93MB
 description: UPC++ is a C++ library that supports Partitioned Global Address Space
   (PGAS) programming, and is designed to interoperate smoothly and efficiently with
