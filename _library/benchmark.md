@@ -6,7 +6,7 @@ versions:
 - 1.5.5
 - 1.5.6
 - 1.6.0
-updated_at: 2021-11-01T15:50:48.532208356Z
+updated_at: 2021-11-13T18:44:47.770529641Z
 size: 27MB
 description: A microbenchmark support library
 container_url: https://github.com/orgs/autamus/packages/container/package/benchmark
