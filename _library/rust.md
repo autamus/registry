@@ -7,8 +7,8 @@ versions:
 - 1.52.1
 - 1.53.0
 - 1.54.0
-updated_at: 2021-11-01T16:14:20.278558078Z
-size: 254MB
+updated_at: 2021-11-13T19:07:25.969553729Z
+size: 255MB
 description: .format( cargo=join_path(boot_bin, 'cargo
 container_url: https://github.com/orgs/autamus/packages/container/package/rust
 
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/rust
 # rust
 ```bash 
 Download        : docker pull ghcr.io/autamus/rust
-Compressed Size : 254MB
+Compressed Size : 255MB
 ```
 
 ## Description
