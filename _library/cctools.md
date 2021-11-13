@@ -4,7 +4,7 @@ name: cctools
 github: https://github.com/autamus/registry/blob/main/containers/c/cctools/spack.yaml
 versions:
 - 7.2.10
-updated_at: 2021-11-01T15:52:36.869897751Z
+updated_at: 2021-11-13T18:46:59.737828085Z
 size: 113MB
 description: 'The Cooperative Computing Tools (cctools) enable large scale distributed
   computations to harness hundreds to thousands of machines from clusters, clouds,
