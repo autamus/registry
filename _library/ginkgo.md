@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/g/ginkgo/spack.
 versions:
 - 1.3.0
 - 1.4.0
-updated_at: 2021-11-01T15:57:15.961436861Z
+updated_at: 2021-11-13T18:49:33.863886023Z
 size: 32MB
 description: High-performance linear algebra library for manycore systems, with a
   focus on sparse solution of linear systems.
