@@ -6,7 +6,7 @@ versions:
 - 4.2.0.0
 - 4.2.2.0
 - 4.2.3.0
-updated_at: 2021-11-08T19:47:47.838257975Z
+updated_at: 2021-11-13T18:53:02.477609627Z
 size: 643MB
 description: ' Genome Analysis Toolkit Variant Discovery in High-Throughput Sequencing
   Data '
