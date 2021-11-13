@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/c/caliper/spack
 versions:
 - 2.6.0
 - 2.7.0
-updated_at: 2021-11-12T16:03:26.361122502Z
+updated_at: 2021-11-13T18:46:00.992789584Z
 size: 72MB
 description: 'Caliper is a program instrumentation and performance measurement framework.
   It is designed as a performance analysis toolbox in a library, allowing one to bake
