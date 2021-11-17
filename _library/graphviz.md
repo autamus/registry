@@ -9,7 +9,7 @@ versions:
 - 2.49.0
 - 2.49.2
 - 2.49.3
-updated_at: 2021-11-13T18:53:34.034633472Z
+updated_at: 2021-11-17T15:59:04.379348528Z
 size: 31MB
 description: Graph Visualization Software
 container_url: https://github.com/orgs/autamus/packages/container/package/graphviz
