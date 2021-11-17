@@ -6,7 +6,7 @@ versions:
 - "1.12"
 - "1.13"
 - "1.14"
-updated_at: 2021-10-30T15:13:53.64492113Z
+updated_at: 2021-11-17T15:58:35.974885951Z
 size: 34MB
 description: C library for high-throughput sequencing data formats.
 container_url: https://github.com/orgs/autamus/packages/container/package/htslib
