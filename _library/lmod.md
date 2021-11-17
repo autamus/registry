@@ -6,11 +6,12 @@ versions:
 - "8.3"
 - 8.5.12
 - 8.5.13
+- 8.5.27
 - 8.5.6
 - 8.5.7
 - 8.5.8
 - 8.5.9
-updated_at: 2021-09-15T23:57:14.392603424Z
+updated_at: 2021-11-17T19:44:51.605374639Z
 size: 45MB
 description: ' homepage = ''https://www.tacc.utexas.edu/research-development/tacc-projects/lmod'
 container_url: https://github.com/orgs/autamus/packages/container/package/lmod
