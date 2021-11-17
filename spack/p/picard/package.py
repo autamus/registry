@@ -22,10 +22,7 @@ class Picard(Package):
 
     # They started distributing a single jar file at v2.6.0, prior to
     # that it was a .zip file with multiple .jar and .so files
-    version('2.26.5', sha256='ecf8cc7a55f249f61f73e857b279ad9f55580ed8ad944aad22db4bd092c2e927', expand=False)
-    version('2.26.4', sha256='295390baab9d9ded1201d80511fb7f953ba80e7f6f729b83b4c01a7f3b58bcfa', expand=False)
-    version('2.26.3', sha256='1fb5600fbe6d98011dd353e3d68e81353d1069785dd69508a4016628ce8e525a', expand=False)
-    version('2.26.2', sha256='99fab1699a735fd048a05975a243774f1cc99e87a9b28311d4aa872d06390474', expand=False)
+    version('2.26.5', sha256='ecf8cc7a55f249f61f73e857b279ad9f55580ed8ad944aad22db4bd092c2e927')
     version('2.25.7', sha256='dc0e830d3e838dee2b4f4aa1c9631fb3a4c3ec982de8dfe5145fc748104c7146', expand=False)
     version('2.25.6', sha256='768709826514625381e6fa3920945360167f4e830bf72f79eb070da059676f02', expand=False)
     version('2.25.5', sha256='f7fa9784b84d384abfcbd77076f5ceab7b2797dc863ac35fd41470daa3efe3a5', expand=False)
