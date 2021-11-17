@@ -23,7 +23,7 @@ class Llvm(CMakePackage, CudaPackage):
     url      = "https://github.com/llvm/llvm-project/archive/llvmorg-7.1.0.tar.gz"
     list_url = "https://releases.llvm.org/download.html"
     git = "https://github.com/llvm/llvm-project"
-    maintainers = ['trws', 'naromero77']
+    maintainers = ['trws', 'haampie']
 
     tags = ['e4s']
 
@@ -198,6 +198,8 @@ class Llvm(CMakePackage, CudaPackage):
     conflicts("+flang", when="~clang")
     # Introduced in version 11 as a part of LLVM and not a separate package.
     conflicts("+flang", when="@:10")
+
+    conflicts('~mlir', when='+flang', msg='Flang requires MLIR')
 
     # Older LLVM do not build with newer compilers, and vice versa
     conflicts("%gcc@11:", when="@:7")
