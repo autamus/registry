@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/c/cfitsio/spack
 versions:
 - "3.49"
 - 4.0.0
-updated_at: 2021-10-30T15:07:04.420176722Z
+updated_at: 2021-11-17T15:50:33.697348324Z
 size: 33MB
 description: 'CFITSIO is a library of C and Fortran subroutines for reading and writing
   data files in FITS (Flexible Image Transport System) data format. '
