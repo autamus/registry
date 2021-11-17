@@ -4,7 +4,7 @@ name: eagle
 github: https://github.com/autamus/registry/blob/main/containers/e/eagle/spack.yaml
 versions:
 - 1.1.2
-updated_at: 2021-10-30T15:10:44.880082793Z
+updated_at: 2021-11-17T15:52:40.437503429Z
 size: 35MB
 description: 'EAGLE: Explicit Alternative Genome Likelihood Evaluator'
 container_url: https://github.com/orgs/autamus/packages/container/package/eagle
