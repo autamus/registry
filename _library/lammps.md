@@ -4,7 +4,7 @@ name: lammps
 github: https://github.com/autamus/registry/blob/main/containers/l/lammps/spack.yaml
 versions:
 - "20210310"
-updated_at: 2021-11-13T18:58:08.052571282Z
+updated_at: 2021-11-17T16:03:33.253059709Z
 size: 91MB
 description: 'LAMMPS stands for Large-scale Atomic/Molecular Massively Parallel Simulator.
   This package uses patch releases, not stable release. See https://github.com/spack/spack/pull/5342
