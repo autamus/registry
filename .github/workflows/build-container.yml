@@ -51,7 +51,7 @@ jobs:
       
       - name: Builder
         id: builder
-        uses: autamus/builder@main
+        uses: autamus/builder@test/pre-post-commands
         with:
           containers_current: ${{ matrix.container.container }}
           parsers_loaded: spack
