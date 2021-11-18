@@ -39,6 +39,7 @@ class Salmon(CMakePackage):
     conflicts('%gcc@:5.1', when='@0.14.1:')
 
     resources = [
+        ('1.5.2', 'pufferfish', '059207e8d3134060ed70595e53f4189954c9e5edfaa6361b46304f55d1b71bc7'),
         ('1.4.0', 'pufferfish', '059207e8d3134060ed70595e53f4189954c9e5edfaa6361b46304f55d1b71bc7'),
         ('0.14.1', 'RapMap', 'fabac2f360513b803aa3567415eddcd97261ab8a23d4f600af5f98ee8ffd944b'),
         ('0.12.0', 'RapMap', '05102c0bbc8a0c0056a01cd0e8788fa5b504aee58ac226ab8c0e3ffec8019790'),
