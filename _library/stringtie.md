@@ -6,7 +6,7 @@ versions:
 - 1.3.4
 - 2.1.6
 - 2.1.7
-updated_at: 2021-11-17T16:15:51.616844209Z
+updated_at: 2021-11-18T19:09:11.950376334Z
 size: 106MB
 description: StringTie is a fast and highly efficient assembler of RNA-Seq alignments
   into potential transcripts.
