@@ -68,11 +68,9 @@ class Samtools(Package):
             else:
                 make('prefix={0}'.format(prefix), 'install')
 
-        # Legacy samtools API removed in version 1.14
         # Install dev headers and libs for legacy apps depending on them
-        if self.spec.version < Version('1.14'):
-            mkdir(prefix.include)
-            mkdir(prefix.lib)
-            install('sam.h', prefix.include)
-            install('bam.h', prefix.include)
-            install('libbam.a', prefix.lib)
+        mkdir(prefix.include)
+        mkdir(prefix.lib)
+        install('sam.h', prefix.include)
+        install('bam.h', prefix.include)
+        install('libbam.a', prefix.lib)
