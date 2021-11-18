@@ -27,6 +27,7 @@ class Psi4(CMakePackage):
     depends_on('blas')
     depends_on('lapack')
     depends_on('boost+chrono+filesystem+python+regex+serialization+system+timer+thread')
+    depends_on('mpfr', when='@1.4:')
     depends_on('python')
     depends_on('cmake@3.3:', type='build')
     depends_on('py-numpy', type=('build', 'run'))
