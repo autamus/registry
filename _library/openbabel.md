@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/o/openbabel/spa
 versions:
 - 3.0.0
 - 3.1.1
-updated_at: 2021-11-17T16:13:01.074759414Z
-size: 197MB
+updated_at: 2021-11-18T17:04:01.233565732Z
+size: 198MB
 description: Open Babel is a chemical toolbox designed to speak the many languages
   of chemical data. It's an open, collaborative project allowing anyone to search,
   convert, analyze, or store data from molecular modeling, chemistry, solid-state
@@ -17,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/openba
 # openbabel
 ```bash 
 Download        : docker pull ghcr.io/autamus/openbabel
-Compressed Size : 197MB
+Compressed Size : 198MB
 ```
 
 ## Description
