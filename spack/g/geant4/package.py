@@ -13,12 +13,13 @@ class Geant4(CMakePackage):
     science."""
 
     homepage = "http://geant4.cern.ch/"
-    url      = "https://gitlab.cern.ch/geant4/geant4/-/archive/v10.7.1/geant4-v10.7.1.tar.gz"
+    url      = "https://gitlab.cern.ch/geant4/geant4/-/archive/v10.7.3/geant4-v10.7.3.tar.gz"
 
     tags = ['hep']
 
     maintainers = ['drbenmorgan']
 
+    version('10.7.3', sha256='8615d93bd4178d34f31e19d67bc81720af67cdab1c8425af8523858dcddcf65b')
     version('10.7.2', sha256='593fc85883a361487b17548ba00553501f66a811b0a79039276bb75ad59528cf')
     version('10.7.1', sha256='2aa7cb4b231081e0a35d84c707be8f35e4edc4e97aad2b233943515476955293')
     version('10.7.0', sha256='c991a139210c7f194720c900b149405090058c00beb5a0d2fac5c40c42a262d4')
