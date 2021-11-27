@@ -11,18 +11,17 @@ class Libunwind(AutotoolsPackage):
        the call-chain of a program."""
 
     homepage = "https://www.nongnu.org/libunwind/"
-    url      = "http://download.savannah.gnu.org/releases/libunwind/libunwind-1.1.tar.gz"
+    url      = "http://download.savannah.gnu.org/releases/libunwind/libunwind-1.6.0.tar.gz"
     git      = "https://github.com/libunwind/libunwind"
     maintainers = ['mwkrentel']
 
     version('master', branch='master')
-    version('1.5-head', branch='v1.5-stable')
-    version('1.5.0', sha256='90337653d92d4a13de590781371c604f9031cdb50520366aa1e3a91e1efb1017')
+    version('1.6.0', sha256='7194c20dda841b26917c0579e6467b53f7ad2e3f9452e5c77f3c3829c4656b70')
+    version('1.5', branch='v1.5-stable')
     version('1.4.0', sha256='df59c931bd4d7ebfd83ee481c943edf015138089b8e50abed8d9c57ba9338435')
     version('1.3.1', sha256='43997a3939b6ccdf2f669b50fdb8a4d3205374728c2923ddc2354c65260214f8')
     version('1.2.1', sha256='3f3ecb90e28cbe53fba7a4a27ccce7aad188d3210bb1964a923a731a27a75acb')
-    version('1.1', sha256='9dfe0fcae2a866de9d3942c66995e4b460230446887dbdab302d41a8aee8d09a',
-            deprecated=True)
+    version('1.1', sha256='9dfe0fcae2a866de9d3942c66995e4b460230446887dbdab302d41a8aee8d09a')
 
     variant('docs', default=True, description='Build man page')
     variant('libs', default='shared,static', values=('shared', 'static'),
