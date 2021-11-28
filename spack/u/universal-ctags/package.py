@@ -13,11 +13,11 @@ class UniversalCtags(AutotoolsPackage):
     the indexed items."""
 
     homepage = "https://ctags.io/"
-    url      = "https://github.com/universal-ctags/ctags/archive/p5.9.20211121.0.tar.gz"
+    url      = "https://github.com/universal-ctags/ctags/archive/p5.9.20211128.0.tar.gz"
     git      = "https://github.com/universal-ctags/ctags.git"
 
     version('master', branch='master')
-    version('5.9.20211121.0', sha256='5ec63ac6671a388175c8b467b53f21751f7ca5dc0b53d1767835041a10f7e6c8')
+    version('5.9.20211128.0', sha256='86682b1e3c5691f2a3cfeca1d9f6e27b0dab64dd4817e1ad5ed604fd78f811d6')
     version('5.9.20211114.0', sha256='7f5e1dc3a6955eace0d57dcc1194ada32188f984a71d46e1d98e029fbd559f86')
     version('5.9.20210912.0', sha256='5082d4f7e5695be3d697c46e2232d76c6d8adff51d22ba7a4b869362f444ee21')
     version('5.9.20210808.0', sha256='7f5f88d20750dfa2437ca9d163972b8684e3cf16de022a5177f322be92f528cc')
