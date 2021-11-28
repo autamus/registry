@@ -14,9 +14,9 @@ class Psi4(CMakePackage):
     a variety of molecular properties."""
 
     homepage = "https://www.psicode.org/"
-    url      = "https://github.com/psi4/psi4/archive/v1.4.1.tar.gz"
+    url      = "https://github.com/psi4/psi4/archive/v1.5.tar.gz"
 
-    version('1.4.1', sha256='4a3138bb718df250b924a1aa60b61d8bb1debf22c55122be7867ee86643dc9d0')
+    version('1.5', sha256='e1f1446c553e6dddf0f19216c2cfbae49d939196022c55c89226ee047cfa0d34')
     version('1.3.2', sha256='ed76c67803b6420f35f57a6dd31c47108b9145b8c9fced5c94cdc179f6b5fbf3')
 
     variant('build_type', default='Release',
@@ -27,7 +27,6 @@ class Psi4(CMakePackage):
     depends_on('blas')
     depends_on('lapack')
     depends_on('boost+chrono+filesystem+python+regex+serialization+system+timer+thread')
-    depends_on('mpfr', when='@1.4:')
     depends_on('python')
     depends_on('cmake@3.3:', type='build')
     depends_on('py-numpy', type=('build', 'run'))
