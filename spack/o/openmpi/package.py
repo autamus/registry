@@ -37,6 +37,7 @@ class Openmpi(AutotoolsPackage):
     tags = ['e4s']
 
     version('master', branch='master', submodules=True)
+    version('4.1.2', sha256='9b78c7cf7fc32131c5cf43dd2ab9740149d9d87cadb2e2189f02685749a6b527')
     version('4.1.1', sha256='e24f7a778bd11a71ad0c14587a7f5b00e68a71aa5623e2157bafee3d44c07cda')
     version('4.1.0', sha256='73866fb77090819b6a8c85cb8539638d37d6877455825b74e289d647a39fd5b5')
     version('4.0.6', sha256='94b7b59ae9860f3bd7b5f378a698713e7b957070fdff2c43453b6cbf8edb410c')
