@@ -11,12 +11,12 @@ class Libunwind(AutotoolsPackage):
        the call-chain of a program."""
 
     homepage = "https://www.nongnu.org/libunwind/"
-    url      = "http://download.savannah.gnu.org/releases/libunwind/libunwind-1.6.0.tar.gz"
+    url      = "http://download.savannah.gnu.org/releases/libunwind/libunwind-1.6.2.tar.gz"
     git      = "https://github.com/libunwind/libunwind"
     maintainers = ['mwkrentel']
 
     version('master', branch='master')
-    version('1.6.0', sha256='7194c20dda841b26917c0579e6467b53f7ad2e3f9452e5c77f3c3829c4656b70')
+    version('1.6.2', sha256='4a6aec666991fb45d0889c44aede8ad6eb108071c3554fcdff671f9c94794976')
     version('1.5', branch='v1.5-stable')
     version('1.4.0', sha256='df59c931bd4d7ebfd83ee481c943edf015138089b8e50abed8d9c57ba9338435')
     version('1.3.1', sha256='43997a3939b6ccdf2f669b50fdb8a4d3205374728c2923ddc2354c65260214f8')
