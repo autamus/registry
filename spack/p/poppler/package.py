@@ -10,11 +10,12 @@ class Poppler(CMakePackage):
     """Poppler is a PDF rendering library based on the xpdf-3.0 code base."""
 
     homepage = "https://poppler.freedesktop.org"
-    url      = "https://poppler.freedesktop.org/poppler-21.11.0.tar.xz"
+    url      = "https://poppler.freedesktop.org/poppler-21.12.0.tar.xz"
     list_url = "https://poppler.freedesktop.org/releases.html"
     git      = "https://gitlab.freedesktop.org/poppler/poppler.git"
 
     version('master', branch='master')
+    version('21.12.0', sha256='acb840c2c1ec07d07e53c57c4b3a1ff3e3ee2d888d44e1e9f2f01aaf16814de7')
     version('21.11.0', sha256='31b76b5cac0a48612fdd154c02d9eca01fd38fb8eaa77c1196840ecdeb53a584')
     version('21.10.0', sha256='964b5b16290fbec3fae57c2a5bcdea49bb0736bd750c3a3711c47995c9efc394')
     version('21.09.0', sha256='5a47fef738c2b99471f9b459a8bf8b40aefb7eed92caa4861c3798b2e126d05b')
