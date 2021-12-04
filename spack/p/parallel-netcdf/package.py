@@ -40,11 +40,11 @@ class ParallelNetcdf(AutotoolsPackage):
     version('1.11.1', sha256='0c587b707835255126a23c104c66c9614be174843b85b897b3772a590be45779')
     version('1.11.0', sha256='a18a1a43e6c4fd7ef5827dbe90e9dcf1363b758f513af1f1356ed6c651195a9f')
     version('1.10.0', sha256='ed189228b933cfeac3b7b4f8944eb00e4ff2b72cf143365b1a77890980663a09')
-    version('1.9.0',  sha256='356e1e1fae14bc6c4236ec11435cfea0ff6bde2591531a4a329f9508a01fbe98')
-    version('1.8.1',  sha256='8d7d4c9c7b39bb1cbbcf087e0d726551c50f0cc30d44aed3df63daf3772c9043')
-    version('1.8.0',  sha256='ac00bb2333bee96354de9d9c32d3dfdaa919d878098762f146996578b7f0ede9')
-    version('1.7.0',  sha256='52f0d106c470a843c6176318141f74a21e6ece3f70ee8fe261c6b93e35f70a94')
-    version('1.6.1',  sha256='8cf1af7b640475e3cc931e5fbcfe52484c5055f2fab526691933c02eda388aae')
+    version('1.9.0', sha256='356e1e1fae14bc6c4236ec11435cfea0ff6bde2591531a4a329f9508a01fbe98')
+    version('1.8.1', sha256='8d7d4c9c7b39bb1cbbcf087e0d726551c50f0cc30d44aed3df63daf3772c9043')
+    version('1.8.0', sha256='ac00bb2333bee96354de9d9c32d3dfdaa919d878098762f146996578b7f0ede9')
+    version('1.7.0', sha256='52f0d106c470a843c6176318141f74a21e6ece3f70ee8fe261c6b93e35f70a94')
+    version('1.6.1', sha256='8cf1af7b640475e3cc931e5fbcfe52484c5055f2fab526691933c02eda388aae')
 
     variant('cxx', default=True, description='Build the C++ Interface')
     variant('fortran', default=True, description='Build the Fortran Interface')
@@ -177,7 +177,7 @@ class ParallelNetcdf(AutotoolsPackage):
 
         return args
 
-    examples_src_dir = 'examples/CXX'
+    examples_src_dir = join_path('examples', 'CXX')
 
     @run_after('install')
     def cache_test_sources(self):
@@ -186,19 +186,24 @@ class ParallelNetcdf(AutotoolsPackage):
         self.cache_extra_test_sources([self.examples_src_dir])
 
     def test(self):
-        test_dir = join_path(self.install_test_root, self.examples_src_dir)
+        test_dir = join_path(self.test_suite.current_test_cache_dir,
+                             self.examples_src_dir)
         # pnetcdf has many examples to serve as a suitable smoke check.
         # column_wise was chosen based on the E4S test suite. Other
         # examples should work as well.
         test_exe = 'column_wise'
-        options = ['{0}.cpp'.format(test_exe), '-o', test_exe, '-lpnetcdf']
+        options = ['{0}.cpp'.format(test_exe), '-o', test_exe, '-lpnetcdf',
+                   '-L{0}'.format(self.prefix.lib),
+                   '-I{0}'.format(self.prefix.include)]
         reason = 'test: compiling and linking pnetcdf example'
         self.run_test(self.spec['mpi'].mpicxx, options, [],
                       installed=False, purpose=reason, work_dir=test_dir)
-        mpiexe_list = ['mpirun', 'mpiexec', 'srun']
+        mpiexe_list = [self.spec['mpi'].prefix.bin.srun,
+                       self.spec['mpi'].prefix.bin.mpirun,
+                       self.spec['mpi'].prefix.bin.mpiexec]
         for mpiexe in mpiexe_list:
             if os.path.isfile(mpiexe):
-                self.run_test(mpiexe, ['-n', '4', test_exe], [],
+                self.run_test(mpiexe, ['-n', '1', test_exe], [],
                               installed=False,
                               purpose='test: pnetcdf smoke test',
                               skip_missing=True,
