@@ -11,11 +11,11 @@ class Stringtie(MakefilePackage):
        into potential transcripts."""
 
     homepage = "https://ccb.jhu.edu/software/stringtie"
-    url      = "https://github.com/gpertea/stringtie/archive/v1.3.3b.tar.gz"
+    url      = "https://github.com/gpertea/stringtie/archive/v2.2.0.tar.gz"
 
-    version('1.3.4d', sha256='0134c0adc264efd31a1df4301b33bfcf3b3fe96bd3990ce3df90819bad9af968')
-    version('1.3.4a', sha256='6164a5fa9bf8807ef68ec89f47e3a61fe57fa07fe858f52fb6627f705bf71add')
-    version('1.3.3b', sha256='30e8a3a29b474f0abeef1540d9b4624a827d8b29d7347226d86a38afea28bc0f')
+    version('2.2.0', sha256='ef000db642aaa0c4bb1a88017f25becb5dd87b48d7fc2534640d2f73bbc5ec52')
+    version('1.3.4', sha256='0134c0adc264efd31a1df4301b33bfcf3b3fe96bd3990ce3df90819bad9af968')
+    version('1.3.3', sha256='30e8a3a29b474f0abeef1540d9b4624a827d8b29d7347226d86a38afea28bc0f')
 
     depends_on('samtools')
 
