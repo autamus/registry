@@ -35,7 +35,7 @@ from spack import *
 class Go(Package):
     """The golang compiler and build environment"""
     homepage = "https://golang.org"
-    url      = "https://dl.google.com/go/go1.17.4.src.tar.gz"
+    url      = "https://dl.google.com/go/go1.17.5.src.tar.gz"
     git      = "https://go.googlesource.com/go.git"
 
     extendable = True
