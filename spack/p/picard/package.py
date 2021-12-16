@@ -16,13 +16,13 @@ class Picard(Package):
     """
 
     homepage = "https://broadinstitute.github.io/picard/"
-    url      = "https://github.com/broadinstitute/picard/releases/download/2.26.7/picard.jar"
+    url      = "https://github.com/broadinstitute/picard/releases/download/2.26.8/picard.jar"
     _urlfmt  = "https://github.com/broadinstitute/picard/releases/download/{0}/picard.jar"
     _oldurlfmt = 'https://github.com/broadinstitute/picard/releases/download/{0}/picard-tools-{0}.zip'
 
     # They started distributing a single jar file at v2.6.0, prior to
     # that it was a .zip file with multiple .jar and .so files
-    version('2.26.7', sha256='92097395e91d226387110fb79ba29cf7b25286fdb1ce1277ba0912963d0d3a05')
+    version('2.26.8', sha256='bd3030059fa5906c648c148c85282e8397886fa7c71996b21918b3837453645e')
     version('2.26.5', sha256='ecf8cc7a55f249f61f73e857b279ad9f55580ed8ad944aad22db4bd092c2e927', expand=False)
     version('2.26.4', sha256='295390baab9d9ded1201d80511fb7f953ba80e7f6f729b83b4c01a7f3b58bcfa', expand=False)
     version('2.26.3', sha256='1fb5600fbe6d98011dd353e3d68e81353d1069785dd69508a4016628ce8e525a', expand=False)
