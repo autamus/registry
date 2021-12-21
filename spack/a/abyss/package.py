@@ -23,8 +23,9 @@ class Abyss(AutotoolsPackage):
        is useful for assembling genomes up to 100 Mbases in size."""
 
     homepage = "https://www.bcgsc.ca/platform/bioinfo/software/abyss"
-    url      = "https://github.com/bcgsc/abyss/releases/download/2.3.3/abyss-2.3.3.tar.gz"
+    url      = "https://github.com/bcgsc/abyss/releases/download/2.3.4/abyss-2.3.4.tar.gz"
 
+    version('2.3.4', sha256='7bbe479d2574a4d0241a5f564852d637690ded165c160862977e90597c614fed')
     version('2.3.3', sha256='4b14642989e84f331d8d1a854cca67bdede95e90bd6813836c173a951d71405c')
     version('2.3.2', sha256='1584656f85e928658589ca876268c1c350721f558842994df3b1f9bda45f1475')
     version('2.3.1', sha256='664045e7903e9732411effc38edb9ebb1a0c1b7636c64b3a14a681f465f43677')
