@@ -40,22 +40,10 @@ class Ascent(CMakePackage, CudaPackage):
 
     maintainers = ['cyrush']
 
-    version('develop',
-            branch='develop',
-            submodules=True)
-
-    version('0.7.1',
-            tag='v0.7.1',
-            submodules=True,
-            preferred=True)
-
-    version('0.7.0',
-            tag='v0.7.0',
-            submodules=True)
-
-    version('0.6.0',
-            tag='v0.6.0',
-            submodules=True)
+    version('develop', branch='develop', submodules=True)
+    version('0.7.1', submodules=True, tag='v0.7.1')
+    version('0.7.0', submodules=True, tag='v0.7.0')
+    version('0.6.0', submodules=True, tag='v0.6.0')
 
     ###########################################################################
     # package variants
@@ -95,6 +83,7 @@ class Ascent(CMakePackage, CudaPackage):
 
     # Certain CMake versions have been found to break for our use cases
     depends_on("cmake@3.14.1:3.14,3.18.2:", type='build')
+    depends_on("conduit@:0.7.2", when="@:0.7.1")
     depends_on("conduit~python", when="~python")
     depends_on("conduit+python", when="+python")
     depends_on("conduit+mpi", when="+mpi")
