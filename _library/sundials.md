@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/s/sundials/spac
 versions:
 - 5.7.0
 - latest
-updated_at: 2021-11-13T19:08:20.967656544Z
-size: 78MB
+updated_at: 2021-12-24T16:03:38.33933611Z
+size: 80MB
 description: SUNDIALS (SUite of Nonlinear and DIfferential/ALgebraic equation Solvers
 container_url: https://github.com/orgs/autamus/packages/container/package/sundials
 
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/sundia
 # sundials
 ```bash 
 Download        : docker pull ghcr.io/autamus/sundials
-Compressed Size : 78MB
+Compressed Size : 80MB
 ```
 
 ## Description
