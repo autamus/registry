@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/b/bismark/spack
 versions:
 - 0.23.0
 - 0.23.1
-updated_at: 2021-11-18T19:08:52.602501494Z
-size: 110MB
+updated_at: 2021-12-30T15:58:52.786503125Z
+size: 111MB
 description: A tool to map bisulfite converted sequence reads and determine cytosine
   methylation states
 container_url: https://github.com/orgs/autamus/packages/container/package/bismark
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/bismar
 # bismark
 ```bash 
 Download        : docker pull ghcr.io/autamus/bismark
-Compressed Size : 110MB
+Compressed Size : 111MB
 ```
 
 ## Description
