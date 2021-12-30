@@ -2,8 +2,6 @@
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
-
-
 import os
 
 from spack import *
@@ -28,11 +26,10 @@ class Turbine(AutotoolsPackage):
             description='Enable calling R')
     variant('hdf5', default=False,
             description='Enable HDF5 support')
-    depends_on('adlbx@master', when='@master')
-    depends_on('adlbx@:0.9.2', when='@:1.2.3')
-    depends_on('adlbx@:0.8.0', when='@:1.1.0')
-    depends_on('adlbx', when='@1.2.1:')
+
     depends_on('adlbx')
+    depends_on('adlbx@master', when='@master')
+    depends_on('adlbx@:0.9.2', when='@1.2.3:1.2.99')
     depends_on('tcl', type=('build', 'run'))
     depends_on('zsh', type=('build', 'run'))
     depends_on('swig', type='build')

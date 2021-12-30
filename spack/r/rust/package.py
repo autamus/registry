@@ -18,7 +18,7 @@ class Rust(Package):
     """
 
     homepage = "https://www.rust-lang.org"
-    url = "https://static.rust-lang.org/dist/rustc-1.42.0-src.tar.gz"
+    url      = "https://static.rust-lang.org/dist/rustc-1.42.0-src.tar.gz"
     git = "https://github.com/rust-lang/rust.git"
 
     maintainers = ["AndrewGaspar"]
@@ -74,24 +74,7 @@ class Rust(Package):
 
     # Pre-release Versions
     version('master', branch='master', submodules=True)
-
-    # These version strings are officially supported, but aren't explicitly
-    # listed because there's no stable checksum for them.
-    # version('nightly')
-    # version('beta')
-
-    # Version Notes:
-    # Here's some information on why your favorite Rust version may be missing.
-    #
-    # < 1.23:
-    # Rust seems to eagerly search for ar next to cc. Spack makes wrappers for
-    # cc and c++, but not for ar, so no ar is found. In future versions, ar
-    # can be specified in the config.
-    #
-    # < 1.17:
-    # The `x.py` bootstrapping script did not exist prior to Rust 1.17. It
-    # would be possible to support both, but for simplicitly, we only support
-    # Rust 1.17 and newer
+    version('nightly')
     version('1.51.0', sha256='7a6b9bafc8b3d81bbc566e7c0d1f17c9f499fd22b95142f7ea3a8e4d1f9eb847')
     version('1.48.0', sha256='0e763e6db47d5d6f91583284d2f989eacc49b84794d1443355b85c58d67ae43b')
     version('1.47.0', sha256='3185df064c4747f2c8b9bb8c4468edd58ff4ad6d07880c879ac1b173b768d81d')
