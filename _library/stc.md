@@ -4,8 +4,8 @@ name: stc
 github: https://github.com/autamus/registry/blob/main/containers/s/stc/spack.yaml
 versions:
 - 0.9.0
-updated_at: 2021-12-24T15:50:34.077547198Z
-size: 270MB
+updated_at: 2021-12-30T15:49:35.360383389Z
+size: 269MB
 description: 'STC: The Swift-Turbine Compiler'
 container_url: https://github.com/orgs/autamus/packages/container/package/stc
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/stc
 # stc
 ```bash 
 Download        : docker pull ghcr.io/autamus/stc
-Compressed Size : 270MB
+Compressed Size : 269MB
 ```
 
 ## Description
