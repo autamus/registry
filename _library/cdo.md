@@ -6,7 +6,7 @@ versions:
 - 1.9.10
 - 2.0.0
 - 2.0.2
-updated_at: 2021-12-24T15:49:22.274883141Z
+updated_at: 2022-01-04T05:56:36.439040933Z
 size: 124MB
 description: 'CDO is a collection of command line Operators to manipulate and analyse
   Climate and NWP model Data. '
