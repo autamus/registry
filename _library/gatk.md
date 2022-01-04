@@ -6,8 +6,8 @@ versions:
 - 4.2.0.0
 - 4.2.2.0
 - 4.2.3.0
-updated_at: 2021-11-17T15:56:24.945593703Z
-size: 643MB
+updated_at: 2022-01-04T05:46:22.642785279Z
+size: 644MB
 description: ' Genome Analysis Toolkit Variant Discovery in High-Throughput Sequencing
   Data '
 container_url: https://github.com/orgs/autamus/packages/container/package/gatk
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/gatk
 # gatk
 ```bash 
 Download        : docker pull ghcr.io/autamus/gatk
-Compressed Size : 643MB
+Compressed Size : 644MB
 ```
 
 ## Description
