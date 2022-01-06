@@ -11,12 +11,13 @@ class PyPetsc4py(PythonPackage):
     """
 
     homepage = "https://gitlab.com/petsc/petsc4py"
-    url      = "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc4py-3.16.2.tar.gz"
+    url      = "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc4py-3.16.3.tar.gz"
     git      = "https://gitlab.com/petsc/petsc.git"
 
     maintainers = ['balay']
 
     version('main', branch='main')
+    version('3.16.3', sha256='10e730d50716e40de55b200ff53b461bc4f3fcc798ba89b74dfe6bdf63fa7b6e')
     version('3.16.2', sha256='906634497ae9c59f2c97e12b935954e5ba95df2e764290c24fff6751b7510b04')
     version('3.16.1', sha256='c218358217c436947f8fd61f247f73ac65fa29ea3489ad00bef5827b1436b95f')
     version('3.16.0', sha256='4044accfdc2c80994e80e4e286478d1ba9ac358512d1b74c42e1327eadb0d802')
