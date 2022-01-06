@@ -6,8 +6,8 @@ versions:
 - 12.0.0
 - 12.0.1
 - 13.0.0
-updated_at: 2021-11-18T19:51:31.867094598Z
-size: 1961MB
+updated_at: 2022-01-06T18:50:38.908087862Z
+size: 1775MB
 description: ' homepage = "http://llvm.org/'
 container_url: https://github.com/orgs/autamus/packages/container/package/llvm
 
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/llvm
 # llvm
 ```bash 
 Download        : docker pull ghcr.io/autamus/llvm
-Compressed Size : 1961MB
+Compressed Size : 1775MB
 ```
 
 ## Description
