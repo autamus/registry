@@ -4,8 +4,8 @@ name: meme
 github: https://github.com/autamus/registry/blob/main/containers/m/meme/spack.yaml
 versions:
 - 5.3.0
-updated_at: 2021-11-17T16:06:28.333170639Z
-size: 138MB
+updated_at: 2022-01-07T16:19:52.288770845Z
+size: 139MB
 description: The MEME Suite allows the biologist to discover novel motifs in collections
   of unaligned nucleotide or protein sequences, and to perform a wide variety of other
   motif-based analyses.
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/meme
 # meme
 ```bash 
 Download        : docker pull ghcr.io/autamus/meme
-Compressed Size : 138MB
+Compressed Size : 139MB
 ```
 
 ## Description
