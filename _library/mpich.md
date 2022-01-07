@@ -4,7 +4,7 @@ name: mpich
 github: https://github.com/autamus/registry/blob/main/containers/m/mpich/spack.yaml
 versions:
 - 3.4.2
-updated_at: 2021-11-17T16:04:07.53511059Z
+updated_at: 2022-01-07T16:17:55.946281556Z
 size: 49MB
 description: MPICH is a high performance and widely portable implementation of the
   Message Passing Interface (MPI) standard.
