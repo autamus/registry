@@ -9,8 +9,8 @@ versions:
 - 1.45.3
 - 1.46.0
 - 1.46.1
-updated_at: 2021-11-17T16:04:27.673368521Z
-size: 73MB
+updated_at: 2022-01-07T16:17:03.509021625Z
+size: 74MB
 description: This project seeks to develop a single piece of open-source, expandable
   software to fill the bioinformatics needs of the microbial ecology community.
 container_url: https://github.com/orgs/autamus/packages/container/package/mothur
@@ -19,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/mothur
 # mothur
 ```bash 
 Download        : docker pull ghcr.io/autamus/mothur
-Compressed Size : 73MB
+Compressed Size : 74MB
 ```
 
 ## Description
