@@ -6,7 +6,8 @@ versions:
 - 1.75.0
 - 1.76.0
 - 1.77.0
-updated_at: 2021-11-17T15:48:12.245596101Z
+- 1.78.0
+updated_at: 2022-01-07T16:03:36.282746845Z
 size: 48MB
 description: 'Boost provides free peer-reviewed portable C++ source libraries, emphasizing
   libraries that work well with the C++ Standard Library. Boost libraries are intended
