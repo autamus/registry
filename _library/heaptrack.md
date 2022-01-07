@@ -6,7 +6,7 @@ versions:
 - 1.1.0
 - 1.2.0
 - 1.3.0
-updated_at: 2021-12-28T17:29:31.044581065Z
+updated_at: 2022-01-07T16:10:47.171764262Z
 size: 65MB
 description: 'Heaptrack is a heap memory profiler that traces all memory allocations
   and annotates these events with stack traces. '
