@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/p/py-libensembl
 versions:
 - 0.7.2
 - 0.8.0
-updated_at: 2021-12-30T15:49:31.488533676Z
-size: 120MB
+updated_at: 2022-01-07T16:22:52.636024938Z
+size: 121MB
 description: Library for managing ensemble-like collections of computations.
 container_url: https://github.com/orgs/autamus/packages/container/package/py-libensemble
 
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/py-lib
 # py-libensemble
 ```bash 
 Download        : docker pull ghcr.io/autamus/py-libensemble
-Compressed Size : 120MB
+Compressed Size : 121MB
 ```
 
 ## Description
