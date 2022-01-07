@@ -6,7 +6,7 @@ versions:
 - 5.1.0
 - 5.3.1
 - 5.3.2
-updated_at: 2021-11-17T16:18:57.644310892Z
+updated_at: 2022-01-07T16:30:08.257323575Z
 size: 46MB
 description: The XROOTD project aims at giving high performance, scalable fault tolerant
   access to data repositories of many kinds.
