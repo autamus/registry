@@ -7,8 +7,9 @@ versions:
 - 1.7.0
 - 1.7.1
 - 1.7.2
-updated_at: 2021-11-17T16:12:12.623555874Z
-size: 144MB
+- 1.7.3
+updated_at: 2022-01-07T16:24:36.784967431Z
+size: 147MB
 description: SciPy (pronounced "Sigh
 container_url: https://github.com/orgs/autamus/packages/container/package/py-scipy
 
@@ -16,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/py-sci
 # py-scipy
 ```bash 
 Download        : docker pull ghcr.io/autamus/py-scipy
-Compressed Size : 144MB
+Compressed Size : 147MB
 ```
 
 ## Description
