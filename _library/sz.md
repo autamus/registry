@@ -6,7 +6,7 @@ versions:
 - 2.1.11.1
 - 2.1.11.2
 - 2.1.12
-updated_at: 2021-12-24T16:04:14.02889859Z
+updated_at: 2022-01-07T16:26:20.887385781Z
 size: 28MB
 description: Error-bounded Lossy Compressor for HPC Data
 container_url: https://github.com/orgs/autamus/packages/container/package/sz
