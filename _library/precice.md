@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/p/precice/spack
 versions:
 - 2.2.1
 - 2.3.0
-updated_at: 2022-01-07T16:24:19.935403082Z
+updated_at: 2022-01-08T15:07:21.738190919Z
 size: 159MB
 description: preCICE (Precise Code Interaction Coupling Environment) is a coupling
   library for partitioned multi-physics simulations. Partitioned means that preCICE
