@@ -4,7 +4,7 @@ name: kallisto
 github: https://github.com/autamus/registry/blob/main/containers/k/kallisto/spack.yaml
 versions:
 - 0.46.2
-updated_at: 2022-01-07T16:15:35.983725671Z
+updated_at: 2022-01-09T16:25:36.483256365Z
 size: 84MB
 description: kallisto is a program for quantifying abundances of transcripts from
   RNA-Seq data.
