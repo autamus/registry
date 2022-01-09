@@ -4,7 +4,7 @@ name: mercurial
 github: https://github.com/autamus/registry/blob/main/containers/m/mercurial/spack.yaml
 versions:
 - "5.8"
-updated_at: 2022-01-07T16:17:36.793431662Z
+updated_at: 2022-01-09T16:28:18.380850925Z
 size: 95MB
 description: Mercurial is a free, distributed source control management tool.
 container_url: https://github.com/orgs/autamus/packages/container/package/mercurial
