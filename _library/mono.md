@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/m/mono/spack.ya
 versions:
 - 6.12.0.122
 - 6.8.0.123
-updated_at: 2022-01-07T16:29:23.463453655Z
+updated_at: 2022-01-09T16:38:51.978328548Z
 size: 146MB
 description: 'Mono is a software platform designed to allow developers to easily create
   cross platform applications. It is an open source implementation of Microsoft''s
