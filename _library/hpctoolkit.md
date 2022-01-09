@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/h/hpctoolkit/sp
 versions:
 - 2021.05.15
 - 2021.10.15
-updated_at: 2022-01-07T16:18:07.398812741Z
+updated_at: 2022-01-09T16:27:40.581304222Z
 size: 382MB
 description: HPCToolkit is an integrated suite of tools for measurement and analysis
   of program performance on computers ranging from multicore desktop systems to the
