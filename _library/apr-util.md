@@ -4,7 +4,7 @@ name: apr-util
 github: https://github.com/autamus/registry/blob/main/containers/a/apr-util/spack.yaml
 versions:
 - 1.6.1
-updated_at: 2021-10-19T07:13:41.315007235Z
+updated_at: 2022-01-09T16:12:50.611691305Z
 size: 36MB
 description: Apache Portable Runtime Utility
 container_url: https://github.com/orgs/autamus/packages/container/package/apr-util
