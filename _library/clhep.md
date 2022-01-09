@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/c/clhep/spack.y
 versions:
 - 2.4.4.0
 - 2.4.5.1
-updated_at: 2022-01-07T16:03:46.039879466Z
+updated_at: 2022-01-09T16:16:30.649838334Z
 size: 29MB
 description: 'CLHEP is a C++ Class Library for High Energy Physics. '
 container_url: https://github.com/orgs/autamus/packages/container/package/clhep
