@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/h/htop/spack.ya
 versions:
 - 2.2.0
 - 3.1.1
-updated_at: 2022-01-07T16:11:53.549879679Z
+updated_at: 2022-01-09T16:23:02.592480681Z
 size: 29MB
 description: htop is an interactive text-mode process viewer for Unix systems.
 container_url: https://github.com/orgs/autamus/packages/container/package/htop
