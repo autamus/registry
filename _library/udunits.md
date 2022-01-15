@@ -4,7 +4,7 @@ name: udunits
 github: https://github.com/autamus/registry/blob/main/containers/u/udunits/spack.yaml
 versions:
 - 2.2.28
-updated_at: 2021-05-26T07:25:09.599417344Z
+updated_at: 2022-01-15T16:12:18.125366299Z
 size: 27MB
 description: Automated units conversion
 container_url: https://github.com/orgs/autamus/packages/container/package/udunits
