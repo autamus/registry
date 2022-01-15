@@ -6,7 +6,7 @@ versions:
 - 2.4.35
 - 2.4.39
 - 2.4.40
-updated_at: 2021-10-04T15:30:18.273503424Z
+updated_at: 2022-01-15T15:43:58.570566828Z
 size: 30MB
 description: BEDOPS is an open-source command-line toolkit that performs highly efficient
   and scalable Boolean and other set operations, statistical calculations, archiving,
