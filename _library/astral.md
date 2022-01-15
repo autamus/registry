@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/a/astral/spack.
 versions:
 - 5.6.1
 - 5.7.1
-updated_at: 2021-10-19T07:14:55.520763909Z
+updated_at: 2022-01-15T15:45:31.218723753Z
 size: 220MB
 description: ASTRAL is a tool for estimating an unrooted species tree given a set
   of unrooted gene trees.
