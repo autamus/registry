@@ -4,8 +4,8 @@ name: ant
 github: https://github.com/autamus/registry/blob/main/containers/a/ant/spack.yaml
 versions:
 - 1.10.7
-updated_at: 2021-09-15T23:29:01.93711971Z
-size: 220MB
+updated_at: 2022-01-15T15:42:26.138858089Z
+size: 221MB
 description: 'Apache Ant is a Java library and command-line tool whose mission is
   to drive processes described in build files as targets and extension points dependent
   upon each other '
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/ant
 # ant
 ```bash 
 Download        : docker pull ghcr.io/autamus/ant
-Compressed Size : 220MB
+Compressed Size : 221MB
 ```
 
 ## Description
