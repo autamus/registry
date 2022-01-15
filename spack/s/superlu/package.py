@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -17,12 +17,8 @@ class Superlu(CMakePackage):
     version('5.3.0', sha256='3e464afa77335de200aeb739074a11e96d9bef6d0b519950cfa6684c4be1f350')
     version('5.2.2', sha256='470334a72ba637578e34057f46948495e601a5988a602604f5576367e606a28c')
     version('5.2.1', sha256='28fb66d6107ee66248d5cf508c79de03d0621852a0ddeba7301801d3d859f463')
-    version('4.3', sha256='169920322eb9b9c6a334674231479d04df72440257c17870aaa0139d74416781',
-            deprecated=True,
-            url='https://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_4.3.tar.gz')
-    version('4.2', sha256='5a06e19bf5a597405dfeea39fe92aa8c5dd41da73c72c7187755a75f581efb28',
-            deprecated=True,
-            url='https://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_4.2.tar.gz')
+    version('4.3', sha256='169920322eb9b9c6a334674231479d04df72440257c17870aaa0139d74416781', url='https://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_4.3.tar.gz')
+    version('4.2', sha256='5a06e19bf5a597405dfeea39fe92aa8c5dd41da73c72c7187755a75f581efb28', url='https://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_4.2.tar.gz')
 
     variant('pic',    default=True,
             description='Build with position independent code')

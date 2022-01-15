@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -12,7 +12,7 @@ class Sparse(MakefilePackage):
 
     maintainers = ['wortiz']
 
-    version('1.4b', sha256='63e6646244fd8f4d89f7f70fbf4cfd46b7688d21b22840a0ce57d294a7496d28')
+    version('1.4', sha256='63e6646244fd8f4d89f7f70fbf4cfd46b7688d21b22840a0ce57d294a7496d28')
 
     variant('pic',    default=True,
             description='Build with position independent code')

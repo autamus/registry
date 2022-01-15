@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -14,7 +14,7 @@ class Circos(Package):
     homepage = "http://circos.ca/"
     url      = "http://circos.ca/distribution/circos-0.69-6.tgz"
 
-    version('0.69-6', sha256='52d29bfd294992199f738a8d546a49754b0125319a1685a28daca71348291566')
+    version('0.69.6', sha256='52d29bfd294992199f738a8d546a49754b0125319a1685a28daca71348291566')
 
     depends_on('perl', type='run')
     depends_on('perl-clone', type='run')

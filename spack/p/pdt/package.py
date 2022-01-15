@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -28,10 +28,10 @@ class Pdt(AutotoolsPackage):
     version('3.24', sha256='4a2bb31f3f7f2e52ed49d9b7189ade05170a4386ef76771280a06e8b3ca97ab2')
     version('3.23', sha256='c17fca2f9126e10b4922b54e737a39c081b2dcf99bf20062c203247e05ecb850')
     version('3.22.1', sha256='215a3684bfe0df8ca673b09ee1efcdb5388ab5f45130dd67a00ef1041bfb5818')
-    version('3.22',   sha256='3a539c04b6d1b7b77b31999a7936717dfccda138b318756e306415e3af17dd8b')
-    version('3.21',   sha256='582f14347b4dd7a6f9bc2f41b3b62a6b40079c0a3127109c2c0c953e3c922401')
-    version('3.20',   sha256='561c3559fba7c3d053df3b98f75f3c2087c64a6d51204b40825a1737677f780b')
-    version('3.19',   sha256='d57234077e2e999f2acf9860ea84369a4694b50cc17fa6728e5255dc5f4a2160')
+    version('3.22', sha256='3a539c04b6d1b7b77b31999a7936717dfccda138b318756e306415e3af17dd8b')
+    version('3.21', sha256='582f14347b4dd7a6f9bc2f41b3b62a6b40079c0a3127109c2c0c953e3c922401')
+    version('3.20', sha256='561c3559fba7c3d053df3b98f75f3c2087c64a6d51204b40825a1737677f780b')
+    version('3.19', sha256='d57234077e2e999f2acf9860ea84369a4694b50cc17fa6728e5255dc5f4a2160')
     version('3.18.1', sha256='d06c2d1793fadebf169752511e5046d7e02cf3fead6135a35c34b1fee6d6d3b2')
 
     variant('pic', default=False, description="Builds with pic")

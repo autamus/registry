@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -17,8 +17,7 @@ class Bwa(Package):
     version('0.7.17', sha256='de1b4d4e745c0b7fc3e107b5155a51ac063011d33a5d82696331ecf4bed8d0fd')
     version('0.7.15', sha256='2f56afefa49acc9bf45f12edb58e412565086cc20be098b8bf15ec07de8c0515')
     version('0.7.13', sha256='559b3c63266e5d5351f7665268263dbb9592f3c1c4569e7a4a75a15f17f0aedc')
-    version('0.7.12', sha256='285f55b7fa1f9e873eda9a9b06752378a799ecdecbc886bbd9ba238045bf62e0',
-            url='https://github.com/lh3/bwa/archive/0.7.12.tar.gz')
+    version('0.7.12', sha256='285f55b7fa1f9e873eda9a9b06752378a799ecdecbc886bbd9ba238045bf62e0', url='https://github.com/lh3/bwa/archive/0.7.12.tar.gz')
 
     depends_on('zlib')
     depends_on('sse2neon', when='target=aarch64:')

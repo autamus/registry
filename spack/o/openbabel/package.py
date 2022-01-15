@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -17,7 +17,7 @@ class Openbabel(CMakePackage):
     git = 'https://github.com/openbabel/openbabel.git'
 
     version('master', branch='master')
-    version('3.1.1', tag='openbabel-3-1-1')
+    version('3.1.1', sha256='5c630c4145abae9bb4ab6c56a940985acb6dadf3a8c3a8073d750512c0220f30')
     version('3.0.0', tag='openbabel-3-0-0')
     version('2.4.1', tag='openbabel-2-4-1')
     version('2.4.0', tag='openbabel-2-4-0')

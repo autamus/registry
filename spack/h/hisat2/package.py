@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -11,11 +11,9 @@ class Hisat2(MakefilePackage):
        against a single reference genome)."""
 
     homepage = "https://daehwankimlab.github.io/hisat2/"
-    url      = "ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.1.0-source.zip"
+    url      = "https://cloud.biohpc.swmed.edu/index.php/s/hisat2-220-source/download"
 
-    version('2.2.0', sha256='0dd55168853b82c1b085f79ed793dd029db163773f52272d7eb51b3b5e4a4cdd',
-            url='https://cloud.biohpc.swmed.edu/index.php/s/hisat2-220-source/download',
-            extension='zip')
+    version('2.2.0', sha256='0dd55168853b82c1b085f79ed793dd029db163773f52272d7eb51b3b5e4a4cdd', expand=False, url='https://cloud.biohpc.swmed.edu/index.php/s/hisat2-220-source/download', extension='zip')
     version('2.1.0', sha256='89a276eed1fc07414b1601947bc9466bdeb50e8f148ad42074186fe39a1ee781')
 
     def install(self, spec, prefix):

@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -14,18 +14,18 @@ class Mercurial(PythonPackage):
     homepage = "https://www.mercurial-scm.org"
     url      = "https://www.mercurial-scm.org/release/mercurial-5.3.tar.gz"
 
-    version('5.8',   sha256='fc5d6a8f6478d88ef83cdd0ab6d86ad68ee722bbdf4964e6a0b47c3c6ba5309f')
+    version('5.8', sha256='fc5d6a8f6478d88ef83cdd0ab6d86ad68ee722bbdf4964e6a0b47c3c6ba5309f')
     version('5.7.1', sha256='cb5139144ccb2ef648f36963c8606d47dea1cb0e22aa2c055d6f860ce3fde7b0')
-    version('5.7',   sha256='609c3e7c9276dd75b03b713eccc10f5e0553001f35ae21600bcea1509699c601')
+    version('5.7', sha256='609c3e7c9276dd75b03b713eccc10f5e0553001f35ae21600bcea1509699c601')
     version('5.6.1', sha256='e55c254f4904c45226a106780e57f4279aee03368f6ff6a981d5d2a38243ffad')
-    version('5.3',   sha256='e57ff61d6b67695149dd451922b40aa455ab02e01711806a131a1e95c544f9b9')
+    version('5.3', sha256='e57ff61d6b67695149dd451922b40aa455ab02e01711806a131a1e95c544f9b9')
     version('5.1.2', sha256='15af0b090b23649e0e53621a88dde97b55a734d7cb08b77d3df284db70d44e2e')
     version('5.1.1', sha256='35fc8ba5e0379c1b3affa2757e83fb0509e8ac314cbd9f1fd133cf265d16e49f')
     version('4.9.1', sha256='1bdd21bb87d1e05fb5cd395d488d0e0cc2f2f90ce0fd248e31a03595da5ccb47')
     version('4.4.1', sha256='8f2a5512d6cc2ffb08988aef639330a2f0378e4ac3ee0e1fbbdb64d9fff56246')
     version('4.1.2', sha256='09415253fb409a77e19b9951532a3c22c4e07e74bab80652527064617daab194')
     version('3.9.1', sha256='625e4fc7e85ec2278c2828bdc547fce74091b3bbe4d9eeeba2d61af51195df74')
-    version('3.9',   sha256='834f25dcff44994198fb8a7ba161a6e24204dbd63c8e6270577e06e6cedbdabc')
+    version('3.9', sha256='834f25dcff44994198fb8a7ba161a6e24204dbd63c8e6270577e06e6cedbdabc')
     version('3.8.4', sha256='4b2e3ef19d34fa1d781cb7425506a05d4b6b1172bab69d6ea78874175fdf3da6')
     version('3.8.3', sha256='f84556cdf9a331984261549d9d08143ab9da33d7c03f0aa323b0ee52d0782a4c')
     version('3.8.2', sha256='cb78b16956140625266a8a6d1fadc7c868969d994086e1ec60279a66bf20bffd')
@@ -33,7 +33,7 @@ class Mercurial(PythonPackage):
 
     depends_on('python+bz2+ssl+zlib@2.6:2.8', when='@:4.2', type=('build', 'run'))
     depends_on('python+bz2+ssl+zlib@2.7:2.8,3.5.3:3.5,3.6.2:', when='@4.3:', type=('build', 'run'))
-    depends_on('py-setuptools', when='@3.6:', type='build')
+    depends_on('py-setuptools', type='build')
     depends_on('py-docutils', type='build')
     depends_on('py-pygments', type=('build', 'run'))
     depends_on('py-certifi',  type=('build', 'run'))

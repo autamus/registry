@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -24,7 +24,7 @@ class Papi(AutotoolsPackage, ROCmPackage):
 
     tags = ['e4s']
 
-    url = "https://icl.cs.utk.edu/projects/papi/downloads/papi-5.4.1.tar.gz"
+    url      = "https://icl.cs.utk.edu/projects/papi/downloads/papi-5.4.1.tar.gz"
     git = "https://bitbucket.org/icl/papi/src/master/"
 
     version('master', branch='master')

@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -24,7 +24,7 @@ class Povray(AutotoolsPackage):
 
     # Add a proper url for your package's homepage here.
     homepage = "http://povray.org/download/"
-    url = "https://github.com/POV-Ray/povray/archive/v3.7.0.8.tar.gz"
+    url      = "https://github.com/POV-Ray/povray/archive/v3.7.0.8.tar.gz"
     git = "https://github.com/POV-Ray/povray.git"
 
     # maintainers = ['payerle' ]
