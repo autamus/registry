@@ -4,7 +4,7 @@ name: zlib
 github: https://github.com/autamus/registry/blob/main/containers/z/zlib/spack.yaml
 versions:
 - 1.2.11
-updated_at: 2021-09-16T00:20:46.226393449Z
+updated_at: 2022-01-15T16:13:48.466994899Z
 size: 26MB
 description: 'A free, general-purpose, legally unencumbered lossless data-compression
   library. '
