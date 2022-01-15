@@ -4,7 +4,7 @@ name: libpng
 github: https://github.com/autamus/registry/blob/main/containers/l/libpng/spack.yaml
 versions:
 - 1.6.37
-updated_at: 2021-09-15T23:51:39.661025442Z
+updated_at: 2022-01-15T15:56:48.574012513Z
 size: 27MB
 description: libpng is the official PNG reference library.
 container_url: https://github.com/orgs/autamus/packages/container/package/libpng
