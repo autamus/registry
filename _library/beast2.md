@@ -6,7 +6,7 @@ versions:
 - 2.6.3
 - 2.6.4
 - 2.6.6
-updated_at: 2021-10-19T07:13:53.180718499Z
+updated_at: 2022-01-15T15:45:01.11131358Z
 size: 227MB
 description: BEAST is a cross-platform program for Bayesian inference using MCMC of
   molecular sequences. It is entirely orientated towards rooted, time-measured phylogenies
