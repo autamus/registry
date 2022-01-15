@@ -4,7 +4,7 @@ name: pcre
 github: https://github.com/autamus/registry/blob/main/containers/p/pcre/spack.yaml
 versions:
 - "8.44"
-updated_at: 2021-09-16T00:00:15.564279678Z
+updated_at: 2022-01-15T16:03:27.02870635Z
 size: 28MB
 description: The PCRE package contains Perl Compatible Regular Expression libraries.
   These are useful for implementing regular expression pattern matching using the
