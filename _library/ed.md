@@ -4,8 +4,8 @@ name: ed
 github: https://github.com/autamus/registry/blob/main/containers/e/ed/spack.yaml
 versions:
 - "1.4"
-updated_at: 2021-06-22T20:01:05.309768267Z
-size: 27MB
+updated_at: 2022-01-15T15:49:49.671634338Z
+size: 26MB
 description: GNU ed is a line-oriented text editor. It is used to create, display,
   modify and otherwise manipulate text files, both interactively and via shell scripts.
 container_url: https://github.com/orgs/autamus/packages/container/package/ed
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/ed
 # ed
 ```bash 
 Download        : docker pull ghcr.io/autamus/ed
-Compressed Size : 27MB
+Compressed Size : 26MB
 ```
 
 ## Description
