@@ -4,7 +4,7 @@ name: loki
 github: https://github.com/autamus/registry/blob/main/containers/l/loki/spack.yaml
 versions:
 - 0.1.7
-updated_at: 2021-10-03T22:30:40.511486441Z
+updated_at: 2022-01-15T15:57:17.336687008Z
 size: 27MB
 description: Loki is a C++ library of designs, containing flexible implementations
   of common design patterns and idioms.
