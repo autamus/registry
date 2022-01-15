@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/a/accumulo/spac
 versions:
 - 2.0.0
 - 2.0.1
-updated_at: 2021-08-26T08:06:29.190702563Z
-size: 273MB
+updated_at: 2022-01-15T15:43:35.583130372Z
+size: 274MB
 description: Apache Accumulo is a sorted, distributed key/value store that provides
   robust, scalable data storage and retrieval.
 container_url: https://github.com/orgs/autamus/packages/container/package/accumulo
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/accumu
 # accumulo
 ```bash 
 Download        : docker pull ghcr.io/autamus/accumulo
-Compressed Size : 273MB
+Compressed Size : 274MB
 ```
 
 ## Description
