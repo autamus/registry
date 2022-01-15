@@ -4,7 +4,7 @@ name: fraggenescan
 github: https://github.com/autamus/registry/blob/main/containers/f/fraggenescan/spack.yaml
 versions:
 - "1.31"
-updated_at: 2021-11-12T05:02:26.892781275Z
+updated_at: 2022-01-15T15:50:38.44138768Z
 size: 66MB
 description: FragGeneScan is an application for finding (fragmented) genes in short
   reads. It can also be applied to predict prokaryotic genes in incomplete assemblies
