@@ -6,7 +6,7 @@ versions:
 - 3.35.5
 - 3.36.0
 - 3.37.1
-updated_at: 2022-01-09T16:36:16.28758088Z
+updated_at: 2022-01-15T16:10:16.308843827Z
 size: 32MB
 description: 'SQLite3 is an SQL database engine in a C library. Programs that link
   the SQLite3 library can have SQL database access without running a separate RDBMS
