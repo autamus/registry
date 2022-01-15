@@ -4,8 +4,8 @@ name: unixodbc
 github: https://github.com/autamus/registry/blob/main/containers/u/unixodbc/spack.yaml
 versions:
 - 2.3.4
-updated_at: 2021-05-26T07:27:37.005360242Z
-size: 28MB
+updated_at: 2022-01-15T16:12:48.195193224Z
+size: 29MB
 description: ODBC is an open specification for providing application developers with
   a predictable API with which to access Data Sources. Data Sources include SQL Servers
   and any Data Source with an ODBC Driver.
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/unixod
 # unixodbc
 ```bash 
 Download        : docker pull ghcr.io/autamus/unixodbc
-Compressed Size : 28MB
+Compressed Size : 29MB
 ```
 
 ## Description
