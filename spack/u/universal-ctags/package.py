@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -13,12 +13,11 @@ class UniversalCtags(AutotoolsPackage):
     the indexed items."""
 
     homepage = "https://ctags.io/"
-    url      = "https://github.com/universal-ctags/ctags/archive/p5.9.20220109.0.tar.gz"
+    url      = "https://github.com/universal-ctags/ctags/archive/p5.9.20220116.0.tar.gz"
     git      = "https://github.com/universal-ctags/ctags.git"
 
     version('master', branch='master')
-    version('5.9.20220109.0', sha256='74d19d6201ce57744f3e72a4613f78253990ec5d35536181ababef8a3d256575')
-    version('5.9.20211114.0', sha256='7f5e1dc3a6955eace0d57dcc1194ada32188f984a71d46e1d98e029fbd559f86')
+    version('5.9.20220116.0', sha256='22166d076d7972ae1542b8bf8d834b26e47bd5e5c9ad9cb359fe6c8a58118989')
     version('5.9.20210912.0', sha256='5082d4f7e5695be3d697c46e2232d76c6d8adff51d22ba7a4b869362f444ee21')
     version('5.9.20210808.0', sha256='7f5f88d20750dfa2437ca9d163972b8684e3cf16de022a5177f322be92f528cc')
 
