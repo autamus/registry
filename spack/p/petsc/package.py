@@ -424,7 +424,7 @@ class Petsc(Package, CudaPackage, ROCmPackage):
                 ('superlu-dist', 'superlu_dist', True, True),
                 ('scotch', 'ptscotch', True, True),
                 ('suite-sparse:umfpack,klu,cholmod,btf,ccolamd,colamd,camd,amd, \
-                suitesparseconfig', 'suitesparse', True, True),
+                suitesparseconfig,spqr', 'suitesparse', True, True),
                 ('hdf5:hl,fortran', 'hdf5', True, True),
                 'zlib',
                 'mumps',
