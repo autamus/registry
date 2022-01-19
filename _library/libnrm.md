@@ -4,7 +4,7 @@ name: libnrm
 github: https://github.com/autamus/registry/blob/main/containers/l/libnrm/spack.yaml
 versions:
 - 0.1.0
-updated_at: 2022-01-15T16:00:30.157961392Z
+updated_at: 2022-01-19T14:39:47.260689177Z
 size: 51MB
 description: Libnrm, the application instrumentation library for the Node Resource
   Manager(NRM).
