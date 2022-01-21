@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -18,7 +18,7 @@ class Rust(Package):
     """
 
     homepage = "https://www.rust-lang.org"
-    url      = "https://static.rust-lang.org/dist/rustc-1.58.0-src.tar.gz"
+    url      = "https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz"
     git = "https://github.com/rust-lang/rust.git"
 
     maintainers = ["AndrewGaspar"]
@@ -75,7 +75,7 @@ class Rust(Package):
     # Pre-release Versions
     version('master', branch='master', submodules=True)
     version('nightly')
-    version('1.58.0', sha256='0ad531a32f3c2e996b9322c6b7262a9cfe557e49ff3363adea07b575106cd770')
+    version('1.58.1', sha256='a839afdd3625d6f3f3c4c10b79813675d1775c460d14be1feaf33a6c829c07c7')
     version('1.51.0', sha256='7a6b9bafc8b3d81bbc566e7c0d1f17c9f499fd22b95142f7ea3a8e4d1f9eb847')
     version('1.48.0', sha256='0e763e6db47d5d6f91583284d2f989eacc49b84794d1443355b85c58d67ae43b')
     version('1.47.0', sha256='3185df064c4747f2c8b9bb8c4468edd58ff4ad6d07880c879ac1b173b768d81d')
