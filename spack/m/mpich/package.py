@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -15,7 +15,7 @@ class Mpich(AutotoolsPackage):
     the Message Passing Interface (MPI) standard."""
 
     homepage = "https://www.mpich.org"
-    url      = "https://www.mpich.org/static/downloads/3.4.3/mpich-3.4.3.tar.gz"
+    url      = "https://www.mpich.org/static/downloads/4.0/mpich-4.0.tar.gz"
     git      = "https://github.com/pmodels/mpich.git"
     list_url = "https://www.mpich.org/static/downloads/"
     list_depth = 1
@@ -25,6 +25,7 @@ class Mpich(AutotoolsPackage):
     executables = ['^mpichversion$']
 
     version('develop', submodules=True)
+    version('4.0', sha256='df7419c96e2a943959f7ff4dc87e606844e736e30135716971aba58524fbff64')
     version('3.4.2', sha256='5c19bea8b84e8d74cca5f047e82b147ff3fba096144270e3911ad623d6c587bf')
     version('3.4.1', sha256='8836939804ef6d492bcee7d54abafd6477d2beca247157d92688654d13779727')
     version('3.4', sha256='ce5e238f0c3c13ab94a64936060cff9964225e3af99df1ea11b130f20036c24b')
