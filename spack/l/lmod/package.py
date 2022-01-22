@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -17,10 +17,12 @@ class Lmod(AutotoolsPackage):
     """
 
     homepage = 'https://www.tacc.utexas.edu/research-development/tacc-projects/lmod'
-    url      = "https://github.com/TACC/Lmod/archive/8.6.5.tar.gz"
+    url      = "https://github.com/TACC/Lmod/archive/8.6.6.tar.gz"
 
+    version('8.6.6', sha256='ed53160fb8e7eba43c22ffde480b56a3ef312e143a35c324828e7654297b51a8')
     version('8.6.5', sha256='4a1823264187340be11104d82f8226905daa8149186fa8615dfc742b6d19c2ce')
     version('8.6.3', sha256='7e259c4e92a5d6d75872d32161985f6f3b389b8f545d8851ac86e9d5eae859e7')
+    version('8.5.29', sha256='4e38074e3ea1d41f3809b6b357440618f821437dffa47d8e653d0ade48d45ab7')
     version('8.5.27', sha256='bec911ff6b20de7d38587d1f9c351f58ed7bdf10cb3938089c82944b5ee0ab0d')
     version('8.5.6', sha256='1d1058ffa33a661994c1b2af4bfee4aa1539720cd5c13d61e18adbfb231bbe88')
     version('8.3', sha256='c2c2e9e6b387b011ee617cb009a2199caac8bf200330cb8a065ceedee09e664a')
