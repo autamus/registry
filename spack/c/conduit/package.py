@@ -1,4 +1,4 @@
-# Copyright 2013-2021 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -34,12 +34,13 @@ class Conduit(CMakePackage):
     coupling between packages in-core, serialization, and I/O tasks."""
 
     homepage = "https://software.llnl.gov/conduit"
-    url      = "https://github.com/LLNL/conduit/releases/download/v0.8.0/conduit-v0.8.0-src-with-blt.tar.gz"
+    url      = "https://github.com/LLNL/conduit/releases/download/v0.8.1/conduit-v0.8.1-src-with-blt.tar.gz"
     git      = "https://github.com/LLNL/conduit.git"
     tags     = ['radiuss', 'e4s']
 
     version('develop', branch='develop', submodules=True)
     version('master', branch='develop', submodules=True)
+    version('0.8.1', sha256='488f22135a35136de592173131d123f7813818b7336c3b18e04646318ad3cbee')
     version('0.8.0', sha256='0607dcf9ced44f95e0b9549f5bbf7a332afd84597c52e293d7ca8d83117b5119')
     version('0.7.2', sha256='359fd176297700cdaed2c63e3b72d236ff3feec21a655c7c8292033d21d5228a')
     version('0.7.1', sha256='460a480cf08fedbf5b38f707f94f20828798327adadb077f80dbab048fd0a07d')
@@ -73,7 +74,7 @@ class Conduit(CMakePackage):
             description="Build Conduit with HDF5 1.8.x (compatibility mode)")
     variant("silo", default=False, description="Build Conduit Silo support")
     variant("adios", default=False, description="Build Conduit ADIOS support")
-    variant("parmetis", default=False, description="Build Conduit Parmetis support")
+    variant("parmetis", default=True, description="Build Conduit Parmetis support")
 
     # zfp compression
     variant("zfp", default=False, description="Build Conduit ZFP support")
@@ -119,6 +120,10 @@ class Conduit(CMakePackage):
     depends_on("hdf5@1.8.19:1.8~shared~cxx", when="+hdf5+hdf5_compat~shared")
     depends_on("hdf5~cxx", when="+hdf5~hdf5_compat+shared")
     depends_on("hdf5~shared~cxx", when="+hdf5~hdf5_compat~shared")
+
+    # conduit uses a <=1.10 api version.
+    depends_on("hdf5@:1.10", when="@:0.7 +hdf5")
+
     # we need to hand this to conduit so it can properly
     # handle downstream linking of zlib reqed by hdf5
     depends_on("zlib", when="+hdf5")
@@ -436,7 +441,7 @@ class Conduit(CMakePackage):
             try:
                 cfg.write("# python module install dir\n")
                 cfg.write(cmake_cache_entry("PYTHON_MODULE_INSTALL_PREFIX",
-                          site_packages_dir))
+                          python_platlib))
             except NameError:
                 # spack's  won't exist in a subclass
                 pass
