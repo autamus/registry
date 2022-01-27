@@ -14,8 +14,9 @@ class Bracken(Package):
     sequences from a metagenomics sample."""
 
     homepage = "https://ccb.jhu.edu/software/bracken"
-    url      = "https://github.com/jenniferlu717/Bracken/archive/1.0.0.tar.gz"
+    url      = "https://github.com/jenniferlu717/Bracken/archive/v2.6.2.tar.gz"
 
+    version('2.6.2', sha256='c83665c613861fe0dc2637d9c190105f0b08f5c4cda97a0dc86a6357aab66be3')
     version('1.0.0', sha256='8ee736535ad994588339d94d0db4c0b1ba554a619f5f96332ee09f2aabdfe176')
 
     depends_on('perl', type=('build', 'link', 'run'))
