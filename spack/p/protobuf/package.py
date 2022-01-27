@@ -13,8 +13,9 @@ class Protobuf(Package):
     """Google's data interchange format."""
 
     homepage = "https://developers.google.com/protocol-buffers"
-    url      = "https://github.com/protocolbuffers/protobuf/archive/v3.19.1.tar.gz"
+    url      = "https://github.com/protocolbuffers/protobuf/archive/v3.19.3.tar.gz"
 
+    version('3.19.3', sha256='390191a0d7884b3e52bb812c440ad1497b9d484241f37bb8e2ccc8c2b72d6c36')
     version('3.19.1', sha256='87407cd28e7a9c95d9f61a098a53cf031109d451a7763e7dd1253abf8b4df422')
     version('3.19.0', sha256='4a045294ec76cb6eae990a21adb5d8b3c78be486f1507faa601541d1ccefbd6b')
     version('3.18.1', sha256='9111bf0b542b631165fadbd80aa60e7fb25b25311c532139ed2089d76ddf6dd7')
