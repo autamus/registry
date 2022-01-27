@@ -40,6 +40,7 @@ class Conduit(CMakePackage):
 
     version('develop', branch='develop', submodules=True)
     version('master', branch='develop', submodules=True)
+    version('0.8.1', sha256='488f22135a35136de592173131d123f7813818b7336c3b18e04646318ad3cbee')
     version('0.8.0', sha256='0607dcf9ced44f95e0b9549f5bbf7a332afd84597c52e293d7ca8d83117b5119')
     version('0.7.2', sha256='359fd176297700cdaed2c63e3b72d236ff3feec21a655c7c8292033d21d5228a')
     version('0.7.1', sha256='460a480cf08fedbf5b38f707f94f20828798327adadb077f80dbab048fd0a07d')
@@ -171,6 +172,7 @@ class Conduit(CMakePackage):
     # Tentative patch for fj compiler
     # Cmake will support fj compiler and this patch will be removed
     patch('fj_flags.patch', when='%fj')
+    patch('bpparametis.patch', when='@0.8.1')
 
     # Add missing include for numeric_limits
     # https://github.com/LLNL/conduit/pull/773
