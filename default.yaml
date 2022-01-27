@@ -17,5 +17,8 @@ spack:
       build:
         - python3-boto3
         - python3-dev
-  mirrors:
-    autamus: s3://autamus-cache
+
+# Disabling Build Cache to improve system stability
+#
+#   mirrors:
+#     autamus: s3://autamus-cache
