@@ -14,8 +14,9 @@ class Psi4(CMakePackage):
     a variety of molecular properties."""
 
     homepage = "https://www.psicode.org/"
-    url      = "https://github.com/psi4/psi4/archive/v1.3.2.tar.gz"
+    url      = "https://github.com/psi4/psi4/archive/v1.5.tar.gz"
 
+    version('1.5', sha256='e1f1446c553e6dddf0f19216c2cfbae49d939196022c55c89226ee047cfa0d34')
     version('1.3.2', sha256='ed76c67803b6420f35f57a6dd31c47108b9145b8c9fced5c94cdc179f6b5fbf3')
 
     variant('build_type', default='Release',
