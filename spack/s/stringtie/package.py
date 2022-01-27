@@ -11,8 +11,9 @@ class Stringtie(MakefilePackage):
        into potential transcripts."""
 
     homepage = "https://ccb.jhu.edu/software/stringtie"
-    url      = "https://github.com/gpertea/stringtie/archive/v1.3.3b.tar.gz"
+    url      = "https://github.com/gpertea/stringtie/archive/v2.2.1.tar.gz"
 
+    version('2.2.1', sha256='19592aa37e293f4dcd684a4c6e0a1439ee34876d9f22944fb4edceba8c09631b')
     version('1.3.4', sha256='0134c0adc264efd31a1df4301b33bfcf3b3fe96bd3990ce3df90819bad9af968')
     version('1.3.3', sha256='30e8a3a29b474f0abeef1540d9b4624a827d8b29d7347226d86a38afea28bc0f')
 
