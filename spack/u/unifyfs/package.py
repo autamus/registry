@@ -16,12 +16,13 @@ class Unifyfs(AutotoolsPackage):
 
     homepage = "https://github.com/LLNL/UnifyFS"
     git      = "https://github.com/LLNL/UnifyFS.git"
-    url      = "https://github.com/LLNL/UnifyFS/releases/download/v0.9.2/unifyfs-0.9.2.tar.gz"
+    url      = "https://github.com/LLNL/UnifyFS/archive/v1.0b.tar.gz"
     maintainers = ['CamStan']
 
     tags = ['e4s']
 
     version('develop', branch='dev')
+    version('1.0', sha256='3d7ac4eec50356c893a0a756554bca9107daf99d939133e6dfd5844a4a159008')
     version('0.9.2', sha256='7046625dc0677535f5d960187cb2e2d58a6f8cfb4dc6a3604f825257eb0891aa')
     version('0.9.1', sha256='2498a859cfa4961356fdf5c4c17e3afc3de7e034ad013b8c7145a622ef6199a0')
 
