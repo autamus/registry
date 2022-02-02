@@ -34,12 +34,13 @@ class Conduit(CMakePackage):
     coupling between packages in-core, serialization, and I/O tasks."""
 
     homepage = "https://software.llnl.gov/conduit"
-    url      = "https://github.com/LLNL/conduit/releases/download/v0.3.0/conduit-v0.3.0-src-with-blt.tar.gz"
+    url      = "https://github.com/LLNL/conduit/archive/v0.8.2.tar.gz"
     git      = "https://github.com/LLNL/conduit.git"
     tags     = ['radiuss', 'e4s']
 
     version('develop', branch='develop', submodules=True)
     version('master', branch='develop', submodules=True)
+    version('0.8.2', sha256='3f2445040f62c8249fb4e0fa236b27bc59353df623a838cf396fc906dcf80dfb')
     version('0.8.1', sha256='488f22135a35136de592173131d123f7813818b7336c3b18e04646318ad3cbee')
     version('0.8.0', sha256='0607dcf9ced44f95e0b9549f5bbf7a332afd84597c52e293d7ca8d83117b5119')
     version('0.7.2', sha256='359fd176297700cdaed2c63e3b72d236ff3feec21a655c7c8292033d21d5228a')
