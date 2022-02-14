@@ -35,12 +35,13 @@ class Ascent(CMakePackage, CudaPackage):
 
     homepage = "https://github.com/Alpine-DAV/ascent"
     git      = "https://github.com/Alpine-DAV/ascent.git"
-    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.5.1/ascent-v0.5.1-src-with-blt.tar.gz"
+    url      = "https://github.com/Alpine-DAV/ascent/releases/download/v0.8.0/ascent-v0.8.0-src-with-blt.tar.gz"
     tags     = ['radiuss', 'e4s']
 
     maintainers = ['cyrush']
 
     version('develop', branch='develop', submodules=True)
+    version('0.8.0', sha256='0219dff3696cd00cd7ed04aba326e92396e5b0951d5a0f0772fe411dd9e5c9e9')
     version('0.7.1', submodules=True, tag='v0.7.1')
     version('0.7.0', submodules=True, tag='v0.7.0')
     version('0.6.0', submodules=True, tag='v0.6.0')
