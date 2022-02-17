@@ -60,10 +60,10 @@ class Libunwind(AutotoolsPackage):
 
     # The libunwind releases contain the autotools generated files,
     # but the git repo snapshots do not.
-    depends_on('autoconf', type='build', when='@master,1.5-head')
-    depends_on('automake', type='build', when='@master,1.5-head')
-    depends_on('libtool',  type='build', when='@master,1.5-head')
-    depends_on('m4',       type='build', when='@master,1.5-head')
+    depends_on('autoconf', type='build', when='@master,1.5-stable')
+    depends_on('automake', type='build', when='@master,1.5-stable')
+    depends_on('libtool',  type='build', when='@master,1.5-stable')
+    depends_on('m4',       type='build', when='@master,1.5-stable')
 
     depends_on('xz', type='link', when='+xz')
     depends_on('zlib', type='link', when='+zlib')
