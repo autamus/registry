@@ -4,7 +4,7 @@ name: autodock-vina
 github: https://github.com/autamus/registry/blob/main/containers/a/autodock-vina/spack.yaml
 versions:
 - 1.1.2
-updated_at: 2022-01-17T16:31:38.392548601Z
+updated_at: 2022-03-13T16:03:34.265703259Z
 size: 45MB
 description: AutoDock Vina is an open-source program for doing molecular docking
 container_url: https://github.com/orgs/autamus/packages/container/package/autodock-vina
