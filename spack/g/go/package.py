@@ -34,7 +34,7 @@ from spack import *
 class Go(Package):
     """The golang compiler and build environment"""
     homepage = "https://golang.org"
-    url      = "https://dl.google.com/go/go1.17.8.src.tar.gz"
+    url      = "https://dl.google.com/go/go1.18.src.tar.gz"
     git      = "https://go.googlesource.com/go.git"
 
     extendable = True
@@ -42,6 +42,8 @@ class Go(Package):
 
     maintainers = ['alecbcs']
 
+    version('1.18', sha256='38f423db4cc834883f2b52344282fa7a39fbb93650dc62a11fdf0be6409bdad6')
+    version('1.17.7', sha256='c108cd33b73b1911a02b697741df3dea43e01a5c4e08e409e8b3a0e3745d2b4d')
     version('1.17.3', sha256='705c64251e5b25d5d55ede1039c6aa22bea40a7a931d14c370339853643c3df0')
     version('1.17.2', sha256='2255eb3e4e824dd7d5fcdc2e7f84534371c186312e546fb1086a34c17752f431')
     version('1.17.1', sha256='49dc08339770acd5613312db8c141eaf61779995577b89d93b541ef83067e5b1')
