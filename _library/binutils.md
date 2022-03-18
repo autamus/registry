@@ -6,7 +6,7 @@ versions:
 - 2.36.1
 - "2.37"
 - "2.38"
-updated_at: 2022-02-25T16:58:58.159061359Z
+updated_at: 2022-03-18T17:14:42.669072343Z
 size: 54MB
 description: GNU binutils, which contain the linker, assembler, objdump and others
 container_url: https://github.com/orgs/autamus/packages/container/package/binutils
