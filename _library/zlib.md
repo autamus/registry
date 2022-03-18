@@ -4,8 +4,8 @@ name: zlib
 github: https://github.com/autamus/registry/blob/main/containers/z/zlib/spack.yaml
 versions:
 - 1.2.11
-updated_at: 2022-01-15T16:13:48.466994899Z
-size: 26MB
+updated_at: 2022-03-18T18:55:54.618499598Z
+size: 27MB
 description: 'A free, general-purpose, legally unencumbered lossless data-compression
   library. '
 container_url: https://github.com/orgs/autamus/packages/container/package/zlib
@@ -14,7 +14,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/zlib
 # zlib
 ```bash 
 Download        : docker pull ghcr.io/autamus/zlib
-Compressed Size : 26MB
+Compressed Size : 27MB
 ```
 
 ## Description
