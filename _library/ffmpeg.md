@@ -6,8 +6,8 @@ versions:
 - 4.3.2
 - 4.4.1
 - "4.5"
-updated_at: 2022-01-15T15:50:44.74047252Z
-size: 50MB
+updated_at: 2022-03-18T17:34:41.46593401Z
+size: 51MB
 description: FFmpeg is a complete, cross-platform solution to record, convert and
   stream audio and video.
 container_url: https://github.com/orgs/autamus/packages/container/package/ffmpeg
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/ffmpeg
 # ffmpeg
 ```bash 
 Download        : docker pull ghcr.io/autamus/ffmpeg
-Compressed Size : 50MB
+Compressed Size : 51MB
 ```
 
 ## Description
