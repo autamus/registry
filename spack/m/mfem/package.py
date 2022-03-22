@@ -48,6 +48,7 @@ class Mfem(Package, CudaPackage, ROCmPackage):
     # 'develop' is a special version that is always larger (or newer) than any
     # other version.
     version('develop', branch='master')
+    version('4.4', sha256='3a495602121b986049286ea0b23512279cdbdfb43c15c42a1511b521051fbe38')
     version('4.3.0', sha256='3a495602121b986049286ea0b23512279cdbdfb43c15c42a1511b521051fbe38', expand=False, url='https://bit.ly/mfem-4-3', extension='tar.gz')
     version('4.2.0', expand=False, url='https://bit.ly/mfem-4-2', extension='tar.gz')
     version('4.1.0', expand=False, url='https://bit.ly/mfem-4-1', extension='tar.gz')
