@@ -10,7 +10,7 @@ class Arborx(CMakePackage):
     """ArborX is a performance-portable library for geometric search"""
 
     homepage = "https://github.com/arborx/arborx"
-    url      = "https://github.com/arborx/arborx/archive/v1.1.tar.gz"
+    url      = "https://github.com/arborx/arborx/archive/v1.2.tar.gz"
     git      = "https://github.com/arborx/arborx.git"
 
     tags = ['e4s', 'ecp']
@@ -18,6 +18,7 @@ class Arborx(CMakePackage):
     maintainers = ['aprokop']
 
     version('master', branch='master')
+    version('1.2', sha256='ed1939110b2330b7994dcbba649b100c241a2353ed2624e627a200a398096c20')
     version('1.1', sha256='2b5f2d2d5cec57c52f470c2bf4f42621b40271f870b4f80cb57e52df1acd90ce')
     version('1.0', sha256='9b5f45c8180622c907ef0b7cc27cb18ba272ac6558725d9e460c3f3e764f1075')
     version('0.9', sha256='b349b5708d1aa00e8c20c209ac75dc2d164ff9bf1b85adb5437346d194ba6c0d')
@@ -42,7 +43,6 @@ class Arborx(CMakePackage):
     depends_on('cmake@3.12:', type='build')
     depends_on('cmake@3.16:', type='build', when='@1.0:')
     depends_on('mpi', when='+mpi')
-    depends_on('rocthrust', when='+rocm')
 
     # Standalone Kokkos
     depends_on('kokkos@3.1.00:', when='~trilinos')
@@ -73,9 +73,6 @@ class Arborx(CMakePackage):
             # Only Kokkos allows '+cuda' for now
             options.append(
                 '-DCMAKE_CXX_COMPILER=%s' % spec["kokkos"].kokkos_cxx)
-        if '+rocm' in spec:
-            options.append(
-                '-DCMAKE_CXX_COMPILER=%s' % spec["hip"].hipcc)
 
         return options
 
