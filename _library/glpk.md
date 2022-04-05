@@ -4,7 +4,7 @@ name: glpk
 github: https://github.com/autamus/registry/blob/main/containers/g/glpk/spack.yaml
 versions:
 - "4.65"
-updated_at: 2022-01-15T15:51:50.36086631Z
+updated_at: 2022-04-05T16:18:17.422619023Z
 size: 27MB
 description: 'The GLPK (GNU Linear Programming Kit) package is intended for solving
   large-scale linear programming (LP), mixed integer programming (MIP), and other
