@@ -12,9 +12,9 @@ class Samtools(Package):
        alignments in a per-position format"""
 
     homepage = "https://www.htslib.org"
-    url      = "https://github.com/samtools/samtools/releases/download/1.15/samtools-1.15.tar.bz2"
+    url      = "https://github.com/samtools/samtools/releases/download/1.15.1/samtools-1.15.1.tar.bz2"
 
-    version('1.15', sha256='35d945a5eee9817a764490870474f24e538400b0397b28f94247a5b91447215d')
+    version('1.15.1', sha256='708c525ac76b0532b25f14aadea34a4d11df667bc19bf0a74dae617d80526c6e')
     version('1.14', sha256='9341dabaa98b0ea7d60fd47e42af25df43a7d3d64d8e654cdf852974546b7d74')
     version('1.13', sha256='616ca2e051cc8009a1e9c01cfd8c7caf8b70916ddff66f3b76914079465f8c60')
     version('1.12', sha256='6da3770563b1c545ca8bdf78cf535e6d1753d6383983c7929245d5dba2902dcb')
