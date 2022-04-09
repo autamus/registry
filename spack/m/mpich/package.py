@@ -15,7 +15,7 @@ class Mpich(AutotoolsPackage):
     the Message Passing Interface (MPI) standard."""
 
     homepage = "https://www.mpich.org"
-    url      = "https://www.mpich.org/static/downloads/3.0.4/mpich-3.0.4.tar.gz"
+    url      = "https://www.mpich.org/static/downloads/4.0.2/mpich-4.0.2.tar.gz"
     git      = "https://github.com/pmodels/mpich.git"
     list_url = "https://www.mpich.org/static/downloads/"
     list_depth = 1
