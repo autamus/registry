@@ -14,9 +14,9 @@ class Cantera(SConsPackage):
     involving chemical kinetics, thermodynamics, and/or transport processes."""
 
     homepage = "https://www.cantera.org/docs/sphinx/html/index.html"
-    url      = "https://github.com/Cantera/cantera/archive/v2.6.0b1.tar.gz"
+    url      = "https://github.com/Cantera/cantera/archive/v2.6.0b2.tar.gz"
 
-    version('2.6.0.b.1', sha256='fe81accd52752a97da81bc4ef5afddbd4e6b3b932addb9c9fa80a1678a8c4bac')
+    version('2.6.0.b.2', sha256='fb361fa296d854f04697e526fd1818e37e065808196c3824c1819b117b450dd4')
     version('2.5.1', sha256='59f673cec686bc9b1eeccc1b1c9158a3978a3abe7491d00e8b355908c1c3be0a')
     version('2.4.0', sha256='0dc771693b657d8f4ba835dd229939e5b9cfd8348d2f5ba82775451a524365a5')
     version('2.3.0', sha256='06624f0f06bdd2acc9c0dba13443d945323ba40f68a9d422d95247c02e539b57')
