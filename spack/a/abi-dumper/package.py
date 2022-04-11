@@ -6,7 +6,7 @@
 from spack import *
 
 
-class AbiDumper(MakefilePackage):
+class AbiDumper(Package):
     """ABI Dumper is a tool to dump ABI of an ELF object containing
     DWARF debug info."""
 
@@ -23,8 +23,6 @@ class AbiDumper(MakefilePackage):
     depends_on('binutils')
     depends_on('universal-ctags')
     depends_on('vtable-dumper@1.1:')
-
-    phases = ['install']
 
     def install(self, spec, prefix):
         make('prefix={0}'.format(prefix), 'install')
