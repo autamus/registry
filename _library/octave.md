@@ -7,7 +7,7 @@ versions:
 - 6.3.0
 - 6.4.0
 - 7.1.0
-updated_at: 2022-04-16T16:51:05.28462956Z
+updated_at: 2022-04-19T16:40:55.929005941Z
 size: 75MB
 description: 'GNU Octave is a high-level language, primarily intended for numerical
   computations. It provides a convenient command line interface for solving linear
