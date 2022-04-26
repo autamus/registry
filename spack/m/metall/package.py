@@ -11,7 +11,7 @@ class Metall(CMakePackage):
 
     homepage = "https://github.com/LLNL/metall"
     git      = "https://github.com/LLNL/metall.git"
-    url      = "https://github.com/LLNL/metall/archive/v0.18.tar.gz"
+    url      = "https://github.com/LLNL/metall/archive/v0.19.tar.gz"
 
     maintainers = ['KIwabuchi', 'rogerpearce', 'mayagokhale']
 
