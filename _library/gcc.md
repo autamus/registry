@@ -8,8 +8,8 @@ versions:
 - 11.1.0
 - 11.2.0
 - 11.3.0
-updated_at: 2022-04-22T18:11:51.361021722Z
-size: 144MB
+updated_at: 2022-04-27T18:12:33.875333991Z
+size: 145MB
 description: The GNU Compiler Collection includes front ends for C, C++, Objective-C,
   Fortran, Ada, and Go, as well as libraries for these languages.
 container_url: https://github.com/orgs/autamus/packages/container/package/gcc
@@ -18,7 +18,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/gcc
 # gcc
 ```bash 
 Download        : docker pull ghcr.io/autamus/gcc
-Compressed Size : 144MB
+Compressed Size : 145MB
 ```
 
 ## Description
