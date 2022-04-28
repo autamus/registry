@@ -41,6 +41,7 @@ class Ascent(CMakePackage, CudaPackage):
     maintainers = ['cyrush']
 
     version('develop', branch='develop', submodules=True)
+    version('0.8.0', submodules=True, tag='v0.8.0')
     version('0.7.1', submodules=True, tag='v0.7.1')
     version('0.7.0', submodules=True, tag='v0.7.0')
     version('0.6.0', submodules=True, tag='v0.6.0')
@@ -83,13 +84,30 @@ class Ascent(CMakePackage, CudaPackage):
     # so folks can build 0.7.1 with those compilers
     patch("ascent-gcc-11-pr753.patch", when="@0.7.1")
 
+    # patch for allowing +shared+cuda
+    # https://github.com/Alpine-DAV/ascent/pull/903
+    patch('ascent-shared-cuda-pr903.patch', when='@0.8.0')
+
     ##########################################################################
     # package dependencies
     ###########################################################################
+    def propagate_cuda_arch(package, spec=None):
+        if not spec:
+            spec = ''
+        for cuda_arch in CudaPackage.cuda_arch_values:
+            depends_on('{0} +cuda cuda_arch={1}'
+                       .format(package, cuda_arch),
+                       when='{0} +cuda cuda_arch={1}'
+                            .format(spec, cuda_arch))
 
     # Certain CMake versions have been found to break for our use cases
     depends_on("cmake@3.14.1:3.14,3.18.2:", type='build')
+
+    #######################
+    # Conduit
+    #######################
     depends_on("conduit@:0.7.2", when="@:0.7.1")
+    depends_on("conduit@0.8.2:", when="@0.8:")
     depends_on("conduit+python", when="+python")
     depends_on("conduit~python", when="~python")
     depends_on("conduit+mpi", when="+mpi")
@@ -123,13 +141,19 @@ class Ascent(CMakePackage, CudaPackage):
     #############################
 
     depends_on("vtk-h", when="+vtkh")
+    depends_on("vtk-h@:0.7", when="@:0.7 +vtkh")
+    depends_on("vtk-h@0.8.1:", when="@0.8: +vtkh")
     # propagate relevent variants to vtk-h
     depends_on("vtk-h+openmp", when="+vtkh+openmp")
     depends_on("vtk-h~openmp", when="+vtkh~openmp")
     depends_on("vtk-h+cuda", when="+vtkh+cuda")
     depends_on("vtk-h~cuda", when="+vtkh~cuda")
+    propagate_cuda_arch('vtk-h', '+vtkh')
     depends_on("vtk-h+shared", when="+vtkh+shared")
     depends_on("vtk-h~shared", when="+vtkh~shared")
+    # When using VTK-h ascent also needs VTK-m
+    depends_on("vtk-m", when="+vtkh")
+    depends_on("vtk-m+testlib", when="+vtkh+test^vtk-m")
 
     # mfem
     depends_on("mfem~threadsafe~openmp+conduit", when="+mfem")
@@ -145,9 +169,11 @@ class Ascent(CMakePackage, CudaPackage):
     # devil ray variants with mpi
     # we have to specify both because mfem makes us
     depends_on('dray~test~utils', when='+dray')
+    depends_on('dray@0.1.8:', when='@0.8: +dray')
     # propagate relevent variants to dray
     depends_on('dray+cuda', when='+dray+cuda')
     depends_on('dray~cuda', when='+dray~cuda')
+    propagate_cuda_arch('dray', '+dray')
     depends_on('dray+mpi', when='+dray+mpi')
     depends_on('dray~mpi', when='+dray~mpi')
     depends_on('dray+shared', when='+dray+shared')
@@ -172,7 +198,7 @@ class Ascent(CMakePackage, CudaPackage):
     ###########
     # Conflicts
     ###########
-    conflicts("+shared", when="+cuda",
+    conflicts("+shared", when="@:0.7 +cuda",
               msg="Ascent needs to be built with ~shared for CUDA builds.")
 
     def setup_build_environment(self, env):
@@ -262,6 +288,7 @@ class Ascent(CMakePackage, CudaPackage):
         #######################
         c_compiler = env["SPACK_CC"]
         cpp_compiler = env["SPACK_CXX"]
+        f_compiler = env["SPACK_FC"]
 
         #######################################################################
         # Directly fetch the names of the actual compilers to create a
@@ -313,6 +340,8 @@ class Ascent(CMakePackage, CudaPackage):
         cfg.write("# fortran compiler used by spack\n")
         if "+fortran" in spec:
             cfg.write(cmake_cache_entry("ENABLE_FORTRAN", "ON"))
+            cfg.write(cmake_cache_entry("CMAKE_Fortran_COMPILER",
+                                        f_compiler))
         else:
             cfg.write(cmake_cache_entry("ENABLE_FORTRAN", "OFF"))
 
