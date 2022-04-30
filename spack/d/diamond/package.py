@@ -12,7 +12,9 @@ class Diamond(CMakePackage):
 
     homepage = "https://ab.inf.uni-tuebingen.de/software/diamond"
     url      = "https://github.com/bbuchfink/diamond/archive/v2.0.13.tar.gz"
+    maintainers = ['snehring']
 
+    version('2.0.15', sha256='cc8e1f3fd357d286cf6585b21321bd25af69aae16ae1a8f605ea603c1886ffa4')
     version('2.0.14', sha256='3eaef2b957e4ba845eac27a2ca3249aae4259ff1fe0ff5a21b094481328fdc53')
     version('2.0.13', sha256='9b79c3a01913999dfa2543f4dd7a3494397a8723ea587207c14683b24e57eac1')
     version('2.0.12', sha256='d0468959ea677cc8e90a6fbd9506f3fb1fbd1b415d30bf398ac2524bb5b6f20c')
