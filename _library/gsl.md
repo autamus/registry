@@ -5,7 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/g/gsl/spack.yam
 versions:
 - "2.6"
 - "2.7"
-updated_at: 2022-01-15T15:52:46.595712504Z
+- 2.7.1
+updated_at: 2022-04-30T15:30:53.669048804Z
 size: 29MB
 description: The GNU Scientific Library (GSL) is a numerical library for C and C++
   programmers. It is free software under the GNU General Public License. The library
