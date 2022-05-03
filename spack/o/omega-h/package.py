@@ -12,13 +12,13 @@ class OmegaH(CMakePackage):
     """
 
     homepage = "https://github.com/sandialabs/omega_h"
-    url      = "https://github.com/SNLComputation/omega_h/archive/v9.34.9.tar.gz"
+    url      = "https://github.com/SNLComputation/omega_h/archive/v9.34.10.tar.gz"
     git      = "https://github.com/sandialabs/omega_h.git"
 
     maintainers = ['cwsmith']
     tags = ['e4s']
     version('main', branch='main')
-    version('9.34.9', sha256='22e1c64ba6c7b27d7d973b8b0e81223ca65de53aa6c06bd526da8af7aae241c9')
+    version('9.34.10', sha256='e259a51628f8f3f233c165ed3c118e35051e51a88401d293a0e9c453675e4589')
     version('9.34.6', sha256='0fcdfedab6afb855ca982c429698eaa2c25e78909152b8bee508c80a54234aac')
     version('9.34.5', sha256='1fa67122d2b6d2b3d0d05fa0c5ed1fa24234d072292b29cb334879ffb5adcc92')
     version('9.34.1', sha256='3a812da3b8df3e0e5d78055e91ad23333761bcd9ed9b2c8c13ee1ba3d702e46c')
