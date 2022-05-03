@@ -17,9 +17,9 @@ class Lmod(AutotoolsPackage):
     """
 
     homepage = 'https://www.tacc.utexas.edu/research-development/tacc-projects/lmod'
-    url      = "https://github.com/TACC/Lmod/archive/8.7.tar.gz"
+    url      = "https://github.com/TACC/Lmod/archive/8.7.1.tar.gz"
 
-    version('8.7', sha256='f8bf4cea79e743a8ffcde3525520fa28595fe15fc3e8582deec22583e9166d93')
+    version('8.7.1', sha256='7b271a6e8509174707154fee502ab18a059c3e3c9d4b37cbb3c930bdd5b75e37')
     version('8.6.5', sha256='4a1823264187340be11104d82f8226905daa8149186fa8615dfc742b6d19c2ce')
     version('8.6.3', sha256='7e259c4e92a5d6d75872d32161985f6f3b389b8f545d8851ac86e9d5eae859e7')
     version('8.5.29', sha256='4e38074e3ea1d41f3809b6b357440618f821437dffa47d8e653d0ade48d45ab7')
