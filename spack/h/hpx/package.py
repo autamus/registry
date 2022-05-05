@@ -15,6 +15,7 @@ class Hpx(CMakePackage, CudaPackage, ROCmPackage):
 
     homepage = "https://hpx.stellar-group.org/"
     url      = "https://github.com/STEllAR-GROUP/hpx/archive/1.2.1.tar.gz"
+    git = "https://github.com/STEllAR-GROUP/hpx.git"
     maintainers = ['msimberg', 'albestro', 'teonnik']
 
     tags = ['e4s']
@@ -45,7 +46,7 @@ class Hpx(CMakePackage, CudaPackage, ROCmPackage):
     variant(
         'malloc', default='tcmalloc',
         description='Define which allocator will be linked in',
-        values=('system', 'tcmalloc', 'jemalloc', 'tbbmalloc')
+        values=('system', 'jemalloc', 'mimalloc', 'tbbmalloc', 'tcmalloc')
     )
 
     variant('max_cpu_count', default='64',
@@ -100,6 +101,7 @@ class Hpx(CMakePackage, CudaPackage, ROCmPackage):
 
     depends_on('gperftools', when='malloc=tcmalloc')
     depends_on('jemalloc', when='malloc=jemalloc')
+    depends_on('mimalloc@1', when='malloc=mimalloc')
     depends_on('tbb', when='malloc=tbbmalloc')
 
     depends_on('mpi', when='networking=mpi')
