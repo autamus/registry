@@ -6,7 +6,7 @@ versions:
 - 4.3.2
 - 4.4.1
 - "4.5"
-updated_at: 2022-03-18T17:34:41.46593401Z
+updated_at: 2022-05-29T18:08:42.675054889Z
 size: 51MB
 description: FFmpeg is a complete, cross-platform solution to record, convert and
   stream audio and video.
