@@ -4,7 +4,7 @@ name: mafft
 github: https://github.com/autamus/registry/blob/main/containers/m/mafft/spack.yaml
 versions:
 - "7.481"
-updated_at: 2022-01-15T15:57:36.862792709Z
+updated_at: 2022-05-29T18:35:18.62409259Z
 size: 34MB
 description: MAFFT is a multiple sequence alignment program for unix-like operating
   systems. It offers a range of multiple alignment methods, L-INS-i (accurate; for
