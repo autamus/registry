@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/g/gawk/spack.ya
 versions:
 - 5.1.0
 - 5.1.1
-updated_at: 2022-04-20T17:30:31.733471933Z
-size: 47MB
+updated_at: 2022-05-29T18:16:47.921671221Z
+size: 34MB
 description: 'If you are like many computer users, you would frequently like to make
   changes in various text files wherever certain patterns appear, or extract data
   from parts of certain lines while discarding the rest. To write a program to do
@@ -20,7 +20,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/gawk
 # gawk
 ```bash 
 Download        : docker pull ghcr.io/autamus/gawk
-Compressed Size : 47MB
+Compressed Size : 34MB
 ```
 
 ## Description
