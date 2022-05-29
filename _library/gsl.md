@@ -6,7 +6,7 @@ versions:
 - "2.6"
 - "2.7"
 - 2.7.1
-updated_at: 2022-04-30T15:30:53.669048804Z
+updated_at: 2022-05-29T18:17:21.02832491Z
 size: 29MB
 description: The GNU Scientific Library (GSL) is a numerical library for C and C++
   programmers. It is free software under the GNU General Public License. The library
