@@ -4,7 +4,7 @@ name: mpfr
 github: https://github.com/autamus/registry/blob/main/containers/m/mpfr/spack.yaml
 versions:
 - 4.1.0
-updated_at: 2022-04-11T17:27:55.09160798Z
+updated_at: 2022-05-29T18:49:22.53306409Z
 size: 30MB
 description: The MPFR library is a C library for multiple-precision floating-point
   computations with correct rounding.
