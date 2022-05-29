@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/c/corset/spack.
 versions:
 - "1.06"
 - "1.09"
-updated_at: 2022-01-15T15:47:37.643483067Z
+updated_at: 2022-05-29T17:53:54.057137493Z
 size: 27MB
 description: Corset is a command-line software program to go from a de novo transcriptome
   assembly to gene-level counts.
