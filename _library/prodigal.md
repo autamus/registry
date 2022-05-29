@@ -4,7 +4,7 @@ name: prodigal
 github: https://github.com/autamus/registry/blob/main/containers/p/prodigal/spack.yaml
 versions:
 - 2.6.3
-updated_at: 2022-01-15T16:05:23.990601629Z
+updated_at: 2022-05-29T19:06:29.257325901Z
 size: 27MB
 description: Fast, reliable protein-coding gene prediction for prokaryotic genomes.
 container_url: https://github.com/orgs/autamus/packages/container/package/prodigal
