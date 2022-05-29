@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/s/sparsehash/sp
 versions:
 - 2.0.3
 - 2.0.4
-updated_at: 2022-01-15T16:09:56.920434281Z
+updated_at: 2022-05-29T19:33:10.700754861Z
 size: 27MB
 description: Sparse and dense hash-tables for C++ by Google
 container_url: https://github.com/orgs/autamus/packages/container/package/sparsehash
