@@ -4,7 +4,7 @@ name: bzip2
 github: https://github.com/autamus/registry/blob/main/containers/b/bzip2/spack.yaml
 versions:
 - 1.0.8
-updated_at: 2022-01-15T15:46:29.422800821Z
+updated_at: 2022-05-29T17:41:53.911265669Z
 size: 26MB
 description: bzip2 is a freely available, patent free high-quality data compressor.
   It typically compresses files to within 10% to 15% of the best available techniques
