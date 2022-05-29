@@ -4,7 +4,7 @@ name: lp-solve
 github: https://github.com/autamus/registry/blob/main/containers/l/lp-solve/spack.yaml
 versions:
 - 5.5.2.11
-updated_at: 2022-01-15T15:57:28.861173345Z
+updated_at: 2022-05-29T18:35:30.171441273Z
 size: 28MB
 description: lp_solve is a Mixed Integer Linear Programming (MILP) solver.
 container_url: https://github.com/orgs/autamus/packages/container/package/lp-solve
