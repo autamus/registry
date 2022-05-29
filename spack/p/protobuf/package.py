@@ -6,7 +6,7 @@
 import sys
 
 import spack.util.web
-from spack import *
+from spack.package import *
 
 
 class Protobuf(Package):
@@ -85,7 +85,7 @@ class Protobuf(Package):
 
     patch('protoc2.5.0_aarch64.patch', sha256='7b44fcdb794f421174d619f83584e00a36012a16da09079e2fad9c12f7337451', when='@2.5.0 target=aarch64:')
 
-    def fetch_remote_versions(self):
+    def fetch_remote_versions(self, *args, **kwargs):
         """Ignore additional source artifacts uploaded with releases,
            only keep known versions
            fix for https://github.com/spack/spack/issues/5356"""
