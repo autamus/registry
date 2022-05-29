@@ -4,7 +4,7 @@ name: intel-mkl
 github: https://github.com/autamus/registry/blob/main/containers/i/intel-mkl/spack.yaml
 versions:
 - 2020.4.304
-updated_at: 2022-05-05T17:34:29.07988205Z
+updated_at: 2022-05-29T18:50:57.195518755Z
 size: 1091MB
 description: Intel Math Kernel Library.
 container_url: https://github.com/orgs/autamus/packages/container/package/intel-mkl
