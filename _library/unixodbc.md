@@ -4,7 +4,7 @@ name: unixodbc
 github: https://github.com/autamus/registry/blob/main/containers/u/unixodbc/spack.yaml
 versions:
 - 2.3.4
-updated_at: 2022-01-15T16:12:48.195193224Z
+updated_at: 2022-05-29T19:48:34.876366167Z
 size: 29MB
 description: ODBC is an open specification for providing application developers with
   a predictable API with which to access Data Sources. Data Sources include SQL Servers
