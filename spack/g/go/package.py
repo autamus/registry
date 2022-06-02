@@ -9,7 +9,7 @@ import re
 
 import llnl.util.tty as tty
 
-from spack import *
+from spack.package import *
 
 # - vanilla CentOS 7, and possibly other systems, fail a test:
 #   TestCloneNEWUSERAndRemapRootDisableSetgroups
@@ -35,7 +35,7 @@ from spack import *
 class Go(Package):
     """The golang compiler and build environment"""
     homepage = "https://golang.org"
-    url      = "https://dl.google.com/go/go1.18.2.src.tar.gz"
+    url      = "https://dl.google.com/go/go1.18.3.src.tar.gz"
     git      = "https://go.googlesource.com/go.git"
 
     extendable = True
