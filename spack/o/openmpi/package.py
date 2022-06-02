@@ -39,6 +39,7 @@ class Openmpi(AutotoolsPackage, CudaPackage):
     tags = ['e4s']
 
     version('main', branch='main', submodules=True)
+    version('4.1.4', sha256='92912e175fd1234368c8730c03f4996fe5942e7479bb1d10059405e7f2b3930d')
     version('4.1.3', sha256='3d81d04c54efb55d3871a465ffb098d8d72c1f48ff1cbaf2580eb058567c0a3b')
     version('4.1.2', sha256='9b78c7cf7fc32131c5cf43dd2ab9740149d9d87cadb2e2189f02685749a6b527')
     version('4.1.1', sha256='e24f7a778bd11a71ad0c14587a7f5b00e68a71aa5623e2157bafee3d44c07cda')
