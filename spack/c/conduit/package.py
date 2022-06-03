@@ -34,13 +34,13 @@ class Conduit(CMakePackage):
     coupling between packages in-core, serialization, and I/O tasks."""
 
     homepage = "https://software.llnl.gov/conduit"
-    url      = "https://github.com/LLNL/conduit/archive/v0.8.2.tar.gz"
+    url      = "https://github.com/LLNL/conduit/releases/download/v0.8.3/conduit-v0.8.3-src-with-blt.tar.gz"
     git      = "https://github.com/LLNL/conduit.git"
     tags     = ['radiuss', 'e4s']
 
     version('develop', branch='develop', submodules=True)
     version('master', branch='develop', submodules=True)
-    version('0.8.2', sha256='3f2445040f62c8249fb4e0fa236b27bc59353df623a838cf396fc906dcf80dfb')
+    version('0.8.3', sha256='a9e60945366f3b8c37ee6a19f62d79a8d5888be7e230eabc31af2f837283ed1a')
     version('0.8.1', sha256='488f22135a35136de592173131d123f7813818b7336c3b18e04646318ad3cbee')
     version('0.8.0', sha256='0607dcf9ced44f95e0b9549f5bbf7a332afd84597c52e293d7ca8d83117b5119')
     version('0.7.2', sha256='359fd176297700cdaed2c63e3b72d236ff3feec21a655c7c8292033d21d5228a')
@@ -70,8 +70,6 @@ class Conduit(CMakePackage):
 
     # variants for comm and i/o
     variant("mpi", default=True, description="Build Conduit MPI Support")
-    # set to false for systems that implicitly link mpi
-    variant('blt_find_mpi', default=True, description='Use BLT CMake Find MPI logic')
     variant("hdf5", default=True, description="Build Conduit HDF5 support")
     variant("hdf5_compat", default=True,
             description="Build Conduit with HDF5 1.8.x (compatibility mode)")
@@ -292,7 +290,13 @@ class Conduit(CMakePackage):
         #######################
         c_compiler = env["SPACK_CC"]
         cpp_compiler = env["SPACK_CXX"]
-        f_compiler = env["SPACK_FC"]
+        f_compiler = None
+
+        if self.compiler.fc:
+            # even if this is set, it may not exist
+            # do one more sanity check
+            if os.path.isfile(env["SPACK_FC"]):
+                f_compiler  = env["SPACK_FC"]
 
         #######################################################################
         # Directly fetch the names of the actual compilers to create a
@@ -340,9 +344,12 @@ class Conduit(CMakePackage):
         cfg.write(cmake_cache_entry("CMAKE_CXX_COMPILER", cpp_compiler))
 
         cfg.write("# fortran compiler used by spack\n")
-        if "+fortran" in spec:
+        if "+fortran" in spec and f_compiler is not None:
             cfg.write(cmake_cache_entry("ENABLE_FORTRAN", "ON"))
+            cfg.write(cmake_cache_entry("CMAKE_Fortran_COMPILER",
+                                        f_compiler))
         else:
+            cfg.write("# no fortran compiler found\n\n")
             cfg.write(cmake_cache_entry("ENABLE_FORTRAN", "OFF"))
 
         if "+shared" in spec:
@@ -480,10 +487,6 @@ class Conduit(CMakePackage):
             cfg.write(cmake_cache_entry("ENABLE_MPI", "ON"))
             cfg.write(cmake_cache_entry("MPI_C_COMPILER", mpicc_path))
             cfg.write(cmake_cache_entry("MPI_CXX_COMPILER", mpicxx_path))
-            if "+blt_find_mpi" in spec:
-                cfg.write(cmake_cache_entry("ENABLE_FIND_MPI", "ON"))
-            else:
-                cfg.write(cmake_cache_entry("ENABLE_FIND_MPI", "OFF"))
             if "+fortran" in spec:
                 cfg.write(cmake_cache_entry("MPI_Fortran_COMPILER",
                                             mpifc_path))
