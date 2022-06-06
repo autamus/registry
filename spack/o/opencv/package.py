@@ -3,19 +3,23 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
+import re
+
+from spack.package import *
+
 
 class Opencv(CMakePackage, CudaPackage):
     """OpenCV (Open Source Computer Vision Library) is an open source computer
     vision and machine learning software library."""
 
     homepage = "https://opencv.org/"
-    url      = "https://github.com/opencv/opencv/archive/4.5.5-openvino-2022.1.0.tar.gz"
+    url      = "https://github.com/opencv/opencv/archive/4.6.0.tar.gz"
     git = "https://github.com/opencv/opencv.git"
 
     maintainers = ["bvanessen", "adamjstewart", "glennpj"]
 
     version('master', branch='master')
-    version('4.5.5.openvino.2022.1.0', sha256='a91b4daa49a2019f1485531b7820ac17515918bc5fec257a90dfbbdc63a24c1e')
+    version('4.6.0', sha256='1ec1cba65f9f20fe5a41fda1586e01c70ea0c9a6d7b67c9e13edf0cfe2239277')
     version('4.5.4', sha256="c20bb83dd790fc69df9f105477e24267706715a9d3c705ca1e7f613c7b3bad3d")
     version('4.5.2', sha256="ae258ed50aa039279c3d36afdea5c6ecf762515836b27871a8957c610d0424f8")
     version('4.5.1', sha256="e27fe5b168918ab60d58d7ace2bd82dd14a4d0bd1d3ae182952c2113f5637513")
@@ -185,10 +189,16 @@ class Opencv(CMakePackage, CudaPackage):
         "js_bindings_generator",
     ]
 
+    # Define the list of libraries objects that may be used
+    # to find an external installation and its variants
+    libraries = []
+
     # module variants
     for mod in modules:
         # At least one of these modules must be enabled to build OpenCV
         variant(mod, default=False, description="Include opencv_{0} module".format(mod))
+        lib = 'libopencv_' + mod
+        libraries.append(lib)
 
     # module conflicts and dependencies
     with when("+calib3d"):
@@ -824,6 +834,48 @@ class Opencv(CMakePackage, CudaPackage):
     conflicts("+win32ui", when="platform=darwin", msg="Windows only")
     conflicts("+win32ui", when="platform=linux", msg="Windows only")
     conflicts("+win32ui", when="platform=cray", msg="Windows only")
+
+    @classmethod
+    def determine_version(cls, lib):
+        ver = None
+        for ext in library_extensions:
+            pattern = None
+            if ext == 'dylib':
+                # Darwin switches the order of the version compared to Linux
+                pattern = re.compile(r'lib(\S*?)_(\S*)\.(\d+\.\d+\.\d+)\.%s' %
+                                     ext)
+            else:
+                pattern = re.compile(r'lib(\S*?)_(\S*)\.%s\.(\d+\.\d+\.\d+)' %
+                                     ext)
+            match = pattern.search(lib)
+            if match:
+                ver = match.group(3)
+        return ver
+
+    @classmethod
+    def determine_variants(cls, libs, version_str):
+        variants = []
+        remaining_modules = set(Opencv.modules)
+        for lib in libs:
+            for ext in library_extensions:
+                pattern = None
+                if ext == 'dylib':
+                    # Darwin switches the order of the version compared to Linux
+                    pattern = re.compile(r'lib(\S*?)_(\S*)\.(\d+\.\d+\.\d+)\.%s' %
+                                         ext)
+                else:
+                    pattern = re.compile(r'lib(\S*?)_(\S*)\.%s\.(\d+\.\d+\.\d+)' %
+                                         ext)
+                match = pattern.search(lib)
+                if match and not match.group(2) == 'core':
+                    variants.append('+' + match.group(2))
+                    remaining_modules.remove(match.group(2))
+
+        # If libraries are not found, mark those variants as disabled
+        for mod in remaining_modules:
+            variants.append('~' + mod)
+
+        return ' '.join(variants)
 
     def cmake_args(self):
         spec = self.spec
