@@ -11,6 +11,7 @@ import llnl.util.tty as tty
 
 import spack.build_environment
 import spack.util.executable
+from spack.package import *
 
 
 class Llvm(CMakePackage, CudaPackage):
@@ -22,7 +23,7 @@ class Llvm(CMakePackage, CudaPackage):
     """
 
     homepage = "https://llvm.org/"
-    url      = "https://github.com/llvm/llvm-project/archive/llvmorg-14.0.4.tar.gz"
+    url      = "https://github.com/llvm/llvm-project/archive/llvmorg-14.0.5.tar.gz"
     list_url = "https://releases.llvm.org/download.html"
     git = "https://github.com/llvm/llvm-project"
     maintainers = ['trws', 'haampie']
@@ -35,7 +36,9 @@ class Llvm(CMakePackage, CudaPackage):
 
     # fmt: off
     version('main', branch='main')
+    version('14.0.5', sha256='a4a57f029cb81f04618e05853f05fc2d21b64353c760977d8e7799bf7218a23a')
     version('14.0.4', sha256='1333236f9bee38658762076be4236cb5ebf15ae9b7f2bfce6946b96ae962dc73')
+    version('14.0.3', sha256='0e1d049b050127ecf6286107e9a4400b0550f841d5d2288b9d31fd32ed0683d5')
     version('14.0.2', sha256='ca52232b3451c8e017f00eb882277707c13e30fac1271ec97015f6d0eeb383d1')
     version('14.0.1', sha256='c8be00406e872c8a24f8571cf6f5517b73ae707104724b1fd1db2f0af9544019')
     version('14.0.0', sha256='87b1a068b370df5b79a892fdb2935922a8efb1fddec4cc506e30fe57b6a1d9c4')
