@@ -2,6 +2,7 @@
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
+from spack.package import *
 
 
 class Salmon(CMakePackage):
@@ -9,9 +10,9 @@ class Salmon(CMakePackage):
        RNA-seq data."""
 
     homepage = "https://combine-lab.github.io/salmon/"
-    url      = "https://github.com/COMBINE-lab/salmon/archive/v1.8.0.tar.gz"
+    url      = "https://github.com/COMBINE-lab/salmon/archive/v1.9.0.tar.gz"
 
-    version('1.8.0', sha256='5c5594fa188909b25ea793d7a50765f9c3cd20f91457f5f755fc3edddfec125c')
+    version('1.9.0', sha256='450d953a5c43fe63fd745733f478d3fbaf24d926cb52731fd38ee21c4990d613')
     version('1.4.0', sha256='6d3e25387450710f0aa779a1e9aaa9b4dec842324ff8551d66962d7c7606e71d')
     version('0.14.1', sha256='05289170e69b5f291a8403b40d6b9bff54cc38825e9f721c210192b51a19273e')
     version('0.12.0', sha256='91ebd1efc5b0b4c12ec6babecf3c0b79f7102e42b8895ca07c8c8fea869fefa3')
@@ -23,8 +24,8 @@ class Salmon(CMakePackage):
             values=('DEBUG', 'RELEASE'))
 
     depends_on('tbb')
-    depends_on('boost@:1.66.0', when='@:0.14.1')
-    depends_on('boost@1.72.0:', when='@1.4.0:')
+    depends_on('boost@1.66.0:+program_options+exception+filesystem+system+chrono+serialization+random+graph+timer+iostreams+math+thread+container', when='@:0.14.1')
+    depends_on('boost@1.72.0:+program_options+exception+filesystem+system+chrono+serialization+random+graph+timer+iostreams+math+thread+container', when='@1.4.0:')
     depends_on('cereal')
     depends_on('jemalloc')
     depends_on('xz')
