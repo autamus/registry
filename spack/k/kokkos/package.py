@@ -15,7 +15,7 @@ class Kokkos(CMakePackage, CudaPackage, ROCmPackage):
 
     homepage = "https://github.com/kokkos/kokkos"
     git      = "https://github.com/kokkos/kokkos.git"
-    url      = "https://github.com/kokkos/kokkos/archive/3.4.01.tar.gz"
+    url      = "https://github.com/kokkos/kokkos/archive/3.6.00.tar.gz"
 
     tags = ['e4s']
 
