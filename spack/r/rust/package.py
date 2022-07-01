@@ -7,6 +7,8 @@ import re
 
 from six import iteritems
 
+from spack.package import *
+
 
 class Rust(Package):
     """The Rust programming language toolchain
@@ -18,7 +20,7 @@ class Rust(Package):
     """
 
     homepage = "https://www.rust-lang.org"
-    url      = "https://static.rust-lang.org/dist/rustc-1.61.0-src.tar.gz"
+    url      = "https://static.rust-lang.org/dist/rustc-1.62.0-src.tar.gz"
     git = "https://github.com/rust-lang/rust.git"
 
     maintainers = ["AndrewGaspar"]
@@ -77,7 +79,7 @@ class Rust(Package):
     # Pre-release Versions
     version('master', branch='master', submodules=True)
     version('nightly')
-    version('1.61.0', sha256='ad0b4351675aa9abdf4c7e066613bd274c4391c5506db152983426376101daed')
+    version('1.62.0', sha256='7d0878809b64d206825acae3eb7f60afb2212d81e3de1adf4c11c6032b36c027')
     version('1.60.0', sha256='20ca826d1cf674daf8e22c4f8c4b9743af07973211c839b85839742314c838b7')
     version('1.58.1', sha256='a839afdd3625d6f3f3c4c10b79813675d1775c460d14be1feaf33a6c829c07c7')
     version('1.51.0', sha256='7a6b9bafc8b3d81bbc566e7c0d1f17c9f499fd22b95142f7ea3a8e4d1f9eb847')
@@ -132,7 +134,8 @@ class Rust(Package):
             'x86_64-unknown-linux-gnu':      'b8a4c3959367d053825e31f90a5eb86418eb0d80cacda52bfa80b078e18150d5',
             'powerpc64le-unknown-linux-gnu': '80125e90285b214c2b1f56ab86a09c8509aa17aec9d7127960a86a7008e8f7de',
             'aarch64-unknown-linux-gnu':     '99c419c2f35d4324446481c39402c7baecd7a8baed7edca9f8d6bbd33c05550c',
-            'x86_64-apple-darwin':           '0b10dc45cddc4d2355e38cac86d71a504327cb41d41d702d4050b9847ad4258c'
+            'x86_64-apple-darwin':           '0b10dc45cddc4d2355e38cac86d71a504327cb41d41d702d4050b9847ad4258c',
+            'aarch64-apple-darwin':          'b532672c278c25683ca63d78e82bae829eea1a32308e844954fb66cfe34ad222',
         },
         '1.58.1': {
             'x86_64-unknown-linux-gnu':      '4fac6df9ea49447682c333e57945bebf4f9f45ec7b08849e507a64b2ccd5f8fb',
@@ -399,7 +402,10 @@ class Rust(Package):
         ],
         'x86_64-apple-darwin': [
             {'platform': 'darwin', 'target': 'x86_64:'}
-        ]
+        ],
+        'aarch64-apple-darwin': [
+            {'platform': 'darwin', 'target': 'aarch64:'},
+        ],
     }
 
     # Specifies the strings which represent a pre-release Rust version. These
@@ -480,8 +486,11 @@ class Rust(Package):
                 return 'powerpc64le-unknown-linux-gnu'
             elif 'target=aarch64:' in self.spec:
                 return 'aarch64-unknown-linux-gnu'
-        elif 'platform=darwin target=x86_64:' in self.spec:
-            return 'x86_64-apple-darwin'
+        elif 'platform=darwin' in self.spec:
+            if 'target=x86_64:' in self.spec:
+                return 'x86_64-apple-darwin'
+            elif 'target=aarch64:' in self.spec:
+                return 'aarch64-apple-darwin'
 
         raise InstallError(
             "rust is not supported for '{0}'".format(
