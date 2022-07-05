@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
+from spack.package import *
 
 
 class Cloc(Package):
@@ -11,9 +11,9 @@ class Cloc(Package):
     given files (may be archives such as compressed tarballs or zip files)
     and/or recursively below the given directories."""
     homepage = "https://github.com/AlDanial/cloc/"
-    url      = "https://github.com/AlDanial/cloc/archive/v1.92.tar.gz"
+    url      = "https://github.com/AlDanial/cloc/archive/v1.94.tar.gz"
 
-    version('1.92', sha256='b5f18f4dbc05eff08ada215b6c2a8cbdab397e9b4b4e25c7427d4ed86fb6e248')
+    version('1.94', sha256='c835fe343e1c25194a61eb74d7a36e98413682ed0c3b4d6b8e35a327077bf926')
     version('1.90', sha256='60b429dd2aa5cd65707b359dcbcbeb710c8e4db880886528ced0962c67e52548')
     version('1.84', sha256='c3f0a6bd2319110418ccb3e55a7a1b6d0edfd7528bfd2ae5d530938abe90f254')
     version('1.80', sha256='082f53530eee3f9ee84ec449eca59a77ff114250cd7daf9519679537b5b21d67')
