@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/a/admixtools/sp
 versions:
 - 7.0.1
 - 7.0.2
-updated_at: 2022-05-29T17:57:57.639470429Z
+updated_at: 2022-07-14T16:58:47.318288868Z
 size: 58MB
 description: The ADMIXTOOLS package implements 5 methods described in Patterson et
   al. (2012) Ancient Admixture in Human History. Details of the methods and algorithm
