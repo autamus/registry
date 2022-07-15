@@ -23,7 +23,7 @@ class Scr(CMakePackage):
        capability for MPI codes"""
 
     homepage = "https://computing.llnl.gov/projects/scalable-checkpoint-restart-for-mpi"
-    url      = "https://github.com/LLNL/scr/archive/v1.2.0.tar.gz"
+    url      = "https://github.com/LLNL/scr/archive/v3.0.1.tar.gz"
     git      = "https://github.com/llnl/scr.git"
     tags     = ['e4s', 'radiuss']
 
