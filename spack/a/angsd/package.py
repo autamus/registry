@@ -2,7 +2,7 @@
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
-from spack import *
+from spack.package import *
 
 
 class Angsd(MakefilePackage):
@@ -15,9 +15,9 @@ class Angsd(MakefilePackage):
     """
 
     homepage = "https://github.com/ANGSD/angsd"
-    url      = "https://github.com/ANGSD/angsd/archive/0.937.tar.gz"
+    url      = "https://github.com/ANGSD/angsd/archive/0.938.tar.gz"
 
-    version('0.937', sha256='4711b33bc0ba329a873946e5307a7dd30655bed5c9f12d9bb60ef0a384b3dd56')
+    version('0.938', sha256='03ffd0594985f6923f0a7e17adbc1253e122c9d13d8f0154581ce9177e59c82d')
     version('0.935', sha256='15000281330fa59ddf745cb84eeaa653acf6da34a4ac6c3df7c5835d1d01ba16')
     version('0.933', sha256='2f992325dc08fa25ac525d9300ef6bd61808e74c521b4cc72a2ce00d98f402bb')
     version('0.921', sha256='8892d279ce1804f9e17fe2fc65a47e5498e78fc1c1cb84d2ca2527fd5c198772')
