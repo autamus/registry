@@ -3,20 +3,20 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-from spack import *
+from spack.package import *
 
 
 class Benchmark(CMakePackage):
     """A microbenchmark support library"""
 
     homepage = "https://github.com/google/benchmark"
-    url      = "https://github.com/google/benchmark/archive/v1.6.1.tar.gz"
+    url      = "https://github.com/google/benchmark/archive/v1.6.2.tar.gz"
     git      = "https://github.com/google/benchmark.git"
 
     # first properly installed CMake config packages in
     # 1.2.0 release: https://github.com/google/benchmark/issues/363
     version('develop', branch='master')
-    version('1.6.1', sha256='6132883bc8c9b0df5375b16ab520fac1a85dc9e4cf5be59480448ece74b278d4')
+    version('1.6.2', sha256='a9f77e6188c1cd4ebedfa7538bf5176d6acc72ead6f456919e5f464ef2f06158')
     version('1.6.0', sha256='1f71c72ce08d2c1310011ea6436b31e39ccab8c2db94186d26657d41747c85d6')
     version('1.5.5', sha256='3bff5f237c317ddfd8d5a9b96b3eede7c0802e799db520d38ce756a2a46a18a0')
     version('1.5.4', sha256='e3adf8c98bb38a198822725c0fc6c0ae4711f16fbbf6aeb311d5ad11e5a081b5')
