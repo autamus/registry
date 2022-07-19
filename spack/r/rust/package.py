@@ -20,7 +20,7 @@ class Rust(Package):
     """
 
     homepage = "https://www.rust-lang.org"
-    url      = "https://static.rust-lang.org/dist/rustc-1.62.0-src.tar.gz"
+    url      = "https://static.rust-lang.org/dist/rustc-1.62.1-src.tar.gz"
     git = "https://github.com/rust-lang/rust.git"
 
     maintainers = ["AndrewGaspar"]
@@ -79,7 +79,7 @@ class Rust(Package):
     # Pre-release Versions
     version('master', branch='master', submodules=True)
     version('nightly')
-    version('1.62.0', sha256='7d0878809b64d206825acae3eb7f60afb2212d81e3de1adf4c11c6032b36c027')
+    version('1.62.1', sha256='72acbe6ffcd94f598382a7430b0d85ee8f679e6d0b27f3f566ed1c16c978133f')
     version('1.60.0', sha256='20ca826d1cf674daf8e22c4f8c4b9743af07973211c839b85839742314c838b7')
     version('1.58.1', sha256='a839afdd3625d6f3f3c4c10b79813675d1775c460d14be1feaf33a6c829c07c7')
     version('1.51.0', sha256='7a6b9bafc8b3d81bbc566e7c0d1f17c9f499fd22b95142f7ea3a8e4d1f9eb847')
