@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/a/accumulo/spac
 versions:
 - 2.0.0
 - 2.0.1
-updated_at: 2022-05-29T17:31:49.155927428Z
+updated_at: 2022-08-01T17:53:13.637705817Z
 size: 274MB
 description: Apache Accumulo is a sorted, distributed key/value store that provides
   robust, scalable data storage and retrieval.
