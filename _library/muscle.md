@@ -4,7 +4,7 @@ name: muscle
 github: https://github.com/autamus/registry/blob/main/containers/m/muscle/spack.yaml
 versions:
 - 3.8.1551
-updated_at: 2022-05-29T18:48:29.642156649Z
+updated_at: 2022-08-01T19:15:01.336343899Z
 size: 27MB
 description: MUSCLE is one of the best-performing multiple alignment programs according
   to published benchmark tests, with accuracy and speed that are consistently better
