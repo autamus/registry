@@ -4,7 +4,7 @@ name: ed
 github: https://github.com/autamus/registry/blob/main/containers/e/ed/spack.yaml
 versions:
 - "1.4"
-updated_at: 2022-05-29T17:56:30.087193969Z
+updated_at: 2022-08-01T18:22:21.486217753Z
 size: 26MB
 description: GNU ed is a line-oriented text editor. It is used to create, display,
   modify and otherwise manipulate text files, both interactively and via shell scripts.
