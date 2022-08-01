@@ -4,7 +4,7 @@ name: alan
 github: https://github.com/autamus/registry/blob/main/containers/a/alan/spack.yaml
 versions:
 - 2.1.1
-updated_at: 2022-05-29T17:27:31.531516742Z
+updated_at: 2022-08-01T17:49:47.095719542Z
 size: 26MB
 description: Alignment viewer for linux terminal
 container_url: https://github.com/orgs/autamus/packages/container/package/alan
