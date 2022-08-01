@@ -4,7 +4,7 @@ name: sparse
 github: https://github.com/autamus/registry/blob/main/containers/s/sparse/spack.yaml
 versions:
 - "1.4"
-updated_at: 2022-05-29T19:29:34.741376887Z
+updated_at: 2022-08-01T20:04:06.107683249Z
 size: 26MB
 description: An open source sparse linear equation solver.
 container_url: https://github.com/orgs/autamus/packages/container/package/sparse
