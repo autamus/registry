@@ -4,7 +4,7 @@ name: igraph
 github: https://github.com/autamus/registry/blob/main/containers/i/igraph/spack.yaml
 versions:
 - 0.7.1
-updated_at: 2022-05-29T18:25:51.383216772Z
+updated_at: 2022-08-01T18:50:00.539664164Z
 size: 34MB
 description: igraph is a library for creating and manipulating graphs.
 container_url: https://github.com/orgs/autamus/packages/container/package/igraph
