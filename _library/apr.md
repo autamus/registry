@@ -4,7 +4,7 @@ name: apr
 github: https://github.com/autamus/registry/blob/main/containers/a/apr/spack.yaml
 versions:
 - 1.7.0
-updated_at: 2022-05-29T17:28:02.538163317Z
+updated_at: 2022-08-01T17:50:48.326889781Z
 size: 30MB
 description: Apache portable runtime.
 container_url: https://github.com/orgs/autamus/packages/container/package/apr
