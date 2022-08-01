@@ -4,7 +4,7 @@ name: xz
 github: https://github.com/autamus/registry/blob/main/containers/x/xz/spack.yaml
 versions:
 - 5.2.5
-updated_at: 2022-05-29T19:51:04.727850261Z
+updated_at: 2022-08-01T20:25:00.383276957Z
 size: 27MB
 description: XZ Utils is free general-purpose data compression software with high
   compression ratio. XZ Utils were written for POSIX-like systems, but also work on
