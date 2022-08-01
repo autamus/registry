@@ -4,7 +4,7 @@ name: libxpm
 github: https://github.com/autamus/registry/blob/main/containers/l/libxpm/spack.yaml
 versions:
 - 3.5.12
-updated_at: 2022-05-29T18:53:46.347108244Z
+updated_at: 2022-08-01T19:22:12.465712937Z
 size: 47MB
 description: libXpm - X Pixmap (XPM) image file format library.
 container_url: https://github.com/orgs/autamus/packages/container/package/libxpm
