@@ -10,12 +10,13 @@ class Mercury(CMakePackage):
     """Mercury is a C library for implementing RPC, optimized for HPC"""
 
     homepage = "https://mercury-hpc.github.io/"
-    url      = "https://github.com/mercury-hpc/mercury/releases/download/v1.0.1/mercury-1.0.1.tar.bz2"
+    url      = "https://github.com/mercury-hpc/mercury/releases/download/v2.2.0/mercury-2.2.0.tar.bz2"
     git = "https://github.com/mercury-hpc/mercury.git"
 
     maintainers = ["soumagne"]
     tags = ["e4s"]
     version('master', branch='master', submodules=True)
+    version('2.2.0', sha256='e66490cf63907c3959bbb2932b5aaf51d96a481b17f0935f409f3a862eff97f6')
     version('2.1.0', sha256="9a58437161e9273b1b1c484d2f1a477a89eea9afe84575415025d47656f3761b")
     version('2.0.1', sha256="335946d9620ac669643ffd9861a5fb3ee486834bab674b7779eaac9d6662e3fa")
     version('2.0.0', sha256="9e80923712e25df56014309df70660e828dbeabbe5fcc82ee024bcc86e7eb6b7")
