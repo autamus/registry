@@ -4,7 +4,7 @@ name: swig
 github: https://github.com/autamus/registry/blob/main/containers/s/swig/spack.yaml
 versions:
 - 4.0.2
-updated_at: 2022-08-01T20:09:57.354697483Z
+updated_at: 2022-08-09T14:53:58.513905148Z
 size: 29MB
 description: SWIG is an interface compiler that connects programs written in C and
   C++ with scripting languages such as Perl, Python, Ruby, and Tcl. It works by taking
