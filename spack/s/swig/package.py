@@ -29,6 +29,7 @@ class Swig(AutotoolsPackage, SourceforgePackage):
 
     version('fortran', branch='master')
     version('master')
+    version('4.1.dev.1', sha256="d9020319771879b41f9545e95f9d252a3ffc379832dded14c385e5cd823e526d", url='https://github.com/swig-fortran/swig/archive/refs/tags/v4.1.0-dev1+fortran.tar.gz')
     version('4.0.2', sha256="d53be9730d8d58a16bf0cbd1f8ac0c0c3e1090573168bfa151b01eb47fa906fc")
     version('4.0.1', sha256="7a00b4d0d53ad97a14316135e2d702091cd5f193bb58bcfcd8bc59d41e7887a9")
     version('4.0.0', sha256="e8a39cd6437e342cdcbd5af27a9bf11b62dc9efec9248065debcb8276fcbb925")
@@ -43,7 +44,7 @@ class Swig(AutotoolsPackage, SourceforgePackage):
 
     depends_on("pcre")
 
-    _autoconf_versions = ["@master", "@fortran", "@4.0.2-fortran"]
+    _autoconf_versions = ["@master", "@fortran", "@4.0.2-fortran", "@4.1.dev1-fortran"]
 
     # Git releases do *not* include configure script
     for _version in _autoconf_versions:
