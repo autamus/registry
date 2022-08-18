@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/e/elfutils/spac
 versions:
 - "0.185"
 - "0.186"
-updated_at: 2022-08-15T16:14:22.607773033Z
+updated_at: 2022-08-18T16:51:40.564703283Z
 size: 44MB
 description: elfutils is a collection of various binary tools such as eu-objdump,
   eu-readelf, and other utilities that allow you to inspect and manipulate ELF files.
