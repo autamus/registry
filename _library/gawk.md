@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/g/gawk/spack.ya
 versions:
 - 5.1.0
 - 5.1.1
-updated_at: 2022-08-01T18:40:49.342633964Z
+updated_at: 2022-08-19T16:53:28.68947721Z
 size: 34MB
 description: 'If you are like many computer users, you would frequently like to make
   changes in various text files wherever certain patterns appear, or extract data
