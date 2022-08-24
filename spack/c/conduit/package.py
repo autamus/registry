@@ -40,6 +40,7 @@ class Conduit(CMakePackage):
 
     version('develop', branch='develop', submodules=True)
     version('master', branch='develop', submodules=True)
+    version('0.8.4', sha256="55c37ddc668dbc45d43b60c440192f76e688a530d64f9fe1a9c7fdad8cd525fd")
     version('0.8.3', sha256="a9e60945366f3b8c37ee6a19f62d79a8d5888be7e230eabc31af2f837283ed1a")
     version('0.8.2', sha256="928eb8496bc50f6d8404f5bfa70220250876645d68d4f35ce0b99ecb85546284")
     version('0.8.1', sha256="488f22135a35136de592173131d123f7813818b7336c3b18e04646318ad3cbee")
