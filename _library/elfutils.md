@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/e/elfutils/spac
 versions:
 - "0.185"
 - "0.186"
-updated_at: 2022-08-23T16:31:18.722870585Z
-size: 44MB
+updated_at: 2022-09-02T16:14:03.189390895Z
+size: 43MB
 description: elfutils is a collection of various binary tools such as eu-objdump,
   eu-readelf, and other utilities that allow you to inspect and manipulate ELF files.
   Refer to Table 5.Tools Included in elfutils for Red Hat Developer for a complete
@@ -18,7 +18,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/elfuti
 # elfutils
 ```bash 
 Download        : docker pull ghcr.io/autamus/elfutils
-Compressed Size : 44MB
+Compressed Size : 43MB
 ```
 
 ## Description
