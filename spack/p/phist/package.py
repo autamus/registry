@@ -21,7 +21,7 @@ class Phist(CMakePackage):
     """
 
     homepage = "https://bitbucket.org/essex/phist/"
-    url      = "https://bitbucket.org/essex/phist/get/phist-1.9.6.tar.gz"
+    url      = "https://bitbucket.org/essex/phist/get/phist-1.10.0.tar.gz"
     git = "https://bitbucket.org/essex/phist.git"
 
     maintainers = ["jthies"]
@@ -33,6 +33,7 @@ class Phist(CMakePackage):
 
     version('develop', branch='devel')
     version('master', branch='master')
+    version('1.10.0', sha256='3ec660c85d37818ee219edc80e977140dfb062bdca1f38623c94a45d13634bd1')
     version('1.9.6', sha256="98ed5ccb22bb98d5b6bf9de0c9960105473e5244978853070b9a3c44138db662")
     version('1.9.5', sha256="24faa3373003f185c82a658c510e36cba9acc4110eb60cbfded9de370ae9ea32")
     version('1.9.4', sha256="9dde3ca0480358fa0877ec8424aaee4011c5defc929219a5930388a7cdb4c8a6")
