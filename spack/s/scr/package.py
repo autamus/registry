@@ -31,6 +31,7 @@ class Scr(CMakePackage):
 
     version('develop', branch='develop')
     version('legacy', branch='legacy')
+    version('3.0.1', sha256="ba8f9e676aec8176ecc46c31a4f470ac95047101654de8cc88e01a1f9d95665a")
     version('3.0', sha256="e204d3e99a49efac50b4bedc7ac05f55a05f1a65429500d919900c82490532cc")
     version('2.0.0', sha256="471978ae0afb56a20847d3989b994fbd680d1dea21e77a5a46a964b6e3deed6b")
     version('1.2.2', sha256="764a85638a9e8762667ec1f39fa5f7da7496fca78de379a22198607b3e027847")
@@ -47,21 +48,14 @@ class Scr(CMakePackage):
 
     # SCR legacy is anything 2.x.x or earlier
     # SCR components is anything 3.x.x or later
-    depends_on("axl@0.4.0", when="@3.0rc1")
-    depends_on("er@0.0.4", when="@3.0rc1")
-    depends_on("kvtree@1.1.1", when="@3.0rc1")
-    depends_on("rankstr@0.0.3", when="@3.0rc1")
-    depends_on("redset@0.0.5", when="@3.0rc1")
-    depends_on("shuffile@0.0.4", when="@3.0rc1")
-    depends_on("spath@0.0.2", when="@3.0rc1")
-
-    depends_on("axl@0.5.0:", when="@3.0rc2")
-    depends_on("er@0.1.0:", when="@3.0rc2")
-    depends_on("kvtree@1.2.0:", when="@3.0rc2")
-    depends_on("rankstr@0.1.0:", when="@3.0rc2")
-    depends_on("redset@0.1.0:", when="@3.0rc2")
-    depends_on("shuffile@0.1.0:", when="@3.0rc2")
-    depends_on("spath@0.1.0:", when="@3.0rc2")
+    depends_on("axl@0.7.1", when="@3.0.1:")
+    depends_on("er@0.2.0", when="@3.0.1:")
+    depends_on("kvtree@1.3.0", when="@3.0.1:")
+    depends_on("rankstr@0.1.0", when="@3.0.1:")
+    depends_on("redset@0.2.0", when="@3.0.1:")
+    depends_on("shuffile@0.2.0", when="@3.0.1:")
+    depends_on("spath@0.2.0", when="@3.0.1:")
+    depends_on("dtcmp@1.1.4", when="@3.0.1:")
 
     depends_on("axl@0.6.0", when="@3.0.0:")
     depends_on("er@0.2.0", when="@3.0.0:")
@@ -71,6 +65,22 @@ class Scr(CMakePackage):
     depends_on("shuffile@0.2.0", when="@3.0.0:")
     depends_on("spath@0.2.0", when="@3.0.0:")
     depends_on("dtcmp@1.1.4", when="@3.0.0:")
+
+    depends_on("axl@0.5.0:", when="@3.0rc2")
+    depends_on("er@0.1.0:", when="@3.0rc2")
+    depends_on("kvtree@1.2.0:", when="@3.0rc2")
+    depends_on("rankstr@0.1.0:", when="@3.0rc2")
+    depends_on("redset@0.1.0:", when="@3.0rc2")
+    depends_on("shuffile@0.1.0:", when="@3.0rc2")
+    depends_on("spath@0.1.0:", when="@3.0rc2")
+
+    depends_on("axl@0.4.0", when="@3.0rc1")
+    depends_on("er@0.0.4", when="@3.0rc1")
+    depends_on("kvtree@1.1.1", when="@3.0rc1")
+    depends_on("rankstr@0.0.3", when="@3.0rc1")
+    depends_on("redset@0.0.5", when="@3.0rc1")
+    depends_on("shuffile@0.0.4", when="@3.0rc1")
+    depends_on("spath@0.0.2", when="@3.0rc1")
 
     # DTCMP is an optional dependency up until 3.x, required thereafter
     variant(
