@@ -19,7 +19,7 @@ class Cmake(Package):
     """
 
     homepage = "https://www.cmake.org"
-    url      = "https://github.com/Kitware/CMake/releases/download/v3.24.1/cmake-3.24.1.tar.gz"
+    url      = "https://github.com/Kitware/CMake/releases/download/v3.24.2/cmake-3.24.2.tar.gz"
     git = "https://gitlab.kitware.com/cmake/cmake.git"
     maintainers = ["chuckatkins"]
 
@@ -28,7 +28,7 @@ class Cmake(Package):
     executables = ["^cmake$"]
 
     version('master', branch='master')
-    version('3.24.1', sha256='4931e277a4db1a805f13baa7013a7757a0cbfe5b7932882925c7061d9d1fa82b')
+    version('3.24.2', sha256='0d9020f06f3ddf17fb537dc228e1a56c927ee506b486f55fe2dc19f69bf0c8db')
     version('3.23.3', sha256="06fefaf0ad94989724b56f733093c2623f6f84356e5beb955957f9ce3ee28809")
     version('3.23.2', sha256="f316b40053466f9a416adf981efda41b160ca859e97f6a484b447ea299ff26aa")
     version('3.23.1', sha256="33fd10a8ec687a4d0d5b42473f10459bb92b3ae7def2b745dc10b192760869f3")
