@@ -18,14 +18,14 @@ class Clingo(CMakePackage):
     problem."""
 
     homepage = "https://potassco.org/clingo/"
-    url      = "https://github.com/potassco/clingo/archive/v5.6.0.tar.gz"
+    url      = "https://github.com/potassco/clingo/archive/v5.6.1.tar.gz"
     git = "https://github.com/potassco/clingo.git"
 
     maintainers = ["tgamblin", "alalazo"]
 
     version('master', branch='master', submodules=True)
     version('spack', commit='2a025667090d71b2c9dce60fe924feb6bde8f667', submodules=True)
-    version('5.6.0', sha256='2891ecfcccbe728168ac27d62c3036aae0164b15b219b4954fb18614eda79f53')
+    version('5.6.1', sha256='fd94a8eadb0051abd0b7176e228404eeb93e0ad70307913a608aa4aa978fabec')
     version('5.5.2', sha256="a2a0a590485e26dce18860ac002576232d70accc5bfcb11c0c22e66beb23baa6")
     version('5.5.1', sha256="b9cf2ba2001f8241b8b1d369b6f353e628582e2a00f13566e51c03c4dd61f67e")
     version('5.5.0', sha256="c9d7004a0caec61b636ad1c1960fbf339ef8fdee9719321fc1b6b210613a8499")
