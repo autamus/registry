@@ -20,6 +20,7 @@ class OmegaH(CMakePackage, CudaPackage):
     tags = ["e4s"]
     version('main', branch='main')
     version('10.1.0', commit='e88912368e101d940f006019585701a704295ab0')
+    version('9.34.13', sha256="2eadfd6d634abc0b50396a82fd446f8f0b586ba6e64788c47827162c2aadec02")
     version('9.34.6', sha256='0fcdfedab6afb855ca982c429698eaa2c25e78909152b8bee508c80a54234aac')
     version('9.34.5', sha256='1fa67122d2b6d2b3d0d05fa0c5ed1fa24234d072292b29cb334879ffb5adcc92')
     version('9.34.1', sha256="3a812da3b8df3e0e5d78055e91ad23333761bcd9ed9b2c8c13ee1ba3d702e46c")
