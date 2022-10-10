@@ -21,7 +21,7 @@ class Phist(CMakePackage):
     """
 
     homepage = "https://bitbucket.org/essex/phist/"
-    url      = "https://bitbucket.org/essex/phist/get/phist-1.10.0.tar.gz"
+    url      = "https://bitbucket.org/essex/phist/get/phist-1.11.0.tar.gz"
     git = "https://bitbucket.org/essex/phist.git"
 
     maintainers = ["jthies"]
@@ -33,7 +33,8 @@ class Phist(CMakePackage):
 
     version('develop', branch='devel')
     version('master', branch='master')
-    version('1.10.0', sha256='3ec660c85d37818ee219edc80e977140dfb062bdca1f38623c94a45d13634bd1')
+    version('1.11.0', sha256='36e6cc41a13884ba0a26f7be03e3f1882b1a2d14ca04353a609c0eec0cfb7a77')
+    version('1.10.0', sha256="3ec660c85d37818ee219edc80e977140dfb062bdca1f38623c94a45d13634bd1")
     version('1.9.6', sha256="98ed5ccb22bb98d5b6bf9de0c9960105473e5244978853070b9a3c44138db662")
     version('1.9.5', sha256="24faa3373003f185c82a658c510e36cba9acc4110eb60cbfded9de370ae9ea32")
     version('1.9.4', sha256="9dde3ca0480358fa0877ec8424aaee4011c5defc929219a5930388a7cdb4c8a6")
@@ -115,6 +116,10 @@ class Phist(CMakePackage):
         description="generate Fortran 2003 bindings (requires Python3 and " "a Fortran compiler)",
     )
 
+    # The builtin kernels switched from the 'mpi' to the 'mpi_f08' module in
+    # phist 1.9.6, which causes compile-time errors with mpich and older
+    # GCC versions.
+    conflicts("kernel_lib=builtin", when="@1.9.6: ^mpich %gcc@:10")
     # in older versions, it is not possible to completely turn off OpenMP
     conflicts("~openmp", when="@:1.7.3")
     # in older versions, it is not possible to turn off the use of host-
@@ -131,6 +136,7 @@ class Phist(CMakePackage):
     patch("ppc64_sse.patch", when="@1.9.4")
     patch("update_tpetra_gotypes.patch", when="@1.6:1.8")
     patch("sbang.patch", when="+fortran")
+    patch("fortran-fixes-pre-1.11.patch", when="+fortran @1.7.0:1.10.0")
 
     # ###################### Dependencies ##########################
 
@@ -159,6 +165,11 @@ class Phist(CMakePackage):
     # The test_install compiles the examples and needs pkgconfig for it
     depends_on("pkgconfig", type="test")
 
+    # in 1.10 we removed some use of deprecated Trilinos interfaces
+    # (some functions in tpetra were renamed)
+    conflicts("^trilinos@13.4:", when="@:1.9 kernel_lib=tpetra")
+    conflicts("^trilinos@:13.2", when="@1.10: kernel_lib=tpetra")
+
     # Fortran 2003 bindings were included in version 1.7, previously they
     # required a separate package
     conflicts("+fortran", when="@:1.6")
@@ -170,10 +181,18 @@ class Phist(CMakePackage):
     # and actual argument at (2) (scalar and rank-1)
     conflicts("%gcc@10:", when="@:1.9.0")
 
+    # reference lapack 3.9.1 (included in openblas 0.3.21) changed their lapack.h API
+    # to include trailing string lengths arguments in functions that have
+    # single-character strings as args. phist should be using the relevant
+    # LAPACK_function(...) macro's instead.
+    # https://bitbucket.org/essex/phist/issues/245/does-not-compile-with-reference-lapack-391
+    conflicts("^openblas@0.3.21:")
+    conflicts("^netlib-lapack@3.9.1:")
+
     # the phist repo came with it's own FindMPI.cmake before, which may cause some other
     # MPI installation to be used than the one spack wants.
     def patch(self):
-        if self.spec.satisfies("@1.9.6"):
+        if self.spec.satisfies("@1.9.6:1.10.0"):
             filter_file("USE mpi", "use mpi_f08", "src/kernels/builtin/crsmat_module.F90")
             # filter_file('use mpi', 'use mpi_f08', -> Needs more fixes
             #            'fortran_bindings/phist_testing.F90')
@@ -199,7 +218,7 @@ class Phist(CMakePackage):
 
     def cmake_args(self):
         spec = self.spec
-        define = CMakePackage.define
+        define = self.define
 
         if spec.satisfies("kernel_lib=builtin") and spec.satisfies("~mpi"):
             raise InstallError("~mpi not possible with kernel_lib=builtin!")
