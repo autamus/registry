@@ -25,7 +25,7 @@ class Hpctoolkit(AutotoolsPackage):
     test_requires_compiler = True
 
     version('develop', branch='develop')
-    version('master', branch='master')
+    version('2022.10.01', commit='e8a5cc87e8f5ddfd14338459a4106f8e0d162c83')
     version('2022.05.15', commit='8ac72d9963c4ed7b7f56acb65feb02fbce353479')
     version('2022.04.15', commit='a92fdad29fc180cc522a9087bba9554a829ee002')
     version('2022.01.15', commit='0238e9a052a696707e4e65b2269f342baad728ae')
@@ -52,7 +52,12 @@ class Hpctoolkit(AutotoolsPackage):
         description="Build for Cray compute nodes, including hpcprof-mpi.",
     )
 
-    variant("mpi", default=False, description="Build hpcprof-mpi, the MPI version of hpcprof.")
+    variant(
+        "mpi",
+        default=False,
+        description="Build hpcprof-mpi, the MPI version of hpcprof "
+        "(not available for 2022.10.01).",
+    )
 
     # We can't build with both PAPI and perfmon for risk of segfault
     # from mismatched header files (unless PAPI installs the perfmon
@@ -64,33 +69,28 @@ class Hpctoolkit(AutotoolsPackage):
         "the hardware performance counters.",
     )
 
-    variant(
-        "all-static",
-        default=False,
-        description="Needed when MPICXX builds static binaries for the compute nodes.",
-    )
-
-    variant(
-        "cuda", default=False, description="Support CUDA on NVIDIA GPUs (2020.03.01 or later)."
-    )
+    # Accelerator variants: cuda, rocm, etc.
+    variant("cuda", default=False, description="Support CUDA on NVIDIA GPUs.", when="@2020.03:")
 
     variant(
         "level_zero",
         default=False,
-        description="Support Level Zero on Intel GPUs (2022.04.15 or later).",
+        description="Support Level Zero on Intel GPUs.",
+        when="@2022.04:",
     )
 
     variant(
         "gtpin",
         default=False,
-        description="Support instrumenting Intel GPU kernels with Intel GT-Pin "
-        "(2022.05.15 or later, and requires level_zero).",
+        description="Support instrumenting Intel GPU kernels with Intel GT-Pin",
+        when="@2022.05: +level_zero",
     )
 
-    variant("opencl", default=False, description="Support OpenCL")
+    variant("opencl", default=False, description="Support offloading with OpenCL.")
 
-    variant("rocm", default=False, description="Support ROCM on AMD GPUs (2022.04.15 or later).")
+    variant("rocm", default=False, description="Support ROCM on AMD GPUs.", when="@2022.04:")
 
+    # Other variants.
     variant("debug", default=False, description="Build in debug (develop) mode.")
 
     variant("viewer", default=True, description="Include hpcviewer.")
@@ -100,7 +100,7 @@ class Hpctoolkit(AutotoolsPackage):
         " +graph +regex +shared +multithreaded visibility=global"
     )
 
-    depends_on("binutils +libiberty", type="link", when="@2021:master")
+    depends_on("binutils +libiberty", type="link", when="@2021:2022.06")
     depends_on("binutils +libiberty~nls", type="link", when="@2020.04:2020")
     depends_on("binutils@:2.33.1 +libiberty~nls", type="link", when="@:2020.03")
     depends_on("boost" + boost_libs)
@@ -111,8 +111,8 @@ class Hpctoolkit(AutotoolsPackage):
     depends_on("elfutils+bzip2+xz~nls", type="link")
     depends_on("gotcha@1.0.3:", when="@:2020.09")
     depends_on("intel-tbb+shared")
-    depends_on("libdwarf", when="@:master")
-    depends_on("libiberty+pic", when="@develop")
+    depends_on("libdwarf", when="@:2022.06")
+    depends_on("libiberty+pic", when="@2022.10:")
     depends_on("libmonitor+hpctoolkit~dlopen", when="@2021.00:")
     depends_on("libmonitor+hpctoolkit+dlopen", when="@:2020")
     depends_on("libmonitor@2021.11.08:", when="@2022.01:")
@@ -120,7 +120,7 @@ class Hpctoolkit(AutotoolsPackage):
     depends_on("mbedtls+pic", when="@:2022.03")
     depends_on("xerces-c transcoder=iconv")
     depends_on("xz+pic", type="link")
-    depends_on("yaml-cpp@0.7.0:", when="@develop")
+    depends_on("yaml-cpp@0.7.0:", when="@2022.10:")
     depends_on("zlib+shared")
 
     depends_on("cuda", when="+cuda")
@@ -134,6 +134,7 @@ class Hpctoolkit(AutotoolsPackage):
     depends_on("papi", when="+papi")
     depends_on("libpfm4", when="~papi")
     depends_on("mpi", when="+mpi")
+    depends_on("hpcviewer@2022.10:", type="run", when="@2022.10: +viewer")
     depends_on("hpcviewer", type="run", when="+viewer")
 
     depends_on("hip@4.5:", when="+rocm")
@@ -141,19 +142,9 @@ class Hpctoolkit(AutotoolsPackage):
     depends_on("roctracer-dev@4.5:", when="+rocm")
     depends_on("rocprofiler-dev@4.5:", when="+rocm")
 
-    conflicts(
-        "%gcc@:4.7", when="^dyninst@10.0.0:", msg="hpctoolkit requires gnu gcc 4.8.x or later"
-    )
-
-    conflicts("%gcc@:4", when="@2020.03:2020", msg="hpctoolkit requires gnu gcc 5.x or later")
-
-    conflicts("%gcc@:6", when="@2021.00:", msg="hpctoolkit requires gnu gcc 7.x or later")
-
-    conflicts("+cuda", when="@:2019", msg="cuda requires 2020.03.01 or later")
-
-    conflicts("+gtpin", when="~level_zero", msg="gtpin requires level_zero")
-
-    conflicts("+rocm", when="@:2022.03", msg="rocm requires 2022.04.15 or later")
+    conflicts("%gcc@:7", when="@2022.10:", msg="hpctoolkit requires gnu gcc 8.x or later")
+    conflicts("%gcc@:6", when="@2021.00:2022.06", msg="hpctoolkit requires gnu gcc 7.x or later")
+    conflicts("%gcc@:4", when="@:2020", msg="hpctoolkit requires gnu gcc 5.x or later")
 
     conflicts("^binutils@2.35:2.35.1", msg="avoid binutils 2.35 and 2.35.1 (spews errors)")
 
@@ -189,15 +180,11 @@ class Hpctoolkit(AutotoolsPackage):
             "--with-zlib=%s" % spec["zlib"].prefix,
         ]
 
-        if spec.satisfies("@:master"):
-            args.extend(
-                [
-                    "--with-binutils=%s" % spec["binutils"].prefix,
-                    "--with-libdwarf=%s" % spec["libdwarf"].prefix,
-                ]
-            )
-        else:
+        if spec.satisfies("@2022.10:"):
             args.append("--with-libiberty=%s" % spec["libiberty"].prefix)
+        else:
+            args.append("--with-binutils=%s" % spec["binutils"].prefix)
+            args.append("--with-libdwarf=%s" % spec["libdwarf"].prefix)
 
         if spec.satisfies("@:2020.09"):
             args.append("--with-gotcha=%s" % spec["gotcha"].prefix)
@@ -216,7 +203,7 @@ class Hpctoolkit(AutotoolsPackage):
         else:
             args.append("--with-perfmon=%s" % spec["libpfm4"].prefix)
 
-        if spec.satisfies("@develop"):
+        if spec.satisfies("@2022.10:"):
             args.append("--with-yaml-cpp=%s" % spec["yaml-cpp"].prefix)
 
         if "+cuda" in spec:
@@ -225,16 +212,13 @@ class Hpctoolkit(AutotoolsPackage):
         if "+level_zero" in spec:
             args.append("--with-level0=%s" % spec["oneapi-level-zero"].prefix)
 
+            # gtpin requires level_zero
+            if "+gtpin" in spec:
+                args.append("--with-gtpin=%s" % spec["intel-gtpin"].prefix)
+                args.append("--with-igc=%s" % spec["oneapi-igc"].prefix)
+
         if "+opencl" in spec:
             args.append("--with-opencl=%s" % spec["opencl-c-headers"].prefix)
-
-        if "+gtpin" in spec:
-            args.extend(
-                [
-                    "--with-gtpin=%s" % spec["intel-gtpin"].prefix,
-                    "--with-igc=%s" % spec["oneapi-igc"].prefix,
-                ]
-            )
 
         if spec.satisfies("+rocm"):
             args.extend(
@@ -248,17 +232,20 @@ class Hpctoolkit(AutotoolsPackage):
 
         # MPI options for hpcprof-mpi.
         if "+cray" in spec:
-            args.extend(
-                [
-                    "--enable-mpi-search=cray",
-                    "--enable-all-static",
-                ]
-            )
-        elif "+mpi" in spec:
-            args.append("MPICXX=%s" % spec["mpi"].mpicxx)
-
-        if "+all-static" in spec:
+            args.append("--enable-mpi-search=cray")
             args.append("--enable-all-static")
+
+        elif "+mpi" in spec:
+            if spec.satisfies("@2022.10.01"):
+                # temporary hack to disable +mpi for one rev
+                tty.warn("hpcprof-mpi is not available in version 2022.10.01")
+                args.append("MPICXX=")
+            else:
+                args.append("MPICXX=%s" % spec["mpi"].mpicxx)
+
+        # Make sure MPICXX is not picked up through the environment.
+        else:
+            args.append("MPICXX=")
 
         if spec.satisfies("+debug"):
             args.append("--enable-develop")
@@ -274,6 +261,8 @@ class Hpctoolkit(AutotoolsPackage):
         env.clear()
         env.prepend_path("PATH", spec.prefix.bin)
         env.prepend_path("MANPATH", spec.prefix.share.man)
+        env.prepend_path("CPATH", spec.prefix.include)
+        env.prepend_path("LD_LIBRARY_PATH", spec.prefix.lib.hpctoolkit)
         if "+viewer" in spec:
             env.prepend_path("PATH", spec["hpcviewer"].prefix.bin)
             env.prepend_path("MANPATH", spec["hpcviewer"].prefix.share.man)
