@@ -10,7 +10,7 @@ class Sz(CMakePackage):
     """Error-bounded Lossy Compressor for HPC Data"""
 
     homepage = "https://szcompressor.org"
-    url      = "https://github.com/szcompressor/SZ/releases/download/v2.1.12.4/SZ-2.1.12.4.tar.gz"
+    url      = "https://github.com/szcompressor/SZ/releases/download/v2.1.12.5/SZ-2.1.12.5.tar.gz"
     git = "https://github.com/szcompressor/sz"
     maintainers = ["disheng222", "robertu94"]
 
