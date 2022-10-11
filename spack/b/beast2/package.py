@@ -15,9 +15,9 @@ class Beast2(Package):
     conditioning on a single tree topology."""
 
     homepage = "http://beast2.org/"
-    url      = "https://github.com/CompEvol/beast2/archive/v2.7.0.tar.gz"
+    url      = "https://github.com/CompEvol/beast2/archive/v2.7.1.tar.gz"
 
-    version('2.7.0', sha256='a5db0a741dfa47639372591d4002f185e692c7ba3ca95540050edac23e24b998')
+    version('2.7.1', sha256='31a39f6874d4098717c8d7f1a1121ed1bc92df20b3f6fa2881fecbbdf76c84c7')
     version('2.6.6', sha256='42e11683372d9feca75d1341363a007533deb525c253bda0eb631dff1216aa9d')
     version('2.6.4', sha256="4f80e2920eb9d87f3e9f64433119774dc67aca390fbd13dd480f852e3f8701a4")
     version('2.6.3', sha256="8899277b0d7124ab04dc512444d45f0f1a13505f3ce641e1f117098be3e2e20d")
