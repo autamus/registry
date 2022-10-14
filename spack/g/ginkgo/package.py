@@ -21,9 +21,8 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
     tags = ["e4s"]
 
     version('develop', branch='develop')
-    version('glu', branch='glu')
-    version('glu_experimental', branch='glu_experimental')
     version('master', branch='master')
+    version('1.5.0', branch='glu')
     version('1.4.0', commit='f811917c1def4d0fcd8db3fe5c948ce13409e28e')
     version('1.3.0', commit='4678668c66f634169def81620a85c9a20b7cec78')
     version('1.2.0', commit='b4be2be961fd5db45c3d02b5e004d73550722e31')
