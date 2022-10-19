@@ -4,7 +4,7 @@ name: papi
 github: https://github.com/autamus/registry/blob/main/containers/p/papi/spack.yaml
 versions:
 - 6.0.0.1
-updated_at: 2022-08-01T19:26:05.743305614Z
+updated_at: 2022-10-19T16:14:57.964651827Z
 size: 35MB
 description: PAPI provides the tool designer and application engineer with a consistent
   interface and methodology for use of the performance counter hardware found in most
