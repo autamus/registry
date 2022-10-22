@@ -15,11 +15,11 @@ class Gatk(Package):
     """
 
     homepage = "https://gatk.broadinstitute.org/hc/en-us"
-    url      = "https://github.com/broadinstitute/gatk/releases/download/4.3.0.0/gatk-4.3.0.0.zip"
+    url      = "https://github.com/broadinstitute/gatk/archive/NVSCOREVARIANTS-PREVIEW.tar.gz"
     list_url = "https://github.com/broadinstitute/gatk/releases"
     maintainers = ["snehring"]
 
-    version('4.3.0.0', sha256='e2c27229b34c3e22445964adf00639a0909887bbfcc040f6910079177bc6e2dd')
+    version('NVSCOREVARIANTS-PREVIEW', sha256='ff6030b256448f29c21ab436e84e1e9102b8445a6a25503ea5058b931ff3fd0a')
     version('4.2.6.1', sha256="1125cfc862301d437310506c8774d36c3a90d00d52c7b5d6b59dac7241203628")
     version('4.2.3.0', sha256='12fbd03142311419a050dba8009d615ee8faceb32b46aad8f4448dafd61e11eb')
     version('4.2.2.0', sha256="ddd902441d1874493796566159288e9df178714ac18216ba05092136db1497fd")
