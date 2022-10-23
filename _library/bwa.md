@@ -4,7 +4,7 @@ name: bwa
 github: https://github.com/autamus/registry/blob/main/containers/b/bwa/spack.yaml
 versions:
 - 0.7.17
-updated_at: 2022-08-01T18:04:27.009558033Z
+updated_at: 2022-10-23T16:48:07.753046148Z
 size: 27MB
 description: Burrow-Wheeler Aligner for pairwise alignment between DNA sequences.
 container_url: https://github.com/orgs/autamus/packages/container/package/bwa
