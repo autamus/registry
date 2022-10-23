@@ -5,7 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/z/zlib/spack.ya
 versions:
 - 1.2.11
 - 1.2.12
-updated_at: 2022-08-01T20:25:09.249694276Z
+- 1.2.13
+updated_at: 2022-10-23T18:36:02.522520803Z
 size: 27MB
 description: 'A free, general-purpose, legally unencumbered lossless data-compression
   library. '
