@@ -12,6 +12,9 @@ class Udunits(AutotoolsPackage):
     homepage = "https://www.unidata.ucar.edu/software/udunits"
     url      = "https://artifacts.unidata.ucar.edu/repository/downloads-udunits/udunits-2.2.28.tar.gz"
 
+    # Unidata now only provides the latest version of each X.Y branch.
+    # Older 2.2 versions have been deprecated accordingly but are still
+    # available in the build cache.
     version('2.2.28', sha256="590baec83161a3fd62c00efa66f6113cec8a7c461e3f61a5182167e0cc5d579e")
     version('2.2.24', sha256="20bac512f2656f056385429a0e44902fdf02fc7fe01c14d56f3c724336177f95")
     version('2.2.23', sha256="b745ae10753fe82cdc7cc834e6ce471ca7c25ba2662e6ff93be147cb3d4fd380")
