@@ -6,7 +6,7 @@ versions:
 - 1.2.11
 - 1.2.12
 - 1.2.13
-updated_at: 2022-10-23T18:36:02.522520803Z
+updated_at: 2022-10-27T18:49:47.461204622Z
 size: 27MB
 description: 'A free, general-purpose, legally unencumbered lossless data-compression
   library. '
