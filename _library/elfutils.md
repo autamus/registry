@@ -6,7 +6,7 @@ versions:
 - "0.185"
 - "0.186"
 - "0.187"
-updated_at: 2022-10-27T17:38:13.489931435Z
+updated_at: 2022-10-28T16:13:50.554815118Z
 size: 43MB
 description: elfutils is a collection of various binary tools such as eu-objdump,
   eu-readelf, and other utilities that allow you to inspect and manipulate ELF files.
