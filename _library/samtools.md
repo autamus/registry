@@ -6,8 +6,9 @@ versions:
 - "1.12"
 - "1.13"
 - "1.14"
-updated_at: 2022-01-09T16:36:48.692158234Z
-size: 107MB
+- 1.15.1
+updated_at: 2022-11-02T23:48:24.115513698Z
+size: 110MB
 description: SAM Tools provide various utilities for manipulating alignments in the
   SAM format, including sorting, merging, indexing and generating alignments in a
   per-position format
@@ -17,7 +18,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/samtoo
 # samtools
 ```bash 
 Download        : docker pull ghcr.io/autamus/samtools
-Compressed Size : 107MB
+Compressed Size : 110MB
 ```
 
 ## Description
