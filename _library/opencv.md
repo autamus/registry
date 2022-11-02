@@ -5,7 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/o/opencv/spack.
 versions:
 - 4.5.2
 - 4.5.3
-updated_at: 2022-01-09T16:31:23.068761305Z
+- 4.6.0
+updated_at: 2022-11-02T23:03:05.576429418Z
 size: 30MB
 description: OpenCV (Open Source Computer Vision Library) is an open source computer
   vision and machine learning software library.
