@@ -3,9 +3,10 @@ layout: container
 name: git
 github: https://github.com/autamus/registry/blob/main/containers/g/git/spack.yaml
 versions:
+- 2.35.2
 - latest
-updated_at: 2021-11-17T15:59:18.12897778Z
-size: 300MB
+updated_at: 2022-11-02T22:16:20.110554945Z
+size: 316MB
 description: 'Git is a free and open source distributed version control system designed
   to handle everything from small to very large projects with speed and efficiency. '
 container_url: https://github.com/orgs/autamus/packages/container/package/git
@@ -14,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/git
 # git
 ```bash 
 Download        : docker pull ghcr.io/autamus/git
-Compressed Size : 300MB
+Compressed Size : 316MB
 ```
 
 ## Description
@@ -31,7 +32,7 @@ docker pull ghcr.io/autamus/git:latest
 or to download a specific version of git run,
 
 ```bash
-docker pull ghcr.io/autamus/git:latest
+docker pull ghcr.io/autamus/git:2.35.2
 ```
 ### Run
 To run the container as an application run,
