@@ -7,8 +7,8 @@ versions:
 - 4.2.0
 - 4.3.0
 - 4.4.0
-updated_at: 2022-08-05T16:49:27.473841573Z
-size: 27MB
+updated_at: 2022-11-02T22:23:32.568244465Z
+size: 29MB
 description: LibTIFF - Tag Image File Format (TIFF) Library and Utilities.
 container_url: https://github.com/orgs/autamus/packages/container/package/libtiff
 
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/libtif
 # libtiff
 ```bash 
 Download        : docker pull ghcr.io/autamus/libtiff
-Compressed Size : 27MB
+Compressed Size : 29MB
 ```
 
 ## Description
