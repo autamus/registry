@@ -40,6 +40,7 @@ class Perl(Package):  # Perl doesn't use Autotools, it should subclass Package
     # explanation of version numbering scheme
 
     # Development releases (odd numbers)
+    version('5.36.0', sha256="e26085af8ac396f62add8a533c3a0ea8c8497d836f0689347ac5abd7b7a4e00a")
     version('5.35.0', sha256="d6c0eb4763d1c73c1d18730664d43fcaf6100c31573c3b81e1504ec8f5b22708")
     version('5.34.1', sha256="357951a491b0ba1ce3611263922feec78ccd581dddc24a446b033e25acf242a1")
     version('5.34.0', sha256="551efc818b968b05216024fb0b727ef2ad4c100f8cb6b43fab615fa78ae5be9a")
@@ -67,8 +68,9 @@ class Perl(Package):  # Perl doesn't use Autotools, it should subclass Package
     extendable = True
 
     if not is_windows:
+        depends_on("gdbm@:1.23")
         # Bind us below gdbm-1.20 due to API change: https://github.com/Perl/perl5/issues/18915
-        depends_on("gdbm@:1.19")
+        depends_on("gdbm@:1.19", when="@:5.35")
         # :5.28 needs gdbm@:1:14.1: https://rt-archive.perl.org/perl5/Ticket/Display.html?id=133295
         depends_on("gdbm@:1.14.1", when="@:5.28.0")
         depends_on("berkeley-db")
