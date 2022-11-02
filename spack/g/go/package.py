@@ -36,7 +36,7 @@ class Go(Package):
     """The golang compiler and build environment"""
 
     homepage = "https://golang.org"
-    url      = "https://dl.google.com/go/go1.19.2.src.tar.gz"
+    url      = "https://dl.google.com/go/go1.19.3.src.tar.gz"
     git = "https://go.googlesource.com/go.git"
 
     extendable = True
@@ -44,7 +44,7 @@ class Go(Package):
 
     maintainers = ["alecbcs"]
 
-    version('1.19.2', sha256='2ce930d70a931de660fdaf271d70192793b1b240272645bf0275779f6704df6b')
+    version('1.19.3', sha256='18ac263e39210bcf68d85f4370e97fb1734166995a1f63fb38b4f6e07d90d212')
     version('1.18', sha256="38f423db4cc834883f2b52344282fa7a39fbb93650dc62a11fdf0be6409bdad6")
     version('1.17.8', sha256="2effcd898140da79a061f3784ca4f8d8b13d811fb2abe9dad2404442dabbdf7a")
     version('1.17.7', sha256="c108cd33b73b1911a02b697741df3dea43e01a5c4e08e409e8b3a0e3745d2b4d")
@@ -137,14 +137,13 @@ class Go(Package):
     # aarch64 machines (including Macs with Apple silicon) can't use
     # go-bootstrap because it pre-dates aarch64 support in Go.  These machines
     # have to rely on Go support in gcc (which may require compiling a version
-    # of gcc with Go support just to satisfy this requirement).  However,
-    # there's also a bug in some versions of GCC's Go front-end that prevents
-    # these versions from properly bootstrapping Go.  (See issue #47771
-    # https://github.com/golang/go/issues/47771 )  On the 10.x branch, we need
-    # at least 10.4.  On the 11.x branch, we need at least 11.3.
+    # of gcc with Go support just to satisfy this requirement) or external go:
 
-    if platform.machine() == "aarch64":
-        depends_on("gcc@10.4.0:10,11.3.0: languages=go", type="build")
+    # #27769: On M1/MacOS, platform.machine() may return arm64:
+    if platform.machine() in ["arm64", "aarch64"]:
+        # Use an external go compiler from packages.yaml/`spack external find go-bootstrap`,
+        # but fallback to build go-bootstrap@1.4 or to gcc with languages=go (for aarch64):
+        depends_on("go-external-or-gccgo-bootstrap", type="build")
     else:
         depends_on("go-bootstrap", type="build")
 
