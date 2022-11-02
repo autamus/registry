@@ -4,8 +4,8 @@ name: restic
 github: https://github.com/autamus/registry/blob/main/containers/r/restic/spack.yaml
 versions:
 - 0.12.1
-updated_at: 2021-11-17T19:00:31.5260603Z
-size: 33MB
+updated_at: 2022-11-02T23:49:15.720270394Z
+size: 34MB
 description: Fast, secure, efficient backup program.
 container_url: https://github.com/orgs/autamus/packages/container/package/restic
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/restic
 # restic
 ```bash 
 Download        : docker pull ghcr.io/autamus/restic
-Compressed Size : 33MB
+Compressed Size : 34MB
 ```
 
 ## Description
