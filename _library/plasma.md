@@ -5,7 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/p/plasma/spack.
 versions:
 - 20.9.20
 - 21.8.29
-updated_at: 2021-10-19T07:45:51.591407776Z
+- 22.9.29
+updated_at: 2022-11-02T23:25:54.409893981Z
 size: 52MB
 description: Parallel Linear Algebra Software for Multicore Architectures, PLASMA
   is a software package for solving problems in dense linear algebra using multicore
