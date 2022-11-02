@@ -7,8 +7,9 @@ versions:
 - 5.4.1
 - 5.5.0
 - 5.5.1
-updated_at: 2022-01-09T16:20:03.45553664Z
-size: 89MB
+- 5.5.2
+updated_at: 2022-11-02T21:26:54.180918891Z
+size: 91MB
 description: 'Clingo: A grounder and solver for logic programs Clingo is part of the
   Potassco project for Answer Set Programming (ASP). ASP offers a simple and powerful
   modeling language to describe combinatorial problems as logic programs. The clingo
@@ -20,7 +21,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/clingo
 # clingo
 ```bash 
 Download        : docker pull ghcr.io/autamus/clingo
-Compressed Size : 89MB
+Compressed Size : 91MB
 ```
 
 ## Description
