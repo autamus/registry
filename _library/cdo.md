@@ -6,8 +6,9 @@ versions:
 - 1.9.10
 - 2.0.0
 - 2.0.2
-updated_at: 2022-01-09T16:20:41.443109594Z
-size: 124MB
+- 2.1.0
+updated_at: 2022-11-02T22:01:05.196302766Z
+size: 138MB
 description: 'CDO is a collection of command line Operators to manipulate and analyse
   Climate and NWP model Data. '
 container_url: https://github.com/orgs/autamus/packages/container/package/cdo
@@ -16,7 +17,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/cdo
 # cdo
 ```bash 
 Download        : docker pull ghcr.io/autamus/cdo
-Compressed Size : 124MB
+Compressed Size : 138MB
 ```
 
 ## Description
