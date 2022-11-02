@@ -4,8 +4,8 @@ name: cowsay
 github: https://github.com/autamus/registry/blob/main/containers/c/cowsay/spack.yaml
 versions:
 - "3.04"
-updated_at: 2022-10-27T17:22:25.724429519Z
-size: 47MB
+updated_at: 2022-11-02T21:13:56.95628703Z
+size: 48MB
 description: A program that generates ASCII pictures of a cow with a message.
 container_url: https://github.com/orgs/autamus/packages/container/package/cowsay
 
@@ -13,7 +13,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/cowsay
 # cowsay
 ```bash 
 Download        : docker pull ghcr.io/autamus/cowsay
-Compressed Size : 47MB
+Compressed Size : 48MB
 ```
 
 ## Description
