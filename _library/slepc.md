@@ -8,7 +8,8 @@ versions:
 - 3.16.0
 - 3.16.1
 - 3.18.0
-updated_at: 2022-11-03T01:08:07.010531085Z
+- 3.18.1
+updated_at: 2022-11-03T21:42:58.159102505Z
 size: 155MB
 description: Scalable Library for Eigenvalue Problem Computations.
 container_url: https://github.com/orgs/autamus/packages/container/package/slepc
