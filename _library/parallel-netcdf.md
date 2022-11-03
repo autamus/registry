@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/p/parallel-netc
 versions:
 - 1.12.2
 - 1.12.3
-updated_at: 2022-11-02T23:10:21.048730202Z
+updated_at: 2022-11-03T20:28:28.573577416Z
 size: 65MB
 description: 'PnetCDF (Parallel netCDF) is a high-performance parallel I/O library
   for accessing files in format compatibility with Unidata''s NetCDF, specifically
