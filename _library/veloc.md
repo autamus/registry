@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/v/veloc/spack.y
 versions:
 - "1.4"
 - "1.5"
-updated_at: 2022-01-09T16:41:47.082505956Z
-size: 74MB
+updated_at: 2022-11-03T00:57:13.706419485Z
+size: 85MB
 description: Very-Low Overhead Checkpointing System. VELOC is a multi-level checkpoint-restart
   runtime for HPC supercomputing infrastructures
 container_url: https://github.com/orgs/autamus/packages/container/package/veloc
@@ -15,7 +15,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/veloc
 # veloc
 ```bash 
 Download        : docker pull ghcr.io/autamus/veloc
-Compressed Size : 74MB
+Compressed Size : 85MB
 ```
 
 ## Description
