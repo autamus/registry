@@ -7,7 +7,7 @@ versions:
 - "1.13"
 - "1.14"
 - 1.15.1
-updated_at: 2022-11-02T23:48:24.115513698Z
+updated_at: 2022-11-03T20:43:35.718955975Z
 size: 110MB
 description: SAM Tools provide various utilities for manipulating alignments in the
   SAM format, including sorting, merging, indexing and generating alignments in a
