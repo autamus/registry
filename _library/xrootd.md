@@ -6,8 +6,8 @@ versions:
 - 5.1.0
 - 5.3.1
 - 5.3.2
-updated_at: 2022-01-09T16:41:24.764034129Z
-size: 46MB
+updated_at: 2022-11-03T00:34:40.693602055Z
+size: 45MB
 description: The XROOTD project aims at giving high performance, scalable fault tolerant
   access to data repositories of many kinds.
 container_url: https://github.com/orgs/autamus/packages/container/package/xrootd
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/xrootd
 # xrootd
 ```bash 
 Download        : docker pull ghcr.io/autamus/xrootd
-Compressed Size : 46MB
+Compressed Size : 45MB
 ```
 
 ## Description
