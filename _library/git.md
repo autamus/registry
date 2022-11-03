@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/g/git/spack.yam
 versions:
 - 2.35.2
 - latest
-updated_at: 2022-11-02T22:16:20.110554945Z
+updated_at: 2022-11-03T20:03:59.413482048Z
 size: 316MB
 description: 'Git is a free and open source distributed version control system designed
   to handle everything from small to very large projects with speed and efficiency. '
