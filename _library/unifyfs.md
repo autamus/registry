@@ -4,8 +4,9 @@ name: unifyfs
 github: https://github.com/autamus/registry/blob/main/containers/u/unifyfs/spack.yaml
 versions:
 - 0.9.2
-updated_at: 2022-01-09T16:42:03.824833756Z
-size: 79MB
+- "1.0"
+updated_at: 2022-11-03T00:44:07.205747947Z
+size: 69MB
 description: User level file system that enables applications to use node-local storage
   as burst buffers for shared files. Supports scalable and efficient aggregation of
   I/O bandwidth from burst buffers while having the same life cycle as a batch-submitted
@@ -18,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/unifyf
 # unifyfs
 ```bash 
 Download        : docker pull ghcr.io/autamus/unifyfs
-Compressed Size : 79MB
+Compressed Size : 69MB
 ```
 
 ## Description
