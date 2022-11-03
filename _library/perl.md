@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/p/perl/spack.ya
 versions:
 - 5.35.0
 - 5.36.0
-updated_at: 2022-11-02T22:45:31.454938123Z
+updated_at: 2022-11-03T20:01:31.305367593Z
 size: 48MB
 description: Perl 5 is a highly capable, feature-rich programming language with over
   27 years of development.
