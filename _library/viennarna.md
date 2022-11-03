@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/v/viennarna/spa
 versions:
 - 2.4.3
 - 2.5.0
-updated_at: 2022-11-03T00:35:27.511602572Z
+updated_at: 2022-11-03T21:19:04.165693479Z
 size: 177MB
 description: 'The ViennaRNA Package consists of a C code library and several stand-alone
   programs for the prediction and comparison of RNA secondary structures. '
