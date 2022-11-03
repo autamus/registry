@@ -6,8 +6,8 @@ versions:
 - 3.7.0.10
 - 3.7.0.8
 - 3.7.0.9
-updated_at: 2022-01-09T16:44:12.643618768Z
-size: 1144MB
+updated_at: 2022-11-03T00:09:23.119724372Z
+size: 1141MB
 description: 'The Persistence of Vision Raytracer creates three-dimensional, photo-realistic
   images using a rendering technique called ray-tracing. It reads in a text file containing
   information describing the objects and lighting in a scene and generates an image
@@ -20,7 +20,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/povray
 # povray
 ```bash 
 Download        : docker pull ghcr.io/autamus/povray
-Compressed Size : 1144MB
+Compressed Size : 1141MB
 ```
 
 ## Description
