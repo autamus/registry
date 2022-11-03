@@ -6,8 +6,8 @@ versions:
 - 3.15.0
 - 3.15.2
 - 3.15.3
-updated_at: 2022-01-09T16:37:37.919539349Z
-size: 105MB
+updated_at: 2022-11-03T00:13:22.102536517Z
+size: 107MB
 description: SPAdes - St. Petersburg genome assembler - is intended for both standard
   isolates and single-cell MDA bacteria assemblies.
 container_url: https://github.com/orgs/autamus/packages/container/package/spades
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/spades
 # spades
 ```bash 
 Download        : docker pull ghcr.io/autamus/spades
-Compressed Size : 105MB
+Compressed Size : 107MB
 ```
 
 ## Description
