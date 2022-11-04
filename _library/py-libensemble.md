@@ -6,7 +6,7 @@ versions:
 - 0.7.2
 - 0.8.0
 - 0.9.3
-updated_at: 2022-11-03T20:48:17.76470476Z
+updated_at: 2022-11-04T17:13:52.688573915Z
 size: 123MB
 description: Library for managing ensemble-like collections of computations.
 container_url: https://github.com/orgs/autamus/packages/container/package/py-libensemble
