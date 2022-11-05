@@ -7,7 +7,7 @@ versions:
 - 2.0.33
 - "20210822.2247"
 - 3.0.3
-updated_at: 2022-11-02T22:13:16.972382094Z
+updated_at: 2022-11-05T21:08:56.004902713Z
 size: 28MB
 description: Library for manipulating JPEG-2000 images
 container_url: https://github.com/orgs/autamus/packages/container/package/jasper
