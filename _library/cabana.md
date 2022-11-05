@@ -6,7 +6,7 @@ versions:
 - 0.3.0
 - 0.4.0
 - 0.5.0
-updated_at: 2022-11-02T21:29:12.305386847Z
+updated_at: 2022-11-05T20:48:16.015724088Z
 size: 64MB
 description: 'The Exascale Co-Design Center for Particle Applications Toolkit '
 container_url: https://github.com/orgs/autamus/packages/container/package/cabana
