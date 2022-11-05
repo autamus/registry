@@ -6,7 +6,7 @@ versions:
 - "7.5"
 - "7.7"
 - "7.9"
-updated_at: 2022-11-03T00:15:51.393905271Z
+updated_at: 2022-11-05T22:46:53.34988949Z
 size: 56MB
 description: The Toolkit for Adaptive Stochastic Modeling and Non-Intrusive ApproximatioN
   is a robust library for high dimensional integration and interpolation as well as
