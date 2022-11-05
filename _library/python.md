@@ -10,8 +10,8 @@ versions:
 - 3.9.7
 - 3.9.8
 - 3.9.9
-updated_at: 2022-11-02T23:33:28.280885555Z
-size: 87MB
+updated_at: 2022-11-05T22:23:33.126798732Z
+size: 88MB
 description: The Python programming language.
 container_url: https://github.com/orgs/autamus/packages/container/package/python
 
@@ -19,7 +19,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/python
 # python
 ```bash 
 Download        : docker pull ghcr.io/autamus/python
-Compressed Size : 87MB
+Compressed Size : 88MB
 ```
 
 ## Description
