@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/a/adios2/spack.
 versions:
 - 2.7.1
 - 2.8.3
-updated_at: 2022-11-02T21:20:21.503670629Z
+updated_at: 2022-11-05T20:42:45.7838427Z
 size: 72MB
 description: The Adaptable Input Output System version 2, developed in the Exascale
   Computing Program
