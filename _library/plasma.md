@@ -6,7 +6,7 @@ versions:
 - 20.9.20
 - 21.8.29
 - 22.9.29
-updated_at: 2022-11-02T23:25:54.409893981Z
+updated_at: 2022-11-05T22:06:31.745205924Z
 size: 52MB
 description: Parallel Linear Algebra Software for Multicore Architectures, PLASMA
   is a software package for solving problems in dense linear algebra using multicore
