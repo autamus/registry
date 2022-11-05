@@ -12,7 +12,7 @@ versions:
 - 3.16.2
 - 3.16.3
 - 3.18.1
-updated_at: 2022-11-03T21:35:00.780846692Z
+updated_at: 2022-11-05T23:17:35.857935154Z
 size: 204MB
 description: 'This package provides Python bindings for the PETSc package. '
 container_url: https://github.com/orgs/autamus/packages/container/package/py-petsc4py
