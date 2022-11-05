@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/s/slate/spack.y
 versions:
 - 2021.05.02
 - 2022.07.00
-updated_at: 2022-11-03T00:48:57.472620307Z
+updated_at: 2022-11-05T23:05:18.382105658Z
 size: 113MB
 description: The Software for Linear Algebra Targeting Exascale (SLATE) project is
   to provide fundamental dense linear algebra capabilities to the US Department of
