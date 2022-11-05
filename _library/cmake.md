@@ -12,7 +12,7 @@ versions:
 - 3.21.4
 - 3.22.1
 - 3.24.2
-updated_at: 2022-11-02T21:33:17.955072191Z
+updated_at: 2022-11-05T20:10:49.98391613Z
 size: 56MB
 description: 'A cross-platform, open-source build system. CMake is a family of tools
   designed to build, test and package software. '
