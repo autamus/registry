@@ -6,7 +6,7 @@ versions:
 - 2.2.1
 - 2.3.0
 - 2.5.0
-updated_at: 2022-11-05T23:00:27.72577465Z
+updated_at: 2022-11-06T21:40:15.218249394Z
 size: 171MB
 description: preCICE (Precise Code Interaction Coupling Environment) is a coupling
   library for partitioned multi-physics simulations. Partitioned means that preCICE
