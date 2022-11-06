@@ -5,8 +5,8 @@ github: https://github.com/autamus/registry/blob/main/containers/r/r-seqlogo/spa
 versions:
 - 1.56.0
 - 1.62.0
-updated_at: 2022-11-05T22:38:52.766327335Z
-size: 280MB
+updated_at: 2022-11-06T20:50:09.362250453Z
+size: 277MB
 description: Sequence logos for DNA sequence alignments seqLogo takes the position
   weight matrix of a DNA sequence motif and plots the corresponding sequence logo
   as introduced by Schneider and Stephens (1990).
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/r-seql
 # r-seqlogo
 ```bash 
 Download        : docker pull ghcr.io/autamus/r-seqlogo
-Compressed Size : 280MB
+Compressed Size : 277MB
 ```
 
 ## Description
