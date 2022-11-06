@@ -8,7 +8,7 @@ versions:
 - 5.5.0
 - 5.5.1
 - 5.5.2
-updated_at: 2022-11-05T20:28:33.117214645Z
+updated_at: 2022-11-06T19:35:13.943937553Z
 size: 91MB
 description: 'Clingo: A grounder and solver for logic programs Clingo is part of the
   Potassco project for Answer Set Programming (ASP). ASP offers a simple and powerful
