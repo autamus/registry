@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/k/kallisto/spac
 versions:
 - 0.46.2
 - 0.48.0
-updated_at: 2022-11-05T21:16:19.531620285Z
+updated_at: 2022-11-06T19:57:28.01904832Z
 size: 27MB
 description: kallisto is a program for quantifying abundances of transcripts from
   RNA-Seq data.
