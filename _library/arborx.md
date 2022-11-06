@@ -6,7 +6,7 @@ versions:
 - "1.0"
 - "1.1"
 - "1.3"
-updated_at: 2022-11-05T20:37:17.51063318Z
+updated_at: 2022-11-06T19:46:58.179144012Z
 size: 64MB
 description: ArborX is a performance-portable library for geometric search
 container_url: https://github.com/orgs/autamus/packages/container/package/arborx
