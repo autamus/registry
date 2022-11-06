@@ -8,7 +8,7 @@ versions:
 - 1.53.0
 - 1.54.0
 - 1.60.0
-updated_at: 2022-11-03T02:39:46.175567611Z
+updated_at: 2022-11-06T01:21:12.218577172Z
 size: 247MB
 description: .format( cargo=join_path(boot_bin, 'cargo
 container_url: https://github.com/orgs/autamus/packages/container/package/rust
