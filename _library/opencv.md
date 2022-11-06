@@ -6,7 +6,7 @@ versions:
 - 4.5.2
 - 4.5.3
 - 4.6.0
-updated_at: 2022-11-05T21:53:49.838003395Z
+updated_at: 2022-11-06T20:28:36.907722051Z
 size: 30MB
 description: OpenCV (Open Source Computer Vision Library) is an open source computer
   vision and machine learning software library.
