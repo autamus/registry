@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/w/wget/spack.ya
 versions:
 - 1.21.1
 - 1.21.3
-updated_at: 2022-11-05T22:54:51.576807062Z
+updated_at: 2022-11-09T22:54:27.169605017Z
 size: 33MB
 description: GNU Wget is a free software package for retrieving files using HTTP,
   HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive
