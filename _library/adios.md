@@ -4,7 +4,7 @@ name: adios
 github: https://github.com/autamus/registry/blob/main/containers/a/adios/spack.yaml
 versions:
 - 1.13.1
-updated_at: 2022-11-06T19:51:40.600481436Z
+updated_at: 2022-11-09T20:57:15.020020862Z
 size: 71MB
 description: 'The Adaptable IO System (ADIOS) provides a simple, flexible way for
   scientists to describe the data in their code that may need to be written, read,
