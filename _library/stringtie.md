@@ -6,8 +6,8 @@ versions:
 - 1.3.4
 - 2.1.6
 - 2.1.7
-updated_at: 2022-11-05T22:45:47.061170927Z
-size: 110MB
+updated_at: 2022-11-09T22:55:02.657406288Z
+size: 129MB
 description: StringTie is a fast and highly efficient assembler of RNA-Seq alignments
   into potential transcripts.
 container_url: https://github.com/orgs/autamus/packages/container/package/stringtie
@@ -16,7 +16,7 @@ container_url: https://github.com/orgs/autamus/packages/container/package/string
 # stringtie
 ```bash 
 Download        : docker pull ghcr.io/autamus/stringtie
-Compressed Size : 110MB
+Compressed Size : 129MB
 ```
 
 ## Description
