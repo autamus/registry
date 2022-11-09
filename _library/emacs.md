@@ -5,7 +5,7 @@ github: https://github.com/autamus/registry/blob/main/containers/e/emacs/spack.y
 versions:
 - "27.2"
 - "28.1"
-updated_at: 2022-11-06T19:25:39.4609346Z
+updated_at: 2022-11-09T20:53:54.711876062Z
 size: 86MB
 description: The Emacs programmable text editor.
 container_url: https://github.com/orgs/autamus/packages/container/package/emacs
