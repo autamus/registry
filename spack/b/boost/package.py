@@ -241,6 +241,13 @@ class Boost(Package):
     conflicts("cxxstd=98", when="+fiber")  # Fiber requires >=C++11.
     conflicts("~context", when="+fiber")  # Fiber requires Context.
 
+    # NOTE: 1.64.0 seems fine for *most* applications, but if you need
+    #       +python and +mpi, there seem to be errors with out-of-date
+    #       API calls from mpi/python.
+    #       See: https://github.com/spack/spack/issues/3963
+    conflicts("@1.64.0", when="+python", msg="Errors with out-of-date API calls from Python")
+    conflicts("@1.64.0", when="+mpi", msg="Errors with out-of-date API calls from MPI")
+
     conflicts("+taggedlayout", when="+versionedlayout")
     conflicts("+numpy", when="~python")
 

@@ -21,3 +21,7 @@ class Udunits(AutotoolsPackage):
     version('2.2.21', sha256="a154d1f8428c24e92723f9e50bdb5cc00827e3f5ff9cba64d33e5409f5c03455")
 
     depends_on("expat")
+
+    @property
+    def libs(self):
+        return find_libraries(["libudunits2"], root=self.prefix, recursive=True, shared=True)
