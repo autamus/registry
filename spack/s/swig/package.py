@@ -43,6 +43,7 @@ class Swig(AutotoolsPackage, SourceforgePackage):
     version('1.3.40', sha256="1945b3693bcda6777bd05fef1015a0ad1a4604cde4a4a0a368b61ccfd143ac09")
 
     depends_on("pcre")
+    depends_on("zlib")
 
     AUTOCONF_VERSIONS = ["@master", "@fortran", "@4.0.2-fortran", "@4.1.dev1-fortran"]
 

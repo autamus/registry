@@ -22,7 +22,7 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
 
     version('develop', branch='develop')
     version('master', branch='master')
-    version('1.5.0', branch='glu')
+    version('1.5.0', commit='234594c92b58e2384dfb43c2d08e7f43e2b58e7a')
     version('1.4.0', commit='f811917c1def4d0fcd8db3fe5c948ce13409e28e')
     version('1.3.0', commit='4678668c66f634169def81620a85c9a20b7cec78')
     version('1.2.0', commit='b4be2be961fd5db45c3d02b5e004d73550722e31')
@@ -36,6 +36,7 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
     variant("oneapi", default=False, description="Build with oneAPI support")
     variant("develtools", default=False, description="Compile with develtools enabled")
     variant("hwloc", default=False, description="Enable HWLOC support")
+    variant("mpi", default=False, description="Enable MPI support")
     variant(
         "build_type",
         default="Release",
@@ -45,12 +46,16 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
 
     depends_on("cmake@3.9:", type="build")
     depends_on("cuda@9:", when="+cuda")
+    depends_on("mpi", when="+mpi")
 
-    depends_on("rocthrust", type="build", when="+rocm")
-    depends_on("hipsparse", type="link", when="+rocm")
-    depends_on("hipblas", type="link", when="+rocm")
-    depends_on("rocrand", type="link", when="+rocm")
-    depends_on("hwloc@2.1:", type="link", when="+hwloc")
+    depends_on("rocthrust", when="+rocm")
+    depends_on("hipsparse", when="+rocm")
+    depends_on("hipblas", when="+rocm")
+    depends_on("rocrand", when="+rocm")
+    # ROCPRIM is not a direct dependency, but until we have reviewed our CMake
+    # setup for rocthrust, this needs to also be added here.
+    depends_on("rocprim", when="+rocm")
+    depends_on("hwloc@2.1:", when="+hwloc")
 
     depends_on("googletest", type="test")
     depends_on("numactl", type="test", when="+hwloc")
@@ -60,6 +65,7 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
 
     conflicts("%gcc@:5.2.9")
     conflicts("+rocm", when="@:1.1.1")
+    conflicts("+mpi", when="@:1.4.0")
     conflicts("+cuda", when="+rocm")
     conflicts("+openmp", when="+oneapi")
 
@@ -68,6 +74,7 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
     conflicts("^hipblas@4.1.0:", when="@:1.3.0")
     conflicts("^hipsparse@4.1.0:", when="@:1.3.0")
     conflicts("^rocthrust@4.1.0:", when="@:1.3.0")
+    conflicts("^rocprim@4.1.0:", when="@:1.3.0")
 
     # Skip smoke tests if compatible hardware isn't found
     patch("1.4.0_skip_invalid_smoke_tests.patch", when="@master")
@@ -109,17 +116,19 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
         args = [
             from_variant("GINKGO_BUILD_CUDA", "cuda"),
             from_variant("GINKGO_BUILD_HIP", "rocm"),
+            from_variant("GINKGO_BUILD_DPCPP", "oneapi"),
             from_variant("GINKGO_BUILD_OMP", "openmp"),
+            from_variant("GINKGO_BUILD_MPI", "mpi"),
             from_variant("BUILD_SHARED_LIBS", "shared"),
             from_variant("GINKGO_JACOBI_FULL_OPTIMIZATIONS", "full_optimizations"),
             from_variant("GINKGO_BUILD_HWLOC", "hwloc"),
-            from_variant("GINKGO_BUILD_DPCPP", "oneapi"),
             from_variant("GINKGO_DEVEL_TOOLS", "develtools"),
             # As we are not exposing benchmarks, examples, tests nor doc
             # as part of the installation, disable building them altogether.
             "-DGINKGO_BUILD_BENCHMARKS=OFF",
             "-DGINKGO_BUILD_DOC=OFF",
             "-DGINKGO_BUILD_EXAMPLES=OFF",
+            "-DGINKGO_WITH_CCACHE=OFF",
             self.define("GINKGO_BUILD_TESTS", self.run_tests),
             # Let spack handle the RPATH
             "-DGINKGO_INSTALL_RPATH=OFF",
@@ -142,6 +151,7 @@ class Ginkgo(CMakePackage, CudaPackage, ROCmPackage):
             args.append("-DHIPBLAS_PATH={0}".format(spec["hipblas"].prefix))
             args.append("-DHIPRAND_PATH={0}/hiprand".format(spec["rocrand"].prefix))
             args.append("-DROCRAND_PATH={0}/rocrand".format(spec["rocrand"].prefix))
+            args.append("-DROCPRIM_INCLUDE_DIRS={0}".format(spec["rocprim"].prefix.include))
             archs = self.spec.variants["amdgpu_target"].value
             if archs != "none":
                 arch_str = ";".join(archs)
