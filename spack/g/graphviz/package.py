@@ -17,9 +17,9 @@ class Graphviz(AutotoolsPackage):
 
     homepage = "http://www.graphviz.org"
     git = "https://gitlab.com/graphviz/graphviz.git"
-    url      = "https://gitlab.com/graphviz/graphviz/-/archive/7.0.1/graphviz-7.0.1.tar.bz2"
+    url      = "https://gitlab.com/graphviz/graphviz/-/archive/7.0.2/graphviz-7.0.2.tar.bz2"
 
-    version('7.0.1', sha256='33e37770879f998ac7c87950f387700d85c1e46941586c4476eea353dfa4b9a9')
+    version('7.0.2', sha256='cef646c7cecc819d61fe1cb8f56858728d82bb8ad643a541193b087fc798ee46')
     version('2.49.3', sha256='c858201dda1ec7c6ab3412dc6cbcce70238e17d4aaeda8ee726aa0c83352d679')
     version('2.49.2', sha256='2ad28686122af8094389bc04ce5790b7f6b4c0afcc83aa4390c8088316f7385d')
     version('2.49.0', sha256="b129555743bb9bfb7b63c55825da51763b2f1ee7c0eaa6234a42a61a3aff6cc9")
@@ -109,13 +109,13 @@ class Graphviz(AutotoolsPackage):
     depends_on("ghostscript", when="+ghostscript")
     depends_on("gtkplus", when="+gtkplus")
     depends_on("gts", when="+gts")
-    depends_on("cairo+pdf+png+svg", when="+pangocairo")
+    depends_on("cairo+pdf+png", when="+pangocairo")
     depends_on("fontconfig", when="+pangocairo")
     depends_on("freetype", when="+pangocairo")
     depends_on("glib", when="+pangocairo")
     depends_on("libpng", when="+pangocairo")
     depends_on("pango", when="+pangocairo")
-    depends_on("poppler+glib", when="+poppler")
+    depends_on("poppler", when="+poppler")
     depends_on("qt", when="+qt")
     depends_on("libx11", when="+x")
 
