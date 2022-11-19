@@ -11,9 +11,9 @@ class Nco(AutotoolsPackage):
     netCDF-accessible formats"""
 
     homepage = "http://nco.sourceforge.net/"
-    url      = "https://github.com/nco/nco/archive/5.1.1.tar.gz"
+    url      = "https://github.com/nco/nco/archive/5.1.2.tar.gz"
 
-    version('5.1.1', sha256='6e004cfaa8e3188f543d2a31f7fdd7b2d2a59b6c7fea44c41ad13232bbe1c8d6')
+    version('5.1.2', sha256='1b86303fc55b5a52b52923285a5e709de82cbc1630e68b64dce434b681e4100a')
     version('5.0.3', sha256='61b45cdfbb772718f00d40da1a4ce268201fd00a61ebb9515460b8dda8557bdb')
     version('5.0.1', sha256="37d11ffe582aa0ee89f77a7b9a176b41e41900e9ab709e780ec0caf52ad60c4b")
     version('4.9.3', sha256="eade5b79f3814b11ae3f52c34159567e76a73f05f0ab141eccaac68f0ca94aee")
