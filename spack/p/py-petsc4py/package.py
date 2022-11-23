@@ -42,13 +42,13 @@ class PyPetsc4py(PythonPackage):
     version('3.13.0', sha256="0e11679353c0c2938336a3c8d1a439b853e20d3bccd7d614ad1dbea3ec5cb31f")
     version('3.12.0', sha256="4c94a1dbbf244b249436b266ac5fa4e67080d205420805deab5ec162b979df8d")
     version('3.11.0', sha256="ec114b303aadaee032c248a02021e940e43c6437647af0322d95354e6f2c06ad")
-    version('3.10.1', sha256="11b59693af0e2067f029924dd6b5220f7a7ec00089f6e2c2361332d6123ea6f7")
-    version('3.10.0', sha256="4e58b9e7d4343adcf905751261b789c8c3489496f8de5c3fc3844664ef5ec5a3")
-    version('3.9.1', sha256="8b7f56e0904c57cca08d1c24a1d8151d1554f06c9c5a31b16fb6db3bc928bbd8")
-    version('3.9.0', sha256="ae077dffd455014de16b6ed4ba014ac9e10227dc6b93f919a4229e8e1c870aec")
-    version('3.8.1', sha256="f6260a52dab02247f5b8d686a0587441b1a2048dff52263f1db42e75d2e3f330")
-    version('3.8.0', sha256="3445da12becf23ade4d40cdd04c746581982ab6a27f55fbb5cd29bc5560df4b1")
-    version('3.7.0', sha256="c04931a5ba3fd7c8c8d165aa7908688921ce3cf4cf8725d0cba73380c2107386")
+    version('3.10.1', sha256='903ad04b99164a89ba02b4d08c67aa214e3dbee65ad64d79f82203abb2659024')
+    version('3.10.0', sha256='45d4bc6be668052a68dff311c0177171b9ceced69a398252c487f6ad9b790332')
+    version('3.9.1', sha256='0ccee912216f100d9b08637e036df00e043a530303ff8afd7c3ac7c454681fb9')
+    version('3.9.0', sha256='cfe4ffa315706a371ca54e2027b4a8df8d696df253ab5ae7c0dbe5eccfa221e4')
+    version('3.8.1', sha256='d7b72c3337ddc56031d39d0b52d7f28b61ecc41b755ae853d23f34912b4f3c92')
+    version('3.8.0', sha256='1f84ca1da29096ba07df6e6c9209b38a8c755a16752347b0f6ce916bb2d3d790')
+    version('3.7.0', sha256='e1fda7a68264c3eca2014f253efe4f306fa91d6dab65546764788bd7ad8518c6')
 
     variant("mpi", default=True, description="Activates MPI support")
 
@@ -73,12 +73,6 @@ class PyPetsc4py(PythonPackage):
     depends_on("petsc@3.13.0:3.13", when="@3.13.0:3.13")
     depends_on("petsc@3.12.0:3.12", when="@3.12.0:3.12")
     depends_on("petsc@3.11.0:3.11", when="@3.11.0:3.11")
-    depends_on("petsc@3.10.3:3.10", when="@3.10.1:3.10")
-    depends_on("petsc@3.10:3.10.2", when="@3.10.0")
-    depends_on("petsc@3.9.0:3.9", when="@3.9.0:3.9")
-    depends_on("petsc@3.8.0:3.8", when="@3.8.0:3.8")
-    depends_on("petsc@3.7.0:3.7", when="@3.7.0:3.7")
-    depends_on("petsc@3.6.0:3.6", when="@3.6.0:3.6")
 
     @property
     def build_directory(self):
