@@ -19,6 +19,7 @@ class OmegaH(CMakePackage, CudaPackage):
     maintainers = ["cwsmith"]
     tags = ["e4s"]
     version('main', branch='main')
+    version('10.6.0', commit='f376fad4741b55a4b2482218eb3437d719b7c72e')
     version('10.1.0', commit='e88912368e101d940f006019585701a704295ab0')
     version('9.34.13', sha256="2eadfd6d634abc0b50396a82fd446f8f0b586ba6e64788c47827162c2aadec02")
     version('9.34.6', sha256='0fcdfedab6afb855ca982c429698eaa2c25e78909152b8bee508c80a54234aac')
@@ -95,7 +96,10 @@ class OmegaH(CMakePackage, CudaPackage):
             cuda_arch_list = self.spec.variants["cuda_arch"].value
             cuda_arch = cuda_arch_list[0]
             if cuda_arch != "none":
-                args.append("-DOmega_h_CUDA_ARCH={0}".format(cuda_arch))
+                if "scorec" in str(self.spec.version):
+                    args.append("-DOmega_h_CUDA_ARCH={0}".format(cuda_arch))
+                else:
+                    args.append("-DCMAKE_CUDA_FLAGS=-arch=sm_{0}".format(cuda_arch))
         else:
             args.append("-DOmega_h_USE_CUDA:BOOL=OFF")
         if "+trilinos" in self.spec:
