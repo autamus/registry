@@ -9,7 +9,7 @@ class Metall(CMakePackage):
 
     homepage = "https://github.com/LLNL/metall"
     git      = "https://github.com/LLNL/metall.git"
-    url      = "https://github.com/LLNL/metall/archive/v0.23.tar.gz"
+    url      = "https://github.com/LLNL/metall/archive/v0.23.1.tar.gz"
 
     maintainers = ['KIwabuchi', 'rogerpearce', 'mayagokhale']
 
@@ -17,7 +17,7 @@ class Metall(CMakePackage):
 
     version('develop', branch='develop')
     version('master', branch='master')
-    version('0.23', sha256='17987922a3eb23a6b904498858db94aca12859d5dbcd8483704619ae93353340')
+    version('0.23.1', sha256='25e8fbc424e66d09e0faf60029288e4612685675bfd947cc142bd9d6d0645ac4')
     version('0.18', sha256='cd1fee376d0523d43e43b92c43731d45a2c4324278a071a5f626f400afecef24')
     version('0.17', sha256='8de6ec2a430a141a2ad465ccd40ba9d0eb0c57d9f2f2de657fe837a73c466e61')
     version('0.16', sha256='190fa6936cbbfad1844659eb1fcfd1ad8c5880f60e76e223e33c506d371ea3a3')
