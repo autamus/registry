@@ -42,7 +42,7 @@ class Python(Package):
 
     #: phase
     install_targets = ["install"]
-    build_targets = []  # type: List[str]
+    build_targets: List[str] = []
 
     version('3.11.0', sha256="64424e96e2457abbac899b90f9530985b51eef2905951febd935f0e73414caeb")
     version('3.10.8', sha256="f400c3fb394b8bef1292f6dc1292c5fadc3533039a5bc0c3e885f3e16738029a")
@@ -102,7 +102,7 @@ class Python(Package):
     version('3.7.2', sha256="f09d83c773b9cc72421abba2c317e4e6e05d919f9bcf34468e192b6a6c8e328d")
     version('3.7.1', sha256="36c1b81ac29d0f8341f727ef40864d99d8206897be96be73dc34d4739c9c9f06")
     version('3.7.0', sha256="85bb9feb6863e04fb1700b018d9d42d1caac178559ffa453d7e6a436e259fd0d")
-    version('3.6.15', sha256='54570b7e339e2cfd72b29c7e2fdb47c0b7b18b7412e61de5b463fc087c13b043')
+    version('3.6.15', sha256="54570b7e339e2cfd72b29c7e2fdb47c0b7b18b7412e61de5b463fc087c13b043")
     version('3.6.14', sha256='70064897bc434d6eae8bcc3e5678f282b5ea776d60e695da548a1219ccfd27a5')
     version('3.6.13', sha256='614950d3d54f6e78dac651b49c64cfe2ceefea5af3aff3371a9e4b27a53b2669')
     version('3.6.12', sha256='12dddbe52385a0f702fb8071e12dcc6b3cb2dde07cd8db3ed60e90d90ab78693')
@@ -265,7 +265,7 @@ class Python(Package):
     conflicts("%nvhpc")
 
     # Used to cache various attributes that are expensive to compute
-    _config_vars = {}  # type: Dict[str, Dict[str, str]]
+    _config_vars: Dict[str, Dict[str, str]] = {}
 
     # An in-source build with --enable-optimizations fails for python@3.X
     build_directory = "spack-build"
@@ -766,6 +766,12 @@ class Python(Package):
                 return Executable(path)
 
         else:
+            # Give a last try at rhel8 platform python
+            if self.spec.external and self.prefix == "/usr" and self.spec.satisfies("os=rhel8"):
+                path = os.path.join(self.prefix, "libexec", "platform-python")
+                if os.path.exists(path):
+                    return Executable(path)
+
             msg = "Unable to locate {0} command in {1}"
             raise RuntimeError(msg.format(self.name, self.prefix.bin))
 

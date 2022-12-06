@@ -17,14 +17,21 @@ class Lammps(CMakePackage, CudaPackage):
     discussion.
     """
 
-    homepage = "https://lammps.sandia.gov/"
+    homepage = "https://www.lammps.org/"
     url      = "https://github.com/lammps/lammps/archive/patch_1Sep2017.tar.gz"
     git = "https://github.com/lammps/lammps.git"
 
     tags = ["ecp", "ecp-apps"]
 
+    maintainers = ["rbberger"]
+
     version('develop', branch='develop')
     version('master', sha256='5d88d4e92f4e0bb57c8ab30e0d20de556830af820223778b9967bec2184efd46')
+    version('20221103', sha256="d28517b84b157d4e46a1a64ed787b4662d8f2f5ade3f5a04bb0caed068f32f7e")
+    version('20220915', sha256="392b8d35fc7919b0efaf8b389259a9b795a817e58e75e380467c63d03a0dab75")
+    version('20220803', sha256="f37cb0b35c1682ffceae5826aadce47278aa7003099a1655fcea43acd7d37926")
+    version('20220623.2', sha256="fdb5474135b17005030cd78ac85762fecf0944bdd27a81fbbe79b2b4522ccae7")
+    version('20220623.1', sha256="1d4fb06a4621b271e8b54f31fef241d0569717a69c1b7646a2b76fe5ce47c966")
     version('20220623', sha256="21533ce6f174c80815a48c99e5f3dd109e69d55c4cad47312d88a7190a35927f")
     version('20220602', sha256="3e8f54453e53b3b387a68317277f832b8cf64a981e64b21e98bb37ea36ac4a60")
     version('20220504', sha256="fe05bae8090fd0177b3c1b987cd32a9cb7cd05d790828ba954c764eb52e10b52")
