@@ -15,7 +15,7 @@ class Kokkos(CMakePackage, CudaPackage, ROCmPackage):
 
     homepage = "https://github.com/kokkos/kokkos"
     git = "https://github.com/kokkos/kokkos.git"
-    url      = "https://github.com/kokkos/kokkos/archive/3.7.00.tar.gz"
+    url      = "https://github.com/kokkos/kokkos/archive/3.7.01.tar.gz"
 
     tags = ["e4s"]
 
@@ -25,7 +25,8 @@ class Kokkos(CMakePackage, CudaPackage, ROCmPackage):
 
     version('develop', branch='develop')
     version('master', branch='master')
-    version('3.7.00', sha256='62e3f9f51c798998f6493ed36463f66e49723966286ef70a9dcba329b8443040')
+    version('3.7.01', sha256='0481b24893d1bcc808ec68af1d56ef09b82a1138a1226d6be27c3b3c3da65ceb')
+    version('3.7.00', sha256="62e3f9f51c798998f6493ed36463f66e49723966286ef70a9dcba329b8443040")
     version('3.6.01', sha256="1b80a70c5d641da9fefbbb652e857d7c7a76a0ebad1f477c253853e209deb8db")
     version('3.6.00', sha256="53b11fffb53c5d48da5418893ac7bc814ca2fde9c86074bdfeaa967598c918f4")
     version('3.5.00', sha256="748f06aed63b1e77e3653cd2f896ef0d2c64cb2e2d896d9e5a57fec3ff0244ff")
