@@ -15,11 +15,12 @@ class Cdo(AutotoolsPackage):
     """
 
     homepage = "https://code.mpimet.mpg.de/projects/cdo"
-    url      = "https://code.mpimet.mpg.de/attachments/download/27276/cdo-2.0.6.tar.gz"
+    url      = "https://code.mpimet.mpg.de/attachments/download/27481/cdo-2.1.0.tar.gz"
     list_url = "https://code.mpimet.mpg.de/projects/cdo/files"
 
     maintainers = ["skosukhin", "Try2Code"]
 
+    version('2.1.1', sha256="c29d084ccbda931d71198409fb2d14f99930db6e7a3654b3c0243ceb304755d9", url='https://code.mpimet.mpg.de/attachments/download/27654/cdo-2.1.1.tar.gz')
     version('2.1.0', sha256="b871346c944b05566ab21893827c74616575deaad0b20eacb472b80b1fa528cc", url='https://code.mpimet.mpg.de/attachments/download/27481/cdo-2.1.0.tar.gz')
     version('2.0.6', sha256="ef120dea9032b1be80a4cfa201958c3b910107205beb6674195675f1ee8ed402", url='https://code.mpimet.mpg.de/attachments/download/27276/cdo-2.0.6.tar.gz')
     version('2.0.5', sha256="edeebbf1c3b1a1f0c642dae6bc8c7624e0c54babe461064dc5c7daca4a5b0dce", url='https://code.mpimet.mpg.de/attachments/download/26823/cdo-2.0.5.tar.gz')
