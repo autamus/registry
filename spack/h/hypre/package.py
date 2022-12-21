@@ -17,7 +17,7 @@ class Hypre(AutotoolsPackage, CudaPackage, ROCmPackage):
     homepage = (
         "https://computing.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods"
     )
-    url      = "https://github.com/hypre-space/hypre/archive/v2.26.0.tar.gz"
+    url      = "https://github.com/hypre-space/hypre/archive/v2.27.0.tar.gz"
     git = "https://github.com/hypre-space/hypre.git"
     tags = ["e4s", "radiuss"]
 
@@ -26,7 +26,8 @@ class Hypre(AutotoolsPackage, CudaPackage, ROCmPackage):
     test_requires_compiler = True
 
     version('develop', branch='master')
-    version('2.26.0', sha256='c214084bddc61a06f3758d82947f7f831e76d7e3edeac2c78bb82d597686e05d')
+    version('2.27.0', sha256='507a3d036bb1ac21a55685ae417d769dd02009bde7e09785d0ae7446b4ae1f98')
+    version('2.26.0', sha256="c214084bddc61a06f3758d82947f7f831e76d7e3edeac2c78bb82d597686e05d")
     version('2.25.0', sha256="f9fc8371d91239fca694284dab17175bfda3821d7b7a871fd2e8f9d5930f303c")
     version('2.24.0', sha256="f480e61fc25bf533fc201fdf79ec440be79bb8117650627d1f25151e8be2fdb5")
     version('2.23.0', sha256="8a9f9fb6f65531b77e4c319bf35bfc9d34bf529c36afe08837f56b635ac052e2")
@@ -97,6 +98,7 @@ class Hypre(AutotoolsPackage, CudaPackage, ROCmPackage):
     depends_on("rocsparse", when="+rocm")
     depends_on("rocthrust", when="+rocm")
     depends_on("rocrand", when="+rocm")
+    depends_on("rocprim", when="+rocm")
     depends_on("umpire", when="+umpire")
     for sm_ in CudaPackage.cuda_arch_values:
         depends_on(
@@ -241,7 +243,8 @@ class Hypre(AutotoolsPackage, CudaPackage, ROCmPackage):
             rocm_pkgs = ["rocsparse", "rocthrust", "rocprim", "rocrand"]
             rocm_inc = ""
             for pkg in rocm_pkgs:
-                rocm_inc += spec[pkg].headers.include_flags + " "
+                if "^" + pkg in spec:
+                    rocm_inc += spec[pkg].headers.include_flags + " "
             configure_args.extend(
                 [
                     "--with-hip",
