@@ -17,8 +17,11 @@ class Openbabel(CMakePackage):
     url      = "https://github.com/openbabel/openbabel/archive/openbabel-3-0-0.tar.gz"
     git = "https://github.com/openbabel/openbabel.git"
 
+    maintainers = ["RMeli"]
+
     version('master', branch='master')
-    version('3.1.1', sha256='5c630c4145abae9bb4ab6c56a940985acb6dadf3a8c3a8073d750512c0220f30')
+    version('3.1.1', tag='openbabel-3-1-1')
+    version('3.1.0', tag='openbabel-3-1-0')
     version('3.0.0', tag='openbabel-3-0-0')
     version('2.4.1', tag='openbabel-2-4-1')
     version('2.4.0', tag='openbabel-2-4-0')
