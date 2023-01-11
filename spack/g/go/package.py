@@ -36,7 +36,7 @@ class Go(Package):
     """The golang compiler and build environment"""
 
     homepage = "https://golang.org"
-    url      = "https://dl.google.com/go/go1.19.4.src.tar.gz"
+    url      = "https://dl.google.com/go/go1.19.5.src.tar.gz"
     git = "https://go.googlesource.com/go.git"
 
     extendable = True
@@ -44,7 +44,8 @@ class Go(Package):
 
     maintainers = ["alecbcs"]
 
-    version('1.19.4', sha256='eda74db4ac494800a3e66ee784e495bfbb9b8e535df924a8b01b1a8028b7f368')
+    version('1.19.5', sha256='8e486e8e85a281fc5ce3f0bedc5b9d2dbf6276d7db0b25d3ec034f313da0375f')
+    version('1.19.4', sha256="eda74db4ac494800a3e66ee784e495bfbb9b8e535df924a8b01b1a8028b7f368")
     version('1.18', sha256="38f423db4cc834883f2b52344282fa7a39fbb93650dc62a11fdf0be6409bdad6")
     version('1.17.8', sha256="2effcd898140da79a061f3784ca4f8d8b13d811fb2abe9dad2404442dabbdf7a")
     version('1.17.7', sha256="c108cd33b73b1911a02b697741df3dea43e01a5c4e08e409e8b3a0e3745d2b4d")
