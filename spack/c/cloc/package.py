@@ -12,9 +12,9 @@ class Cloc(Package):
     and/or recursively below the given directories."""
 
     homepage = "https://github.com/AlDanial/cloc/"
-    url      = "https://github.com/AlDanial/cloc/archive/v1.96.tar.gz"
+    url      = "https://github.com/AlDanial/cloc/archive/v1.96.1.tar.gz"
 
-    version('1.96', sha256='9cab16a2d9b9e915d7f7299f718d13bb7a8e2082255d29747dc79498d5a4a3a4')
+    version('1.96.1', sha256='f0551d98dcce9ca2e78b984adf8e8cc7c6002037a1155e5294338c435e4a1af1')
     version('1.90', sha256="60b429dd2aa5cd65707b359dcbcbeb710c8e4db880886528ced0962c67e52548")
     version('1.84', sha256="c3f0a6bd2319110418ccb3e55a7a1b6d0edfd7528bfd2ae5d530938abe90f254")
     version('1.80', sha256="082f53530eee3f9ee84ec449eca59a77ff114250cd7daf9519679537b5b21d67")
