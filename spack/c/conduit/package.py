@@ -34,13 +34,14 @@ class Conduit(CMakePackage):
     coupling between packages in-core, serialization, and I/O tasks."""
 
     homepage = "https://software.llnl.gov/conduit"
-    url      = "https://github.com/LLNL/conduit/releases/download/v0.8.5/conduit-v0.8.5-src-with-blt.tar.gz"
+    url      = "https://github.com/LLNL/conduit/releases/download/v0.8.6/conduit-v0.8.6-src-with-blt.tar.gz"
     git = "https://github.com/LLNL/conduit.git"
     tags = ["radiuss", "e4s"]
 
     version('develop', branch='develop', submodules=True)
     version('master', branch='develop', submodules=True)
-    version('0.8.5', sha256='b4a6f269a81570a4597e2565927fd0ed2ac45da0a2500ce5a71c26f7c92c5483')
+    version('0.8.6', sha256='8ca5d37033143ed7181c7286dd25a3f6126ba0358889066f13a2b32f68fc647e')
+    version('0.8.5', sha256="b4a6f269a81570a4597e2565927fd0ed2ac45da0a2500ce5a71c26f7c92c5483")
     version('0.8.4', sha256="55c37ddc668dbc45d43b60c440192f76e688a530d64f9fe1a9c7fdad8cd525fd")
     version('0.8.3', sha256="a9e60945366f3b8c37ee6a19f62d79a8d5888be7e230eabc31af2f837283ed1a")
     version('0.8.2', sha256="928eb8496bc50f6d8404f5bfa70220250876645d68d4f35ce0b99ecb85546284")
@@ -98,6 +99,8 @@ class Conduit(CMakePackage):
     # doxygen support is wip, since doxygen has several dependencies
     # we want folks to explicitly opt in to building doxygen
     variant("doxygen", default=False, description="Build Conduit's Doxygen documentation")
+    # caliper
+    variant("caliper", default=False, description="Build Conduit Caliper support")
 
     ###########################################################################
     # package dependencies
@@ -162,6 +165,11 @@ class Conduit(CMakePackage):
     # MPI
     #######################
     depends_on("mpi", when="+mpi")
+
+    #######################
+    # Caliper
+    #######################
+    depends_on("caliper", when="+caliper")
 
     #######################
     # Documentation related
@@ -503,6 +511,16 @@ class Conduit(CMakePackage):
             cfg.write(cmake_cache_entry("ZFP_DIR", spec["zfp"].prefix))
         else:
             cfg.write("# zfp not built by spack \n")
+
+        #######################
+        # Caliper
+        #######################
+        cfg.write("# caliper from spack \n")
+        if "+caliper" in spec:
+            cfg.write(cmake_cache_entry("CALIPER_DIR", spec["caliper"].prefix))
+            cfg.write(cmake_cache_entry("ADIAK_DIR", spec["adiak"].prefix))
+        else:
+            cfg.write("# caliper not built by spack \n")
 
         #######################################################################
         # I/O Packages
