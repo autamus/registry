@@ -23,7 +23,7 @@ class Llvm(CMakePackage, CudaPackage):
     """
 
     homepage = "https://llvm.org/"
-    url      = "https://github.com/llvm/llvm-project/archive/llvmorg-15.0.6.tar.gz"
+    url      = "https://github.com/llvm/llvm-project/archive/llvmorg-15.0.7.tar.gz"
     list_url = "https://releases.llvm.org/download.html"
     git = "https://github.com/llvm/llvm-project"
     maintainers = ["trws", "haampie"]
@@ -35,7 +35,9 @@ class Llvm(CMakePackage, CudaPackage):
     family = "compiler"  # Used by lmod
 
     version('main', branch='main')
-    version('15.0.6', sha256='4d857d7a180918bdacd09a5910bf9743c9861a1e49cb065a85f7a990f812161d')
+    version('15.0.7', sha256='42a0088f148edcf6c770dfc780a7273014a9a89b66f357c761b4ca7c8dfa10ba')
+    version('15.0.6', sha256="4d857d7a180918bdacd09a5910bf9743c9861a1e49cb065a85f7a990f812161d")
+    version('15.0.5', sha256="c47640269e0251e009ae18a25162df4e20e175885286e21d28c054b084b991a4")
     version('15.0.4', sha256="e24b4d3bf7821dcb1c901d1e09096c1f88fb00095c5a6ef893baab4836975e52")
     version('15.0.3', sha256="8ac8e4c0982bf236526d737d385db5e1e66543ab217a9355d54159659eae3774")
     version('15.0.2', sha256="dc11d35e60ab61792baa607dff080c993b39de23fb93b3d3369ba15b0601c307")
@@ -245,7 +247,8 @@ class Llvm(CMakePackage, CudaPackage):
     # openmp dependencies
     depends_on("perl-data-dumper", type=("build"))
     depends_on("hwloc")
-    depends_on("libelf", when="+cuda")  # libomptarget
+    depends_on("hwloc@2.0.1:", when="@9:")
+    depends_on("elf", when="+cuda")  # libomptarget
     depends_on("libffi", when="+cuda")  # libomptarget
 
     # llvm-config --system-libs libraries.
@@ -607,9 +610,7 @@ class Llvm(CMakePackage, CudaPackage):
                     [
                         define("LIBOMPTARGET_NVPTX_ENABLE_BCLIB", True),
                         # work around bad libelf detection in libomptarget
-                        define(
-                            "LIBOMPTARGET_DEP_LIBELF_INCLUDE_DIR", spec["libelf"].prefix.include
-                        ),
+                        define("LIBOMPTARGET_DEP_LIBELF_INCLUDE_DIR", spec["elf"].prefix.include),
                     ]
                 )
         else:
@@ -746,9 +747,7 @@ class Llvm(CMakePackage, CudaPackage):
                 cmake_args.extend(
                     [
                         define("LIBOMPTARGET_NVPTX_ENABLE_BCLIB", True),
-                        define(
-                            "LIBOMPTARGET_DEP_LIBELF_INCLUDE_DIR", spec["libelf"].prefix.include
-                        ),
+                        define("LIBOMPTARGET_DEP_LIBELF_INCLUDE_DIR", spec["elf"].prefix.include),
                         self.stage.source_path + "/openmp",
                     ]
                 )
