@@ -644,6 +644,7 @@ class Trilinos(CMakePackage, CudaPackage, ROCmPackage):
                 ),
                 define_from_variant("Amesos2_ENABLE_Basker", "basker"),
                 define_from_variant("Amesos2_ENABLE_LAPACK", "amesos2"),
+                define_from_variant("Amesos2_ENABLE_MUMPS", "mumps"),
             ]
         )
 
