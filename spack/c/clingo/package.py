@@ -22,7 +22,7 @@ class Clingo(CMakePackage):
     homepage = "https://potassco.org/clingo/"
     url      = "https://github.com/potassco/clingo/archive/v5.5.1.tar.gz"
     git = "https://github.com/potassco/clingo.git"
-
+    tags = ["windows"]
     maintainers = ["tgamblin", "alalazo"]
 
     version('master', branch='master', submodules=True)
