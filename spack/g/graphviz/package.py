@@ -1,4 +1,4 @@
-# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2023 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -17,9 +17,9 @@ class Graphviz(AutotoolsPackage):
 
     homepage = "http://www.graphviz.org"
     git = "https://gitlab.com/graphviz/graphviz.git"
-    url      = "https://gitlab.com/graphviz/graphviz/-/archive/7.0.6/graphviz-7.0.6.tar.bz2"
+    url      = "https://gitlab.com/graphviz/graphviz/-/archive/7.1.0/graphviz-7.1.0.tar.bz2"
 
-    version('7.0.6', sha256='5c5b6d7a8dc179c6d30bc5d0d52f40be6564164edf0d581ffd7f57a8b8f9afdf')
+    version('7.1.0', sha256='7943c3fa0c55c779f595259f3b9e41c7ea6ed92f0aca0d24df917f631322dc01')
     version('2.49.3', sha256='c858201dda1ec7c6ab3412dc6cbcce70238e17d4aaeda8ee726aa0c83352d679')
     version('2.49.2', sha256='2ad28686122af8094389bc04ce5790b7f6b4c0afcc83aa4390c8088316f7385d')
     version('2.49.0', sha256="b129555743bb9bfb7b63c55825da51763b2f1ee7c0eaa6234a42a61a3aff6cc9")
