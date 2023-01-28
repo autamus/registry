@@ -19,13 +19,14 @@ class Boost(Package):
        encourages both commercial and non-commercial use.
     """
     homepage = "https://www.boost.org"
-    url      = "https://sourceforge.net/projects/boost/files/boost/1.78.0.beta1/boost_1_78_0_b1.tar.bz2/download"
+    url      = "https://sourceforge.net/projects/boost/files/boost/1.79.0/boost_1_79_0.tar.gz/download"
     git      = "https://github.com/boostorg/boost.git"
     list_url = "https://sourceforge.net/projects/boost/files/boost/"
     list_depth = 1
     maintainers = ['hainest']
 
     version('develop', branch='develop', submodules=True)
+    version('1.79.0', sha256='273f1be93238a068aba4f9735a4a2b003019af067b9c183ed227780b8f36062c')
     version('1.78.0', sha256='8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc')
     version('1.77.0', sha256='fc9f85fc030e233142908241af7a846e60630aa7388de9a5fafb1f3a26840854')
     version('1.76.0', sha256='f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41')
