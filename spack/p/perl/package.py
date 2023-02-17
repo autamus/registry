@@ -362,7 +362,6 @@ class Perl(Package):  # Perl doesn't use Autotools, it should subclass Package
         # If system perl is used through packages.yaml
         # there cannot be extensions.
         if dependent_spec.package.is_extension:
-
             # perl extension builds can have a global perl
             # executable function
             module.perl = self.spec["perl"].command

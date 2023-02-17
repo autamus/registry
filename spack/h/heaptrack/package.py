@@ -25,7 +25,6 @@ class Heaptrack(CMakePackage):
     depends_on("zstd")
 
     def cmake_args(self):
-
         spec = self.spec
 
         cmake_args = [
