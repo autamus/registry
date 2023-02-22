@@ -15,6 +15,7 @@ class Ant(Package):
     homepage = "https://ant.apache.org/"
     url      = "https://archive.apache.org/dist/ant/source/apache-ant-1.9.7-src.tar.gz"
 
+    version('1.10.13', sha256="da006f4c888d41d0f3f213565e48aeff73e4d8a6196e494121d8da1e567a8406")
     version('1.10.7', sha256="2f9c4ef094581663b41a7412324f65b854f17622e5b2da9fcb9541ca8737bd52")
     version('1.10.6', sha256="c641721ae844196b28780e7999d2ae886085b89433438ab797d531413a924311")
     version('1.10.5', sha256="5937cf11d74d75d6e8927402950b012e037e362f9f728262ce432ad289b9f6ca")
