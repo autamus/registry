@@ -1,4 +1,4 @@
-# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2023 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -10,9 +10,12 @@ class Htslib(AutotoolsPackage):
     """C library for high-throughput sequencing data formats."""
 
     homepage = "https://github.com/samtools/htslib"
-    url      = "https://github.com/samtools/htslib/releases/download/1.16/htslib-1.16.tar.bz2"
+    url      = "https://github.com/samtools/htslib/releases/download/1.17/htslib-1.17.tar.bz2"
 
-    version('1.16', sha256='606b7c7aff73734cf033ecd156f40529fa5792f54524952a28938ca0890d7924')
+    version('1.17', sha256='763779288c40f07646ec7ad98b96c378c739171d162ad98398868783b721839f')
+    version('1.16', sha256="606b7c7aff73734cf033ecd156f40529fa5792f54524952a28938ca0890d7924")
+    version('1.15.1', sha256="8d7f8bf9658226942eeab70af2a22aca618577eaa8fe2ed9416ee306d5351aa1")
+    version('1.15', sha256="1a9f49911503a22f56817cc82ea9b87fb7e7467b5ff989ca5aa61c12e7d532d9")
     version('1.14', sha256="ed221b8f52f4812f810eebe0cc56cd8355a5c9d21c62d142ac05ad0da147935f")
     version('1.13', sha256="f2407df9f97f0bb6b07656579e41a1ca5100464067b6b21bf962a2ea4b0efd65")
     version('1.12', sha256="2280141b46e953ba4ae01b98335a84f8e6ccbdb6d5cdbab7f70ee4f7e3b6f4ca")
