@@ -1,4 +1,4 @@
-# Copyright 2013-2022 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2023 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -16,7 +16,7 @@ class Picard(Package):
     """
 
     homepage = "https://broadinstitute.github.io/picard/"
-    url      = "https://github.com/broadinstitute/picard/releases/download/2.27.5/picard.jar"
+    url      = "https://github.com/broadinstitute/picard/archive/3.0.0.tar.gz"
     _urlfmt = "https://github.com/broadinstitute/picard/releases/download/{0}/picard.jar"
     _oldurlfmt = (
         "https://github.com/broadinstitute/picard/releases/download/{0}/picard-tools-{0}.zip"
@@ -24,7 +24,7 @@ class Picard(Package):
 
     # They started distributing a single jar file at v2.6.0, prior to
     # that it was a .zip file with multiple .jar and .so files
-    version('2.27.5', sha256='131ca3e0626a3ef12e8399795e7a49f829bb4e85d71b489bf4f231d21a6c3199')
+    version('3.0.0', sha256='b6fc53469b989662e37a2ff198b2a3715b778ef3a1da5ccd58663f710dfc57b1')
     version('2.26.5', sha256='ecf8cc7a55f249f61f73e857b279ad9f55580ed8ad944aad22db4bd092c2e927')
     version('2.26.4', sha256='295390baab9d9ded1201d80511fb7f953ba80e7f6f729b83b4c01a7f3b58bcfa')
     version('2.26.3', sha256='1fb5600fbe6d98011dd353e3d68e81353d1069785dd69508a4016628ce8e525a')
