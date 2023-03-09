@@ -10,13 +10,13 @@ class PyPetsc4py(PythonPackage):
     """This package provides Python bindings for the PETSc package."""
 
     homepage = "https://gitlab.com/petsc/petsc4py"
-    url      = "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc4py-3.18.4.tar.gz"
+    url      = "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc4py-3.18.5.tar.gz"
     git = "https://gitlab.com/petsc/petsc.git"
 
     maintainers = ["balay"]
 
     version('main', branch='main')
-    version('3.18.4', sha256='84a055b7f38d1200a8c486c89db05ce0724fe28da56afb656660cef054384e24')
+    version('3.18.5', sha256='625cbb99d7d3000ad05afe60585c6aa24ca650894b09a1989127febb64b65470')
     version('3.18.3', sha256="853ab9620c4832cbfe1f490edde827a505c8a376cc1a7b4fa6406faac9059433")
     version('3.18.2', sha256="1b6761b02ec6ef9099e2a048e234065c1c4096ace01e52e353624b80417cceec")
     version('3.18.1', sha256="6d9d9632e2da0920c4e3905b7bac919837bdd85ecfaf1b9e461ba7e05ec4a5ce")
